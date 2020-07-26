@@ -1,0 +1,40 @@
+
+/* navbar */
+.navbar{ 
+    background: white;
+}
+
+.nav-link , .navbar-brand{ 
+    color: #BDBDBD; 
+    cursor: pointer;
+}
+
+.nav-link{ 
+    margin-right: 1em !important;
+}
+
+.nav-link:hover{ 
+    background: #f4f4f4; 
+    color: #3F95A9; 
+}
+
+#navbar-nav{
+    margin: auto;
+}
+.navbar-toggler{
+    background:#000000 !important;
+}
+
+#navButton{
+    color: #3F95A9;
+    border: solid 1px #3F95A9;
+    border-radius: 100px;
+}
+#navButton:hover{
+    background: #3F95A9;
+    color: #ffffff;
+}
+
+.navbar-toggler-icon{
+    background: #ffffff;
+}

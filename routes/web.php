@@ -21,3 +21,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+// applicant routes
+Route::get('/lowongankerja', 'LowonganKerjaController@index')->name('lowongankerja');
+
+// company routes
+
