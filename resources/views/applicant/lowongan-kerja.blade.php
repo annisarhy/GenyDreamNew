@@ -77,12 +77,16 @@
     <div class="row">
         <div class="col-lg-4 col-md-6">
             <div class="lowongan-kerja m-3 p-4">                                
-                <div class="row">
-                    <i class="fa fa-clock-o"></i>
+                <div class="row update-time">
+                    <i class="fa fa-clock-o p-1"></i>
                     <p>Diperbaharui 1 jam yang lalu</p>
                 </div>
                 <div class="company-img">
                     <img src="{{ asset('/images/gambarPertamina.png') }}" alt="">
+                </div>
+                <div class="company-location row justify-content-end">
+                    <i class="fa fa-map-marker p-1"></i>
+                    <p>Jakarta Pusat</p>
                 </div>
             </div>
         </div>
