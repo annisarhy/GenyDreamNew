@@ -12,8 +12,6 @@
                 <div class="card-body">
                     <h5 class="card-title" style="color: #3F95A9;">Masuk </h5>
                     <form class="form-signin">
-
-
                         <div class="form-label-group">
                             <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                             <label for="inputEmail">Email address</label>
