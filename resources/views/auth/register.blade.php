@@ -1,48 +1,70 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url('/css/auth.css') }}" />
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="col-lg-12 col-xl-12 mx-auto">
             <div class="card card-signin flex-row my-5">
                 <div class="card-img-left d-none d-md-flex">
                     <!-- Background image for card set in CSS! -->
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title" style="color: #3F95A9;">Daftar </h5>
-                    <form class="form-signin">
-                        <div class="form-label-group">
-                            <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
-                            <label for="inputUserame">Username</label>
+                    <div style="margin-bottom: 5%;" class="d-flex justify-content-between">
+                        <div>
+                            <p class="text-left"><a style="color: black;" href="{{ __('/') }}"><i class="fas fa-angle-left"></i><b> Kembali</b></a></p>
                         </div>
-
-                        <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-                            <label for="inputEmail">Email address</label>
+                        <div>
+                            <p class="text-right"><a style="color: black;" href="{{ __('login') }}"><b> Login </b><i class="fas fa-angle-right"></i></a></p>
                         </div>
+                    </div>
+                    <div class="container">
+                        <div class="container-fluid">
+                            <h5 class="card-title">Get Register for free </h5>
+                            <p>Welcome! Please fill all the text to create your account.</p>
 
-                        <hr>
+                            <form class="form-signin">
+                                <div class="form-label-group">
+                                    <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
+                                    <label for="inputUserame">Full Name</label>
+                                </div>
 
-                        <div class="form-label-group">
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                            <label for="inputPassword">Password</label>
+                                <div class="form-label-group">
+                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                                    <label for="inputEmail">Email address</label>
+                                </div>
+
+                                <hr>
+                                <div class="row">
+                                    <div style="margin-bottom: 2%;" class="col-md-6">
+                                        <div class="form-label-group">
+                                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                            <label for="inputPassword">Password</label>
+                                        </div>
+                                    </div>
+                                    <div style="margin-bottom: 2%;" class="col-md-6">
+                                        <div class="form-label-group">
+                                            <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+                                            <label for="inputConfirmPassword">Confirm password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
+                                <hr>
+                                <p>Or register with</p>
+
+                                <div class="row">
+                                    <div style="margin-bottom: 2%;" class="col-md-6">
+                                        <button class="btn btn-lg btn-block btn-google text-uppercase" type="submit"><i class="fab fa-google "></i></button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-lg btn-block btn-facebook text-uppercase" type="submit"><i class="fab fa-facebook-f "></i></button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-
-                        <div class="form-label-group">
-                            <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
-                            <label for="inputConfirmPassword">Confirm password</label>
-                        </div>
-
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
-                        <a class=" d-block text-center mt-2 small" href="#">Sign In</a>
-                        <hr>
-                        <div class="d-flex justify-content-center">
-                            <button class="btn btn-lg btn-google text-uppercase" type="submit"><i class="fab fa-google mr-2"></i>With Google</button> &emsp;
-                            <button class="btn btn-lg btn-facebook text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i>With Facebook</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
