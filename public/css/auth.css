@@ -21,6 +21,8 @@ body {
     margin-bottom: 2rem;
     font-weight: 300;
     font-size: 1.5rem;
+    color: #3F95A9;
+    font-weight: bold;
 }
 
 .card-signin .card-img-left {
@@ -110,13 +112,19 @@ body {
 }
 
 .btn-google {
-    color: white;
-    background-color: #ea4335;
+    color: #BDBDBD;
+    background-color: #fff;
+    border-color: #BDBDBD;
+    border-width: 1px;
 }
 
 .btn-facebook {
     color: white;
     background-color: #3b5998;
+}
+
+.btn-primary {
+    background-color: #3F95A9;
 }
 
 /*LOGIN*/
