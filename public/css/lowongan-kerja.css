@@ -1,0 +1,24 @@
+.form-search{
+    outline: 0;
+    border-width: 0 0 2px;
+    width: 80%;    
+}
+.form-search:focus{
+    border-color: #3F95A9;
+}
+
+#btnSearch{
+    background-color: #3F95A9;
+    color: white;
+}
+
+.fa-search{
+    height: 20px;
+    width: 20px;
+}
+
+.lowongan-kerja{    
+    border-radius: 10px;    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}

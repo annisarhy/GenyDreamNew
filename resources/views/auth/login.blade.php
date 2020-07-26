@@ -11,6 +11,7 @@
                 </div>
 
                 <div class="card-body">
+
                     <div style="margin-bottom: 5%;" class="d-flex justify-content-between">
                         <div>
                             <p class="text-left"><a style="color: black;" href="{{ __('/') }}"><i class="fas fa-angle-left"></i><b> Kembali</b></a></p>
@@ -30,6 +31,12 @@
                                     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                                     <label for="inputEmail">Email address</label>
                                 </div>
+                    <h5 class="card-title" style="color: #3F95A9;">Masuk </h5>
+                    <form class="form-signin">
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                            <label for="inputEmail">Email address</label>
+                        </div>
 
                                 <div class="form-label-group">
                                     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
