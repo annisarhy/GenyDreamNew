@@ -27,7 +27,7 @@
 
                         <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
                         <a class="d-block text-center mt-2 small" href="#">Register</a>
-                        <hr class="my-4">
+                        <hr>
                         <div class="d-flex justify-content-center">
                             <button class="btn btn-lg btn-google text-uppercase" type="submit"><i class="fab fa-google mr-2"></i>With Google</button> &emsp;
                             <button class="btn btn-lg btn-facebook text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i>With Facebook</button>
