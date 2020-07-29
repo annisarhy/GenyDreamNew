@@ -25,18 +25,11 @@
                             <h5 class="card-title">Login </h5>
                             <p>Welcome! Please fill email and password to sign in into your account.</p>
                             <form class="form-signin">
-
-
                                 <div class="form-label-group">
                                     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                                     <label for="inputEmail">Email address</label>
                                 </div>
-                    <h5 class="card-title" style="color: #3F95A9;">Masuk </h5>
-                    <form class="form-signin">
-                        <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-                            <label for="inputEmail">Email address</label>
-                        </div>
+
 
                                 <div class="form-label-group">
                                     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
@@ -44,7 +37,7 @@
                                 </div>
                                 <p class="text-right"><a href=""> Forgot your password?</a></p>
 
-                                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
+                                <a href="{{ __('kursusfirst') }}" style="color: white;" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</a>
                                 <hr>
                                 <p>Or login with</p>
 

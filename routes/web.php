@@ -26,4 +26,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/lowongankerja', 'LowonganKerjaController@index')->name('lowongankerja');
 
 // company routes
-
