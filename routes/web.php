@@ -24,5 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // applicant routes
 Route::get('/lowongankerja', 'LowonganKerjaController@index')->name('lowongankerja');
+Route::get('/detaillowongankerja', 'LowonganKerjaDetailController@index')->name('detaillowongankerja');
+Route::get('/detailkursus', 'KursusDetailController@index')->name('detailkursus');
+Route::get('/kursus', 'KursusController@index')->name('kursus');
 
 // company routes

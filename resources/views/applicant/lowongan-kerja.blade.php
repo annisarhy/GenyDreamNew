@@ -75,34 +75,244 @@
     <h5>Tersedia <span>26,170</span> Lowongan Kerja</h5>
         
     <div class="row">
-        <div class="col-lg-4 col-md-6">
-            <div class="lowongan-kerja m-3 p-4">                                
-                <div class="row">
-                    <i class="fa fa-clock-o"></i>
+        <div class="col-lg-4 col-md-6 mt-2">            
+            <div class="card lowongan-kerja">                
+                <div class="row ml-1 update-time">
+                    <i class="fa fa-clock-o p-1"></i>
                     <p>Diperbaharui 1 jam yang lalu</p>
-                </div>
-                <div class="company-img">
+                </div>    
+                
+                <div class="card-image mx-auto">
                     <img src="{{ asset('/images/gambarPertamina.png') }}" alt="">
                 </div>
+
+                <div class="card-body d-flex flex-column p-0">
+                    <div class="company-location mr-2 row justify-content-end">
+                        <i class="fa fa-map-marker p-1"></i>
+                        <p>Jakarta Pusat</p>
+                    </div>
+
+                    <div class="job-position ml-2">
+                        <h6 class="font-weight-bold">Accounting Staff</h6>
+                        <p>PT PERTAMINA (PERSERO)</p>
+                    </div>
+
+                    <div class="job-description mt-3 ml-2">
+                        <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id nemo consequatur beatae vitae eligendi, ipsa explicabo corporis....</p>
+                    </div>
+
+                    <div class="row ml-2">
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <a href="" class="mr-4"><i class="fa fa-heart"></i></a>
+                            <a href="" class="ml-4"><i class="fa fa-share-alt"></i></a>
+                        </div>
+                        <div class="col-md-6">
+                        <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-block btn-primary">Lihat Lowongan<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>                                
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="lowongan-kerja m-3"></div>
+        <div class="col-lg-4 col-md-6 mt-2">            
+            <div class="card lowongan-kerja">                
+                <div class="row ml-1 update-time">
+                    <i class="fa fa-clock-o p-1"></i>
+                    <p>Diperbaharui 1 jam yang lalu</p>
+                </div>    
+                
+                <div class="card-image mx-auto">
+                    <img src="{{ asset('/images/gambarPertamina.png') }}" alt="">
+                </div>
+
+                <div class="card-body d-flex flex-column p-0">
+                    <div class="company-location mr-2 row justify-content-end">
+                        <i class="fa fa-map-marker p-1"></i>
+                        <p>Jakarta Pusat</p>
+                    </div>
+
+                    <div class="job-position ml-2">
+                        <h6 class="font-weight-bold">Accounting Staff</h6>
+                        <p>PT PERTAMINA (PERSERO)</p>
+                    </div>
+
+                    <div class="job-description mt-3 ml-2">
+                        <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id nemo consequatur beatae vitae eligendi, ipsa explicabo corporis....</p>
+                    </div>
+
+                    <div class="row ml-2">
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <a href="" class="mr-4"><i class="fa fa-heart"></i></a>
+                            <a href="" class="ml-4"><i class="fa fa-share-alt"></i></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-block btn-primary">Lihat Lowongan<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>                                
+            </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="lowongan-kerja m-3"></div>
+        <div class="col-lg-4 col-md-6 mt-2">            
+            <div class="card lowongan-kerja">                
+                <div class="row ml-1 update-time">
+                    <i class="fa fa-clock-o p-1"></i>
+                    <p>Diperbaharui 1 jam yang lalu</p>
+                </div>    
+                
+                <div class="card-image mx-auto">
+                    <img src="{{ asset('/images/gambarPertamina.png') }}" alt="">
+                </div>
+
+                <div class="card-body d-flex flex-column p-0">
+                    <div class="company-location mr-2 row justify-content-end">
+                        <i class="fa fa-map-marker p-1"></i>
+                        <p>Jakarta Pusat</p>
+                    </div>
+
+                    <div class="job-position ml-2">
+                        <h6 class="font-weight-bold">Accounting Staff</h6>
+                        <p>PT PERTAMINA (PERSERO)</p>
+                    </div>
+
+                    <div class="job-description mt-3 ml-2">
+                        <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id nemo consequatur beatae vitae eligendi, ipsa explicabo corporis....</p>
+                    </div>
+
+                    <div class="row ml-2">
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <a href="" class="mr-4"><i class="fa fa-heart"></i></a>
+                            <a href="" class="ml-4"><i class="fa fa-share-alt"></i></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-block btn-primary">Lihat Lowongan<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>                                
+            </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="lowongan-kerja m-3"></div>
+        <div class="col-lg-4 col-md-6 mt-2">            
+            <div class="card lowongan-kerja">                
+                <div class="row ml-1 update-time">
+                    <i class="fa fa-clock-o p-1"></i>
+                    <p>Diperbaharui 1 jam yang lalu</p>
+                </div>    
+                
+                <div class="card-image mx-auto">
+                    <img src="{{ asset('/images/gambarPertamina.png') }}" alt="">
+                </div>
+
+                <div class="card-body d-flex flex-column p-0">
+                    <div class="company-location mr-2 row justify-content-end">
+                        <i class="fa fa-map-marker p-1"></i>
+                        <p>Jakarta Pusat</p>
+                    </div>
+
+                    <div class="job-position ml-2">
+                        <h6 class="font-weight-bold">Accounting Staff</h6>
+                        <p>PT PERTAMINA (PERSERO)</p>
+                    </div>
+
+                    <div class="job-description mt-3 ml-2">
+                        <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id nemo consequatur beatae vitae eligendi, ipsa explicabo corporis....</p>
+                    </div>
+
+                    <div class="row ml-2">
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <a href="" class="mr-4"><i class="fa fa-heart"></i></a>
+                            <a href="" class="ml-4"><i class="fa fa-share-alt"></i></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-block btn-primary">Lihat Lowongan<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>                                
+            </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="lowongan-kerja m-3"></div>
+        <div class="col-lg-4 col-md-6 mt-2">            
+            <div class="card lowongan-kerja">                
+                <div class="row ml-1 update-time">
+                    <i class="fa fa-clock-o p-1"></i>
+                    <p>Diperbaharui 1 jam yang lalu</p>
+                </div>    
+                
+                <div class="card-image mx-auto">
+                    <img src="{{ asset('/images/gambarPertamina.png') }}" alt="">
+                </div>
+
+                <div class="card-body d-flex flex-column p-0">
+                    <div class="company-location mr-2 row justify-content-end">
+                        <i class="fa fa-map-marker p-1"></i>
+                        <p>Jakarta Pusat</p>
+                    </div>
+
+                    <div class="job-position ml-2">
+                        <h6 class="font-weight-bold">Accounting Staff</h6>
+                        <p>PT PERTAMINA (PERSERO)</p>
+                    </div>
+
+                    <div class="job-description mt-3 ml-2">
+                        <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id nemo consequatur beatae vitae eligendi, ipsa explicabo corporis....</p>
+                    </div>
+
+                    <div class="row ml-2">
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <a href="" class="mr-4"><i class="fa fa-heart"></i></a>
+                            <a href="" class="ml-4"><i class="fa fa-share-alt"></i></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-block btn-primary">Lihat Lowongan<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>                                
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-2">            
+            <div class="card lowongan-kerja">                
+                <div class="row ml-1 update-time">
+                    <i class="fa fa-clock-o p-1"></i>
+                    <p>Diperbaharui 1 jam yang lalu</p>
+                </div>    
+                
+                <div class="card-image mx-auto">
+                    <img src="{{ asset('/images/gambarPertamina.png') }}" alt="">
+                </div>
+
+                <div class="card-body d-flex flex-column p-0">
+                    <div class="company-location mr-2 row justify-content-end">
+                        <i class="fa fa-map-marker p-1"></i>
+                        <p>Jakarta Pusat</p>
+                    </div>
+
+                    <div class="job-position ml-2">
+                        <h6 class="font-weight-bold">Accounting Staff</h6>
+                        <p>PT PERTAMINA (PERSERO)</p>
+                    </div>
+
+                    <div class="job-description mt-3 ml-2">
+                        <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id nemo consequatur beatae vitae eligendi, ipsa explicabo corporis....</p>
+                    </div>
+
+                    <div class="row ml-2">
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <a href="" class="mr-4"><i class="fa fa-heart"></i></a>
+                            <a href="" class="ml-4"><i class="fa fa-share-alt"></i></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-block btn-primary">Lihat Lowongan<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>                                
+            </div>
         </div>
     </div>
+
+    <div class="row mt-5 mb-5">        
+            <button class="btn btn-primary mx-auto">Load More</button>        
+    </div>    
 
 </div>
 @endsection
