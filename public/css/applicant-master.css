@@ -43,3 +43,105 @@
     background: #000000;    
 }
 
+.footer{
+    background: #22272b;
+}
+
+.logo-footer {
+    margin-bottom: 33px;
+    padding-left: 35px;
+}
+
+
+.footer ul li a {
+    color: #6f787f;
+}
+
+.footer ul li a i {
+    font-weight: 400;
+}
+
+.footer li a:hover {
+    color: #bfc5ca;
+}
+
+.footer-widget {
+    padding: 55px 0px 91px 0px;
+}
+
+.flat-socials p{
+    color: #bfc5ca;
+}
+/* widget */
+.widget {
+    padding-left: 30px;
+}
+
+.widget h3.widget-title{
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    color: #bfc5ca;
+    font-family: 'Roboto Slab';
+    padding-left: 70px;
+    margin-bottom: 25px;
+}
+
+.footer.style2 .widget h3.widget-title {
+    color: #FFF;
+}
+
+.widget h3.widget-title::before {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: #3F95A9;
+}
+
+.widget ul {
+    padding-left: 70px;
+}
+
+.widget ul li {
+    position: relative;
+    padding-left: 15px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.widget>ul>li>a:hover {
+    padding-left: 3px;
+}
+
+.widget>ul>li::before {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    content: "\f0da";
+    font-family: 'FontAwesome';
+    color: #6f787f;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.widget>ul a:hover>li:before {
+    color: #bfc5ca;
+}
+
+.widget ul li a {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+}
+
+
+
