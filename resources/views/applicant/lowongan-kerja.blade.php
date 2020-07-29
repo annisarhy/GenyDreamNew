@@ -98,7 +98,7 @@
                     </div>
 
                     <div class="job-description mt-3 ml-2">
-                        <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id nemo consequatur beatae vitae eligendi, ipsa explicabo corporis....</p>
+                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id nemo consequatur beatae vitae eligendi, ipsa explicabo corporis....</p>
                     </div>
 
                     <div class="row ml-2">
