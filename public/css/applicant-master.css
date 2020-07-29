@@ -2,7 +2,9 @@
     --input-padding-x: 1.5rem;
     --input-padding-y: .75rem;
 }
-
+body{
+    font-family: 'Source Sans Pro';
+}
 /* navbar */
 .navbar{ 
     background: white;
