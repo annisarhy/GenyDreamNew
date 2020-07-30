@@ -230,12 +230,45 @@
                         <input type="text" class="form-control pl-4" id="enter" placeholder="Masukan nama lowongan, posisi, skills, atau instansi"> 
                         <button class="btn pt-1" id="clear">CARI</button> 
                     </div> 
-                    <p class="mt-2"><i class="fa fa-info mr-2"></i>Temukan lebih dari 90.000 lowongan dalam Geny Hire</p>
+                    <p class="mt-3"><i class="fa fa-info mr-2"></i>Temukan lebih dari 90.000 lowongan dalam Geny Hire</p>
+                    <p class="join-text">AYO BERGABUNG BERSAMA KAMI</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- end of section cari lowongan -->
+
+    <!-- info website -->
+    <section class="info-website">
+        <div class="container py-4">
+            <div class="row justify-content-center pl-5">
+                <div class="col-lg-3 col-md-6">
+                    <img src="{{ asset('images/ant-design_user-outlined.png') }}" class="img-fluid" id="image-feature" alt="">
+                    <p class="font-weight-bold text-left info-jumlah mb-0 mt-2">120.000+ Pengguna</p>
+                    <p class="col-md-8 p-0 text-left text-explain">Telah bergabung bersama kami</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <img src="{{ asset('images/ant-design_file-search-outlined-white.png') }}" class="img-fluid" id="image-feature" alt="">
+                    <p class="font-weight-bold text-left info-jumlah mb-0 mt-2">90.000+ Lowongan</p>
+                    <p class="col-md-8 p-0 text-left text-explain">Telah tersedia di Geny Hire</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid" id="image-feature" alt="">
+                    <p class="font-weight-bold text-left info-jumlah mb-0 mt-2">4000+ Perusahaan</p>
+                    <p class="col-md-8 p-0 text-left text-explain">Telah telah terdaftar di Geny Hire</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <img src="{{ asset('images/la_user-tie-solid-white.png') }}" class="img-fluid" id="image-feature" alt="">
+                    <p class="font-weight-bold text-left info-jumlah mb-0 mt-2">70.000+ Pengguna</p>
+                    <p class="col-md-8 p-0 text-left text-explain">Sudah bekerja di karir pilihannya melalui Geny Hire</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of info website -->
 
     <footer id="footer" class="footer">
         <div class="container">
