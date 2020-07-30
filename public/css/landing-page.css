@@ -51,7 +51,8 @@ header .carousel-inner .carousel-item {
 }
 
 .carousel-item .banner-1 {
-    background-image: url('/images/Background1.png');
+
+    background-image: url('/images/1.jpg');
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -60,7 +61,7 @@ header .carousel-inner .carousel-item {
 }
 
 .carousel-item .banner-2 {
-    background-image: url('/images/Background1.png');
+    background-image: url('/images/1.jpg');
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -69,7 +70,7 @@ header .carousel-inner .carousel-item {
 }
 
 .carousel-item .banner-3 {
-    background-image: url('/images/Background1.png');
+    background-image: url('/images/1.jpg');
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;

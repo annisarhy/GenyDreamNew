@@ -28,5 +28,6 @@ Route::get('/detaillowongankerja', 'LowonganKerjaDetailController@index')->name(
 Route::get('/detailkursus', 'KursusDetailController@index')->name('detailkursus');
 Route::get('/kursus', 'KursusController@index')->name('kursus');
 Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::get('/edit-profile', 'EditProfileController@index')->name('edit-profile');
 
 // company routes
