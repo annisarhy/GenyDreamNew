@@ -241,8 +241,8 @@
     <!-- info website -->
     <section class="info-website">
         <div class="container py-4">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6 border">                    
+            <div class="row justify-content-center pl-5">
+                <div class="col-lg-3 col-md-6">                    
                     <img src="{{ asset('images/ant-design_user-outlined.png') }}" class="img-fluid" id="image-feature" alt="">
                     <p class="font-weight-bold text-left info-jumlah mb-0 mt-2">120.000+ Pengguna</p>
                     <p class="col-md-8 p-0 text-left text-explain">Telah bergabung bersama kami</p>                     
