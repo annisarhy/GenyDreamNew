@@ -233,16 +233,29 @@
                         <div class="media-body">
                             <div class="row">
                                 <div class="col-8 d-flex">
-                                    <h5>Maria Smantha</h5> <span>- 2 hours ago</span>
+                                    <h5>Theresa Webb</h5> <span>- 2 hours ago</span>
                                 </div>
                                 <div class="col-4">
                                     <div class="pull-right reply"> <a href="#"><span><i class="fa fa-reply"></i> reply</span></a> </div>
                                 </div>
-                            </div> It is a long established fact that a reader will be distracted by the readable content of a page. <div class="media mt-4"> <a class="pr-3" href="#"><img class="rounded-circle" alt="Bootstrap Media Another Preview" src="https://i.imgur.com/xELPaag.jpg" /></a>
+                            </div>
+                            <div class="row">
+                                <div class="col-8 d-flex">
+                                    <div class="d-flex flex-row mt-0 mb-3 justify-content-center">                                    
+                                        <img src="{{ asset('images/star1.png') }}" alt="" class="img-rate">
+                                        <img src="{{ asset('images/star1.png') }}" alt="" class="img-rate">
+                                        <img src="{{ asset('images/star1.png') }}" alt="" class="img-rate">
+                                        <img src="{{ asset('images/star1.png') }}" alt="" class="img-rate">
+                                        <img src="{{ asset('images/star5.png') }}" alt="" class="img-rate">                                        
+                                    </div>                                    
+                                </div>                                
+                            </div>
+                            
+                            It is a long established fact that a reader will be distracted by the readable content of a page. <div class="media mt-4"> <a class="pr-3" href="#"><img class="rounded-circle" alt="Bootstrap Media Another Preview" src="https://i.imgur.com/xELPaag.jpg" /></a>
                                 <div class="media-body">
                                     <div class="row">
                                         <div class="col-12 d-flex">
-                                            <h5>Simona Disa</h5> <span>- 3 hours ago</span>
+                                            <h5>Devon Lane</h5> <span>- 3 hours ago</span>
                                         </div>
                                     </div> letters, as opposed to using 'Content here, content here', making it look like readable English.
                                 </div>
@@ -251,13 +264,14 @@
                                 <div class="media-body">
                                     <div class="row">
                                         <div class="col-12 d-flex">
-                                            <h5>John Smith</h5> <span>- 4 hours ago</span>
+                                            <h5>Devon Lane</h5> <span>- 4 hours ago</span>
                                         </div>
                                     </div> the majority have suffered alteration in some form, by injected humour, or randomised words.
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="media mt-4"> <img class="mr-3 rounded-circle" alt="Bootstrap Media Preview" src="https://i.imgur.com/xELPaag.jpg" />
                         <div class="media-body">
                             <div class="row">
@@ -267,7 +281,20 @@
                                 <div class="col-4">
                                     <div class="pull-right reply"> <a href="#"><span><i class="fa fa-reply"></i> reply</span></a> </div>
                                 </div>
-                            </div> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33. <div class="media mt-4"> <a class="pr-3" href="#"><img class="rounded-circle" alt="Bootstrap Media Another Preview" src="https://i.imgur.com/nUNhspp.jpg" /></a>
+                            </div>
+                            <div class="row">
+                                <div class="col-8 d-flex">
+                                    <div class="d-flex flex-row mt-0 mb-3 justify-content-center">                                    
+                                        <img src="{{ asset('images/star1.png') }}" alt="" class="img-rate">
+                                        <img src="{{ asset('images/star1.png') }}" alt="" class="img-rate">
+                                        <img src="{{ asset('images/star1.png') }}" alt="" class="img-rate">
+                                        <img src="{{ asset('images/star1.png') }}" alt="" class="img-rate">
+                                        <img src="{{ asset('images/star5.png') }}" alt="" class="img-rate">                                        
+                                    </div>                                    
+                                </div>                                
+                            </div>
+
+                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33. <div class="media mt-4"> <a class="pr-3" href="#"><img class="rounded-circle" alt="Bootstrap Media Another Preview" src="https://i.imgur.com/nUNhspp.jpg" /></a>
                                 <div class="media-body">
                                     <div class="row">
                                         <div class="col-12 d-flex">
