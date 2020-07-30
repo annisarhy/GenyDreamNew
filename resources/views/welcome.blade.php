@@ -224,7 +224,7 @@
                     <a href="{{ url('lowongankerja') }}" class="btn btn-md pl-3 pr-3"><i class="fa fa-list-ul pr-2"></i>LIST LOWONGAN</a>
                 </div>
 
-                <div class="col-lg-6 right-side">
+                <div class="col-lg-6 right-side">                    
                     <div class="buttonIn mt-2"> 
                         <i class="fa fa-search"></i>
                         <input type="text" class="form-control pl-4" id="enter" placeholder="Masukan nama lowongan, posisi, skills, atau instansi"> 
@@ -241,11 +241,11 @@
     <!-- info website -->
     <section class="info-website">
         <div class="container py-4">
-            <div class="row justify-content-center pl-5">
-                <div class="col-lg-3 col-md-6">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 border">                    
                     <img src="{{ asset('images/ant-design_user-outlined.png') }}" class="img-fluid" id="image-feature" alt="">
                     <p class="font-weight-bold text-left info-jumlah mb-0 mt-2">120.000+ Pengguna</p>
-                    <p class="col-md-8 p-0 text-left text-explain">Telah bergabung bersama kami</p>
+                    <p class="col-md-8 p-0 text-left text-explain">Telah bergabung bersama kami</p>                     
                 </div>
 
                 <div class="col-lg-3 col-md-6">
@@ -268,7 +268,28 @@
             </div>
         </div>
     </section>
-    <!-- end of info website -->
+    <!-- end of section info website -->
+
+    <!-- section lowongan kerja populer -->
+    <!-- <section class="lowongan-populer">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="row bg-dark">
+                        <div class="col-md-6 col-sm-6">
+                            <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid p-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="font-weight-bold text-center mt-4">Developer</p>
+                            <p class="font-weight-light text-center mt-2" id="jmlLowongan">2084 Lowongan</p>
+                        </div>                        
+                    </div>
+                </div>                                                                                                
+            </div>
+        </div>
+
+    </section> -->
+    <!-- end of section lowogan kerja populer -->
 
     <footer id="footer" class="footer">
         <div class="container">
