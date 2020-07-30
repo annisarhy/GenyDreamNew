@@ -460,6 +460,10 @@
 
 /* review dan komentar */
 
+.review-komentar{    
+    max-height: 500px;   
+    overflow: auto
+}
 .review-komentar h3{
     font-size: 24px;
     font-weight: bolder;
@@ -469,3 +473,4 @@
     font-size: 20px;
     font-weight: bold;
 }
+

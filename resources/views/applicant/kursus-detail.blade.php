@@ -228,6 +228,7 @@
                     <h3 class="text-left">ULASAN AND KOMENTAR</h3>                                                
                     
                     <h5 class="jml-comment mt-5">16 Komentar</h5>
+                    
                 </div>
             </div>
         </div>
