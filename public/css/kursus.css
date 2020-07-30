@@ -214,3 +214,258 @@
 .kursus-list .footer-card .btn-block:hover {
     background: #0F91A7;    
 }
+
+
+/* detail kursus */
+
+.wrap-course-details .course-category p{
+    position: relative;
+    color: #3F95A9;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+
+.wrap-course-details .course-category p::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 20px;
+    height: 2px;
+    background: #3F95A9;
+}
+
+.title-detail .right-side h1{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.title-detail .right-side .mentor{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.title-detail .hour-rate .hour-side p{
+    font-size: 15px;
+    color: #BDBDBD;    
+}
+
+.rate-side img{
+    height: 23px;
+    width: 23px;
+    
+}
+
+.title-detail hr{
+    background-color: #3F95A9;
+    width: 20%;
+    height: 5px;
+    text-align: left;
+    margin-left: 17px;
+    border-radius: 20px;
+    align-content: flex-start;
+}
+
+.course-about h3{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.course-advantage h3{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.wrap-course-details .line-3{
+    background-color: #3F95A9;
+    width: 20%;
+    height: 5px;
+    text-align: left;
+    margin-left: 0px;
+    border-radius: 20px;
+    align-content: flex-start;
+}
+
+.course-silabus h3{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.course-silabus thead{
+    background-color: #3F95A9;
+    color: white;
+}
+
+.course-silabus tbody{
+    background-color: #FAFAFA;
+
+}
+
+.gabung h3{
+    font-size: 24px;
+    font-weight: bolder;    
+}
+
+.gabung .pull-right span{
+    color: #EB5757;
+}
+
+.gabung .pull-right{
+    color: #BDBDBD;
+}
+
+.gabung .kuota-tersedia{
+    color: #3F95A9;
+}
+
+.gabung .kuota-tersedia img{
+    width: 40px;
+    height: 40px;
+}
+
+.gabung .kuota-tersedia span{
+    font-weight: bolder;
+}
+
+.gabung .btn-gabung{
+    background-color: #68C8D8;
+    color: white;
+    border-radius: 100px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.gabung .btn-gabung:hover{
+    background-color: #3F95A9;    
+}
+
+.rating-komentar h3{
+    font-size: 24px;
+    font-weight: bolder;    
+}
+
+/* for rating */
+
+.star-rating__stars {
+    position: relative;
+    height: 20px;
+    width: 100px;
+    background: url('/images/star5.png');
+    background-size: 20px 20px;
+  }
+  
+  .star-rating__label {
+    position: absolute;
+    height: 100%;
+    background-size: 20px 20px;
+  }
+  
+  .star-rating__input {
+    margin: 0;
+    position: absolute;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  
+  .star-rating__stars .star-rating__label:nth-of-type(1) {
+    z-index: 5;
+    width: 20%;
+  }
+  
+  .star-rating__stars .star-rating__label:nth-of-type(2) {
+    z-index: 4;
+    width: 40%;
+  }
+  
+  .star-rating__stars .star-rating__label:nth-of-type(3) {
+    z-index: 3;
+    width: 60%;
+  }
+  
+  .star-rating__stars .star-rating__label:nth-of-type(4) {
+    z-index: 2;
+    width: 80%;
+  }
+  
+  .star-rating__stars .star-rating__label:nth-of-type(5) {
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .star-rating__input:checked + .star-rating__label,
+  .star-rating__input:focus + .star-rating__label,
+  .star-rating__label:hover {
+    background-image: url('/images/star1.png');
+  }
+  
+  .star-rating__label:hover ~ .star-rating__label {
+    background-image: url('/images/star5.png');
+  }
+  
+  .star-rating__input:focus ~ .star-rating__focus {
+    position: absolute;
+    top: -.25em;
+    right: -.25em;
+    bottom: -.25em;
+    left: -.25em;
+    outline: 0.25rem solid lightblue;
+  }
+
+.wrap-course-mentor .mentor-name{
+      font-weight: bolder;
+      text-transform: capitalize;
+  }
+
+.wrap-course-mentor .mentor-job{    
+    text-transform: capitalize;
+}
+
+.wrap-course-mentor .mentor-img{    
+    display:block;
+    margin:auto;
+}
+
+.rating-komentar .btn-delete{
+    border-radius: 100px;    
+    border: 1px solid #EB5757;
+    color: #EB5757;
+}
+
+.rating-komentar .btn-edit{
+    border-radius: 100px;    
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+}
+
+.rating-komentar .btn-kirim{
+    background-color: #68C8D8;
+    border-radius: 100px;
+    color: white;
+}
+
+.wrap-course-mentor .follow .btn-circle {        
+    width: 40px;
+    height: 40px;
+    color: #BDBDBD;
+}
+
+.wrap-course-mentor .follow .btn-circle:hover{
+    color: #68C8D8;
+}
+.wrap-course-mentor .follow li{
+    display: inline;
+}
+
+
+/* review dan komentar */
+
+.review-komentar h3{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.review-komentar h5{
+    font-size: 20px;
+    font-weight: bold;
+}
