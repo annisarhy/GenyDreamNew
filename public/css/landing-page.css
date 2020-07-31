@@ -390,6 +390,39 @@ header .carousel-inner .carousel-item {
     font-weight: 1;
 }
 
+
+
+/* kategori populer */
+
+#btn-kategori {            
+    border: solid 2px;
+}
+
+#image-kategori {
+    display: block;
+    margin: auto;
+    margin-top: 15%;
+    width: 70px;
+    height: 70px;
+    background: #D6EDF1;
+    border-radius: 100px;
+}
+
+#jmlLowongan {
+    color: #68C8D8;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* footer */
 .footer {
     background: #22272b;
@@ -491,3 +524,5 @@ header .carousel-inner .carousel-item {
     line-height: 30px;
     letter-spacing: 0.2px;
 }
+
+

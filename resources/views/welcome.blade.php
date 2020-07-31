@@ -209,20 +209,155 @@
 <!-- section lowongan kerja populer -->
 <section class="lowongan-populer">
         <div class="container py-5">
-            <div class="row justify-content-center">
+
+            <h4 class="font-weight-bold text-center">KATEGORI LOWONGAN KERJA PALING POPULER</h4>                    
+            <div class="" id="line-row">
+                <div class="line"></div>
+            </div>
+                                        
+            <p class="text-center">Inilah kategori yang paling banyak dilihat di situs web temukan pekerjaan favorit kamu di sini.</p>
+
+            <div class="row justify-content-center lowongan-content">                                
                 <div class="col-lg-3 col-md-6">
-                    <div class="row bg-dark">
+                    <div class="row border m-2 pb-3">
                         <div class="col-md-6 col-sm-6">
                             <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid p-3" id="image-kategori">
                         </div>
                         <div class="col-md-6">
-                            <p class="font-weight-bold text-center mt-4">Developer</p>
-                            <p class="font-weight-light text-center mt-2" id="jmlLowongan">2084 Lowongan</p>
+                            <p class="font-weight-bold mt-4 mb-0">Developer</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
                         </div>                        
                     </div>
                 </div>                                                                                                
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="row border m-2 pb-3">
+                        <div class="col-md-6 col-sm-6">
+                            <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid p-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="font-weight-bold mt-4 mb-0">Developer</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>                        
+                    </div>
+                </div>                                                                                                
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="row border m-2 pb-3">
+                        <div class="col-md-6 col-sm-6">
+                            <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid p-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="font-weight-bold mt-4 mb-0">Developer</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>                        
+                    </div>
+                </div>                                                                                                
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="row border m-2 pb-3">
+                        <div class="col-md-6 col-sm-6">
+                            <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid p-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="font-weight-bold mt-4 mb-0">Developer</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>                        
+                    </div>
+                </div>                                                                                                
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="row border m-2 pb-3">
+                        <div class="col-md-6 col-sm-6">
+                            <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid p-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="font-weight-bold mt-4 mb-0">Developer</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>                        
+                    </div>
+                </div>                                                                                                
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="row border m-2 pb-3">
+                        <div class="col-md-6 col-sm-6">
+                            <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid p-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="font-weight-bold mt-4 mb-0">Developer</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>                        
+                    </div>
+                </div>                                                                                                
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="row border m-2 pb-3">
+                        <div class="col-md-6 col-sm-6">
+                            <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid p-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="font-weight-bold mt-4 mb-0">Developer</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>                        
+                    </div>
+                </div>                                                                                                
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="row border m-2 pb-3">
+                        <div class="col-md-6 col-sm-6">
+                            <img src="{{ asset('images/gedung-outline.png') }}" class="img-fluid p-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="font-weight-bold mt-4 mb-0">Developer</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>                        
+                    </div>
+                </div>                                                                                                
+                
             </div>
         </div>
-</section>        
+</section>   
 
+<!-- section Lowongan terbaik -->
+<section class="lowongan-terbaik">
+
+</section>
+
+<!-- end of section lowongan terbaik -->
+
+<!-- section lowongan-terkini -->
+<section class="lowongan-terkini">
+
+</section>
+<!-- end of section lowongan terbaik -->
+
+<!-- section daftar akun -->
+<section class="daftar-akun">
+
+</section>
+<!-- end of section daftar akun -->
+
+<!-- section quote 2 -->
+<section class="quote-2">
+
+</section>
+<!-- end of section quote 2 -->
+
+<!-- section list-course -->
+<section class="list-course">
+
+</section>
+<!-- end of list course -->
+
+<!-- section kursus terbaru -->
+<section class="kursus-terbaru">
+
+</section>
+<!-- end of kursus terbaru -->
+
+<!-- section intern -->
+<section class="intern">
+
+</section>
+<!-- end of section intern -->
 @endsection
