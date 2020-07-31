@@ -207,7 +207,7 @@
 <!-- end of section info website -->
 
 <!-- section lowongan kerja populer -->
-<!-- <section class="lowongan-populer">
+<section class="lowongan-populer">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-6">
@@ -222,6 +222,7 @@
                     </div>
                 </div>                                                                                                
             </div>
-        </div>-->
+        </div>
+</section>        
 
 @endsection
