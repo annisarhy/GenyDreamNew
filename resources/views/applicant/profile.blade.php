@@ -54,7 +54,7 @@
                                     <div class="infos">
                                         <h2>Ana Minerva</h2>
                                         <div class="">Employee Acount</div>
-                                        <button style="margin-top: 10px;" class="col btn btn-blue-moon btn-rounded"> EDIT YOUR PROFILE</button>
+                                        <button style="margin-top: 10px;" class="col btn btn-blue-moon btn-rounded"><a href="{{ __('edit-profile') }}"> EDIT YOUR PROFILE</a></button>
 
                                     </div>
                                 </div>

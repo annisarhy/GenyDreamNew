@@ -50,7 +50,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ __('kursusfirst') }}" style="color: white;" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</a>
+                                <a href="{{ __('lowongan-kerja') }}" style="color: white;" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</a>
                                 <hr>
                                 <p>Or register with</p>
 

@@ -37,7 +37,7 @@
                                 </div>
                                 <p class="text-right"><a href=""> Forgot your password?</a></p>
 
-                                <a href="{{ __('kursusfirst') }}" style="color: white;" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</a>
+                                <a href="{{ __('lowongan-kerja') }}" style="color: white;" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</a>
                                 <hr>
                                 <p>Or login with</p>
 
