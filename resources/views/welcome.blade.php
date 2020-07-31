@@ -38,13 +38,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" data-value="about" href="#">BERANDA</a>
+                    <a class="nav-link" data-value="about" href="#carouselExampleIndicators">BERANDA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="portfolio" href="#">LOWONGAN KERJA</a>
+                    <a class="nav-link " data-value="portfolio" href="#cari-lowongan">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="blog" href="#">TIPS DAN BERITA</a>
+                    <a class="nav-link " data-value="blog" href="#list-course">KURSUS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="team" href="#">FAQ</a>
@@ -56,10 +56,10 @@
 
             <ul class="navbar-nav pull-right flex-row" id="pull-right">
                 <li class="nav-item">
-                    <a href="#" class="nav-link pl-3 pr-3" id="navButton">SIGN IN</a>
+                    <a href="{{ url('login') }}" class="nav-link pl-3 pr-3" id="navButton">SIGN IN</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link pl-3 pr-3" id="navButton">SIGN UP</a>
+                    <a href="{{ url('register') }}" class="nav-link pl-3 pr-3" id="navButton">SIGN UP</a>
                 </li>
             </ul>
         </div>
@@ -214,7 +214,7 @@
 
 
     <!-- section cari lowongan -->
-    <section class="cari-lowongan">
+    <section class="cari-lowongan" id="cari-lowongan">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-6 left-side">
@@ -859,10 +859,10 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-3 d-flex justify-content-end">
-                    <button class="btn btn-signup font-weight-bold"><img src="{{ asset('images/ant-design_file-search-outlined-white.png') }}" alt=""> CARI LOWONGAN</button>
+                    <a href="{{ url('register') }}" class="btn btn-signup font-weight-bold"><img src="{{ asset('images/ant-design_file-search-outlined-white.png') }}" alt=""> CARI LOWONGAN</a>
                 </div>
                 <div class="col-md-3">
-                    <button class="btn btn-signup font-weight-bold"><img src="{{ asset('images/signupLogo.png') }}" alt="" class="mr-2">PASANG LOWONGAN</button>
+                    <a class="btn btn-signup font-weight-bold"><img src="{{ asset('images/signupLogo.png') }}" alt="" class="mr-2">PASANG LOWONGAN</a>
                 </div>
             </div>
         </div>
@@ -876,7 +876,7 @@
     <!-- end of section quote 2 -->
 
     <!-- section list-course -->
-    <section class="list-course">
+    <section class="list-course" id="list-course">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-5 col-md-5 list-course-title">

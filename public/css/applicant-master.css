@@ -50,6 +50,10 @@ body {
     background: #000000;
 }
 
+#profilebutton{
+    height: 30px;
+}
+
 
 /*Footer*/
 .footer-widget p {

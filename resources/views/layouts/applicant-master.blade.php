@@ -43,10 +43,10 @@
                     <a class="nav-link" data-value="about" href="#">BERANDA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="portfolio" href="#">LOWONGAN KERJA</a>
+                    <a class="nav-link " data-value="portfolio" href="{{ url('lowongankerja') }}">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="blog" href="#">TIPS DAN BERITA</a>
+                    <a class="nav-link " data-value="blog" href="{{ url('kursus') }}">KURSUS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="team" href="#">FAQ</a>
@@ -56,13 +56,10 @@
                 </li>
             </ul>
 
-            <ul class="navbar-nav pull-right flex-row" id="pull-right">
+            <ul class="navbar-nav pull-right flex-row mr-4" id="pull-right">
                 <li class="nav-item">
-                    <a href="#" class="nav-link pl-3 pr-3" id="navButton">SIGN IN</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link pl-3 pr-3" id="navButton">SIGN UP</a>
-                </li>
+                    <a href="{{ url('profile') }}" data-toggle="tooltip" title="Profile"><img src="{{ asset('images/mentor-img.png') }}" alt="" id="profilebutton"></a>
+                </li>                
             </ul>
         </div>
     </nav>
@@ -232,6 +229,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script>
+
 
 </body>
 
