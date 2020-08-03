@@ -24,14 +24,15 @@
                             <h5 class="card-title">Get Register for free </h5>
                             <p>Welcome! Please fill all the text to create your account.</p>
 
-                            <form class="form-signin">
+                            <form class="form-signin" method="POST" action="{{ route('register') }}">
+                                @csrf
                                 <div class="form-label-group">
-                                    <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
-                                    <label for="inputUserame">Full Name</label>
+                                    <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                                    <label for="inputUserame">Username</label>
                                 </div>
 
                                 <div class="form-label-group">
-                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                                    <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                                     <label for="inputEmail">Email address</label>
                                 </div>
 
@@ -39,18 +40,18 @@
                                 <div class="row">
                                     <div style="margin-bottom: 2%;" class="col-md-6">
                                         <div class="form-label-group">
-                                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                            <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                                             <label for="inputPassword">Password</label>
                                         </div>
                                     </div>
                                     <div style="margin-bottom: 2%;" class="col-md-6">
                                         <div class="form-label-group">
-                                            <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+                                            <input name="password_confirmation" type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
                                             <label for="inputConfirmPassword">Confirm password</label>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ __('lowongan-kerja') }}" style="color: white;" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</a>
+                                <button style="color: white;" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
                                 <hr>
                                 <p>Or register with</p>
 

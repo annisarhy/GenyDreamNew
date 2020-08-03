@@ -19,6 +19,7 @@ class CreateLamaranTable extends Migration
             $table->foreignId('id_pelamar')->constrained('pelamar');
             $table->tinyInteger('status');
             $table->string('verifikator');
+            $table->date('tgl_verifikasi');
             $table->timestamps();
         });
     }

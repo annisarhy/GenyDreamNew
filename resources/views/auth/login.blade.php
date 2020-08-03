@@ -24,20 +24,21 @@
                         <div class="container-fluid">
                             <h5 class="card-title">Login </h5>
                             <p>Welcome! Please fill email and password to sign in into your account.</p>
-                            <form class="form-signin">
+                            <form class="form-signin" method="POST" action="{{ route('login') }}">
+                                @csrf
                                 <div class="form-label-group">
-                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                                    <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                                     <label for="inputEmail">Email address</label>
                                 </div>
 
 
                                 <div class="form-label-group">
-                                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                    <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                                     <label for="inputPassword">Password</label>
                                 </div>
                                 <p class="text-right"><a href=""> Forgot your password?</a></p>
 
-                                <a href="{{ __('lowongan-kerja') }}" style="color: white;" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</a>
+                                <button style="color: white;" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
                                 <hr>
                                 <p>Or login with</p>
 
