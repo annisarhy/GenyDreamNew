@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -23,10 +24,11 @@
     <link href="{{ asset('css/landing-page.css') }}" rel="stylesheet">
 
 </head>
+
 <body>
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top pl-4">
         <a class="navbar-brand" href="#">
             <img src="{{asset('/images/LogoGenyDream.png') }}" alt="">
         </a>
@@ -273,121 +275,121 @@
 
     <!-- section lowongan kerja populer -->
     <section class="lowongan-populer">
-            <div class="container py-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <h4 class="font-weight-bold text-center">KATEGORI LOWONGAN KERJA PALING POPULER</h4>
-                        <div class="row justify-content-center">
-                            <div class="col-md-9 mt-3 mb-4" id="line-row">
-                                <div class="line"></div>
-                            </div>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h4 class="font-weight-bold text-center">KATEGORI LOWONGAN KERJA PALING POPULER</h4>
+                    <div class="row justify-content-center">
+                        <div class="col-md-9 mt-3 mb-4" id="line-row">
+                            <div class="line"></div>
                         </div>
-                        <div class="row justify-content-center">
-                            <p class="text-center col-md-9">Inilah kategori yang paling banyak dilihat di situs web temukan pekerjaan favorit kamu di sini.</p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="text-center col-md-9">Inilah kategori yang paling banyak dilihat di situs web temukan pekerjaan favorit kamu di sini.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center lowongan-content-container">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="d-flex flex-row m-2 pb-3 lowongan-content ">
+                        <div class="col-md-5 col-sm-5">
+                            <img src="{{ asset('images/developer.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <p class="font-weight-bold mt-3 mb-0 lowongan-name">Developer</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
                         </div>
                     </div>
                 </div>
-                                                    
-                <div class="row justify-content-center lowongan-content-container">                                
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="d-flex flex-row m-2 pb-3 lowongan-content ">
-                            <div class="col-md-5 col-sm-5">
-                                <img src="{{ asset('images/developer.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                                <p class="font-weight-bold mt-3 mb-0 lowongan-name">Developer</p>
-                                <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
-                            </div>                        
-                        </div>
-                    </div>                                                                                                
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-row m-2 pb-3 lowongan-content">
-                            <div class="col-md-5 col-sm-5">
-                                <img src="{{ asset('images/pemerintahan.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                                <p class="font-weight-bold mt-3 mb-0 lowongan-name">PEMERINTAH</p>
-                                <p class="font-weight-light" id="jmlLowongan">1923 Lowongan</p>
-                            </div>                        
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-row m-2 pb-3 lowongan-content">
+                        <div class="col-md-5 col-sm-5">
+                            <img src="{{ asset('images/pemerintahan.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
                         </div>
-                    </div>                                                                                                
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-row m-2 pb-3 lowongan-content">
-                            <div class="col-md-5 col-sm-5 p-0">
-                                <img src="{{ asset('images/konstruksi.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
-                            </div>
-                            <div class="col-md-7 col-sm-7 p-0">
-                                <p class="font-weight-bold mt-3 mb-0 lowongan-name">KONSTRUKSI DAN FASILITAS</p>
-                                <p class="font-weight-light" id="jmlLowongan">752 Lowongan</p>
-                            </div>                        
+                        <div class="col-md-7 col-sm-7">
+                            <p class="font-weight-bold mt-3 mb-0 lowongan-name">PEMERINTAH</p>
+                            <p class="font-weight-light" id="jmlLowongan">1923 Lowongan</p>
                         </div>
-                    </div>                                                                                                
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-row m-2 pb-3 lowongan-content">
-                            <div class="col-md-5 col-sm-5">
-                                <img src="{{ asset('images/multimedia.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                                <p class="font-weight-bold mt-3 mb-0 lowongan-name">DESIGN & MULTIMEDIA</p>
-                                <p class="font-weight-light" id="jmlLowongan">2031 Lowongan</p>
-                            </div>                        
-                        </div>
-                    </div>                                                                                                
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-row m-2 pb-3 lowongan-content">
-                            <div class="col-md-5 col-sm-5">
-                                <img src="{{ asset('images/teknologi.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                                <p class="font-weight-bold mt-3 mb-0 lowongan-name">TEKNOLOGI</p>
-                                <p class="font-weight-light" id="jmlLowongan">2038 Lowongan</p>
-                            </div>                        
-                        </div>
-                    </div>                                                                                                
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-row m-2 pb-3 lowongan-content">
-                            <div class="col-md-5 col-sm-5">
-                                <img src="{{ asset('images/akuntansi.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                                <p class="font-weight-bold mt-3 mb-0 lowongan-name">AKUNTASI & KEUANGAN</p>
-                                <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
-                            </div>                        
-                        </div>
-                    </div>                                                                                                
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-row m-2 pb-3 lowongan-content">
-                            <div class="col-md-5 col-sm-5">
-                                <img src="{{ asset('images/telekomunikasi.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                                <p class="font-weight-bold mt-3 mb-0 lowongan-name">TELEKOMUNIKASI</p>
-                                <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
-                            </div>                        
-                        </div>
-                    </div>                                                                                                
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-row m-2 pb-3 lowongan-content clearfix">
-                            <div class="col-md-5 col-sm-5">
-                                <img src="{{ asset('images/sdm.png') }}" class="img-fluid p-3 mt-3 col-s" id="image-kategori">
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                                <p class="font-weight-bold mt-3 mb-0 lowongan-name">SUMBER DAYA MANUSIA</p>
-                                <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
-                            </div>                        
-                        </div>
-                    </div>                                                                                                
-                    
+                    </div>
                 </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-row m-2 pb-3 lowongan-content">
+                        <div class="col-md-5 col-sm-5 p-0">
+                            <img src="{{ asset('images/konstruksi.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-7 col-sm-7 p-0">
+                            <p class="font-weight-bold mt-3 mb-0 lowongan-name">KONSTRUKSI DAN FASILITAS</p>
+                            <p class="font-weight-light" id="jmlLowongan">752 Lowongan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-row m-2 pb-3 lowongan-content">
+                        <div class="col-md-5 col-sm-5">
+                            <img src="{{ asset('images/multimedia.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <p class="font-weight-bold mt-3 mb-0 lowongan-name">DESIGN & MULTIMEDIA</p>
+                            <p class="font-weight-light" id="jmlLowongan">2031 Lowongan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-row m-2 pb-3 lowongan-content">
+                        <div class="col-md-5 col-sm-5">
+                            <img src="{{ asset('images/teknologi.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <p class="font-weight-bold mt-3 mb-0 lowongan-name">TEKNOLOGI</p>
+                            <p class="font-weight-light" id="jmlLowongan">2038 Lowongan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-row m-2 pb-3 lowongan-content">
+                        <div class="col-md-5 col-sm-5">
+                            <img src="{{ asset('images/akuntansi.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <p class="font-weight-bold mt-3 mb-0 lowongan-name">AKUNTASI & KEUANGAN</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-row m-2 pb-3 lowongan-content">
+                        <div class="col-md-5 col-sm-5">
+                            <img src="{{ asset('images/telekomunikasi.png') }}" class="img-fluid p-3 mt-3" id="image-kategori">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <p class="font-weight-bold mt-3 mb-0 lowongan-name">TELEKOMUNIKASI</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-row m-2 pb-3 lowongan-content clearfix">
+                        <div class="col-md-5 col-sm-5">
+                            <img src="{{ asset('images/sdm.png') }}" class="img-fluid p-3 mt-3 col-s" id="image-kategori">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <p class="font-weight-bold mt-3 mb-0 lowongan-name">SUMBER DAYA MANUSIA</p>
+                            <p class="font-weight-light" id="jmlLowongan">2084 Lowongan</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-    </section>   
+        </div>
+    </section>
 
     <!-- section Lowongan terbaik -->
     <section class="lowongan-terbaik">
@@ -408,71 +410,71 @@
 
             <div class="row justify-content-center lowongan-terbaik-container">
                 <div class="col-lg-3 col-md-6">
-                    <div class="row pb-3 lowongan-terbaik-content">                    
-                        <img src="{{ asset('images/jakarta.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">                
-                        
-                        <p class="font-weight-bold city-name">JAKARTA</p>                    
+                    <div class="row pb-3 lowongan-terbaik-content">
+                        <img src="{{ asset('images/jakarta.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">
+
+                        <p class="font-weight-bold city-name">JAKARTA</p>
                     </div>
-                </div>                                                                                                
+                </div>
 
                 <div class="col-lg-3 col-md-6">
                     <div class="row pb-3 lowongan-terbaik-content">
-                        <img src="{{ asset('images/bandung.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">                
-                        
-                        <p class="font-weight-bold city-name">BANDUNG</p>                                    
+                        <img src="{{ asset('images/bandung.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">
+
+                        <p class="font-weight-bold city-name">BANDUNG</p>
                     </div>
-                </div>                                                                                                            
+                </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="row pb-3 lowongan-terbaik-content">                    
-                        <img src="{{ asset('images/bandung.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">                
-                        
-                        <p class="font-weight-bold city-name">SURABAYA</p>                    
+                    <div class="row pb-3 lowongan-terbaik-content">
+                        <img src="{{ asset('images/bandung.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">
+
+                        <p class="font-weight-bold city-name">SURABAYA</p>
                     </div>
-                </div>                                                                                                
+                </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="row pb-3 lowongan-terbaik-content">                    
-                        <img src="{{ asset('images/semarang.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">                
-                        
-                        <p class="font-weight-bold city-name">SEMARANG</p>                    
+                    <div class="row pb-3 lowongan-terbaik-content">
+                        <img src="{{ asset('images/semarang.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">
+
+                        <p class="font-weight-bold city-name">SEMARANG</p>
                     </div>
-                </div>                                                                                                            
+                </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="row pb-3 lowongan-terbaik-content">                    
-                        <img src="{{ asset('images/medan.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">                
-                        
-                        <p class="font-weight-bold city-name">MEDAN</p>                    
+                    <div class="row pb-3 lowongan-terbaik-content">
+                        <img src="{{ asset('images/medan.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">
+
+                        <p class="font-weight-bold city-name">MEDAN</p>
                     </div>
-                </div>                                                                                                
+                </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="row pb-3 lowongan-terbaik-content">                    
-                        <img src="{{ asset('images/balikpapan.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">                
-                        
-                        <p class="font-weight-bold city-name">BALIKPAPAN</p>                    
+                    <div class="row pb-3 lowongan-terbaik-content">
+                        <img src="{{ asset('images/balikpapan.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">
+
+                        <p class="font-weight-bold city-name">BALIKPAPAN</p>
                     </div>
-                </div>                                                                                                            
+                </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="row pb-3 lowongan-terbaik-content">                    
-                        <img src="{{ asset('images/makassar.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">                
-                        
-                        <p class="font-weight-bold city-name">MAKASSAR</p>                    
+                    <div class="row pb-3 lowongan-terbaik-content">
+                        <img src="{{ asset('images/makassar.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">
+
+                        <p class="font-weight-bold city-name">MAKASSAR</p>
                     </div>
-                </div>                                                                                                
+                </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="row pb-3 lowongan-terbaik-content">                    
-                        <img src="{{ asset('images/yogya.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">                
-                        
-                        <p class="font-weight-bold city-name">YOGYAKARTA</p>                    
+                    <div class="row pb-3 lowongan-terbaik-content">
+                        <img src="{{ asset('images/yogya.png') }}" class="img-fluid p-3 mx-auto" id="image-kota">
+
+                        <p class="font-weight-bold city-name">YOGYAKARTA</p>
                     </div>
-                </div>                                                                                                            
-                
+                </div>
+
             </div>
-        </div>    
+        </div>
     </section>
 
     <!-- end of section lowongan terbaik -->
@@ -509,22 +511,22 @@
 
                         <ol class="carousel-indicators" style="margin-top:100px">
                             <li data-target="#lowongan-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#lowongan-carousel" data-slide-to="1"></li>                    
+                            <li data-target="#lowongan-carousel" data-slide-to="1"></li>
                         </ol>
-                    </div>                
+                    </div>
 
                     <!--Slides-->
                     <div class="carousel-inner" role="listbox">
 
                         <!--First slide-->
                         <div class="carousel-item active">
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">            
-                                <div class="card lowongan-kerja pb-3">                
+                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
+                                <div class="card lowongan-kerja pb-3">
                                     <div class="row ml-1 update-time">
                                         <i class="fa fa-clock-o p-1"></i>
                                         <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>    
-                                    
+                                    </div>
+
                                     <div class="card-image mx-auto">
                                         <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                                     </div>
@@ -553,17 +555,17 @@
                                                 <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">            
-                                <div class="card lowongan-kerja pb-3">                
+                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
+                                <div class="card lowongan-kerja pb-3">
                                     <div class="row ml-1 update-time">
                                         <i class="fa fa-clock-o p-1"></i>
                                         <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>    
-                                    
+                                    </div>
+
                                     <div class="card-image mx-auto">
                                         <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                                     </div>
@@ -592,17 +594,17 @@
                                                 <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">            
-                                <div class="card lowongan-kerja pb-3">                
+                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
+                                <div class="card lowongan-kerja pb-3">
                                     <div class="row ml-1 update-time">
                                         <i class="fa fa-clock-o p-1"></i>
                                         <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>    
-                                    
+                                    </div>
+
                                     <div class="card-image mx-auto">
                                         <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                                     </div>
@@ -631,17 +633,17 @@
                                                 <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">            
-                                <div class="card lowongan-kerja pb-3">                
+                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
+                                <div class="card lowongan-kerja pb-3">
                                     <div class="row ml-1 update-time">
                                         <i class="fa fa-clock-o p-1"></i>
                                         <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>    
-                                    
+                                    </div>
+
                                     <div class="card-image mx-auto">
                                         <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                                     </div>
@@ -670,25 +672,25 @@
                                                 <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
-                            
 
-                            
+
+
 
                         </div>
                         <!--/.First slide-->
 
                         <!--Second slide-->
                         <div class="carousel-item">
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">            
-                                <div class="card lowongan-kerja pb-3">                
+                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
+                                <div class="card lowongan-kerja pb-3">
                                     <div class="row ml-1 update-time">
                                         <i class="fa fa-clock-o p-1"></i>
                                         <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>    
-                                    
+                                    </div>
+
                                     <div class="card-image mx-auto">
                                         <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                                     </div>
@@ -717,17 +719,17 @@
                                                 <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">            
-                                <div class="card lowongan-kerja pb-3">                
+                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
+                                <div class="card lowongan-kerja pb-3">
                                     <div class="row ml-1 update-time">
                                         <i class="fa fa-clock-o p-1"></i>
                                         <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>    
-                                    
+                                    </div>
+
                                     <div class="card-image mx-auto">
                                         <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                                     </div>
@@ -756,17 +758,17 @@
                                                 <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">            
-                                <div class="card lowongan-kerja pb-3">                
+                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
+                                <div class="card lowongan-kerja pb-3">
                                     <div class="row ml-1 update-time">
                                         <i class="fa fa-clock-o p-1"></i>
                                         <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>    
-                                    
+                                    </div>
+
                                     <div class="card-image mx-auto">
                                         <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                                     </div>
@@ -795,17 +797,17 @@
                                                 <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">            
-                                <div class="card lowongan-kerja pb-3">                
+                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
+                                <div class="card lowongan-kerja pb-3">
                                     <div class="row ml-1 update-time">
                                         <i class="fa fa-clock-o p-1"></i>
                                         <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>    
-                                    
+                                    </div>
+
                                     <div class="card-image mx-auto">
                                         <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                                     </div>
@@ -834,7 +836,7 @@
                                                 <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -887,11 +889,11 @@
                     <a href="{{ url('kursus') }}" class="btn btn-md pl-3 pr-3 mt-3"><i class="fa fa-list-ul pr-2"></i>LIST COURSE</a>
                 </div>
 
-                <div class="col-lg-7 col-md-7 image-list-course-right">     
-                    <img src="{{ asset('images/list-course-kanan.png') }}" alt="">           
+                <div class="col-lg-7 image-list-course-right">
+                    <img src="{{ asset('images/list-course-kanan.png') }}" alt="">
                 </div>
             </div>
-        </div>        
+        </div>
     </section>
     <!-- end of list course -->
 
@@ -1065,9 +1067,11 @@
     </footer>
 
 
+
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>

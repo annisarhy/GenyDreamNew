@@ -31,7 +31,7 @@ body {
 }
 
 .navbar-toggle {
-    background: #ffffff !important;
+    background: #FFF;
 }
 
 #navButton {
@@ -46,7 +46,7 @@ body {
 }
 
 .navbar-toggler-icon {
-    background: #000000;
+    background-image: url('https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png');
 }
 
 /* carousel header */
@@ -61,7 +61,7 @@ header .carousel-inner .carousel-item {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 70vh;
 }
 
 .carousel-item .banner-2 {
@@ -70,7 +70,7 @@ header .carousel-inner .carousel-item {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 70vh;
 }
 
 .carousel-item .banner-3 {
@@ -79,7 +79,7 @@ header .carousel-inner .carousel-item {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 70vh;
 }
 
 .carousel-caption {
@@ -134,11 +134,11 @@ header .carousel-inner .carousel-item {
     align-content: flex-start;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
     .event-list-button {
         position: relative;
     }
-    
+
     .event-list-button a {
         position: absolute;
         bottom: 0;
@@ -150,11 +150,11 @@ header .carousel-inner .carousel-item {
     }
 }
 
-@media screen and (max-width: 992px) and ( min-width: 600px){
+@media screen and (max-width: 992px) and (min-width: 600px) {
     .event-list-button {
         position: relative;
     }
-    
+
     .event-list-button a {
         position: absolute;
         bottom: 0;
@@ -167,13 +167,13 @@ header .carousel-inner .carousel-item {
 }
 
 @media screen and (max-width: 600px) {
-    .event-list-button a {                                
+    .event-list-button a {
         border-radius: 100px;
         margin-bottom: 50px;
         background-color: #68C8D8;
         color: white;
     }
-  }
+}
 
 #carouselEventIndicators .carousel-inner {
     max-height: 300px;
@@ -237,7 +237,7 @@ header .carousel-inner .carousel-item {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 45vh;
     position: relative;
     z-index: 2;
 }
@@ -293,7 +293,7 @@ header .carousel-inner .carousel-item {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 45vh;
     position: relative;
     z-index: 2;
 }
@@ -425,16 +425,17 @@ header .carousel-inner .carousel-item {
 
 /* kategori populer */
 
-.lowongan-content{
+.lowongan-content {
     height: 100px;
     max-height: 100px;
     border: 1px solid #BDBDBD;
 }
 
-.lowongan-name{
+.lowongan-name {
     font-size: 16px;
 }
-#btn-kategori {            
+
+#btn-kategori {
     border: solid 2px;
 }
 
@@ -470,11 +471,11 @@ header .carousel-inner .carousel-item {
 
 /* lowongan terbaik */
 
-.lowongan-terbaik-content{
-    position: relative;    
+.lowongan-terbaik-content {
+    position: relative;
 }
 
-.lowongan-terbaik-content .city-name{
+.lowongan-terbaik-content .city-name {
     position: absolute;
     top: 47%;
     left: 50%;
@@ -484,39 +485,42 @@ header .carousel-inner .carousel-item {
 }
 
 /* lowongan terkini */
-.lowongan-terkini{
+.lowongan-terkini {
     background: rgb(63, 149, 169, 0.1);
 }
 
 
-.lowongan-kerja .update-time p,i{
+.lowongan-kerja .update-time p,
+i {
     color: #BDBDBD;
     font-size: 12px;
 }
 
 
-.lowongan-kerja .company-location p,i{
+.lowongan-kerja .company-location p,
+i {
     color: #BDBDBD;
 }
 
-.lowongan-kerja .job-position h6{
+.lowongan-kerja .job-position h6 {
     color: #3F95A9;
 }
-.lowongan-kerja .job-position p{
+
+.lowongan-kerja .job-position p {
     color: #BDBDBD;
 }
 
-.lowongan-kerja .btn-detail{
+.lowongan-kerja .btn-detail {
     background: #3F95A9;
     border-radius: 100px;
     color: white;
     font-size: 13px;
-    font-weight: lighter;    
+    font-weight: lighter;
 }
 
 .prev-lowongan {
-    top: 200px;    
-    background: #3F95A9;    
+    top: 200px;
+    background: #3F95A9;
     width: 50px;
     height: 60px;
     opacity: 50%;
@@ -524,37 +528,38 @@ header .carousel-inner .carousel-item {
 }
 
 .next-lowongan {
-    top: 200px;    
-    background: #3F95A9;    
+    top: 200px;
+    background: #3F95A9;
     width: 50px;
     height: 60px;
     opacity: 50%;
 }
 
-.carousel-control{
+.carousel-control {
     position: relative;
 }
 
-.carousel-control .carousel-indicators{
+.carousel-control .carousel-indicators {
     top: 300px;
 }
 
-@media screen and (max-width: 600px){
-    .carousel-control .carousel-indicators{
+@media screen and (max-width: 600px) {
+    .carousel-control .carousel-indicators {
         top: 1520px;
     }
 }
 
 /* daftar akun */
-.signup-title{
-    font-weight: bolder;    
+.signup-title {
+    font-weight: bolder;
 }
-.daftar-akun h1{
+
+.daftar-akun h1 {
     color: #3F95A9;
     font-weight: bolder;
 }
 
-.daftar-akun .btn-signup{    
+.daftar-akun .btn-signup {
     width: 200px;
     height: 50px;
     background: #68C8D8;
@@ -562,7 +567,7 @@ header .carousel-inner .carousel-item {
     color: white;
 }
 
-.daftar-akun .btn-signup img{
+.daftar-akun .btn-signup img {
     height: 20px;
 }
 
@@ -582,25 +587,26 @@ header .carousel-inner .carousel-item {
     align-content: flex-start;
 }
 
-.list-course-title a{        
-    margin-bottom: 50px;    
+.list-course-title a {
+    margin-bottom: 50px;
     border-radius: 100px;
     background-color: #68C8D8;
     color: white;
     font-size: 15px;
 }
 
-.list-course-title i{        
+.list-course-title i {
     color: white;
 }
 
-.list-course-title span{        
+.list-course-title span {
     color: #3F95A9;
 }
 
-.image-list-course-right{    
-    text-align: end;    
+.image-list-course-right {
+    text-align: end;
     margin-top: 140px;
+    display: none;
 }
 
 
@@ -973,5 +979,3 @@ header .carousel-inner .carousel-item {
 .copyright a:hover {
     color: #3F95A9;
 }
-
-

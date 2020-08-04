@@ -28,7 +28,8 @@
 <body>
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+
+    <nav class="navbar navbar-expand-lg flex-row pl-4 sticky-top">
         <a class="navbar-brand" href="#">
             <img src="{{asset('/images/LogoGenyDream.png') }}" alt="">
         </a>
@@ -56,19 +57,31 @@
                 </li>
             </ul>
 
-            <ul class="navbar-nav pull-right flex-row mr-4" id="pull-right">
-                <li class="nav-item">
-                    <a href="{{ url('profile') }}" data-toggle="tooltip" title="Profile"><img src="{{ asset('images/mentor-img.png') }}" alt="" id="profilebutton"></a>
-                </li>                
+            <ul class="navbar-nav  pull-left flex-row mr-4 dropdown">
+                <button class="btn btn-default" type="button" id="menu1" data-toggle="dropdown">
+                    <img id="profilebutton" style=" width: 30px; height:30px;" src="{{ asset('images/mentor-img.png') }}">
+
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href=" {{ url('profile') }}">Profile</a></li>
+                    <li role="presentation">
+                        <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+
+                </ul>
             </ul>
         </div>
+
     </nav>
 
     <!-- end of navbar -->
 
     @yield('content')
 
-    <footer id="dk-footer" class="dk-footer">
+    <footer id=" dk-footer" class="dk-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-4">
@@ -231,8 +244,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <script>
-        $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();   
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
 

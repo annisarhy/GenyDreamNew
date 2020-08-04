@@ -47,10 +47,10 @@ body {
 }
 
 .navbar-toggler-icon {
-    background: #000000;
+    background-image: url('https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png');
 }
 
-#profilebutton{
+#profilebutton {
     height: 30px;
 }
 
