@@ -1,5 +1,6 @@
 @extends('layouts.applicant-master')
 @section('content')
+
 <link rel="stylesheet" type="text/css" href="{{ url('/css/edit-profile.css') }}" />
 
 <div class=" db-social">

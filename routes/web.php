@@ -26,11 +26,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['namespace' => 'Applicant'], function () {
   Route::get('/profile', 'ProfileController@index')->name('profile');
   Route::get('/edit-profile', 'ProfileController@edit')->name('profile.edit');
-  Route::patch('/edit-profile/{id}','ProfileController@update')->name('profile.update');
+  Route::patch('/edit-profile/{id}', 'ProfileController@update')->name('profile.update');
 });
 Route::get('/lowongankerja', 'LowonganKerjaController@index')->name('lowongankerja');
 Route::get('/detaillowongankerja', 'LowonganKerjaDetailController@index')->name('detaillowongankerja');
 Route::get('/detailkursus', 'KursusDetailController@index')->name('detailkursus');
 Route::get('/kursus', 'KursusController@index')->name('kursus');
+Route::get('/sukses-apply-lamaran', 'SuksesApplyController@index')->name('sukses-apply-lamaran');
+Route::get('/apply-lamaran', 'ApplyLamaranController@index')->name('apply-lamaran');
 
 // company routes
