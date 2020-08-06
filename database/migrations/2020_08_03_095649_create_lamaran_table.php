@@ -15,7 +15,7 @@ class CreateLamaranTable extends Migration
     {
         Schema::create('lamaran', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_perusahaan')->constrained('perusahaan');
+            $table->foreignId('id_lowongan')->constrained('lowongan');
             $table->foreignId('id_pelamar')->constrained('pelamar');
             $table->tinyInteger('status');
             $table->string('verifikator');
