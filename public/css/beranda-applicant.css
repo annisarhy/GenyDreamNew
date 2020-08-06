@@ -1,0 +1,51 @@
+.form-search{
+    outline: 0;
+    border-width: 0 0 2px;
+    width: 80%;    
+}
+.form-search:focus{
+    border-color: #3F95A9;
+}
+
+#btnSearch{
+    background-color: #3F95A9;
+    color: white;
+}
+
+.fa-search{
+    height: 20px;
+    width: 20px;
+}
+
+.lowongan-terkini {
+    background: rgb(63, 149, 169, 0.1);
+}
+
+
+.lowongan-kerja .update-time p,
+i {
+    color: #BDBDBD;
+    font-size: 12px;
+}
+
+
+.lowongan-kerja .company-location p,
+i {
+    color: #BDBDBD;
+}
+
+.lowongan-kerja .job-position h6 {
+    color: #3F95A9;
+}
+
+.lowongan-kerja .job-position p {
+    color: #BDBDBD;
+}
+
+.lowongan-kerja .btn-detail {
+    background: #3F95A9;
+    border-radius: 100px;
+    color: white;
+    font-size: 13px;
+    font-weight: lighter;
+}
