@@ -122,7 +122,7 @@
                 </div>
 
                 <div class="col-lg-7 col-md-7 event-list-button">
-                    <a href="#" class="btn btn-md pl-3 pr-3"><i class="fa fa-list-ul pr-2"></i>LIST EVENT</a>
+                    <a href="#" class="btn btn-md pl-3 pr-3"><i class="fa fa-list-ul text-white pr-2"></i>LIST EVENT</a>
                 </div>
             </div>
 
@@ -163,10 +163,10 @@
     <section class="product pt-0" id="product">
         <div class="img-cloud-top"></div>
         <div class="container py-4">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <h1>MENGAPA KAMU HARUS MENGGUNAKAN GENY DREAM ?</h1>
                 <hr>
-                <p class="col-lg-8 p-0 feature-explain">Geny dream selalu berusaha memberikan yang terbaik dalam perjalanan karir kamu, kami ingin agar anak - anak muda Indonesia dapat sukses dalam berkarir sesuai dengan passion yang mereka miliki. Untuk mewujudkannya kami memiliki beberapa fitur diantarnya :</p>
+                <p class="col-lg-12 p-0 feature-explain">Geny dream selalu berusaha memberikan yang terbaik dalam perjalanan karir kamu, kami ingin agar anak - anak muda Indonesia dapat sukses dalam berkarir sesuai dengan passion yang mereka miliki. Untuk mewujudkannya kami memiliki beberapa fitur diantarnya :</p>
             </div>
 
             <div class="row">
@@ -224,15 +224,15 @@
                     <hr>
                     <p>Berbagai pilihan karir tersedia untuk kamu, raih karir impianmu dari berbagai daerah di Indonesia. Temukan karir yang sesuai untukmu dengan berbagai pilihan kategori berdasarkan spesialisasi dan kemampuanmu. Mari kita raih kesuksesan karir bersama GenyDream.</p>
 
-                    <a href="{{ url('lowongankerja') }}" class="btn btn-md pl-3 pr-3"><i class="fa fa-list-ul pr-2"></i>LIST LOWONGAN</a>
+                    <a href="{{ url('lowongankerja') }}" class="btn btn-md pl-3 pr-3"><i class="fa fa-list-ul text-white pr-2"></i>LIST LOWONGAN</a>
                 </div>
 
                 <div class="col-lg-6 right-side">
-                    <div class="buttonIn mt-2">
-                        <i class="fa fa-search"></i>
-                        <input type="text" class="form-control pl-4" id="enter" placeholder="Masukan nama lowongan, posisi, skills, atau instansi">
-                        <button class="btn pt-1" id="clear">CARI</button>
-                    </div>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <button class="btn btn-cari">CARI</button>
+                        <input type="text" class="form-control" placeholder="Masukan nama lowongan, posisi, skills, atau instansi">                    
+                    </div> 
                     <p class="mt-3"><i class="fa fa-info mr-2"></i>Temukan lebih dari 90.000 lowongan dalam Geny Hire</p>
                     <p class="join-text">AYO BERGABUNG BERSAMA KAMI</p>
                 </div>

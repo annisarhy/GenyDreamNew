@@ -245,7 +245,7 @@ p.nama-perusahaan{
 }
 
 .btn-lamar-side button:hover{
-    background: #00363d;    
+    background: #09707e;    
     color: white;
 }
 
@@ -300,4 +300,50 @@ p.nama-perusahaan{
     .carousel-control .carousel-indicators {
         top: 320px;
     }
+}
+
+
+.modal-header{
+    border:none;
+}
+
+.square-image-modal{
+    border: 1px solid #BDBDBD;
+    height: 100px;    
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nama-lowongan-modal{
+    color: #3F95A9;
+    font-weight: bolder;
+    text-transform: capitalize;  
+    font-size: 20px;  
+}
+
+.nama-perusahaan-modal{
+    color: #BDBDBD;
+    font-size: 13px;
+}
+
+.btn-lamar-modal{
+    background: #68C8D8;
+    border-radius: 100px;
+    padding: 10px;
+    color: white;
+}
+
+.btn-lamar-modal i{
+    color: white;
+}
+
+.btn-lamar-modal:hover{
+    background: #09707e;    
+    color: white;
+}
+
+.modal-footer{
+    border: none;
 }

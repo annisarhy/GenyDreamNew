@@ -588,22 +588,34 @@
 
 <!-- Modal -->
 <div class="modal fade" id="lamarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="exampleModalLabel">LAMARAN BARU</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row title-pekerjaan">
+                    <div class="col md-3">
+                        <div class="square-image-modal">
+                            <img src="{{ asset('images/gojek.png') }}" alt="img-perusahaan" class="img-fluid img-perusahaan-modal">
+                        </div>                        
+                    </div>
+                    <div class="col-md-9">
+                        <h5 class="nama-lowongan-modal">senior android developer</h5>
+                        <p class="nama-perusahaan-modal">PT GOJEK INDONESIA</p>
+                    </div>
+                </div>
+
+                <p class="mt-3 text-dark">Apa alasanmu ingin melamar pada lowongan ini ?</p>
+                <input type="text" class="form-control w-75 bg-light" name="alasan_lamar" id="alasan-lamar">
+            </div>
+            <div class="modal-footer">                
+                <a href="{{ url('apply-lamaran') }}" type="button" class="btn btn-lamar-modal">LAMAR SEKARANG <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 @endsection

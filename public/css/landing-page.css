@@ -326,42 +326,38 @@ header .carousel-inner .carousel-item {
 }
 
 .right-side {
-    position: relative;
+    position: relative;    
 }
 
-.right-side .buttonIn input {
-    margin-top: 25%;
-    padding: 0px;
-    outline: none;
+.has-search .form-control {
+    margin-top: 20%;
+    padding-left: 2.375rem;
+    position: relative;    
     border-radius: 100px;
-    font-size: 15px;
-    font-weight: Source Sans Pro;
-    padding-right: 20%;
 }
 
-.right-side .buttonIn i {
+.has-search .form-control-feedback {
     position: absolute;
-    top: 44%;
-    left: 20px;
     z-index: 2;
-    height: 30px;
-    cursor: pointer;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
     color: #68C8D8;
-    transform: translateX(2px);
 }
 
-.right-side .buttonIn button {
+.has-search .btn-cari {
     position: absolute;
-    top: 42%;
-    border-radius: 100px;
-    right: 20px;
     z-index: 2;
-    border: none;
-    height: 30px;
-    cursor: pointer;
+    display: block;
+    right: 15px;
+    border-radius: 100px;    
+    text-align: center;
+    pointer-events: none;
     color: white;
-    background-color: #1e90ff;
-    transform: translateX(2px);
+    background: #68C8D8;
 }
 
 .right-side p {
