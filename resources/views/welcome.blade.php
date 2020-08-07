@@ -95,16 +95,16 @@
             <div class="carousel-item">
                 <div class="banner banner-2"></div>
                 <div class="carousel-caption">
-                    <h4>carousel 2</h4>
-                    <h5>carousel ke 2</h5>
+                    <h4>Choose a job you love, and you will never have to work a day in your life.”</h4>
+                    <h5>Confucius</h5>
                 </div>
             </div>
 
             <div class="carousel-item">
                 <div class="banner banner-3"></div>
                 <div class="carousel-caption">
-                    <h4>Carousel 3</h4>
-                    <h5>Carousel ke 3</h5>
+                    <h4>"Don't give up on your dreams, or your dreams will give up on you."</h4>
+                    <h5>John Wooden</h5>
                 </div>
             </div>
         </div>
