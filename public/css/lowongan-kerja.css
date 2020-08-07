@@ -1,111 +1,303 @@
-.form-search{
-    outline: 0;
-    border-width: 0 0 2px;
-    width: 80%;    
-}
-.form-search:focus{
-    border-color: #3F95A9;
+/* wrap */
+
+.wrap-slider{
+    background: url('/images/lowongan-wrapper.png');
+    height: 300px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;        
+    width: 100%;
+    position: relative;
 }
 
-#btnSearch{
-    background-color: #3F95A9;
-    color: white;
+.wrap-slider::after {
+	content: ''; 
+	width: 100%; 
+	height: 100%;
+	background-color: #3F95A9; 
+	opacity: 0.5; 
+	position: absolute; 
+	top: 0; 
+	left: 0;	
 }
 
-.fa-search{
-    height: 20px;
-    width: 20px;
+.container.page-container {
+    height: 100%;    
 }
 
-.lowongan-kerja{    
-    border-radius: 20px;    
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    
+.wrap-slider .page-content{
+    width: 100%;
+    height: 100%;
+    display: table;    
 }
 
-.lowongan-kerja .update-time p,i{
-    color: #BDBDBD;
+.wrap-slider .page-title{
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    z-index: 2;
 }
 
-
-.lowongan-kerja .company-location p,i{
-    color: #BDBDBD;
+.wrap-slider .page-title h1{
+    font-family: Source Sans Pro;
+    font-size: 60px;
+    color: white;        
 }
 
-.lowongan-kerja .job-position h6{
-    color: #3F95A9;
-}
-.lowongan-kerja .job-position p{
-    color: #BDBDBD;
-}
-
-.lowongan-kerja .btn-block{
-    background: #3F95A9;
-    border-bottom-right-radius: 20px;
-    color: white;
-    font-size: 13px;
-    font-weight: lighter;    
-}
-.lowongan-kerja .fa-angle-right{    
-    color: white;    
-}
-
-/* Detail Lowongan */
-#img-profile-nav{
-    height: 40px;
-    width: 40px;
+/* search */
+.has-search .form-control {
+    padding-left: 2.375rem;
+    position: relative;    
     border-radius: 100px;
 }
 
-.emp-profile{
-    padding: 3%;    
-    margin-bottom: 3%;
-    border-radius: 0.5rem;
-    background: #fff;
-}
-.profile-img{
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
     text-align: center;
-}
-.profile-img img{
-    width: 70%;
-    height: 100%;
-    max-height: 160px;
+    pointer-events: none;
+    color: #aaa;
 }
 
-.profile-head h5{
-    color: #333;
-}
-.profile-head h6{
-    color: #3F95A9;
+.has-search .btn-cari {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    right: 15px;
+    border-radius: 100px;    
+    text-align: center;
+    pointer-events: none;
+    color: white;
+    background: #68C8D8;
 }
 
-.profile-head .nav-tabs{
-    margin-bottom:5%;
+.bootstrap-select .btn {
+    background-color: white;
+    border: 2px solid #68C8D8;                
+    color: #68C8D8;
+}  
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active {
+  color: #68C8D8;
 }
-.profile-head .nav-tabs .nav-link{
-    font-weight:600;
-    border: none;
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover{
+    color: white;
+  }
+
+.dropdown-toggle{
+    background: white;
+    border: 2px solid #68C8D8;
+    color: #68C8D8;
 }
-.profile-head .nav-tabs .nav-link.active{
-    border: none;
-    border-bottom:2px solid #68C8D8;
+
+.dropdown-toggle:hover{
+    background-color: #68C8D8;
+    border: 2px solid #68C8D8;                
+    color: white;
 }
-.profile-work{
-    padding: 14%;
-    margin-top: -15%;
+.dropdown-menu {
+    min-width:inherit;    
 }
-.profile-work p{
+
+.dropdown-toggle::after{
+    float: right;
+    margin-top: 10px;
+}
+
+/* lowongan */
+.lowongan-section{
+    background-color: rgb(63, 149, 169, 0.1);
+}
+.lowongan-terkini {
+    background: rgb(63, 149, 169, 0.1);
+}
+
+.card-img-top{
+    height: 90px;
+}
+.lowongan-kerja .update-time p,
+i {
+    color: #BDBDBD;
     font-size: 12px;
-    color: #818182;
-    font-weight: 600;
-    margin-top: 10%;
 }
 
-.profile-tab label{
-    font-weight: 600;
+
+.lowongan-kerja .company-location p,
+i {
+    color: #BDBDBD;
 }
-.profile-tab p{
-    font-weight: 600;
+
+.lowongan-kerja .job-position h6 {
     color: #3F95A9;
+}
+
+.lowongan-kerja .job-position p {
+    color: #BDBDBD;
+}
+
+.lowongan-kerja .btn-detail {
+    background: #3F95A9;
+    border-radius: 100px;
+    color: white;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+/* Detail Lowongan */
+
+.lowongan-sesuai{
+    background-color: rgb(63, 149, 169, 0.1);
+}
+
+.square-image{
+    border: 1px solid #BDBDBD;
+    height: 200px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nama-lowongan{
+    color: #3F95A9;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 24px;
+}
+
+p.nama-perusahaan{
+    color: #BDBDBD;
+    text-transform: uppercase;
+}
+
+.place-side .city-name{
+    color: #219653;
+}
+
+.hour-side .hour-text{
+    color: #BDBDBD;
+}
+
+.bookmark-share button{
+    border: 1px solid #BDBDBD;
+    color: #BDBDBD;
+}
+
+.deskripsi-title{
+    font-weight: bolder;    
+}
+
+.deskripsi{
+    white-space: pre-wrap;
+}
+
+.skill-title{
+    font-weight: bolder;
+}
+
+.skill{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 1px solid #BDBDBD;
+    border-radius: 100px;
+    background: rgb(189, 189, 189, 0.2);
+    margin-right: 10px;
+}
+
+.melamar-title{
+    font-weight: bolder;
+}
+
+.img-info{    
+    height: 20px;
+}
+
+.klik-disini{
+    color: #68C8D8;
+    font-weight: bolder;
+}
+
+.btn-lamar-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-lamar-side button{
+    background: #68C8D8;
+    border-radius: 100px;
+    padding: 20px;
+    color: white;
+}
+
+.btn-lamar-side i{
+    color: white;
+}
+
+.btn-lamar-side button:hover{
+    background: #00363d;    
+    color: white;
+}
+
+.title-tentang-perusahaan{
+    font-weight: bolder;
+}
+
+.paragraph-tentang-perusahaan{
+    white-space: pre-wrap;
+}
+
+.lowongan-lain-title{
+    font-weight: bolder;
+}
+
+.prev-lowongan {
+    top: 200px;
+    background: #3F95A9;
+    width: 50px;
+    height: 60px;
+    opacity: 50%;
+
+}
+
+.next-lowongan {
+    top: 200px;
+    background: #3F95A9;
+    width: 50px;
+    height: 60px;
+    opacity: 50%;
+}
+
+.carousel-control {
+    position: relative;
+}
+
+.carousel-control .carousel-indicators {
+    top: 280px;
+}
+
+.carousel-control .carousel-indicators li{
+    background-color: #BDBDBD;    
+    border-radius: 100%;
+    width: 15px;
+    height: 12px;
+}
+
+.carousel-control .carousel-indicators .active{
+    background-color: #68C8D8;
+}
+@media screen and (max-width: 600px) {
+    .carousel-control .carousel-indicators {
+        top: 320px;
+    }
 }

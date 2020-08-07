@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 // applicant routes
-Route::get('/beranda', 'BerandaApplicantController@index')->name('berandaapplicant');
+Route::get('/berandaapplicant', 'BerandaApplicantController@index')->name('berandaapplicant');
 Route::get('/lowongankerja', 'LowonganKerjaController@index')->name('lowongankerja');
 Route::get('/detaillowongankerja', 'LowonganKerjaDetailController@index')->name('detaillowongankerja');
 Route::get('/detailkursus', 'KursusDetailController@index')->name('detailkursus');
