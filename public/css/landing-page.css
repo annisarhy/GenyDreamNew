@@ -99,8 +99,8 @@ header .carousel-inner .carousel-item {
 .carousel-indicators .active {
     background-color: #68C8D8;
     border-radius: 100%;
-    width: 20px;
-    height: 10px;
+    width: 15px;
+    height: 12px;
 }
 
 .carousel-indicators li {
