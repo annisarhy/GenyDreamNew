@@ -613,7 +613,7 @@
                 <input type="text" class="form-control w-75 bg-light" name="alasan_lamar" id="alasan-lamar">
             </div>
             <div class="modal-footer">                
-                <a href="{{ url('apply-lamaran') }}" type="button" class="btn btn-lamar-modal">LAMAR SEKARANG <i class="fa fa-arrow-right"></i></a>
+                <a href="{{ url('sukses-apply-lamaran') }}" type="button" class="btn btn-lamar-modal">LAMAR SEKARANG <i class="fa fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
