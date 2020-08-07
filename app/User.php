@@ -18,7 +18,7 @@ class User extends Authenticatable implements MustVerifyEmail,JWTSubject
      * @var array
      */
     protected $fillable = [
-        'username', 'email', 'password',
+        'username', 'email', 'password', 'role'
     ];
 
     /**
@@ -58,4 +58,16 @@ class User extends Authenticatable implements MustVerifyEmail,JWTSubject
     {
         return [];
     }
+
+    //create data pelamar from user...
+    public function initPelamar()
+    {
+      if($this->role == "pelamar"){
+        Pelamar::create([
+          'id_user' => $this->id
+        ])->save();
+      }
+    }
+
+
 }

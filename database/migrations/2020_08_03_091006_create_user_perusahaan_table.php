@@ -16,8 +16,8 @@ class CreateUserPerusahaanTable extends Migration
         Schema::create('user_perusahaan', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_perusahaan')->constrained('perusahaan');
-            $table->string('nama');
-            $table->string('jabatan');
+            $table->string('nama')->nullable();
+            $table->string('jabatan')->nullable();
             $table->timestamps();
         });
     }

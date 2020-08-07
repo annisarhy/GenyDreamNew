@@ -16,8 +16,8 @@ class CreatePerusahaanTable extends Migration
         Schema::create('perusahaan', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('email_perusahaan');
-            $table->foreignId('id_penanggung_jawab')->constrained('users');
+            $table->string('email');
+            $table->string('penanggung_jawab');
             $table->string('no_hp');
             $table->string('alamat');
             $table->timestamps();

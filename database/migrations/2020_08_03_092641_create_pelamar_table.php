@@ -16,14 +16,14 @@ class CreatePelamarTable extends Migration
         Schema::create('pelamar', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_user')->constrained('users');
-            $table->string('nama_lengkap');
-            $table->string('gelar_depan');
-            $table->string('gelar_belakang');
-            $table->date('tgl_lahir');
-            $table->enum('jen_kel',['l','p']);
-            $table->string('no_hp');
-            $table->string('no_ktp');
-            $table->string('alamat');
+            $table->string('nama_lengkap')->nullable();
+            $table->string('gelar_depan')->nullable();
+            $table->string('gelar_belakang')->nullable();
+            $table->date('tgl_lahir')->nullable();
+            $table->enum('jen_kel',['l','p'])->nullable();
+            $table->string('no_hp')->nullable();
+            $table->string('no_ktp')->nullable();
+            $table->string('alamat')->nullable();
             $table->timestamps();
         });
     }
