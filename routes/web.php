@@ -22,6 +22,9 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::get('/loginperusahaan', 'LoginPerusahaanController@index')->name('loginperusahaan');
+Route::get('/registerperusahaan', 'RegisterPerusahaanController@index')->name('loginperusahaan');
+
 // applicant routes
 
 Route::group(['namespace' => 'Applicant'], function () {
@@ -39,3 +42,4 @@ Route::get('/sukses-apply-lamaran', 'SuksesApplyController@index')->name('sukses
 Route::get('/apply-lamaran', 'ApplyLamaranController@index')->name('apply-lamaran');
 
 // company routes
+
