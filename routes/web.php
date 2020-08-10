@@ -22,8 +22,8 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/loginperusahaan', 'LoginPerusahaanController@index')->name('loginperusahaan');
-Route::get('/registerperusahaan', 'RegisterPerusahaanController@index')->name('loginperusahaan');
+Route::get('/loginperusahaan', 'AuthPerusahaan\LoginPerusahaanController@index')->name('loginperusahaan');
+Route::get('/registerperusahaan', 'AuthPerusahaan\RegisterPerusahaanController@index')->name('loginperusahaan');
 
 // applicant routes
 

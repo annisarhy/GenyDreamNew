@@ -16,7 +16,7 @@
                             <p class="text-left"><a style="color: black;" href="{{ __('/') }}"><i class="fas fa-angle-left"></i><b> Kembali</b></a></p>
                         </div>
                         <div>
-                            <p class="text-right"><a style="color: black;" href="{{ __('login-perusahaan') }}"><b> Login </b><i class="fas fa-angle-right"></i></a></p>
+                            <p class="text-right"><a style="color: black;" href="{{ __('loginperusahaan') }}"><b> Login </b><i class="fas fa-angle-right"></i></a></p>
                         </div>
                     </div>
                     <div class="container">
@@ -27,7 +27,7 @@
                             <form class="form-signin" method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="form-label-group">
-                                    <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Company Name" required autofocus>
+                                    <input name="username" type="text" id="inputCompanyName" class="form-control" placeholder="Company Name" required autofocus>
                                     <label for="inputUserame">Company Name</label>
                                 </div>
 
