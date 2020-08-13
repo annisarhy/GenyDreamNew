@@ -881,7 +881,7 @@
     <section class="list-course" id="list-course">
         <div class="container py-5">
             <div class="row">
-                <div class="col-lg-5 col-md-5 list-course-title">
+                <div class="col-lg-5 col-md-9 list-course-title">
                     <h1>LATIH SKILLMU DI</h1>
                     <h1><span>GENY COURSE</span></h1>
                     <hr>
@@ -889,7 +889,7 @@
                     <a href="{{ url('kursus') }}" class="btn btn-md pl-3 pr-3 mt-3"><i class="fa fa-list-ul pr-2"></i>LIST COURSE</a>
                 </div>
 
-                <div class="col-lg-7 image-list-course-right">
+                <div class="col-lg-7 image-list-course-right d-none d-md-block">
                     <img src="{{ asset('images/list-course-kanan.png') }}" alt="">
                 </div>
             </div>
