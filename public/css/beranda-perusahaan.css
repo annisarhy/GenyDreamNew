@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(63, 149, 169, 0.1);
+}
+/* dashboard-header */
+/* .dashboard-header{
+    background-color: rgb(63, 149, 169, 0.1);
+} */
+
+.user-info-container{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);;
+}
+
+.info-lengkapi-profile{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.info-lengkapi-profile a{
+    color: black;
+}
+
+.info-lengkapi-profile a:hover{
+    color: #68C8D8;
+}
+
+.fa-angle-right{
+    margin-top: 5px;
+}
+
+.announcement{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+#image-kategori {
+    display: block;
+    margin: auto;
+    margin-top: 15%;
+    width: 85px;
+    height: 85px;
+    background: rgb(63, 149, 169, 0.2);
+    border-radius: 100px;
+}
+
+
+/* wrap */
+
+.wrap-image-header{
+    background: url('/images/Background1.png');
+    height: 200px;
+    background-repeat: no-repeat;    
+    background-size: cover;
+    background-position: center;        
+    width: 100%;
+    position: relative;
+}
+
+.wrap-image-header::after {
+	content: ''; 
+	width: 100%; 
+	height: 100%;
+	background-color: rgb(63, 149, 169,0.4); 
+	/* opacity: 0.4;  */
+	position: absolute; 
+	top: 0; 
+	left: 0;	
+}
+
+.wrap-image-header .page-title{
+    position: absolute;
+    text-align: start;    
+    z-index: 2;
+    left: 0;
+    top: 35px;    
+    font-size: 25px;
+}
+
+.wrap-image-header .page-title .title-username{
+    color: #68C8D8;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.wrap-image-header .page-title .title-text{
+    color: white;
+    font-weight: bolder;    
+}

@@ -48,7 +48,7 @@
                 <div class="announcement mt-3 p-5">                    
                     <div class="announcement-content d-flex">
                         <img src="{{ asset('images/announcement.png') }}" alt="">
-                        <p class="mt-2 ml-3">Temukan Pekerjaan yang sesuai untukmu selama pandemi covid-19. <a href="{{ url('lowongankerja') }}">KLIK DISINI <i class="fa fa-arrow-right ml-2"></i></a></p>
+                        <p class="mt-2 ml-3">Temukan Pekerjaan yang sesuai untukmu selama pandemi covid-19. <a href="{{ url('lowongan-kerja') }}">KLIK DISINI <i class="fa fa-arrow-right ml-2"></i></a></p>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
            <div class="div col-lg-6 mt-4">
                 <div class="feature-content">
                     <img src="{{ asset('images/genyhire.png') }}" alt="geny hire" class="img-fluid">
-                    <a href="{{ url('lowongankerja') }}" class="feature-button btn pl-4 pr-4 pb-2 pt-2">MULAI SEKARANG</a>
+                    <a href="{{ url('lowongan-kerja') }}" class="feature-button btn pl-4 pr-4 pb-2 pt-2">MULAI SEKARANG</a>
                 </div>
            </div>
 
@@ -106,5 +106,9 @@
             </div>
         </div>
     </div>
+</section>
+
+<section class="tips-berita-carousel">
+    
 </section>
 @endsection

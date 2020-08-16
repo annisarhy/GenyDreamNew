@@ -31,10 +31,10 @@ Route::group(['namespace' => 'Applicant'], function () {
   Route::get('/profile', 'ProfileController@index')->name('profile');
   Route::get('/edit-profile', 'ProfileController@edit')->name('profile.edit');
   Route::patch('/edit-profile/{id}', 'ProfileController@update')->name('profile.update');
-  Route::get('/berandaapplicant', 'BerandaApplicantController@index')->name('berandaapplicant');
-  Route::get('/lowongankerja', 'LowonganKerjaController@index')->name('lowongankerja');
-  Route::get('/detaillowongankerja', 'LowonganKerjaDetailController@index')->name('detaillowongankerja');
-  Route::get('/detailkursus', 'KursusDetailController@index')->name('detailkursus');
+  Route::get('/beranda-applicant', 'BerandaApplicantController@index')->name('beranda-applicant');
+  Route::get('/lowongan-kerja', 'LowonganKerjaController@index')->name('lowongan-kerja');
+  Route::get('/detail-lowongan-kerja', 'LowonganKerjaDetailController@index')->name('detail-lowongan-kerja');
+  Route::get('/detail-kursus', 'KursusDetailController@index')->name('detail-kursus');
   Route::get('/kursus', 'KursusController@index')->name('kursus');
   Route::get('/sukses-apply-lamaran', 'SuksesApplyController@index')->name('sukses-apply-lamaran');
   Route::get('/apply-lamaran', 'ApplyLamaranController@index')->name('apply-lamaran');
@@ -44,6 +44,6 @@ Route::group(['namespace' => 'Applicant'], function () {
 // company routes
 
 Route::group(['namespace' => 'Perusahaan'], function () {
-  
+  Route::get('/beranda-perusahaan', 'BerandaPerusahaanController@index')->name('beranda-perusahaan');
 });
 

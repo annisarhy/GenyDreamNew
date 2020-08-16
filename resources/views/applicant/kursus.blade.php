@@ -92,7 +92,7 @@
                                     <p class="price-tag mt-2"><span class="font-weight-bold">PRICE : </span>Rp 100.000</p>
                                 </div>
                                 <div class="col-md-6 detail">
-                                    <a href="{{ url('detailkursus') }}" class="btn btn-lg btn-block">Detail</a>
+                                    <a href="{{ url('detail-kursus') }}" class="btn btn-lg btn-block">Detail</a>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +117,7 @@
                                     <p class="price-tag mt-2"><span class="font-weight-bold">PRICE : </span>Rp 100.000</p>
                                 </div>
                                 <div class="col-md-6 detail">
-                                    <a href="{{ url('detailkursus') }}" class="btn btn-lg btn-block">Detail</a>
+                                    <a href="{{ url('detail-kursus') }}" class="btn btn-lg btn-block">Detail</a>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +142,7 @@
                                     <p class="price-tag mt-2"><span class="font-weight-bold">PRICE : </span>Rp 100.000</p>
                                 </div>
                                 <div class="col-md-6 detail">
-                                    <a href="{{ url('detailkursus') }}" class="btn btn-lg btn-block">Detail</a>
+                                    <a href="{{ url('detail-kursus') }}" class="btn btn-lg btn-block">Detail</a>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                     <p class="price-tag mt-2"><span class="font-weight-bold">PRICE : </span>Rp 100.000</p>
                                 </div>
                                 <div class="col-md-6 detail">
-                                    <a href="{{ url('detailkursus') }}" class="btn btn-lg btn-block">Detail</a>
+                                    <a href="{{ url('detail-kursus') }}" class="btn btn-lg btn-block">Detail</a>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
                                     <p class="price-tag mt-2"><span class="font-weight-bold">PRICE : </span>Rp 100.000</p>
                                 </div>
                                 <div class="col-md-6 detail">
-                                    <a href="{{ url('detailkursus') }}" class="btn btn-lg btn-block">Detail</a>
+                                    <a href="{{ url('detail-kursus') }}" class="btn btn-lg btn-block">Detail</a>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                                     <p class="price-tag mt-2"><span class="font-weight-bold">PRICE : </span>Rp 100.000</p>
                                 </div>
                                 <div class="col-md-6 detail">
-                                    <a href="{{ url('detailkursus') }}" class="btn btn-lg btn-block">Detail</a>
+                                    <a href="{{ url('detail-kursus') }}" class="btn btn-lg btn-block">Detail</a>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +242,7 @@
                                     <p class="price-tag mt-2"><span class="font-weight-bold">PRICE : </span>Rp 100.000</p>
                                 </div>
                                 <div class="col-md-6 detail">
-                                    <a href="{{ url('detailkursus') }}" class="btn btn-lg btn-block">Detail</a>
+                                    <a href="{{ url('detail-kursus') }}" class="btn btn-lg btn-block">Detail</a>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +267,7 @@
                                     <p class="price-tag mt-2"><span class="font-weight-bold">PRICE : </span>Rp 100.000</p>
                                 </div>
                                 <div class="col-md-6 detail">
-                                    <a href="{{ url('detailkursus') }}" class="btn btn-lg btn-block">Detail</a>
+                                    <a href="{{ url('detail-kursus') }}" class="btn btn-lg btn-block">Detail</a>
                                 </div>
                             </div>
                         </div>
@@ -292,7 +292,7 @@
                                     <p class="price-tag mt-2"><span class="font-weight-bold">PRICE : </span>Rp 100.000</p>
                                 </div>
                                 <div class="col-md-6 detail">
-                                    <a href="{{ url('detailkursus') }}" class="btn btn-lg btn-block">Detail</a>
+                                    <a href="{{ url('detail-kursus') }}" class="btn btn-lg btn-block">Detail</a>
                                 </div>
                             </div>
                         </div>

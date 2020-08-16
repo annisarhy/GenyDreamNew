@@ -117,7 +117,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -234,7 +234,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -273,7 +273,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -312,7 +312,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -351,7 +351,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -390,7 +390,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -429,7 +429,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -468,7 +468,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -507,7 +507,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>
@@ -546,7 +546,7 @@
                                 <a href=""><i class="fa fa-share-alt"></i></a>
                             </div>
                             <div class="col-md-9 d-flex justify-content-center">
-                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/applicant-master.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/perusahaan-master.css') }}" rel="stylesheet">
 
 </head>
 
@@ -45,13 +45,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" data-value="about" href="{{ url('beranda-applicant') }}">BERANDA</a>
+                    <a class="nav-link" data-value="about" href="#">BERANDA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="portfolio" href="{{ url('lowongan-kerja') }}">LOWONGAN KERJA</a>
+                    <a class="nav-link " data-value="portfolio" href="#">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="blog" href="{{ url('kursus') }}">KURSUS</a>
+                    <a class="nav-link " data-value="blog" href="#">KURSUS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="team" href="#">FAQ</a>
@@ -67,7 +67,7 @@
 
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href=" {{ url('profile') }}">Profile</a></li>
+                    <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href="#">Profile</a></li>
                     <li role="presentation">
                         <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

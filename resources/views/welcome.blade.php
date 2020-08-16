@@ -224,7 +224,7 @@
                     <hr>
                     <p>Berbagai pilihan karir tersedia untuk kamu, raih karir impianmu dari berbagai daerah di Indonesia. Temukan karir yang sesuai untukmu dengan berbagai pilihan kategori berdasarkan spesialisasi dan kemampuanmu. Mari kita raih kesuksesan karir bersama GenyDream.</p>
 
-                    <a href="{{ url('lowongankerja') }}" class="btn btn-md pl-3 pr-3"><i class="fa fa-list-ul text-white pr-2"></i>LIST LOWONGAN</a>
+                    <a href="{{ url('lowongan-kerja') }}" class="btn btn-md pl-3 pr-3"><i class="fa fa-list-ul text-white pr-2"></i>LIST LOWONGAN</a>
                 </div>
 
                 <div class="col-lg-6 right-side">
@@ -552,7 +552,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -591,7 +591,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -630,7 +630,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -669,7 +669,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -716,7 +716,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -755,7 +755,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -794,7 +794,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -833,7 +833,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detaillowongankerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
