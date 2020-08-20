@@ -45,13 +45,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" data-value="about" href="{{ url('beranda-applicant') }}">BERANDA</a>
+                    <a class="nav-link" data-value="about" href="{{ url('beranda-perusahaan') }}">BERANDA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="portfolio" href="{{ url('lowongan-kerja') }}">LOWONGAN KERJA</a>
+                    <a class="nav-link " data-value="portfolio" href="#">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="blog" href="{{ url('kursus') }}">KURSUS</a>
+                    <a class="nav-link " data-value="blog" href="#">KURSUS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="team" href="#">FAQ</a>
