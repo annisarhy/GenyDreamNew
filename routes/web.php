@@ -45,5 +45,8 @@ Route::group(['namespace' => 'Applicant'], function () {
 
 Route::group(['namespace' => 'Perusahaan'], function () {
   Route::get('/beranda-perusahaan', 'BerandaPerusahaanController@index')->name('beranda-perusahaan');
+  Route::get('/daftar-lowongan', 'DaftarLowonganController@index')->name('daftar-lowongan');
+  Route::get('/daftar-pelamar', 'DaftarPelamarController@index')->name('daftar-pelamar');
+  Route::get('/bookmark', 'BookmarkController@index')->name('bookmark');
 });
 

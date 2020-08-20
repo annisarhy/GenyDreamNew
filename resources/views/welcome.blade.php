@@ -899,13 +899,11 @@
 
     <!-- section kursus terbaru -->
     <section class="kursus-terbaru">
-
     </section>
     <!-- end of kursus terbaru -->
 
     <!-- section intern -->
     <section class="intern">
-
     </section>
     <!-- end of section intern -->
 

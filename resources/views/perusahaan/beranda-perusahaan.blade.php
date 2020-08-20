@@ -1,4 +1,4 @@
-@extends('layouts.applicant-master')
+@extends('layouts.company-master')
 
 @section('content')
 <link href="{{ asset('css/beranda-perusahaan.css') }}" rel="stylesheet">
@@ -96,14 +96,14 @@
     <div class="pl-5 pr-5 py-5">
         <div class="d-flex justify-content-between">
             <p class="daftar-title">DAFTAR LOWONGAN</p>
-            <a href="#" class="btn-look-another">LIHAT LOWONGAN LAINNYA <i class="fa fa-angle-right ml-2"></i></a>
+            <a href="{{ url('daftar-pelamar') }}" class="btn-look-another">LIHAT LOWONGAN LAINNYA <i class="fa fa-angle-right ml-2"></i></a>
         </div>
 
         <div class="row mt-5">
             <div class="col-lg-7">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="lowongan-card p-2">
+                        <div class="lowongan-card p-2 mt-4">
                             <div class="row title-pekerjaan p-3">
                                 <div class="col md-5 pr-0">
                                     <div class="square-image mt-2">
@@ -136,7 +136,7 @@
                     </div>    
                     
                     <div class="col-lg-6">
-                        <div class="lowongan-card p-2">
+                        <div class="lowongan-card p-2 mt-4">
                             <div class="row title-pekerjaan p-3">
                                 <div class="col md-5 pr-0">
                                     <div class="square-image mt-2">
@@ -186,7 +186,7 @@
     <div class="pl-5 pr-5 py-5">
         <div class="d-flex justify-content-between">
             <p class="daftar-title">DAFTAR PELAMAR</p>
-            <a href="#" class="btn-look-another">LIHAT PELAMAR LAINNYA <i class="fa fa-angle-right ml-2"></i></a>
+            <a href="{{ url('daftar-pelamar') }}" class="btn-look-another">LIHAT PELAMAR LAINNYA <i class="fa fa-angle-right ml-2"></i></a>
         </div>
 
         <div class="container">

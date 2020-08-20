@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/company-master.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard-company-master.css') }}" rel="stylesheet">
 
 </head>
 
@@ -79,53 +79,80 @@
             </ul>
         </div>
     </nav>
-    <!-- end of navbar -->        
+        <!-- end of navbar -->
+        
+        
+    
+    <div class="d-flex p-0 mt-5 mb-5" id="wrapper">
 
-    @yield('content')
+        <!-- sidebar -->
+        <div class=" border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">
+            <button class="btn btn-primary" id="">Buat Lowongan</button>            
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action">Daftar Lowongan</a>
+                <a href="#" class="list-group-item list-group-item-action">Daftar Pelamar</a>
+                <a href="#" class="list-group-item list-group-item-action">Bookmark</a>                
+            </div>
+        </div>
+        <!-- end of sidebar -->
 
-    <footer id=" dk-footer" class="dk-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-4">
-                    <div class="dk-footer-box-info">
-                        <a href="index.html" class="footer-logo">
-                            <img src="{{asset('/images/LogoGenyWhite.png') }}" class="img-fluid">
-                        </a>
-                        <p class="footer-info-text">
-                            Geny Dream adalah Aplikasi untuk menyiapkan para pengguna masuk ke dalam dunia pekerjaan dan mendapatkan pekerjaan yang diinginkan.
-                        </p>
-                        <div class="footer-social-link">
-                            <h3>Follow us</h3>
-                            <ul style="margin-bottom: 30px;">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
+        <div id="page-content-wrapper">
+            <!-- content -->
+            <div class="container-fluid">
+                <button class="btn btn-primary mb-3" id="menu-toggle">Toggle Menu</button>
+                @yield('content')
+            </div>
+        </div>
+        
+    </div>
+    
+        
+
+        <footer id=" dk-footer" class="dk-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-4">
+                        <div class="dk-footer-box-info">
+                            <a href="index.html" class="footer-logo">
+                                <img src="{{asset('/images/LogoGenyWhite.png') }}" class="img-fluid">
+                            </a>
+                            <p class="footer-info-text">
+                                Geny Dream adalah Aplikasi untuk menyiapkan para pengguna masuk ke dalam dunia pekerjaan dan mendapatkan pekerjaan yang diinginkan.
+                            </p>
+                            <div class="footer-social-link">
+                                <h3>Follow us</h3>
+                                <ul style="margin-bottom: 30px;">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Social link -->
                         </div>
-                        <!-- End Social link -->
-                    </div>
 
                     </div>
                     <!-- End Col -->
@@ -250,11 +277,21 @@
     <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
+
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
         });
-    </script>
+
+        
+    </script>    
+  
     
     @yield('js')            
 
 </body>
 
 </html>
+
+<link rel="stylesheet" href="{{ asset('css/beranda-perusahaan.css') }}">
