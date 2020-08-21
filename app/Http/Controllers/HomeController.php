@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -16,13 +17,15 @@ class HomeController extends Controller
     $this->middleware(['auth','verified']);
   }
 
-  /**
-  * Show the application dashboard.
-  *
-  * @return \Illuminate\Contracts\Support\Renderable
-  */
+  // redirect to role's dashboards!
   public function index()
   {
-    return view('home');
+    $role = Auth::user()->role;
+
+    if($role == "pelamar"){
+      return redirect()->route('pelamar.beranda');
+    }else if($role == "perusahaan"){
+      return redirect()->route('perusahaan.beranda');
+    }
   }
 }

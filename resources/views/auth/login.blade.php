@@ -26,6 +26,7 @@
                             <p>Welcome! Please fill email and password to sign in into your account.</p>
                             <form class="form-signin" method="POST" action="{{ route('login') }}">
                                 @csrf
+                                <input name="role" type="hidden" value="pelamar"/>
                                 <div class="form-label-group">
                                     <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                                     <label for="inputEmail">Email address</label>

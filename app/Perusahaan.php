@@ -10,16 +10,17 @@ class Perusahaan extends Model
 
 
     protected $fillable = [
+        'id_user',
         'nama',
         'email',
-        'id_penanggung_jawab',
+        'penanggung_jawab',
         'no_hp',
         'alamat',
     ];
 
     public function penanggungjawab()
     {
-        return $this->belongsTo('App\User','id_penanggung_jawab');
+        return $this->belongsTo('App\User','id_user');
     }
 
     public function perusahaan_has_user_perusahaan()

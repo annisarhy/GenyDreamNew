@@ -60,14 +60,16 @@ class User extends Authenticatable implements MustVerifyEmail,JWTSubject
     }
 
     //create data pelamar from user...
-    public function initPelamar()
+    public function initRole()
     {
       if($this->role == "pelamar"){
         Pelamar::create([
-          'id_user' => $this->id
+          'id_user' => $this->id,
+        ])->save();
+      }else if($this->role == "perusahaan"){
+        Perusahaan::create([
+          'id_user' => $this->id,
         ])->save();
       }
     }
-
-
 }

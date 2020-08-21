@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,40 +14,54 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-  return view('welcome');
+Route::get('/',function () {
+    return redirect('/guest');
+})->name('welcome');
+Route::get('/home','HomeController@index')->name('home');
+
+//guest route
+
+Route::group(['prefix' => 'guest'], function () {
+    //welcome dan redirect after login
+    Route::get('/','GuestController@welcome');
+
+    //login biasa
+    Auth::routes(['verify' => true]);
+
+    //login perushaan
+    Route::get('/login/perusahaan', 'Perusahaan\AuthPerusahaanController@showLoginForm')->name('perusahaan.login');
+    Route::get('/register/perusahaan', 'Perusahaan\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
 });
-
-Auth::routes(['verify' => true]);
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/loginperusahaan', 'AuthPerusahaan\LoginPerusahaanController@index')->name('loginperusahaan');
-Route::get('/registerperusahaan', 'AuthPerusahaan\RegisterPerusahaanController@index')->name('loginperusahaan');
 
 // applicant routes
 
-Route::group(['namespace' => 'Applicant'], function () {
-  Route::get('/profile', 'ProfileController@index')->name('profile');
-  Route::get('/edit-profile', 'ProfileController@edit')->name('profile.edit');
-  Route::patch('/edit-profile/{id}', 'ProfileController@update')->name('profile.update');
-  Route::get('/beranda-applicant', 'BerandaApplicantController@index')->name('beranda-applicant');
-  Route::get('/lowongan-kerja', 'LowonganKerjaController@index')->name('lowongan-kerja');
-  Route::get('/detail-lowongan-kerja', 'LowonganKerjaDetailController@index')->name('detail-lowongan-kerja');
-  Route::get('/detail-kursus', 'KursusDetailController@index')->name('detail-kursus');
-  Route::get('/kursus', 'KursusController@index')->name('kursus');
-  Route::get('/sukses-apply-lamaran', 'SuksesApplyController@index')->name('sukses-apply-lamaran');
-  Route::get('/apply-lamaran', 'ApplyLamaranController@index')->name('apply-lamaran');
+Route::group([
+  'namespace' => 'Applicant',
+  'prefix' => 'pelamar',
+  'middleware' => ['pelamar','auth','verified'],
+], function () {
+  Route::get('/', 'BerandaApplicantController@index')->name('pelamar.beranda');
+  Route::get('/profile', 'ProfileController@index')->name('pelamar.profile');
+  Route::get('/profile/edit', 'ProfileController@edit')->name('pelamar.profile.edit');
+  Route::patch('/profile/edit/{id}', 'ProfileController@update')->name('pelamar.profile.update');
+  Route::get('/loker', 'LowonganKerjaController@index')->name('pelamar.loker');
+  Route::get('/loker/detail', 'LowonganKerjaDetailController@index')->name('pelamar.detail');
+  Route::get('/kursus/detail', 'KursusDetailController@index')->name('pelamar.kursus.detail');
+  Route::get('/kursus', 'KursusController@index')->name('pelamar.kursus');
+  Route::get('/loker/apply/sukses', 'SuksesApplyController@index')->name('pelamar.lamaran.sukses');
+  Route::get('/loker/apply', 'ApplyLamaranController@index')->name('pelamar.lamaran');
 });
 
 
 // company routes
 
-Route::group(['namespace' => 'Perusahaan'], function () {
-  Route::get('/beranda-perusahaan', 'BerandaPerusahaanController@index')->name('beranda-perusahaan');
-  Route::get('/daftar-lowongan', 'DaftarLowonganController@index')->name('daftar-lowongan');
-  Route::get('/daftar-pelamar', 'DaftarPelamarController@index')->name('daftar-pelamar');
-  Route::get('/bookmark', 'BookmarkController@index')->name('bookmark');
+Route::group([
+  'namespace' => 'Perusahaan',
+  'prefix' => 'perusahaan',
+  'middleware' => ['perusahaan','auth','verified'],
+], function () {
+  Route::get('/', 'BerandaPerusahaanController@index')->name('perusahaan.beranda');
+  Route::get('/list/lowongan', 'DaftarLowonganController@index')->name('perusahaan.lowongan');
+  Route::get('/list/pelamar', 'DaftarPelamarController@index')->name('perusahaan.pelamar');
+  Route::get('/bookmark', 'BookmarkController@index')->name('perusahaan.bookmark');
 });
-

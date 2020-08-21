@@ -58,10 +58,10 @@
 
             <ul class="navbar-nav pull-right flex-row" id="pull-right">
                 <li class="nav-item">
-                    <a href="{{ url('login') }}" class="nav-link pl-3 pr-3" id="navButton">SIGN IN</a>
+                    <a href="{{ route('login') }}" class="nav-link pl-3 pr-3" id="navButton">SIGN IN</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('register') }}" class="nav-link pl-3 pr-3" id="navButton">SIGN UP</a>
+                    <a href="{{ route('register') }}" class="nav-link pl-3 pr-3" id="navButton">SIGN UP</a>
                 </li>
             </ul>
         </div>
@@ -231,8 +231,8 @@
                     <div class="form-group has-search">
                         <span class="fa fa-search form-control-feedback"></span>
                         <button class="btn btn-cari">CARI</button>
-                        <input type="text" class="form-control" placeholder="Masukan nama lowongan, posisi, skills, atau instansi">                    
-                    </div> 
+                        <input type="text" class="form-control" placeholder="Masukan nama lowongan, posisi, skills, atau instansi">
+                    </div>
                     <p class="mt-3"><i class="fa fa-info mr-2"></i>Temukan lebih dari 90.000 lowongan dalam Geny Hire</p>
                     <p class="join-text">AYO BERGABUNG BERSAMA KAMI</p>
                 </div>

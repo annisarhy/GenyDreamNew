@@ -26,6 +26,7 @@
 
                             <form class="form-signin" method="POST" action="{{ route('register') }}">
                                 @csrf
+                                <input name="role" type="hidden" value="pelamar"/>
                                 <div class="form-label-group">
                                     <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
                                     <label for="inputUserame">Username</label>
