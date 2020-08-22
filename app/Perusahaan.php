@@ -23,7 +23,7 @@ class Perusahaan extends Model
         return $this->belongsTo('App\User','id_user');
     }
 
-    public function perusahaan_has_user_perusahaan()
+    public function listUserPerusahaan()
     {
         return $this->belongsToMany('App\UserPerusahaan');
     }

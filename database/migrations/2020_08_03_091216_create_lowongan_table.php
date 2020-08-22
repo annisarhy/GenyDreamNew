@@ -16,11 +16,11 @@ class CreateLowonganTable extends Migration
         Schema::create('lowongan', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_perusahaan')->constrained('perusahaan');
-            $table->string('nama_lowongan');
+            $table->string('judul');
             $table->foreignId('id_kategori_lowongan')->constrained('kategori_lowongan');
             $table->dateTime('waktu_posting');
             $table->decimal('salary',13);
-            $table->text('deskripsi_lowongan');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }

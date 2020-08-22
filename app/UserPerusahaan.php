@@ -15,7 +15,7 @@ class UserPerusahaan extends Model
         'jabatan',
     ];
 
-    public function user_perusahaan_has_perusahaan()
+    public function perusahaan()
     {
         return $this->belongsTo('App\Perusahaan','id_perusahaan');
     }

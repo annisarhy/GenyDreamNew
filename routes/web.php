@@ -45,11 +45,11 @@ Route::group([
   Route::get('/profile/edit', 'ProfileController@edit')->name('pelamar.profile.edit');
   Route::patch('/profile/edit/{id}', 'ProfileController@update')->name('pelamar.profile.update');
   Route::get('/loker', 'LowonganKerjaController@index')->name('pelamar.loker');
-  Route::get('/loker/detail', 'LowonganKerjaDetailController@index')->name('pelamar.detail');
-  Route::get('/kursus/detail', 'KursusDetailController@index')->name('pelamar.kursus.detail');
+  Route::get('/loker/{id}', 'LowonganKerjaController@detail')->name('pelamar.loker.detail');
+  Route::get('/loker/{id}/apply', 'LowonganKerjaController@successApply')->name('pelamar.loker.apply');
   Route::get('/kursus', 'KursusController@index')->name('pelamar.kursus');
-  Route::get('/loker/apply/sukses', 'SuksesApplyController@index')->name('pelamar.lamaran.sukses');
-  Route::get('/loker/apply', 'ApplyLamaranController@index')->name('pelamar.lamaran');
+  Route::get('/kursus/detail', 'KursusController@detail')->name('pelamar.kursus.detail');
+  Route::get('/lamaran', 'LamaranController@index')->name('pelamar.lamaran');
 });
 
 

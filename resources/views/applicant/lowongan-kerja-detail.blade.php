@@ -7,27 +7,27 @@
     <div class="container page-container">
         <div class="page-content col-md-6 mx-auto">
             <div class="page-title">
-                <h1 class="font-weight-bold text-center">WELCOME TO GENY HIRE</h1>                    
+                <h1 class="font-weight-bold text-center">WELCOME TO GENY HIRE</h1>
             </div> <!-- end page-title -->
         </div> <!-- end page-content -->
     </div> <!-- end page-container -->
-</div> <!-- end page-wrap-slider -->   
+</div> <!-- end page-wrap-slider -->
 
 <!-- detail-lowongan-section -->
 <section class="detail-lowongan-section">
     <div class="container py-5">
         <div class="row">
             <div class="col-md-6 wrap-responsive">
-                <div class="wrap-lowongan-detail p-4">                                    
+                <div class="wrap-lowongan-detail p-4">
                     <div class="row title-pekerjaan">
                         <div class="col md-5">
                             <div class="square-image">
                                 <img src="{{ asset('images/gojek.png') }}" alt="img-perusahaan" class="img-fluid img-perusahaan">
-                            </div>                        
+                            </div>
                         </div>
                         <div class="col-md-7">
-                            <h3 class="nama-lowongan">senior android developer</h3>
-                            <p class="nama-perusahaan">PT GOJEK INDONESIA</p>
+                        <h3 class="nama-lowongan">{{ $loker->judul }}</h3>
+                        <p class="nama-perusahaan">{{ $loker->perusahaan->nama }}</p>
                         </div>
                     </div>
 
@@ -37,10 +37,10 @@
                         </div>
 
                         <div class="col-md-8 hour-side">
-                            <p class="mt-3 hour-text text-right"><img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" class="img-fluid mr-2" alt=""> 8 jam yang lalu</p>
-                        </div>                    
-                    </div>    
-                    
+                        <p class="mt-3 hour-text text-right"><img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" class="img-fluid mr-2" alt=""> {{ $loker->updated_at }}</p>
+                        </div>
+                    </div>
+
                     <hr>
 
                     <div class="row justify-content-end bookmark-share">
@@ -50,39 +50,36 @@
 
                     <div class="deskripsi-perkejaan mt-5">
                         <h4 class="deskripsi-title">DESKRIPSI PEKERJAAN</h4>
-                        <p class="mt-3 deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, tortor ultrices tincidunt aenean ultrices pellentesque eros. Et ipsum in non nibh diam fermentum. Dolor ut nisi orci, erat egestas. Eget felis varius sapien scelerisque tincidunt facilisi. Sit mi lectus scelerisque congue massa morbi metus. Facilisis scelerisque tincidunt interdum nisi. Arcu libero imperdiet posuere nunc id. In morbi at et at congue et feugiat. Tincidunt porta facilisis ac risus. Viverra auctor id eu arcu faucibus iaculis venenatis nisi, magna. Ut hendrerit vel odio in tellus sed gravida purus ut. Tortor tincidunt viverra tellus non diam. 
-    Purus eget maecenas quis mattis. Egestas id in enim nascetur posuere ornare. Eget fermentum nulla ut dignissim. In leo non suspendisse vestibulum morbi velit sem. Blandit convallis aenean maecenas viverra posuere. Vulputate morbi aliquet ultrices purus pulvinar et tempus, aenean molestie. Tortor tincidunt mattis eget nisi. Duis ultrices phasellus curabitur velit sollicitudin vehicula habitant ac suscipit. In pharetra nec commodo amet orci aliquam.
-    Sed egestas nisi ac pellentesque at. Odio mauris et ac nibh. Cursus vel mauris risus nibh blandit. Maecenas tellus dignissim et cursus fermentum id tincidunt. Ultrices enim praesent id est. In venenatis gravida sit gravida dui. Cursus et sed elementum, magnis eget cursus nascetur ut amet. Est sit commodo tincidunt elit ridiculus ullamcorper quis.</p>
-                    </div>
+                    <p class="mt-3 deskripsi">{{ $loker->deskripsi }}</div>
 
                     <div class="keterangan-skill mt-5 py-4">
                         <h4 class="skill-title">SKILL YANG HARUS DIMILIKI</h4>
                         <div class="row pl-3">
-                            <p class="skill">Android Programming</p>    
-                            <p class="skill">Teamwork</p>    
-                            <p class="skill">Communication Skill</p>    
-                            <p class="skill">Problem Solving</p>    
+                            <p class="skill">Android Programming</p>
+                            <p class="skill">Teamwork</p>
+                            <p class="skill">Communication Skill</p>
+                            <p class="skill">Problem Solving</p>
                         </div>
-                        
+
                     </div>
 
                     <div class="melamar-kerja">
-                        
+
                         <h4 class="melamar-title">APAKAH KAMU INGIN MELAMAR PEKERJAAN INI ?</h4>
                         <div class="row">
-                            <div class="col-md-6">                            
+                            <div class="col-md-6">
                                 <div class="d-flex">
                                     <img src="{{ asset('images/ant-design_info-circle-outlined.png') }}" alt="" class="img-fluid img-info mr-2 mt-1">
                                     <p>Jika dalam lowongan ini terdapat kejanggalan didalamnya termasuk bersifat penipuan.<br> <a href="#" class="klik-disini">KLIK DISINI</a></p>
-                                </div>                            
+                                </div>
                             </div>
 
                             <div class="col-md-6 btn-lamar-side">
                                 <button type="button" class="btn" data-toggle="modal" data-target="#lamarModal">
                                     Lamar Sekarang <i class="fa fa-arrow-right"></i>
                                 </button>
-                            </div>       
-                        </div>                                     
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,8 +108,8 @@
                                 <a class="carousel-control-next next-lowongan" href="#lowongan-carousel" data-slide="next">
                                     <span class="carousel-control-next-icon"></span>
                                 </a>
-                                <!--/.Controls-->  
-                                
+                                <!--/.Controls-->
+
                                 <ol class="carousel-indicators" style="margin-top:100px">
                                     <li data-target="#lowongan-carousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#lowongan-carousel" data-slide-to="1"></li>
@@ -120,7 +117,7 @@
                                 </ol>
                             </div>
 
-                            
+
 
                             <!--Slides-->
                             <div class="carousel-inner" role="listbox">
@@ -207,8 +204,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>                                                                    
-                                    
+                                    </div>
+
                                 </div>
                                 <!--/.Second slide-->
                                 <!--Third slide-->
@@ -250,8 +247,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>                                                                    
-                                    
+                                    </div>
+
                                 </div>
                                 <!--/.Third slide-->
                             </div>
@@ -259,7 +256,7 @@
                         </div>
                         <!--/.Carousel Wrapper-->
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
@@ -601,19 +598,19 @@
                     <div class="col md-3">
                         <div class="square-image-modal">
                             <img src="{{ asset('images/gojek.png') }}" alt="img-perusahaan" class="img-fluid img-perusahaan-modal">
-                        </div>                        
+                        </div>
                     </div>
                     <div class="col-md-9">
-                        <h5 class="nama-lowongan-modal">senior android developer</h5>
-                        <p class="nama-perusahaan-modal">PT GOJEK INDONESIA</p>
+                        <h5 class="nama-lowongan-modal">{{ $loker->judul }}</h5>
+                        <p class="nama-perusahaan-modal">{{ $loker->perusahaan->nama }}</p>
                     </div>
                 </div>
 
                 <p class="mt-3 text-dark">Apa alasanmu ingin melamar pada lowongan ini ?</p>
                 <input type="text" class="form-control w-75 bg-light" name="alasan_lamar" id="alasan-lamar">
             </div>
-            <div class="modal-footer">                
-                <a href="{{ url('sukses-apply-lamaran') }}" type="button" class="btn btn-lamar-modal">LAMAR SEKARANG <i class="fa fa-arrow-right"></i></a>
+            <div class="modal-footer">
+                <a href="{{ route('pelamar.loker.apply',$loker->id) }}" type="button" class="btn btn-lamar-modal">LAMAR SEKARANG <i class="fa fa-arrow-right"></i></a>
             </div>
         </div>
     </div>

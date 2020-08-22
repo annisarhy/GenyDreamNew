@@ -7,10 +7,10 @@ use Faker\Generator as Faker;
 
 $factory->define(Lowongan::class, function (Faker $faker) {
     return [
-        'nama_lowongan' => $faker->sentence(2),
+        'judul' => $faker->sentence(2),
         'id_kategori_lowongan' => 1, //sementara masukin ke kategori 1 (dari seeder)
         'waktu_posting' => now(),
         'salary' => $faker->randomNumber(8,true),
-        'deskripsi_lowongan' => $faker -> sentence(5)
+        'deskripsi' => $faker -> sentence(5)
     ];
 });

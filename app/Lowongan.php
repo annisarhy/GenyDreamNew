@@ -11,10 +11,15 @@ class Lowongan extends Model
     protected $fillable = [
         'nama',
         'id_perusahaan',
-        'nama_lowongan',
+        'judul',
         'id_kategori_lowongan',
         'waktu_posting',
         'salary',
-        'deskripsi_lowongan',
+        'deskripsi',
     ];
+
+    public function perusahaan()
+    {
+        return $this->belongsTo('App\Perusahaan','id_perusahaan');
+    }
 }

@@ -17,4 +17,9 @@ class KursusController extends Controller
   {
     return view('applicant/kursus');
   }
+
+  public function detail()
+  {
+      return view('applicant/kursus-detail');
+  }
 }
