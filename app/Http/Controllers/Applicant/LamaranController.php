@@ -8,13 +8,7 @@ use App\Lamaran;
 use App\Pelamar;
 use Illuminate\Support\Facades\Auth;
 
-class LamaranController extends Controller
-{
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
+class LamaranController extends Controller{
     public function index()
     {
         $pelamar = Pelamar::where('id_user',Auth::user()->id)->first();;

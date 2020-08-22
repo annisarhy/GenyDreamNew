@@ -14,24 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',function () {
-    return redirect('/guest');
-})->name('welcome');
+//welcome dan redirect after login
+Route::get('/','GuestController@welcome')->name('welcome');;
 Route::get('/home','HomeController@index')->name('home');
 
-//guest route
+//login biasa
+Auth::routes(['verify' => true]);
 
-Route::group(['prefix' => 'guest'], function () {
-    //welcome dan redirect after login
-    Route::get('/','GuestController@welcome');
-
-    //login biasa
-    Auth::routes(['verify' => true]);
-
-    //login perushaan
-    Route::get('/login/perusahaan', 'Perusahaan\AuthPerusahaanController@showLoginForm')->name('perusahaan.login');
-    Route::get('/register/perusahaan', 'Perusahaan\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
-});
+//login perushaan
+Route::get('/login/perusahaan', 'Perusahaan\AuthPerusahaanController@showLoginForm')->name('perusahaan.login');
+Route::get('/register/perusahaan', 'Perusahaan\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
 
 // applicant routes
 
@@ -40,7 +32,7 @@ Route::group([
   'prefix' => 'pelamar',
   'middleware' => ['pelamar','auth','verified'],
 ], function () {
-  Route::get('/', 'BerandaApplicantController@index')->name('pelamar.beranda');
+  Route::get('/', 'BerandaController@index')->name('pelamar.beranda');
   Route::get('/profile', 'ProfileController@index')->name('pelamar.profile');
   Route::get('/profile/edit', 'ProfileController@edit')->name('pelamar.profile.edit');
   Route::patch('/profile/edit/{id}', 'ProfileController@update')->name('pelamar.profile.update');
@@ -52,7 +44,6 @@ Route::group([
   Route::get('/lamaran', 'LamaranController@index')->name('pelamar.lamaran');
 });
 
-
 // company routes
 
 Route::group([
@@ -60,8 +51,8 @@ Route::group([
   'prefix' => 'perusahaan',
   'middleware' => ['perusahaan','auth','verified'],
 ], function () {
-  Route::get('/', 'BerandaPerusahaanController@index')->name('perusahaan.beranda');
-  Route::get('/list/lowongan', 'DaftarLowonganController@index')->name('perusahaan.lowongan');
-  Route::get('/list/pelamar', 'DaftarPelamarController@index')->name('perusahaan.pelamar');
+  Route::get('/', 'BerandaController@index')->name('perusahaan.beranda');
+  Route::get('/lowongan', 'DaftarLowonganController@index')->name('perusahaan.list.lowongan');
+  Route::get('/pelamar', 'DaftarPelamarController@index')->name('perusahaan.list.pelamar');
   Route::get('/bookmark', 'BookmarkController@index')->name('perusahaan.bookmark');
 });
