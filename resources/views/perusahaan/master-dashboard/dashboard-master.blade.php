@@ -45,10 +45,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" data-value="about" href="{{ url('beranda-perusahaan') }}">BERANDA</a>
+                    <a class="nav-link" data-value="about" href="{{ route('perusahaan.beranda') }}">BERANDA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="portfolio" href="#">LOWONGAN KERJA</a>
+                <a class="nav-link " data-value="portfolio" href="{{ route('perusahaan.list.lowongan') }}">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="blog" href="#">KURSUS</a>
@@ -60,7 +60,7 @@
                     <a class="nav-link " data-value="contact" href="#">CHATTING</a>
                 </li>
             </ul>
-            
+
             <ul class="navbar-nav  pull-left flex-row mr-4 dropdown">
                 <button class="btn btn-default" type="button" id="menu1" data-toggle="dropdown">
                     <img id="profilebutton" style=" width: 30px; height:30px;" src="{{ asset('images/mentor-img.png') }}">
@@ -80,20 +80,20 @@
         </div>
     </nav>
         <!-- end of navbar -->
-        
-        
-    
+
+
+
     <div class="d-flex p-0 mt-5 mb-5" id="wrapper">
 
         <!-- sidebar -->
         <div class=" border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">
-            <button class="btn btn-primary" id="">Buat Lowongan</button>            
+            <button class="btn btn-primary" id="">Buat Lowongan</button>
             </div>
             <div class="list-group list-group-flush">
-                <a href="{{ url('daftar-lowongan') }}" class="list-group-item list-group-item-action">Daftar Lowongan</a>
-                <a href="{{ url('daftar-pelamar') }}" class="list-group-item list-group-item-action">Daftar Pelamar</a>
-                <a href="{{ url('bookmark') }}" class="list-group-item list-group-item-action">Bookmark</a>                
+                <a href="{{ route('perusahaan.list.lowongan') }}" class="list-group-item list-group-item-action">Daftar Lowongan</a>
+                <a href="{{ route('perusahaan.list.pelamar') }}" class="list-group-item list-group-item-action">Daftar Pelamar</a>
+                <a href="{{ route('perusahaan.bookmark') }}" class="list-group-item list-group-item-action">Bookmark</a>
             </div>
         </div>
         <!-- end of sidebar -->
@@ -105,10 +105,10 @@
                 @yield('content')
             </div>
         </div>
-        
+
     </div>
-    
-        
+
+
 
         <footer id=" dk-footer" class="dk-footer">
             <div class="container">
@@ -267,12 +267,12 @@
         </footer>
 
 
-        
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>        
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -284,11 +284,11 @@
             });
         });
 
-        
-    </script>    
-  
-    
-    @yield('js')            
+
+    </script>
+
+
+    @yield('js')
 
 </body>
 

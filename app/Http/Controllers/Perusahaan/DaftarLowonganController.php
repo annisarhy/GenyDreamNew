@@ -5,9 +5,16 @@ namespace App\Http\Controllers\Perusahaan;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Lowongan;
+use App\Perusahaan;
+use Illuminate\Support\Facades\Auth;
+
 class DaftarLowonganController extends Controller
 {
     public function index(){
-        return view('perusahaan/daftar-lowongan');
+        $perusahaan = Perusahaan::where('id_user',Auth::user()->id)->first();
+        $listLowongan = Lowongan::where('id_perusahaan',$perusahaan->id)->withCount('lamaran')->get();
+
+        return view('perusahaan/daftar-lowongan',compact('listLowongan','perusahaan'));
     }
 }

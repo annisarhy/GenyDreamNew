@@ -46,7 +46,7 @@ class LoginController extends Controller
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required',
-            'role' => 'required',
+            // 'role' => 'required',
         ]);
 
         $role = $inputVal['role'];

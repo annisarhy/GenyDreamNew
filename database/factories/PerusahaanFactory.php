@@ -9,7 +9,7 @@ $factory->define(Perusahaan::class, function (Faker $faker) {
     return [
         'nama' => $faker->company,
         'email' => $faker->unique()->safeEmail,
-        'id_penanggung_jawab' => 1,
+        'penanggung_jawab' => $faker->name,
         'no_hp' => $faker->phoneNumber,
         'alamat' => $faker ->address,
     ];
