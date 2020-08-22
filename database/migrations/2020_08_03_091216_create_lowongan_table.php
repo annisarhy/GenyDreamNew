@@ -19,7 +19,7 @@ class CreateLowonganTable extends Migration
             $table->string('nama_lowongan');
             $table->foreignId('id_kategori_lowongan')->constrained('kategori_lowongan');
             $table->dateTime('waktu_posting');
-            $table->decimal('salary');
+            $table->decimal('salary',13);
             $table->text('deskripsi_lowongan');
             $table->timestamps();
         });
