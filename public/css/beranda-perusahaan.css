@@ -302,4 +302,49 @@ hr{
 }
 
 
-/* sidebar */
+/* search */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    position: relative;    
+    border-radius: 100px;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.has-search .btn-cari {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    right: 15px;
+    border-radius: 100px;    
+    text-align: center;
+    pointer-events: none;
+    color: white;
+    background: #68C8D8;
+}
+
+.btn-filter{    
+    height: 2.375rem;
+    border-radius: 100px;    
+    text-align: center;
+    pointer-events: none;
+    color: white;
+    background: #68C8D8;
+}
+
+
+.select-filter{
+    background: none;
+    width: 60%;
+}

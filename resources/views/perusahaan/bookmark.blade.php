@@ -3,6 +3,20 @@
 @section('content')
 <link href="{{ asset('css/beranda-perusahaan.css') }}" rel="stylesheet">
 
+
+<div class="row pl-4 justify-content-between">
+    <p class="jml-data-tampil">Menampilkan 12 dari 24 pelamar</p>
+
+    <form action="">
+        <select class="border-0 bg-none select-filter">
+            <option selected>SORT BY</option>
+            <option value="developer">Developer</option>
+            <option value="design dan multimedia">Design dan Multimedia</option>                            
+    </select>
+    </form>
+    
+</div>
+
 <div class="row">
     <div class="col-lg-4 mt-5">
         <div class="pelamar-card p-2">

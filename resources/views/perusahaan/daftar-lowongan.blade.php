@@ -3,9 +3,21 @@
 @section('content')
 <link href="{{ asset('css/beranda-perusahaan.css') }}" rel="stylesheet">
 
-
 <div class="row">
-    @foreach ($listLowongan as $lowongan)
+    <form action="" class="form-signin col-md-5">
+        <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <button class="btn btn-cari">CARI</button>
+            <input type="text" class="form-control" placeholder="Ketik lowongan yang ingin kamu cari">
+        </div>
+    </form>
+
+    <button class="btn btn-filter ml-3"><img src="{{ asset('images/heroicons-outline_filter.png') }}" alt=""> FILTER</button>
+</div>
+
+
+<div class="row">                        
+    @foreach ($listLowongan as $lowongan)    
     <div class="col-lg-4">
         <div class="lowongan-card p-2 mt-3">
             <div class="row title-pekerjaan p-3">
