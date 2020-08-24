@@ -96,7 +96,7 @@
     <div class="pl-5 pr-5 py-5">
         <div class="d-flex justify-content-between">
             <p class="daftar-title">DAFTAR LOWONGAN</p>
-            <a href="{{ url('daftar-lowongan') }}" class="btn-look-another">LIHAT LOWONGAN LAINNYA <i class="fa fa-angle-right ml-2"></i></a>
+            <a href="{{ route('perusahaan.list.lowongan') }}" class="btn-look-another">LIHAT LOWONGAN LAINNYA <i class="fa fa-angle-right ml-2"></i></a>
         </div>
 
         <div class="row mt-5">
@@ -186,7 +186,7 @@
     <div class="pl-5 pr-5 py-5">
         <div class="d-flex justify-content-between">
             <p class="daftar-title">DAFTAR PELAMAR</p>
-            <a href="{{ url('daftar-pelamar') }}" class="btn-look-another">LIHAT PELAMAR LAINNYA <i class="fa fa-angle-right ml-2"></i></a>
+            <a href="{{ route('perusahaan.list.pelamar') }}" class="btn-look-another">LIHAT PELAMAR LAINNYA <i class="fa fa-angle-right ml-2"></i></a>
         </div>
 
         <div class="container">
