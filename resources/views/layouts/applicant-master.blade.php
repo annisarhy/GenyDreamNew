@@ -71,7 +71,7 @@
 
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href=" {{ url('profile') }}">Profile</a></li>
+                    <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href=" {{ route('pelamar.profile') }}">Profile</a></li>
                     <li role="presentation">
                         <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
