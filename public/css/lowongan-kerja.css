@@ -130,10 +130,14 @@ i {
     font-size: 12px;
 }
 
+.lowongan-kerja{
 
-.lowongan-kerja .company-location p,
-i {
-    color: #BDBDBD;
+    height: 380px;
+}
+
+
+.lowongan-kerja .company-location p, .lowongan-kerja .company-location i {
+    color: #219653;
 }
 
 .lowongan-kerja .job-position h6 {
@@ -142,6 +146,17 @@ i {
 
 .lowongan-kerja .job-position p {
     color: #BDBDBD;
+}
+
+.lowongan-kerja .job-description{            
+    height: 100px;        
+}
+
+.lowongan-kerja .job-description p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .lowongan-kerja .btn-detail {

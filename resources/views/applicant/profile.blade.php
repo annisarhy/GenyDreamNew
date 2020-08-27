@@ -8,8 +8,9 @@
         <div class="row">
             <div class="col-md-9 col-sm-8 wrap-responsive py-2">
                 <div class="user-info-detail">
-                    <div class="row profile-header box-shadow pb-5">                        
-                            
+
+                    <!-- profile header -->
+                    <div class="row profile-header box-shadow pb-5">                                                    
                         <img class="jumbotron img-fluid" src="https://image.freepik.com/free-photo/construction-site_53876-14088.jpg" alt="">
                                                 
                         <div class="col-md-4">
@@ -39,14 +40,233 @@
                         </div>                        
                     </div>
 
-                    <div class="row basic-info box-shadow">
+                    <!-- basic info -->
+                    <div class="row basic-info box-shadow mt-5 p-4">                        
+                        <div class="basic-info-content w-100">
+                            <div class="d-flex justify-content-between basic-info-header">                                                                
+                                <h3 class="header-title">BASIC INFO</h3>
+                                <button class="btn btn-show-modal"><i class="fa fa-pencil mr-2"></i>EDIT BASIC INFO</button>
+                            </div>
 
+                            <hr>
+
+                            <div class="row basic-info-body">
+                                <div class="col-md-5">
+
+                                    <p class="info-title mt-5">Nama</p>
+                                    <p>Anna Minerva</p>
+
+                                    <p class="info-title mt-5">Gelar Depan</p>
+                                    <p>Belum ada gelar</p>
+
+                                    <p class="info-title mt-5">Tempat, Tanggal Lahir</p>
+                                    <p>Bandung, 20 Maret 2000</p>                                    
+
+                                    <p class="info-title mt-5">Gender</p>
+                                    <p>Perempuan</p>
+
+                                    <p class="info-title mt-5">E-mail</p>
+                                    <p>annaminerva@gmail.com</p>
+                                </div>    
+
+                                <div class="col-md-6">
+
+                                    <p class="info-title mt-5">No KTP</p>
+                                    <p>3245987312560934</p>
+
+                                    <p class="info-title mt-5">Gelar Belakang</p>
+                                    <p>Belum ada</p>
+
+                                    <p class="info-title mt-5">Usia</p>
+                                    <p>20</p>
+
+                                    <p class="info-title mt-5">Telepon</p>
+                                    <p>088822222222</p>                                
+
+                                    <p class="info-title mt-5">Alamat</p>
+                                    <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+                                </div>
+                            </div>
+                        </div>                                                
+                    </div>
+
+                    <!-- description -->
+                    <div class="row description box-shadow mt-5 p-4">
+                        <div class="description-content w-100">
+                            <div class="d-flex justify-content-between about-header">                                                                
+                                <h3 class="header-title mr-1">DESKRIPSI</h3>
+                                <button class="btn btn-show-modal"><i class="fa fa-pencil mr-2"></i>EDIT DESCRIPTION</button>
+                            </div>
+
+                            <hr>
+
+                            <p class="description mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, labore vero quos sunt qui laudantium non omnis, consequuntur reiciendis consectetur illum reprehenderit excepturi ipsum, harum error maxime. Unde, tempore? Deserunt.</p>
+                        </div>
+                    </div>
+
+                    <!-- education -->
+                    <div class="row education box-shadow mt-5 p-4">
+                        <div class="education-content w-100">
+                            <div class="d-flex justify-content-between education-header">                                                                
+                                <h3 class="header-title">PENDIDIKAN TERAKHIR</h3>
+                                <button class="btn btn-show-modal"><i class="fa fa-pencil mr-2"></i>TAMBAH PENDIDIKAN</button>
+                            </div>
+
+                            <hr>
+
+                            <div class="education-body">
+                                <div class="education-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/la_user-graduate-solid.png') }}" alt="" class="education-img">
+
+                                        <p class="education-level mt-4 ml-4">PERGURUAN TINGGI</p>
+                                    </div>
+
+                                    <div class="education-detail pl-4 mt-3">
+                                        <h3 class="university-name mb-1">INSTITUT TEKNOLOGI BANDUNG</h3>
+                                        <p class="major text-capitalize">jurusan teknik informatika</p>        
+                                        
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="d-flex duration-of-education mt-2">
+                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
+                                                    <p class="ml-1">From 2018 - 2022 (expected)</p>
+                                                </div>                                            
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <p class="final-score">Nilai Akhir : 3,78</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex btn-editdelete">
+                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+
+                                            <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                        </div>
+                                    </div>
+                                </div>                                                                                                
+
+                                <!-- contoh 2 -->
+                                <div class="education-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/la_user-graduate-solid.png') }}" alt="" class="education-img">
+
+                                        <p class="education-level mt-4 ml-4">Sekolah menengah kejuruan</p>
+                                    </div>
+
+                                    <div class="education-detail pl-4 mt-3">
+                                        <h3 class="university-name mb-1">SMK Negeri 4 bandung</h3>
+                                        <p class="major text-capitalize">jurusan rekayasa perangkat lunak</p>        
+                                        
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="d-flex duration-of-education mt-2">
+                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
+                                                    <p class="ml-1">From 2015 - 2018</p>
+                                                </div>                                            
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <p class="final-score">Nilai Akhir : 3,78</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex btn-editdelete">
+                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+
+                                            <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- work experience -->
+                    <div class="row work-experience box-shadow mt-5 p-4">
+                        <div class="work-experience-content w-100">
+                            <div class="d-flex justify-content-between work-experience-header">                                                                
+                                <h3 class="header-title">PEKERJAAAN TERAKHIR</h3>
+                                <button class="btn btn-show-modal"><i class="fa fa-pencil mr-2"></i>TAMBAH PEKERJAAN</button>
+                            </div>
+
+                            <hr>
+
+                            <div class="work-experience-body">
+                                <div class="work-experience-row mt-2">
+                                    
+                                    <img src="{{ asset('images/la_user-tie-solid-blue.png') }}" alt="" class="work-experience-img">                                        
+                                    
+                                    <div class="work-experience-detail pl-4 mt-3">
+                                        <h3 class="company-name mb-1">CV. Triwikrama</h3>
+                                        <p class="job-title text-capitalize">Front end developer</p>        
+                                                                                
+                                        <div class="d-flex duration-of-work mt-4">
+                                            <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
+                                            <p class="ml-1">From Oktober 2017 - Desember 2017</p>
+                                        </div>                                                                                                                                    
+                                        
+                                        <div class="d-flex btn-editdelete">
+                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+
+                                            <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                        </div>
+                                    </div>
+                                </div>                                                                                                
+
+                                <!-- contoh 2 -->                                
+                                <div class="work-experience-row mt-2">
+                                    
+                                    <img src="{{ asset('images/la_user-tie-solid-blue.png') }}" alt="" class="work-experience-img">                                        
+                                    
+                                    <div class="work-experience-detail pl-4 mt-3">
+                                        <h3 class="company-name mb-1">CV. Triwikrama</h3>
+                                        <p class="job-title text-capitalize">Front end developer</p>        
+                                                                                
+                                        <div class="d-flex duration-of-work mt-4">
+                                            <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
+                                            <p class="ml-1">From Oktober 2017 - Desember 2017</p>
+                                        </div>                                                                                                                                    
+                                        
+                                        <div class="d-flex btn-editdelete">
+                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+
+                                            <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 col-sm-4 wrap-overflow py-2">
+                
+                <div class="info-lengkapi-profile box-shadow p-3">
+                    <p class="info-lengkapi-title font-weight-bold">Ayo Lengkapi Profilmu</p>
 
+                    <div class="progress-container d-flex">
+                        <div class="progress flex-fill mt-1 mr-2">
+                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="flex-shrink percentage">50%</p>
+                    </div>                                    
+                </div>
+
+                <div class="notification p-3 box-shadow mt-5">
+                    <p class="notification-title font-weight-bold">Cek Notifikasimu</p>
+
+                    <div class="container">
+                        <div class="d-flex">
+                            <img src="{{ asset('images/mentor-img.png') }}" alt="" class="notif-img">
+
+                            <p class="ml-4">Bessie Cooper, replied your comments</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -83,53 +83,51 @@
 <section class="lowongan-section">
     <div class="container py-3">
         <h3 class="mt-5">Lowongan Kerja Indonesia</h3>
-    <h5>Tersedia <span>{{ $listLoker->count() }}</span> Lowongan Kerja</h5>
+        <h5>Tersedia <span>{{ $listLoker->count() }}</span> Lowongan Kerja</h5>
         <div class="row">
            @foreach ($listLoker as $loker)
            <div class="col-lg-3 col-md-3 mt-3">
             <div class="card lowongan-kerja pb-3">
                 <div class="row ml-1 update-time">
                     <i class="fa fa-clock-o p-1"></i>
-                <p>Diperbaharui {{ $loker->updated_at }}</p>
+                    <p class="mt-1">Diperbaharui {{ $loker->updated_at }}</p>
                 </div>
 
                 <div class="card-image mx-auto">
                     <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                 </div>
 
-                <div class="card-body d-flex flex-column p-0">
-                    <div class="company-location mr-2 row justify-content-end">
-                        <i class="fa fa-map-marker p-1"></i>
+                <div class="card-body d-flex flex-column p-0">                    
+
+                    <div class="job-position ml-2">
+                        <h6 class="font-weight-bold">{{ $loker->judul }}</h6>
+                        <p>{{ $loker->perusahaan->nama }}</p>
+                    </div>
+
+                    <div class="company-location mr-2 row ml-2">
+                        <i class="fa fa-map-marker pt-1 mr-1"></i>
                         <p>Jakarta Pusat</p>
                     </div>
 
-                    <div class="job-position ml-2">
-                    <h6 class="font-weight-bold">{{ $loker->judul }}</h6>
-                    <p>{{ $loker->perusahaan->nama }}</p>
-                    </div>
-
-                    <div class="job-description mt-3 ml-2">
-                    <p class="card-texr">{{ $loker->deskripsi_lowongan }}</p>
+                    <div class="job-description mt-3 ml-2 mr-2">
+                        <p class="card-text">dakdkashdksahdkjhakjdhaagdjagdjgajdhgajdgajdgjagdjagdjhagdgahjdgsahgdjagdjagdjagdjgdhgajhadgasjgdjhasgjgjgdajhgdajgdjgdjgadghdggdjahsgdjahgdjagdjhagdjasgdjagdjgadasdadadadasd</p>
                     </div>
 
                     <div class="row ml-2">
-                        <div class="col-md-3 d-flex justify-content-start">
+                        <div class="col-md-4 d-flex justify-content-start">
                             <a href="" class="mr-2"><i class="fa fa-heart"></i></a>
                             <a href=""><i class="fa fa-share-alt"></i></a>
                         </div>
-                        <div class="col-md-9 d-flex justify-content-center">
-                            <a href="{{ route('pelamar.loker.detail',$loker->id) }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                        <div class="col-md-8 d-flex justify-content-center">
+                            <a href="{{ route('pelamar.loker.detail',$loker->id) }}" class="btn btn-lg btn-block btn-detail mr-3">DETAIL</i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
            @endforeach
-        </div>
-
-        <div class="row mt-5 mb-5">
-
-        </div>
+        
+        
     </div>
 
 </section>

@@ -7,12 +7,13 @@ body{
     background-color: white;
 }
 
+
+/* left side */
 /* profile header */
 
 .profile-header .jumbotron{
     margin: 0;
-    width: 100%;
-    
+    width: 100%;    
     background-repeat: no-repeat;    
     top: 0px;
     background-size: cover;
@@ -103,21 +104,183 @@ body{
     font-weight: bolder;    
 }
 
-.upgrade-text{
-    
-}
-
 
 .upgrade-button{
     background: none!important;
     border: none;
-    padding: 0!important;
-    /*optional*/
-    font-family: arial, sans-serif;
-    /*input has OS specific font-family*/
+    padding: 0!important;            
     color: #069;    
     cursor: pointer;
 }
+
+
+.user-info-detail .btn-show-modal{
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+}
+
+.user-info-detail .btn-show-modal:hover{
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+    background: rgb(104, 200, 206, 0.2);
+}
+
+
+.user-info-detail .header-title{
+    font-weight: bolder;
+}
+
+.user-info-detail hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 1px;
+}
+/* Basic Info Section */
+
+.info-title{
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+/* education section */
+
+.education-img{
+    display: block;        
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    background: rgb(63, 149, 169, 0.1);
+    border-radius: 100px;
+}
+
+.education-level{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.education-detail{
+    border-left: 4px solid rgb(63, 149, 169, 0.1);
+    margin-left: 33px;
+}
+
+.education-detail .university-name{
+    text-transform: uppercase;
+    color: #3F95A9;
+    font-weight: bolder;
+}
+
+.duration-of-education{
+    color: #BDBDBD;
+    font-size: 17px;    
+}
+
+.duration-of-education img{    
+    height: 27px;
+}
+
+.final-score{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;    
+    border-radius: 100px;    
+    margin-right: 10px;    
+    background-color: rgb(104, 200, 216, 0.2);
+    max-width: 80%;
+    color: #68C8D8;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 992px){
+    .education-detail{
+        position: relative;
+    }
+
+    .btn-editdelete{
+        position: absolute;
+        top: -50px;
+        right: 30px;
+    }
+}
+
+
+/* work experience section */
+
+.work-experience-img{
+    display: block;        
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    background: rgb(63, 149, 169, 0.1);
+    border-radius: 100px;
+}
+
+.work-experience-detail{
+    border-left: 4px solid rgb(63, 149, 169, 0.1);
+    margin-left: 33px;
+}
+
+.work-experience-detail .company-name{
+    text-transform: uppercase;
+    color: #3F95A9;
+    font-weight: bolder;
+}
+
+.duration-of-work{
+    color: #BDBDBD;
+    font-size: 17px;    
+}
+
+.duration-of-work img{    
+    height: 27px;
+}
+
+
+@media screen and (min-width: 992px){
+    .work-experience-detail{
+        position: relative;
+    }
+
+    .btn-editdelete{
+        position: absolute;
+        top: -50px;
+        right: 30px;
+    }
+}
+
+
+/* button edit delete */
+
+.btn-edit{    
+    height: 50px;    
+    background: rgb(104, 200, 206, 0.2);
+    border-radius: 100px;
+}
+
+.btn-edit:hover{        
+    box-shadow: 5px 5px rgb(104, 200, 206);
+    transition: .3s;
+}
+
+.btn-delete{
+    height: 50px;    
+    background: rgb(235, 87, 87, 0.2);
+    border-radius: 100px;
+}
+
+.btn-delete:hover{
+    box-shadow: 5px 5px rgb(235, 87, 87);
+    transition: .3s;
+}
+
+
+
+
+
+/* Modal Input Floating Label */
+
 
 
 
@@ -192,4 +355,21 @@ body{
 .princing-item:hover .deco-layer--2 {
     -webkit-transform: translate3d(-15px, 0, 0);
     transform: translate3d(-15px, 0, 0);
+}
+
+
+
+/* right side */
+/* lengkapi profile */
+
+/* .info-lengkapi-profile{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+} */
+
+.progress{
+    border-radius: 100px;
+}
+.progress-bar{
+    border-radius: 100px;
 }
