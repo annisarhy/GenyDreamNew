@@ -62,7 +62,7 @@ body{
     }   
 }
 
-#pic {
+.profile-header #pic {
     display: none;
 }
 
@@ -251,6 +251,17 @@ body{
 }
 
 
+/* skills section */
+.skill-content:hover{
+    background: rgb(104, 200, 206, 0.2);
+}
+
+.skill-name{
+    color: #4F4F4F;
+    font-size: 20px;
+}
+
+
 /* button edit delete */
 
 .btn-edit{    
@@ -279,10 +290,143 @@ body{
 
 
 
-/* Modal Input Floating Label */
+/* Modal Update*/
+
+.btn-cancel{
+    background: #FAFAFA;
+    border-radius: 100px;
+    color: #BDBDBD;
+    width: 120px;
+}
+
+.btn-simpan{
+    background: #68C8D8;
+    border-radius: 100px;
+    color: white;
+    width: 120px;
+}
+
+.modal-footer{
+    border: none;
+}
+
+.modal-header{
+    border-bottom: 2px solid rgb(63, 149, 169, 0.1);    
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* basic-info modal */
+.modal .image-default img{
+
+    width: 120px;
+    height: 120px;                    
+    margin-left: 145%;
+    
+}
+
+.modal #pic {
+    display: none;
+}
+
+.img-warning{
+    height: 20px;    
+}
+
+.verify-email{
+    color: #68C8D8;    
+}
+
+
+/* education modal */
+.tgl-title{
+    font-weight: bold;
+    color: #BDBDBD;
+}
 
 
 
+
+
+
+/* floating label */
+.has-float-label{
+	display:block;
+	position:relative
+}
+.has-float-label label, .has-float-label > span{
+	position:absolute;
+	cursor:text;
+	font-size:75%;
+	opacity:1;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+	top:-.5em;
+	left:.75rem;
+	z-index:3;
+	line-height:1;
+    padding:0 1px    
+}
+.has-float-label label::after, .has-float-label > span::after{
+	content:" ";
+	display:block;
+	position:absolute;
+	background:#fff;
+	height:2px;
+	top:50%;
+	left:-.2em;
+	right:-.2em;
+	z-index:-1
+}
+.has-float-label .form-control::-webkit-input-placeholder{
+	opacity:1;
+	-webkit-transition:all .2s;
+    transition:all .2s;
+    box-shadow: none;
+    
+}
+.has-float-label .form-control::-moz-placeholder{
+	opacity:1;
+	transition:all .2s;
+}
+.has-float-label .form-control:-ms-input-placeholder{
+	opacity:1;
+	transition:all .2s;
+}
+.has-float-label .form-control::placeholder{
+	opacity:0;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)+*{
+	font-size:100%;
+	color: #6c757d;
+	opacity: 1;
+	top:.3em;
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)+*{
+	font-size:100%;
+	color: #6c757d;
+	opacity: 1;
+	top:.3em;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus) + * {
+	margin-top: 6px;
+}
+  
 
 /*Modal Price*/
 
@@ -373,4 +517,10 @@ body{
 /* notification */
 .notif-img{
     height: 50px;
+}
+
+/* dream career */
+
+.explain-text{
+    font-size: 13px;
 }
