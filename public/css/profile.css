@@ -362,14 +362,15 @@ body{
 /* right side */
 /* lengkapi profile */
 
-/* .info-lengkapi-profile{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: white;
-} */
-
 .progress{
     border-radius: 100px;
 }
 .progress-bar{
     border-radius: 100px;
+}
+
+
+/* notification */
+.notif-img{
+    height: 50px;
 }

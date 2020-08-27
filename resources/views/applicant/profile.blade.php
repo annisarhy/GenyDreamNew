@@ -259,7 +259,7 @@
                 <div class="notification p-3 box-shadow mt-5">
                     <p class="notification-title font-weight-bold">Cek Notifikasimu</p>
 
-                    <div class="container">
+                    <div class="notif-content">
                         <div class="d-flex">
                             <img src="{{ asset('images/mentor-img.png') }}" alt="" class="notif-img">
 
