@@ -261,6 +261,57 @@ body{
     font-size: 20px;
 }
 
+/* Competence section */
+
+.competence-img{
+    display: block;        
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    background: rgb(63, 149, 169, 0.1);
+    border-radius: 100px;
+}
+
+.competence-name{        
+    font-weight: bold;
+    color: #3F95A9;
+}
+
+.competence-detail{
+    border-left: 4px solid rgb(63, 149, 169, 0.1);
+    margin-left: 33px;
+}
+
+.seminar-place{
+    color: #219653;
+}
+.duration-of-seminar{
+    color: #BDBDBD;
+    font-size: 17px;    
+}
+
+.duration-of-seminar img{    
+    height: 27px;
+}
+
+/* cv dan file pendukung section */
+.cv-link{
+    border: 1px dashed rgb(104, 200, 206);
+    background: rgb(104, 200, 206, 0.2);
+}
+
+/* portofolio section */
+.portofolio-img{
+    display: block;        
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background: rgb(63, 149, 169, 0.1);
+    border-radius: 100px;
+}
+
+
+
 
 /* button edit delete */
 
@@ -344,7 +395,53 @@ body{
     color: #BDBDBD;
 }
 
+/* skill modal */
 
+.btn-add-more{
+    border: 2px solid #68C8D8;
+    color: #68C8D8;
+}    
+    
+/* cv modal */
+.btn-add-cv{
+    border: 2px solid #68C8D8;
+    color: #68C8D8;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #68C8D8;
+    background-color: rgb(104, 200, 206, 0.2);
+    border: 1px dashed #68C8D8;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: rgb(104, 200, 206, 0.5);
+}
+
+.inputfile + label {
+	cursor: pointer;
+}
+
+/* social media and portofolio */
+.btn-view-more{
+    border: 2px solid #68C8D8;
+    color: #68C8D8;
+}
 
 
 

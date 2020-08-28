@@ -109,7 +109,7 @@
                         <div class="education-content w-100">
                             <div class="d-flex justify-content-between education-header">                                                                
                                 <h3 class="header-title">PENDIDIKAN TERAKHIR</h3>
-                                <button class="btn btn-show-modal" data-toggle="modal" data-target="#educationModal"><i class="fa fa-pencil mr-2"></i>TAMBAH PENDIDIKAN</button>
+                                <button class="btn btn-show-modal" data-toggle="modal" data-target="#educationModal"><i class="fa fa-plus mr-2"></i>TAMBAH PENDIDIKAN</button>
                             </div>
 
                             <hr>
@@ -189,7 +189,7 @@
                         <div class="work-experience-content w-100">
                             <div class="d-flex justify-content-between work-experience-header">                                                                
                                 <h3 class="header-title">PEKERJAAAN TERAKHIR</h3>
-                                <button class="btn btn-show-modal" data-toggle="modal" data-target="#workModal"><i class="fa fa-pencil mr-2"></i>TAMBAH PEKERJAAN</button>
+                                <button class="btn btn-show-modal" data-toggle="modal" data-target="#workModal"><i class="fa fa-plus mr-2"></i>TAMBAH PEKERJAAN</button>
                             </div>
 
                             <hr>
@@ -243,10 +243,10 @@
 
                     <!-- Skills -->
                     <div class="row skills box-shadow mt-5 p-4">
-                        <div class="description-content w-100">
-                            <div class="d-flex justify-content-between about-header">                                                                
+                        <div class="skills-content w-100">
+                            <div class="d-flex justify-content-between skills-header">                                                                
                                 <h3 class="header-title mr-1">TAMBAH SKILL</h3>
-                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#skilsModal"><i class="fa fa-pencil mr-2"></i>EDIT DESCRIPTION</button>
+                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#skillsModal"><i class="fa fa-plus mr-2"></i>EDIT DESCRIPTION</button>
                             </div>
 
                             <hr>
@@ -301,43 +301,148 @@
 
                     <!-- kompetensi -->
                     <div class="row competence box-shadow mt-5 p-4">
-                        <div class="description-content w-100">
-                            <div class="d-flex justify-content-between about-header">                                                                
-                                <h3 class="header-title mr-1">DESKRIPSI</h3>
-                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#kompetensiModal"><i class="fa fa-pencil mr-2"></i>EDIT DESCRIPTION</button>
+                        <div class="competence-content w-100">
+                            <div class="d-flex justify-content-between competence-header">                                                                
+                                <h3 class="header-title mr-1">KOMPETENSI ATAU SEMINAR</h3>
+                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#kompetensiModal"><i class="fa fa-plus mr-2"></i>TAMBAH KOMPETENSI</button>
                             </div>
 
                             <hr>
 
-                            <p class="description mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, labore vero quos sunt qui laudantium non omnis, consequuntur reiciendis consectetur illum reprehenderit excepturi ipsum, harum error maxime. Unde, tempore? Deserunt.</p>
+                            <div class="competence-body">
+                                <div class="competence-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/carbon_certificate.png') }}" alt="" class="competence-img">
+
+                                        <h3 class="competence-name mt-4 ml-4">MASTER UI/UX COURSE</h3>
+                                    </div>
+
+                                    <div class="education-detail pl-5 mt-3">                                        
+                                        <p class="seminar-place text-capitalize ml-3"><i class="fa fa-map-marker mr-2"></i>Bandung, Jawa Barat, Indonesia</p>
+
+                                        <p class="seminar-description ml-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem labore dolor, ratione iste saepe aspernatur consectetur quod, aliquid impedit doloribus accusamus blanditiis, est ipsa facere odio distinctio soluta. Aut!</p>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="d-flex duration-of-seminar mt-2 ml-3">
+                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
+                                                    <p class="ml-1">Dari Mei 2019 - Juli 2019 </p>
+                                                </div>                                            
+                                            </div>
+                                            
+                                        </div>                                        
+                                    </div>
+                                </div>                                                                                                
+
+                                <!-- contoh 2 -->                                
+                                <div class="competence-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/carbon_certificate.png') }}" alt="" class="competence-img">
+
+                                        <h3 class="competence-name mt-4 ml-4">BRANDING FOR INTERPRENEUR</h3>
+                                    </div>
+
+                                    <div class="education-detail pl-5 mt-3">                                        
+                                        <p class="seminar-place text-capitalize ml-3"><i class="fa fa-map-marker mr-2"></i>Bandung, Jawa Barat, Indonesia</p>
+
+                                        <p class="seminar-description ml-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem labore dolor, ratione iste saepe aspernatur consectetur quod, aliquid impedit doloribus accusamus blanditiis, est ipsa facere odio distinctio soluta. Aut!</p>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="d-flex duration-of-seminar mt-2 ml-3">
+                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
+                                                    <p class="ml-1">Dari September 2019 - Februari 2020 </p>
+                                                </div>                                            
+                                            </div>
+                                            
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- cv dan file pendukung -->
                     <div class="row support-file box-shadow mt-5 p-4">
-                        <div class="description-content w-100">
-                            <div class="d-flex justify-content-between about-header">                                                                
-                                <h3 class="header-title mr-1">DESKRIPSI</h3>
-                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#cvModal"><i class="fa fa-pencil mr-2"></i>EDIT DESCRIPTION</button>
+                        <div class="support-file-content w-100">
+                            <div class="d-flex justify-content-between support-file-header">                                                                
+                                <h3 class="header-title mr-1">CV DAN FILE PENDUKUNG LAINNYA</h3>
+                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#cvModal"><i class="fa fa-file mr-2"></i>UPDLOAD FILE</button>
                             </div>
 
                             <hr>
 
-                            <p class="description mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, labore vero quos sunt qui laudantium non omnis, consequuntur reiciendis consectetur illum reprehenderit excepturi ipsum, harum error maxime. Unde, tempore? Deserunt.</p>
+                            <div class="file-body">
+                                <div class="file-row col-md-12">
+                                    <p class="file-name mt-5 font-weight-bold mb-1 ml-1">FILE CV</p>
+                                    <!-- link mengarah ke file pdfnya -->
+                                    <a href="#" class="cv-link row ml-1 p-2">CV Anna Minerva.pdf</a>
+                                </div> 
+                                
+                                <div class="file-row col-md-12">
+                                    <p class="file-name mt-5 font-weight-bold mb-1 ml-1">FILE PENDUKUNG</p>
+                                    <!-- link mengarah ke file pdfnya -->
+                                    <a href="#" class="cv-link row ml-1 p-2">File pendukung satu.pdf</a>
+                                </div>
+
+                                <div class="file-row col-md-12">
+                                    <p class="file-name mt-5 font-weight-bold mb-1 ml-1">FILE PENDUKUNG</p>
+                                    <!-- link mengarah ke file pdfnya -->
+                                    <a href="#" class="cv-link row ml-1 p-2">File pendukung dua.pdf</a>
+                                </div>
+                            </div>
+                            
+
                         </div>
                     </div>
 
                     <!-- portfolio dan sosial media -->
                     <div class="row portfolio box-shadow mt-5 p-4">
-                        <div class="description-content w-100">
-                            <div class="d-flex justify-content-between about-header">                                                                
-                                <h3 class="header-title mr-1">DESKRIPSI</h3>
-                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#portofolioModal"><i class="fa fa-pencil mr-2"></i>EDIT DESCRIPTION</button>
+                        <div class="portfolio-content w-100">
+                            <div class="d-flex justify-content-between portfolio-header">                                                                
+                                <h3 class="header-title mr-1">PORTFOLIO AND SOCIAL MEDIA</h3>
+                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#portofolioModal"><i class="fa fa-plus mr-2"></i>TAMBAH SOCIAL MEDIA</button>
                             </div>
 
                             <hr>
 
-                            <p class="description mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, labore vero quos sunt qui laudantium non omnis, consequuntur reiciendis consectetur illum reprehenderit excepturi ipsum, harum error maxime. Unde, tempore? Deserunt.</p>
+                            <div class="portofolio-body">
+                                <div class="portofolio-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/bx_bxl-facebook.png') }}" alt="" class="portofolio-img">
+
+                                        <div class="portofolio-link">
+                                            <p class="social-media-title ml-3 mb-0 font-weight-bold">FACEBOOK</p>
+                                            <a href="#" class="social-media-link ml-3">www.facebook.com/AnnaMinerva</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="portofolio-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/ant-design_instagram-outlined.png') }}" alt="" class="portofolio-img">
+
+                                        <div class="portofolio-link">
+                                            <p class="social-media-title ml-3 mb-0 font-weight-bold">Instagram</p>
+                                            <a href="#" class="social-media-link ml-3">www.instagram.com/AnnaMinerva</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="portofolio-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/ant-design_twitter-outlined.png') }}" alt="" class="portofolio-img">
+
+                                        <div class="portofolio-link">
+                                            <p class="social-media-title ml-3 mb-0 font-weight-bold">Twitter</p>
+                                            <a href="#" class="social-media-link ml-3">www.twitter.com/AnnaMinerva</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -795,10 +900,258 @@
 
 
 <!-- modal skill -->
+<div class="modal fade" id="skillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header pl-0 pr-0">
+                <h5 class="modal-title font-weight-bold" id="ModalSkill">TAMBAH SKILL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>                
+            </div>            
+            
+            <!-- form -->
+            <form action="">
+                <div class="modal-body modal-desctiption">                            
 
+                    <div class="skill-content-modal">
+                        <div class="form-group mt-4">
+                            <span class="has-float-label">
+                                <input type="text" name="nama_skill" value="" class="form-control" id="nama_skill" placeholder="NAMA SKILL"></input>
+                                <label for="nama_skill">NAMA SKILL</label>
+                            </span>                        
+                        </div>
+
+                        <div class="form-group">                        
+                            <input type="range" class="form-control-range range-skill" id="range_skill" name="range_skill" min="0" max="100" step="10">
+                        </div>
+                    </div>                    
+                    
+
+                    <button class="btn btn-block btn-add-more mt-5" type="button"><i class="fa fa-plus"></i>TAMBAH SKILL</button>
+
+                </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
+                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                </div>
+            </form>
+
+            <!-- end of form -->
+        </div>
+    </div>
+</div>
 <!-- end of modal skill -->
 
 
+<!-- modal kompetensi -->
+<div class="modal fade" id="kompetensiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header pl-0 pr-0">
+                <h5 class="modal-title font-weight-bold" id="ModalCompetenceTitle">TAMBAH KOMPETENSI</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>                
+            </div>            
+            
+            <!-- form -->
+            <form action="">
+                <div class="modal-body modal-competence mt-4">                                    
+                    <div class="form-group">
+                        <span class="has-float-label">
+                            <input type="text" name="compatence_name" value="" class="form-control" id="compatence_name" placeholder="NAMA KOMPETENSI" required="required">
+                            <label for="compatence_name">NAMA KOMPETENSI</label>
+                        </span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <span class="has-float-label">
+                            <input type="text" name="location" value="" class="form-control" id="location" placeholder="LOKASI" required="required">
+                            <label for="location">LOKASI</label>
+                        </span>
+                    </div>
+                                        
+                    
+                    <div class="tanggal-mulai mt-4">
+                        <p class="tgl-title mb-4">TANGGAL MULAI</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-group has-float-label">
+                                    <select class="form-control custom-select" id="months-start-seminar"></select>
+                                    <span>BULAN</span>
+                                </label>
+                            </div>  
+
+                            <div class="col-md-6">
+                                <label class="form-group has-float-label">
+                                    <select class="form-control custom-select" id="years-start-seminar"></select>
+                                    <span>TAHUN</span>
+                                </label>
+                            </div>                        
+                        </div>
+                    </div>                    
+
+                    <div class="tanggal-akhir mt-2">
+                        <p class="tgl-title mb-4">TANGGAL AKHIR</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-group has-float-label">
+                                    <select class="form-control custom-select" id="months-end-seminar"></select>
+                                    <span>BULAN</span>
+                                </label>
+                            </div>  
+
+                            <div class="col-md-6">
+                                <label class="form-group has-float-label">
+                                    <select class="form-control custom-select" id="years-end-seminar"></select>
+                                    <span>TAHUN</span>
+                                </label>
+                            </div>                        
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <span class="has-float-label">
+                            <textarea type="text" name="keterangan" value="" class="form-control" id="keterangan" placeholder="KETERANGAN" rows="5"></textarea>
+                            <label for="keterangan">KETERANGAN</label>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
+                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                </div>
+            </form>
+
+            <!-- end of form -->
+        </div>
+    </div>
+</div>
+<!-- end of modal kompetensi -->
+
+
+<!-- modal CV -->
+<div class="modal fade" id="cvModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header pl-0 pr-0">
+                <h5 class="modal-title font-weight-bold" id="ModalSkill">UPLOAD FILE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>                
+            </div>            
+            
+            <!-- form -->
+            <form action="">
+                <div class="modal-body modal-desctiption">                            
+
+                    <div class="cv-content-modal">
+                        <div class="form-group mt-4">
+                            <span class="has-float-label">
+                                <input type="text" name="nama_file" value="" class="form-control" id="nama_file" placeholder="NAMA FILE"></input>
+                                <label for="nama_file">NAMA FILE</label>
+                            </span>                        
+                        </div>
+
+                        <div class="form-group">                        
+                            <input type="file" class="inputfile" id="file_cv" name="file_cv">
+                            <label for="file_cv"><i class="fa fa-file mr-2"></i>Choose a file</label>
+                        </div>
+                    </div>                    
+                    
+
+                    <button class="btn btn-block btn-add-cv mt-5" type="button"><i class="fa fa-plus"></i>TAMBAH SKILL</button>
+
+                </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
+                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                </div>
+            </form>
+
+            <!-- end of form -->
+        </div>
+    </div>
+</div>
+<!-- end of modal CV -->
+
+
+<!-- modal portofolio -->
+<div class="modal fade" id="portofolioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header pl-0 pr-0">
+                <h5 class="modal-title font-weight-bold" id="ModalPortofolioTitle">TAMBAH SOCIAL MEDIA</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>                
+            </div>            
+            
+            <!-- form -->
+            <form action="">
+                <div class="modal-body modal-competence mt-4">                                    
+                    <div class="form-group social-media more-social-media">
+                        <span class="has-float-label">
+                            <input type="text" name="website" value="" class="form-control" id="website" placeholder="WEBSITE">
+                            <label for="website">WEBSITE</label>
+                        </span>
+                    </div>
+
+                    <div class="form-group social-media more-social-media">
+                        <span class="has-float-label">
+                            <input type="text" name="facebook" value="" class="form-control" id="facebook" placeholder="FACEBOOK">
+                            <label for="facebook">FACEBOOK</label>
+                        </span>
+                    </div>
+
+                    <div class="form-group social-media more-social-media">
+                        <span class="has-float-label">
+                            <input type="text" name="instagram" value="" class="form-control" id="instagram" placeholder="INSTAGRAM">
+                            <label for="instagram">INSTAGRAM</label>
+                        </span>
+                    </div>
+
+                    <div class="form-group social-media more-social-media">
+                        <span class="has-float-label">
+                            <input type="text" name="twitter" value="" class="form-control" id="twitter" placeholder="TWITTER">
+                            <label for="twitter">TWITTER</label>
+                        </span>
+                    </div>
+                    
+                    <div class="form-group more-social-media" style="display: none;">
+                        <span class="has-float-label">
+                            <input type="text" name="github" value="" class="form-control" id="github" placeholder="GITHUB">
+                            <label for="github">GITHUB</label>
+                        </span>
+                    </div>
+
+                    <div class="form-group more-social-media" style="display: none;">
+                        <span class="has-float-label">
+                            <input type="text" name="linkedin" value="" class="form-control" id="linkedin" placeholder="LINKEDIN">
+                            <label for="linkedin">LINKEDIN</label>
+                        </span>
+                    </div>                
+
+                    <button class="btn btn-block btn-view-more mt-5" type="button">LIHAT LAINNYA</button>
+
+                </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
+                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                </div>
+            </form>
+
+            <!-- end of form -->
+        </div>
+    </div>
+</div>
+<!-- end of modal portofolio -->
 
 <!-- modal price subscribe -->
 <div class="modal fade bd-example-modal-xl" id="myModal" role="dialog">
@@ -982,11 +1335,8 @@
         }
         
     });
-</script>
 
-
-
-<!-- <script>
+    // Competence
     $(document).ready(function(){
         var nowY = new Date().getFullYear();
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];        
@@ -996,9 +1346,9 @@
             options += "<option>"+ Y +"</option>";
         }
 
-        $("#years-start").append( options );    
+        $("#years-start-seminar").append( options );    
 
-        $("#years-end").append( options );
+        $("#years-end-seminar").append( options );
        
         for (var m = 0; m < 12; m++){
             let monthNum = new Date(2020, m).getMonth()
@@ -1007,7 +1357,7 @@
             monthElem.value = monthNum; 
             monthElem.textContent = month;            
             
-            $("#months-start").append(monthElem);            
+            $("#months-start-seminar").append(monthElem);            
         }
 
         for (var m = 0; m < 12; m++){
@@ -1017,11 +1367,44 @@
             monthElem.value = monthNum; 
             monthElem.textContent = month;            
             
-            $("#months-end").append(monthElem);            
+            $("#months-end-seminar").append(monthElem);            
         }
         
     });
-    
-</script> -->
+
+
+    $(document).ready(function(){
+
+        // skill modal
+        $('.btn-add-more').click(function(){
+            var html = $('.skill-content-modal').html();
+            $('.skill-content-modal').after(html);
+        });
+
+        // cv modal
+        $('.btn-add-cv').click(function(){
+            var html = $('.cv-content-modal').html();
+            $('.cv-content-modal').after(html);
+        });
+
+        // social media dan portofolio
+        $(".more-social-media").slice(0, 3).show();
+            if($(".social-media:hidden").lenght != 0){
+                $(".btn-view-more").show();
+            }
+
+            $(".btn-view-more").click(function(e){
+                e.preventDefault();
+                $(".more-social-media:hidden").slice(0, 5).slideDown();
+                if($("more-social-media:hidden").length == 0){
+                    $(".btn-view-more").fadeOut('slow');
+                }
+            })
+    });
+</script>
+
+
+
+
 
 @endsection
