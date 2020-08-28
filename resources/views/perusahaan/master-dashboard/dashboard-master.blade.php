@@ -48,7 +48,7 @@
                     <a class="nav-link" data-value="about" href="{{ route('perusahaan.beranda') }}">BERANDA</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link " data-value="portfolio" href="{{ route('perusahaan.list.lowongan') }}">LOWONGAN KERJA</a>
+                    <a class="nav-link " data-value="portfolio" href="{{ route('perusahaan.list.lowongan') }}">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="blog" href="#">KURSUS</a>
@@ -67,7 +67,7 @@
 
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href=" {{ url('profile') }}">Profile</a></li>
+                    <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href="#">Profile</a></li>
                     <li role="presentation">
                         <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -88,7 +88,7 @@
         <!-- sidebar -->
         <div class=" border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">
-            <button class="btn btn-primary" id="">Buat Lowongan</button>
+            <a href="{{ route('perusahaan.add.lowongan') }}" class="btn btn-primary" id="">Buat Lowongan</a>
             </div>
             <div class="list-group list-group-flush">
                 <a href="{{ route('perusahaan.list.lowongan') }}" class="list-group-item list-group-item-action">Daftar Lowongan</a>
