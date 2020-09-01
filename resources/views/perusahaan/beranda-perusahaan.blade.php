@@ -14,7 +14,7 @@
                     <div class="user-info-content">
                         <p class="username mb-0">Anna Minerva</p>
                         <p class="user-position">Human Resources Department</p>
-                        <a href="#">LIHAT PROFIL <i class="fa fa-arrow-right"></i></a>
+                        <a href="{{ route('perusahaan.profile') }}">LIHAT PROFIL <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -28,9 +28,9 @@
                         <p class="flex-shrink percentage">50%</p>
                     </div>                                            
                     
-                    <a href="#" class="profile-picture d-block">Profile Picture <i class="fa fa-angle-right pull-right"></i></a>                                            
+                    <a href="{{ route('perusahaan.profile') }}" class="profile-picture d-block">Profile Picture <i class="fa fa-angle-right pull-right"></i></a>                                            
                                         
-                    <a href="#" class="basic-information d-block mt-3">Basic Information <i class="fa fa-angle-right pull-right"></i></a>                                            
+                    <a href="{{ route('perusahaan.profile') }}" class="basic-information d-block mt-3">Basic Information <i class="fa fa-angle-right pull-right"></i></a>                                            
                 </div>
             </div>
             

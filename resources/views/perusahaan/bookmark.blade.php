@@ -1,6 +1,6 @@
 @extends('perusahaan.master-dashboard.dashboard-master')
 
-@section('content')
+@section('content-dashboard')
 <link href="{{ asset('css/beranda-perusahaan.css') }}" rel="stylesheet">
 
 

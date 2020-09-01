@@ -1,9 +1,9 @@
 @extends('perusahaan.master-dashboard.dashboard-master')
 
-@section('content')
+@section('content-dashboard')
 <link href="{{ asset('css/beranda-perusahaan.css') }}" rel="stylesheet">
 
-<div class="row">
+<!-- <div class="row">
     <form action="" class="form-signin col-md-5">
         <div class="form-group has-search">
             <span class="fa fa-search form-control-feedback"></span>
@@ -13,7 +13,7 @@
     </form>
 
     <button class="btn btn-filter ml-3"><img src="{{ asset('images/heroicons-outline_filter.png') }}" alt=""> FILTER</button>
-</div>
+</div> -->
 
 
 <div class="row">                        

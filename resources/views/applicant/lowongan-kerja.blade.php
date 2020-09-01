@@ -110,7 +110,7 @@
                     </div>
 
                     <div class="job-description mt-3 ml-2 mr-2">
-                        <p class="card-text">dakdkashdksahdkjhakjdhaagdjagdjgajdhgajdgajdgjagdjagdjhagdgahjdgsahgdjagdjagdjagdjgdhgajhadgasjgdjhasgjgjgdajhgdajgdjgdjgadghdggdjahsgdjahgdjagdjhagdjasgdjagdjgadasdadadadasd</p>
+                        <p class="card-text">{{ $loker->deskripsi }}</p>
                     </div>
 
                     <div class="row ml-2">

@@ -1,19 +1,8 @@
 @extends('perusahaan.master-dashboard.dashboard-master')
 
-@section('content')
+@section('content-dashboard')
 <link href="{{ asset('css/beranda-perusahaan.css') }}" rel="stylesheet">
 
-<div class="row">
-    <form action="" class="form-signin col-md-5">
-        <div class="form-group has-search">
-            <span class="fa fa-search form-control-feedback"></span>
-            <button class="btn btn-cari">CARI</button>
-            <input type="text" class="form-control" placeholder="Ketik nama pelamar yang ingin kamu temukan">
-        </div>
-    </form>
-
-    <button class="btn btn-filter ml-3"><img src="{{ asset('images/heroicons-outline_filter.png') }}" alt=""> FILTER</button>
-</div>
 
 <div class="row">
     <div class="col-lg-4 mt-5">

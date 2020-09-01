@@ -26,40 +26,62 @@ body{
 
 .profile-header .image-default img{
 
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     position: absolute;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     top: -80px;
     left: 85px;    
     margin: 0 auto;    
     z-index: 10;
 }
 
-@media screen and (max-width: 992px) and (min-width: 600px) {
+.profile-header .username-info{
+    float: right;
+}
+@media screen and (max-width: 1204px) and (min-width: 600px) {
     .profile-header .image-default img{
 
         width: 120px;
         height: 120px;
         position: absolute;
+        border-radius: 100px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         top: -80px;
-        left: 40px;    
+        left: 40px;            
         margin: 0 auto;    
         z-index: 10;
     }   
+
+    .profile-header .username-info{
+        float: none;
+        margin-top: 30px;
+    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 736px) {
     
     .profile-header .image-default img{
 
         width: 120px;
         height: 120px;
         position: absolute;
+        border-radius: 100px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         top: -80px;
         left: 107px;    
         margin: 0 auto;    
         z-index: 10;
     }   
+    .profile-header .username-info{
+        float: none;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
 }
 
 .profile-header #pic {
@@ -70,39 +92,32 @@ body{
     cursor: pointer;
 }
 
-.username{
+.company-name{
     font-weight: bolder;
     text-transform: capitalize;
 }
 
-.btn-export{
-    border-radius: 100px;
-    background-color: #68C8D8;
-    color: white;
-    font-weight: bolder;
-    font-size: 15px;
-    width: 30%;
-    height: 45px;
-}
-
-.btn-preview{
-    border-radius: 100px;
-    background-color: rgb(104, 200, 216, 0.6);
-    color: white;
-    font-weight: bolder;
-    font-size: 15px;
-    width: 30%;
-    height: 45px;
-}
-
-.user-status{
-    border: 1px solid #BDBDBD;
-    width: 20%;
+.user-status{        
     pointer-events: none;
     color: #BDBDBD;
     font-size: 17px;
     font-weight: bolder;    
 }
+
+.btn-export{    
+    background-color: white;
+    color: #68C8D8;
+    font-weight: 600;
+    font-size: 15px;
+    width: 60%;    
+    border: 2px solid #68C8D8;
+}
+
+.btn-export:hover{
+    background-color: #68C8D8;
+    color: white;
+}
+
 
 
 .upgrade-button{
@@ -141,200 +156,14 @@ body{
     margin-bottom: 5px;
 }
 
-/* education section */
+/* user perusahaan section */
 
-.education-img{
-    display: block;        
-    width: 70px;
-    height: 70px;
-    padding: 10px;
-    background: rgb(63, 149, 169, 0.1);
+.user-img{
+    width: 140px;
+    height: 140px;    
     border-radius: 100px;
-}
-
-.education-level{
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 20px;
-}
-
-.education-detail{
-    border-left: 4px solid rgb(63, 149, 169, 0.1);
-    margin-left: 33px;
-}
-
-.education-detail .university-name{
-    text-transform: uppercase;
-    color: #3F95A9;
-    font-weight: bolder;
-}
-
-.duration-of-education{
-    color: #BDBDBD;
-    font-size: 17px;    
-}
-
-.duration-of-education img{    
-    height: 27px;
-}
-
-.final-score{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;    
-    border-radius: 100px;    
-    margin-right: 10px;    
-    background-color: rgb(104, 200, 216, 0.2);
-    max-width: 80%;
-    color: #68C8D8;
-    text-align: center;
-    font-weight: bold;
-}
-
-
-@media screen and (min-width: 992px){
-    .education-detail{
-        position: relative;
-    }
-
-    .btn-editdelete{
-        position: absolute;
-        top: -50px;
-        right: 30px;
-    }
-}
-
-
-/* work experience section */
-
-.work-experience-img{
-    display: block;        
-    width: 70px;
-    height: 70px;
-    padding: 10px;
-    background: rgb(63, 149, 169, 0.1);
-    border-radius: 100px;
-}
-
-.work-experience-detail{
-    border-left: 4px solid rgb(63, 149, 169, 0.1);
-    margin-left: 33px;
-}
-
-.work-experience-detail .company-name{
-    text-transform: uppercase;
-    color: #3F95A9;
-    font-weight: bolder;
-}
-
-.duration-of-work{
-    color: #BDBDBD;
-    font-size: 17px;    
-}
-
-.duration-of-work img{    
-    height: 27px;
-}
-
-
-@media screen and (min-width: 992px){
-    .work-experience-detail{
-        position: relative;
-    }
-
-    .btn-editdelete{
-        position: absolute;
-        top: -50px;
-        right: 30px;
-    }
-}
-
-
-/* skills section */
-.skill-content:hover{
-    background: rgb(104, 200, 206, 0.2);
-}
-
-.skill-name{
-    color: #4F4F4F;
-    font-size: 20px;
-}
-
-/* Competence section */
-
-.competence-img{
-    display: block;        
-    width: 70px;
-    height: 70px;
-    padding: 10px;
-    background: rgb(63, 149, 169, 0.1);
-    border-radius: 100px;
-}
-
-.competence-name{        
-    font-weight: bold;
-    color: #3F95A9;
-}
-
-.competence-detail{
-    border-left: 4px solid rgb(63, 149, 169, 0.1);
-    margin-left: 33px;
-}
-
-.seminar-place{
-    color: #219653;
-}
-.duration-of-seminar{
-    color: #BDBDBD;
-    font-size: 17px;    
-}
-
-.duration-of-seminar img{    
-    height: 27px;
-}
-
-/* cv dan file pendukung section */
-.cv-link{
-    border: 1px dashed rgb(104, 200, 206);
-    background: rgb(104, 200, 206, 0.2);
-}
-
-/* portofolio section */
-.portofolio-img{
-    display: block;        
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    background: rgb(63, 149, 169, 0.1);
-    border-radius: 100px;
-}
-
-
-
-
-/* button edit delete */
-
-.btn-edit{    
-    height: 50px;    
-    background: rgb(104, 200, 206, 0.2);
-    border-radius: 100px;
-}
-
-.btn-edit:hover{        
-    box-shadow: 5px 5px rgb(104, 200, 206);
-    transition: .3s;
-}
-
-.btn-delete{
-    height: 50px;    
-    background: rgb(235, 87, 87, 0.2);
-    border-radius: 100px;
-}
-
-.btn-delete:hover{
-    box-shadow: 5px 5px rgb(235, 87, 87);
-    transition: .3s;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -389,59 +218,8 @@ body{
 }
 
 
-/* education modal */
-.tgl-title{
-    font-weight: bold;
-    color: #BDBDBD;
-}
 
-/* skill modal */
 
-.btn-add-more{
-    border: 2px solid #68C8D8;
-    color: #68C8D8;
-}    
-    
-/* cv modal */
-.btn-add-cv{
-    border: 2px solid #68C8D8;
-    color: #68C8D8;
-}
-
-.inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
-
-.inputfile +    label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: #68C8D8;
-    background-color: rgb(104, 200, 206, 0.2);
-    border: 1px dashed #68C8D8;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-}
-
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background-color: rgb(104, 200, 206, 0.5);
-}
-
-.inputfile + label {
-	cursor: pointer;
-}
-
-/* social media and portofolio */
-.btn-view-more{
-    border: 2px solid #68C8D8;
-    color: #68C8D8;
-}
 
 
 

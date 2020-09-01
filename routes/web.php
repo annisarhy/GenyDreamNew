@@ -52,8 +52,9 @@ Route::group([
   'middleware' => ['perusahaan','auth','verified'],
 ], function () {
   Route::get('/', 'BerandaController@index')->name('perusahaan.beranda');
+  Route::get('/profile-perusahaan', 'ProfilePerusahaanController@index')->name('perusahaan.profile');  
   Route::get('/lowongan', 'DaftarLowonganController@index')->name('perusahaan.list.lowongan');
   Route::get('/lowongan/tambah-lowongan', 'AddLowonganController@index')->name('perusahaan.add.lowongan');
   Route::get('/pelamar', 'DaftarPelamarController@index')->name('perusahaan.list.pelamar');
-  Route::get('/bookmark', 'BookmarkController@index')->name('perusahaan.bookmark');  
+  Route::get('/bookmark', 'BookmarkController@index')->name('perusahaan.bookmark');    
 });
