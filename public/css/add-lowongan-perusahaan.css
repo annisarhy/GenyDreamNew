@@ -122,3 +122,4 @@
 .has-float-label .form-control:placeholder-shown:not(:focus) + * {
     margin-top: 6px;    
 }
+

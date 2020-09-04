@@ -3,7 +3,6 @@
 @section('content-dashboard')
 <link href="{{ asset('css/add-lowongan-perusahaan.css') }}" rel="stylesheet">
 
-
 <div class="row pl-4 justify-content-between">    
     <div class="col-md-8 add-lowongan bg-white p-5">
         <h2 class="font-weight-bold">BUAT LOWONGAN BARU</h2>
@@ -20,7 +19,14 @@
 
             <div class="form-group mt-4">
                 <span class="has-float-label">
-                    <input type="text" name="kategori" value="" class="form-control" id="kategori" placeholder="KATEGORI">
+                    <input type="text" name="kategori" value="" class="form-control" list="kategoriList" id="kategori" placeholder="KATEGORI">
+                    <datalist id="kategoriList">
+                        <option value="teknologi informasi">Teknologi Informasi</option>
+                        <option value="akuntansi">Akuntansi</option>
+                        <option value="administrasi">Administrasi</option>
+                        <option value="hukum">Hukum</option>
+                        <option value="manufaktur">Manufaktur</option>
+                    </datalist>
                     <label for="kategori">KATEGORI</label>
                 </span>
             </div>
@@ -70,20 +76,14 @@
 
             <div class="skills-container mt-4 mb-5">
                 <p class="salary-title mb-2">SKILL YANG DIBUTUHKAN</p>
-                <div class="row">
-                    <div class="form-group mt-1 col-md-9">
-                        <span class="has-float-label">
-                            <input type="text" name="nama_skill" value="" class="form-control" id="nama_skill" placeholder="nama_skill">
-                            <label for="nama_skill">NAMA SKILL</label>
-                        </span>
-                    </div>                 
-
-                    <div class="col-md-3">
-                        <button class="btn btn-block btn-tambah-skill font-weight-bold" type="button">TAMBAH</button>
-                    </div>
-                </div>
-
-                <hr>
+                
+                <div class="form-group mt-1">
+                    <span class="has-float-label">
+                        <input type="text" data-role="tagsinput" name="nama_skill" value="" class="form-control" id="nama_skill">
+                        <label for="nama_skill">NAMA SKILL</label>
+                    </span>
+                </div>                                     
+                            
             </div>
             
             <button class="btn btn-simpan mt-5">SIMPAN</button>
