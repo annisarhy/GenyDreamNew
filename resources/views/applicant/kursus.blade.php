@@ -38,9 +38,7 @@
                                 <li><a href="#">HTML</a></li>
                                 <li><a href="#">CSS</a></li>
                                 <li><a href="#">JavaScript</a></li>
-                            </ul>
-                            <a href="#" class="sort-col active"><i class="fa fa-th"></i></a>
-                            <a href="#" class="sort-row"><i class="fa fa-list-ul"></i></a>
+                            </ul>                            
                         </div>
                     </div>                    
                 </div>
