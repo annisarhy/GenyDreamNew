@@ -29,6 +29,9 @@ body{
     width: 120px;
     height: 120px;
     position: absolute;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     top: -80px;
     left: 85px;    
     margin: 0 auto;    

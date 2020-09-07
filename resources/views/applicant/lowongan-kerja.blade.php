@@ -13,24 +13,28 @@
                         <input type="text" class="form-control" placeholder="Masukan karir, nama perusahaan, atau skill yang kamu inginkan">
                     </div>
 
-                    <div class="row p-3">
-                        <select class="selectpicker col-md-4 mt-2" multiple data-live-search="false" title="Job Type">
-                            <option value="freelance">Freelance</option>
-                            <option value="remote">Remote</option>
-                            <option value="full time">Full time</option>
-                            <option value="part time">Part Time</option>
-                        </select>
-
-                        <select class="selectpicker col-md-4 mt-2" multiple data-live-search="false" title="Career">
-                            <option value="developer">Developer</option>
-                            <option value="design dan multimedia">Design dan Multimedia</option>
-                            <option value="teknologi">Teknologi</option>
-                            <option value="konstruksi dan fasilitas">Konstruksi dan Fasilitas</option>
-                            <option value="akuntansi dan keuangan">Akuntansi dan Keuangan</option>
-                            <option value="pemerintahan">Pemerintahan</option>
-                            <option value="telekomunikasi">Telekomunikasi</option>
-                            <option value="sumber daya manusia">Sumber Daya Manusia</option>
-                        </select>
+                    <div class="row p-3 select-filter">                        
+                        <div class="col-md-4">
+                            <select class=" mt-2 p-2" title="Job Type">
+                                <option value="freelance">Freelance</option>
+                                <option value="remote">Remote</option>
+                                <option value="full time">Full time</option>
+                                <option value="part time">Part Time</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-4 pt-2">
+                            <select class="js-example-basic-single p-2" title="Career">
+                                <option value="developer">Developer</option>
+                                <option value="design dan multimedia">Design dan Multimedia</option>
+                                <option value="teknologi">Teknologi</option>
+                                <option value="konstruksi dan fasilitas">Konstruksi dan Fasilitas</option>
+                                <option value="akuntansi dan keuangan">Akuntansi dan Keuangan</option>
+                                <option value="pemerintahan">Pemerintahan</option>
+                                <option value="telekomunikasi">Telekomunikasi</option>
+                                <option value="sumber daya manusia">Sumber Daya Manusia</option>
+                            </select>
+                        </div>                        
 
                         <div class="dropdown col-md-4 mt-2">
                             <button class="btn text-left btn-block dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Salary
@@ -41,37 +45,44 @@
                             </div>
                         </div>
 
-                        <select class="selectpicker col-md-4 mt-2" multiple data-live-search="false" title="Skill">
-                            <option value="android programming">Android Programming</option>
-                            <option value="graphic design">Graphic Design</option>
-                            <option value="script writing">Script Writing</option>
-                            <option value="web programming">Web Programming</option>
-                            <option value="illustration">Illustration</option>
-                            <option value="marketing">Marketing</option>
-                            <option value="web design">Web Design</option>
-                            <option value="visual branding">Visula Branding</option>
-                        </select>
+                        <div class="col-md-4 pt-2" >
+                            <select class="js-example-basic-single p-2" title="Skill">
+                                <option value="android programming">Android Programming</option>
+                                <option value="graphic design">Graphic Design</option>
+                                <option value="script writing">Script Writing</option>
+                                <option value="web programming">Web Programming</option>
+                                <option value="illustration">Illustration</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="web design">Web Design</option>
+                                <option value="visual branding">Visula Branding</option>
+                            </select>
+                        </div>                    
 
-                        <select class="selectpicker col-md-4 mt-2" multiple data-live-search="false" title="Location">
-                            <option value="kota bandung">Kota Bandung</option>
-                            <option value="jakarta">Jakarta</option>
-                            <option value="kota bogor">Kota Bogor</option>
-                            <option value="semarang">Semarang</option>
-                            <option value="yogyakarta">Yogyakarta</option>
-                            <option value="kota depok">Kota Depok</option>
-                            <option value="kabupaten garut">Kabupaten Garut</option>
-                            <option value="surabaya">Surabaya</option>
-                            <option value="bali">Bali</option>
-                        </select>
+                        <div class="col-md-4 pt-2">
+                            <select class="js-example-basic-single p-2" title="Location">
+                                <option value="kota bandung">Kota Bandung</option>
+                                <option value="jakarta">Jakarta</option>
+                                <option value="kota bogor">Kota Bogor</option>
+                                <option value="semarang">Semarang</option>
+                                <option value="yogyakarta">Yogyakarta</option>
+                                <option value="kota depok">Kota Depok</option>
+                                <option value="kabupaten garut">Kabupaten Garut</option>
+                                <option value="surabaya">Surabaya</option>
+                                <option value="bali">Bali</option>
+                            </select>
+                        </div>                
 
-                        <select class="selectpicker col-md-4 mt-2" multiple data-live-search="false" title="Experience">
-                            <option value="fresh graduate">Fresh Graduate</option>
-                            <option value="less than 1 year">Less than 1 year</option>
-                            <option value="1-3 years">1-3 years</option>
-                            <option value="4-6 years">4-6 years</option>
-                            <option value="7-10 years">7-10 years</option>
-                            <option value="more than 10 years">More than 10 years</option>
-                        </select>
+                        <div class="col-md-4">
+                            <select class="p-2 mt-2" title="Experience">
+                                <option value="fresh graduate">Fresh Graduate</option>
+                                <option value="less than 1 year">Less than 1 year</option>
+                                <option value="1-3 years">1-3 years</option>
+                                <option value="4-6 years">4-6 years</option>
+                                <option value="7-10 years">7-10 years</option>
+                                <option value="more than 10 years">More than 10 years</option>
+                            </select>                
+                        </div>        
+                        
                     </div>
                 </form>
             </div>
