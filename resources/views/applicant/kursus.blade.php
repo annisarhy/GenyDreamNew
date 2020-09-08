@@ -14,37 +14,39 @@
 
 <section class="course bg-theme">
     <div class="container py-4">
-        <div class="select-category">
-            <div class="row">
-                <div class="col-md-10">
-                    <div class="row">                        
-                        <div class="col-md-6 showing pt-1 mt-2">
-                            <p>Tampilkan 1-9 dari 50 kursus</p>
-                        </div>
-                        <div class="col-md-6 search">
-                            <div class="buttonIn mt-2"> 
-                                <i class="fa fa-search"></i>
-                                <input type="text" class="form-control pl-4" id="enter" placeholder="Masukan nama kursus yang ingin anda ikuti"> 
-                                <button class="btn pt-1" id="clear">CARI</button> 
-                            </div> 
-                        </div>
-                    </div>                    
-                </div>
-                <div class="col-md-2">
-                    <div class="filter-button mt-2">
-                        <div class="dropdown">
-                            <button class="btn btn-primary btn-dropdown"type="button" data-toggle="dropdown"><i class="fa fa-filter pr-2" aria-hidden="true"></i>Filter</button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">HTML</a></li>
-                                <li><a href="#">CSS</a></li>
-                                <li><a href="#">JavaScript</a></li>
-                            </ul>                            
-                        </div>
-                    </div>                    
+        <form action="">
+            <div class="select-category">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="row">                        
+                            <div class="col-md-6 showing pt-1 mt-2">
+                                <p>Tampilkan 1-9 dari 50 kursus</p>
+                            </div>
+                            <div class="col-md-6 search">
+                                <div class="buttonIn mt-2"> 
+                                    <i class="fa fa-search"></i>
+                                    <input type="text" class="form-control pl-4" id="enter" placeholder="Masukan nama kursus yang ingin anda ikuti"> 
+                                    <button class="btn pt-1" id="clear">CARI</button> 
+                                </div> 
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="col-md-2">
+                        <div class="filter-button mt-2">
+                            <div class="dropdown">
+                                <button class="btn btn-primary btn-dropdown"type="button" data-toggle="dropdown"><i class="fa fa-filter pr-2" aria-hidden="true"></i>Filter</button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>                            
+                            </div>
+                        </div>                    
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- end select category -->
+            <!-- end select category -->
+        </form>        
 
         <div class="poluler-category mt-5">
             <div class="row">
