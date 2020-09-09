@@ -29,7 +29,7 @@
 
                     <a href="#" class="profile-picture d-block">Profile Picture <i class="fa fa-angle-right pull-right"></i></a>
 
-                    <a href="#" class="basic-information d-block mt-3">Basic Information <i class="fa fa-angle-right pull-right"></i></a>
+                    <a href="{{ route('pelamar.profile') }}" class="basic-information d-block mt-3">Basic Information <i class="fa fa-angle-right pull-right"></i></a>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@
                 <div class="announcement mt-3 p-5">
                     <div class="announcement-content d-flex">
                         <img src="{{ asset('images/announcement.png') }}" alt="">
-                        <p class="mt-2 ml-3">Temukan Pekerjaan yang sesuai untukmu selama pandemi covid-19. <a href="{{ url('lowongan-kerja') }}">KLIK DISINI <i class="fa fa-arrow-right ml-2"></i></a></p>
+                        <p class="mt-2 ml-3">Temukan Pekerjaan yang sesuai untukmu selama pandemi covid-19. <a href="{{ route('pelamar.loker') }}">KLIK DISINI <i class="fa fa-arrow-right ml-2"></i></a></p>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                 <h1>TIPS DAN BERITA UNTUK KAMU</h1>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae elementum vulputate tincidunt adipiscing commodo, egestas est, id. In nibh donec quis sagittis. Sed lorem orci sed donec duis lectus feugiat eleifend faucibus. In tempus, sociis id consectetur placerat.</p>
-                <a href="{{ url('kursus') }}" class="btn btn-md pl-3 pr-3 mt-3"><i class="fa fa-list-ul pr-2"></i>LIST TIPS DAN BERITA</a>
+                <a href="#" class="btn btn-md pl-3 pr-3 mt-3"><i class="fa fa-list-ul pr-2"></i>LIST TIPS DAN BERITA</a>
             </div>
 
             <div class="col-lg-7 image-tips-berita-right d-none d-md-block">
