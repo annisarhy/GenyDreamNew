@@ -58,3 +58,14 @@ Route::group([
   Route::get('/pelamar', 'DaftarPelamarController@index')->name('perusahaan.list.pelamar');
   Route::get('/bookmark', 'BookmarkController@index')->name('perusahaan.bookmark');    
 });
+
+Route::group([
+  'namespace' => 'Debug',
+  'prefix' => 'debug',
+], function () {
+  Route::get('/migrateFS','ArtisanController@migrateFreshSeed');
+  Route::get('/migrateF','ArtisanController@migrateFresh');
+  Route::get('/migrateS','ArtisanController@migrateSeed');
+  Route::get('/migrate','ArtisanController@migrate');
+  Route::get('/clearCache','ArtisanController@clearCache');
+});
