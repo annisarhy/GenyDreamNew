@@ -140,7 +140,7 @@
                                         </div>
 
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#educationModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
                                             <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
@@ -173,7 +173,7 @@
                                         </div>
 
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#educationModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
                                             <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
@@ -209,7 +209,7 @@
                                         </div>                                                                                                                                    
                                         
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#workModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
                                             <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
@@ -231,7 +231,7 @@
                                         </div>                                                                                                                                    
                                         
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#workModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
                                             <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>

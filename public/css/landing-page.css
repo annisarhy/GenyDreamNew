@@ -233,13 +233,31 @@ header .carousel-inner .carousel-item {
 
 .img-cloud-top {
     background-image: url('/images/cloud-top.png');
-    -webkit-background-size: cover;
+    height: 290px;
+    background-repeat: no-repeat;    
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 45vh;
+    background-position: center;        
+    width: 100%;
     position: relative;
     z-index: 2;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+    .img-cloud-top {
+       
+        height: 185px;
+       
+    }   
+}
+
+
+@media screen and (max-width: 600px) {
+    .img-cloud-top {
+       
+        height: 115px;
+       
+    }   
+    
 }
 
 .product .container {
@@ -289,13 +307,32 @@ header .carousel-inner .carousel-item {
 
 .img-cloud-bottom {
     background-image: url('/images/cloud-bottom.png');
-    -webkit-background-size: cover;
+    height: 290px;
+    background-repeat: no-repeat;    
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 45vh;
+    background-position: center;        
+    width: 100%;
     position: relative;
     z-index: 2;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+    .img-cloud-bottom {
+       
+        height: 185px;
+       
+    }   
+}
+
+
+@media screen and (max-width: 600px) {
+    .img-cloud-bottom {
+       
+        height: 115px;
+        margin-top: 10px;
+       
+    }   
+    
 }
 
 

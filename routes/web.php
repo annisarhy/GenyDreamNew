@@ -21,6 +21,8 @@ Route::get('/home','HomeController@index')->name('home');
 //login biasa
 Auth::routes(['verify' => true]);
 
+Route::get('/register/pelamar', 'Applicant\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
+
 //login perushaan
 Route::get('/login/perusahaan', 'Perusahaan\AuthPerusahaanController@showLoginForm')->name('perusahaan.login');
 Route::get('/register/perusahaan', 'Perusahaan\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');

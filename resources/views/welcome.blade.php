@@ -228,7 +228,7 @@
                     <hr>
                     <p>Berbagai pilihan karir tersedia untuk kamu, raih karir impianmu dari berbagai daerah di Indonesia. Temukan karir yang sesuai untukmu dengan berbagai pilihan kategori berdasarkan spesialisasi dan kemampuanmu. Mari kita raih kesuksesan karir bersama GenyDream.</p>
 
-                    <a href="{{ url('lowongan-kerja') }}" class="btn btn-md pl-3 pr-3"><i class="fa fa-list-ul text-white pr-2"></i>LIST LOWONGAN</a>
+                    <a href="{{ route('pelamar.loker') }}" class="btn btn-md pl-3 pr-3"><i class="fa fa-list-ul text-white pr-2"></i>LIST LOWONGAN</a>
                 </div>
 
                 <div class="col-lg-6 right-side">
@@ -556,7 +556,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -595,7 +595,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -634,7 +634,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -673,7 +673,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -720,7 +720,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -759,7 +759,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -798,7 +798,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -837,7 +837,7 @@
                                                 <a href=""><i class="fa fa-share-alt"></i></a>
                                             </div>
                                             <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="{{ url('detail-lowongan-kerja') }}" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
+                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -865,10 +865,10 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-3 d-flex justify-content-end">
-                    <a href="{{ url('register') }}" class="btn btn-signup font-weight-bold"><img src="{{ asset('images/ant-design_file-search-outlined-white.png') }}" alt=""> CARI LOWONGAN</a>
+                    <a href="{{ route('register') }}" class="btn btn-signup font-weight-bold"><img src="{{ asset('images/ant-design_file-search-outlined-white.png') }}" alt=""> CARI LOWONGAN</a>
                 </div>
                 <div class="col-md-3">
-                    <a class="btn btn-signup font-weight-bold"><img src="{{ asset('images/signupLogo.png') }}" alt="" class="mr-2">PASANG LOWONGAN</a>
+                    <a href="route('perusahaan.register')" class="btn btn-signup font-weight-bold"><img src="{{ asset('images/signupLogo.png') }}" alt="" class="mr-2">PASANG LOWONGAN</a>
                 </div>
             </div>
         </div>
