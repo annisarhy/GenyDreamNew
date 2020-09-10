@@ -1,7 +1,7 @@
 @extends('layouts.applicant-master')
 
 @section('content')
-<link href="{{ asset('css/lowongan-kerja.css') }}" rel="stylesheet">
+<link href="{{ asset('css/applicant/lowongan-kerja.css') }}" rel="stylesheet">
 
 <!-- detail-lowongan-section -->
 <section class="detail-lowongan-section">

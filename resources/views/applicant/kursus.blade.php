@@ -1,7 +1,7 @@
 @extends('layouts.applicant-master')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/kursus.css') }}">    
+<link rel="stylesheet" href="{{ asset('css/applicant/kursus.css') }}">    
 <div class="wrap-slider">
     <div class="container page-container">
         <div class="page-content col-md-6 mx-auto">

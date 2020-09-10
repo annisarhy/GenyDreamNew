@@ -1,7 +1,7 @@
 @extends('layouts.company-master')
 
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ url('/css/profile-perusahaan.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/perusahaan/profile-perusahaan.css') }}" />
 
 <div class="flat-row profile-page p-3">
     <div class="container py-5">

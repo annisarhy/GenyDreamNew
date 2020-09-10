@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="{{ asset('css/tags-input/tagsinput.css') }}" />
 
     <!-- Styles -->
-    <link href="{{ asset('css/company-master.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/perusahaan/company-master.css') }}" rel="stylesheet">
 
 </head>
 
@@ -58,7 +58,7 @@
                     <a class="nav-link " data-value="list-kursus" href="#">KURSUS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="list-pelamar" href="{{ route('perusahaan.list.pelamar') }}">PELAMAR</a>
+                    <a class="nav-link " data-value="list-pelamar" href="#">PELAMAR</a>
                 </li>                
             </ul>
 

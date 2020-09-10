@@ -59,9 +59,13 @@ body{
   background-repeat: no-repeat;
 }
 
-.select2-container--default{
-    margin-top: 0px;
+.select-filter select{
+    outline: 0px transparent !important;
 }
+.select2 {
+    width:100%!important;
+}
+
 .select2-container--default .select2-selection--single{    
     padding-top: 5px;
     height: 44px;
@@ -69,6 +73,7 @@ body{
     border: 2px solid #68C8D8;
     color: #68C8D8;
     width: 100%;    
+    outline: 0px transparent !important;
     border-radius: 0;
 }
 
@@ -85,11 +90,6 @@ body{
     border-radius: 0;
 }
 
-.dropdown-toggle:hover{
-    background-color: #68C8D8;
-    border: 2px solid #68C8D8;                
-    color: white;
-}
 .dropdown-menu {
     min-width:inherit;    
 }

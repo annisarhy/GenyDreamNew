@@ -1,27 +1,24 @@
-@extends('perusahaan.master-dashboard.dashboard-master')
+@extends('layouts.company-master')
 
-@section('content-dashboard')
-<link href="{{ asset('css/beranda-perusahaan.css') }}" rel="stylesheet">
-
-<!-- <div class="row">
-    <form action="" class="form-signin col-md-5">
-        <div class="form-group has-search">
-            <span class="fa fa-search form-control-feedback"></span>
-            <button class="btn btn-cari">CARI</button>
-            <input type="text" class="form-control" placeholder="Ketik lowongan yang ingin kamu cari">
-        </div>
-    </form>
-
-    <button class="btn btn-filter ml-3"><img src="{{ asset('images/heroicons-outline_filter.png') }}" alt=""> FILTER</button>
-</div> -->
+@section('content')
+<link href="{{ asset('css/perusahaan/beranda-perusahaan.css') }}" rel="stylesheet">
 
 
-<div class="row">                        
+<div class="row py-5 p-5">
+    <div class="col-md-10">
+        <h3>Daftar Lowongan</h3>
+    </div>
+
+    <div class="col-md-2">
+        <a href="{{ route('perusahaan.add.lowongan') }}" class="btn btn-primary btn-add-lowongan" id="">Buat Lowongan</a>
+    </div>
+</div>
+<div class="row pl-5 pr-5 pb-5 pt-1">                        
     @foreach ($listLowongan as $lowongan)    
     <div class="col-lg-4">
         <div class="lowongan-card p-2 mt-3">
             <div class="row title-pekerjaan p-3">
-                <div class="col md-5 pr-0">
+                <div class="col md-5">
                     <div class="square-image mt-2">
                         <img src="{{ asset('images/gojek.png') }}" alt="img-perusahaan" class="img-fluid img-perusahaan">
                     </div>

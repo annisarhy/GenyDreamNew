@@ -1,10 +1,10 @@
-@extends('perusahaan.master-dashboard.dashboard-master')
+@extends('layouts.company-master')
 
-@section('content-dashboard')
-<link href="{{ asset('css/add-lowongan-perusahaan.css') }}" rel="stylesheet">
+@section('content')
+<link href="{{ asset('css/perusahaan/add-lowongan-perusahaan.css') }}" rel="stylesheet">
 
-<div class="row pl-4 justify-content-between">    
-    <div class="col-md-8 add-lowongan bg-white p-5">
+<div class="row pl-4 justify-content-center">    
+    <div class="col-md-8 add-lowongan mt-5 mb-5 p-5">
         <h2 class="font-weight-bold">BUAT LOWONGAN BARU</h2>
 
         <hr>

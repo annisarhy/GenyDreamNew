@@ -1,7 +1,7 @@
 @extends('layouts.applicant-master')
 
 @section('content')
-<link href="{{ asset('css/lowongan-kerja.css') }}" rel="stylesheet">
+<link href="{{ asset('css/applicant/lowongan-kerja.css') }}" rel="stylesheet">
 <section class="search">
     <div class="container my-4">
         <div class="row">
@@ -15,7 +15,7 @@
 
                     <div class="row p-3 select-filter">                        
                         <div class="col-md-4">
-                            <select class=" mt-2 p-2" title="Job Type">
+                            <select class="mt-2 p-2" title="Job Type">
                                 <option value="freelance">Freelance</option>
                                 <option value="remote">Remote</option>
                                 <option value="full time">Full time</option>
@@ -24,7 +24,7 @@
                         </div>
                         
                         <div class="col-md-4 pt-2">
-                            <select class="js-example-basic-single p-2" title="Career">
+                            <select class="my-select p-2" title="Career">
                                 <option value="developer">Developer</option>
                                 <option value="design dan multimedia">Design dan Multimedia</option>
                                 <option value="teknologi">Teknologi</option>
@@ -46,7 +46,7 @@
                         </div>
 
                         <div class="col-md-4 pt-2" >
-                            <select class="js-example-basic-single p-2" title="Skill">
+                            <select class="my-select p-2" title="Skill">
                                 <option value="android programming">Android Programming</option>
                                 <option value="graphic design">Graphic Design</option>
                                 <option value="script writing">Script Writing</option>
@@ -59,7 +59,7 @@
                         </div>                    
 
                         <div class="col-md-4 pt-2">
-                            <select class="js-example-basic-single p-2" title="Location">
+                            <select class="my-select p-2" title="Location">
                                 <option value="kota bandung">Kota Bandung</option>
                                 <option value="jakarta">Jakarta</option>
                                 <option value="kota bogor">Kota Bogor</option>
@@ -142,4 +142,12 @@
     </div>
 
 </section>
+@endsection
+
+@section('js')
+    <script>
+        $(document).ready(function(){
+            $(".my-select").select2();
+        });
+    </script>
 @endsection

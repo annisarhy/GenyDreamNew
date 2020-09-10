@@ -1,7 +1,7 @@
 @extends('layouts.applicant-master')
 
 @section('content')
-<link href="{{ asset('css/beranda-applicant.css') }}" rel="stylesheet">
+<link href="{{ asset('css/applicant/beranda-applicant.css') }}" rel="stylesheet">
 
 <section class="dashboard-header">
     <div class="pl-5 pr-5 py-5">

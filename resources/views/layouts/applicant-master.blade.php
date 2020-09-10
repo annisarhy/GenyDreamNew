@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/applicant-master.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/applicant/applicant-master.css') }}" rel="stylesheet">
 
 </head>
 

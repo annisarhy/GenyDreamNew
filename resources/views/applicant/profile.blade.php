@@ -1,7 +1,7 @@
 @extends('layouts.applicant-master')
 
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ url('/css/profile.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/applicant/profile.css') }}" />
 
 <div class="flat-row profile-page p-3">
     <div class="container py-5">
