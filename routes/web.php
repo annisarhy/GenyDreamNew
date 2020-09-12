@@ -57,7 +57,14 @@ Route::group([
   Route::get('/', 'BerandaController@index')->name('perusahaan.beranda');
   Route::get('/profile-perusahaan', 'ProfilePerusahaanController@index')->name('perusahaan.profile');  
   Route::get('/lowongan', 'DaftarLowonganController@index')->name('perusahaan.list.lowongan');
+
+  Route::get('/detaillowonganperusahaan', 'DaftarLowonganController@detailLowongan')->name('perusahaan.detail.lowongan');
+
   Route::get('/lowongan/tambah-lowongan', 'AddLowonganController@index')->name('perusahaan.add.lowongan');  
+
+  Route::get('/daftarpelamar', 'ListPelamarController@index')->name('perusahaan.list.pelamar');  
+
+  Route::get('/detailpelamar', 'ListPelamarController@detailPelamar')->name('perusahaan.detail.pelamar');
 });
 
 Route::group([

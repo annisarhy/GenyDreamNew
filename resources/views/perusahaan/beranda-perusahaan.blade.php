@@ -12,7 +12,7 @@
                     <img src="{{ asset('images/profile-image.png') }}" alt="">
                     
                     <div class="user-info-content">
-                        <p class="username mb-0">Anna Minerva</p>
+                        <p class="username mb-0 font-weight-bold">Anna Minerva</p>
                         <p class="user-position">Human Resources Department</p>
                         <a href="{{ route('perusahaan.profile') }}">LIHAT PROFIL <i class="fa fa-arrow-right"></i></a>
                     </div>

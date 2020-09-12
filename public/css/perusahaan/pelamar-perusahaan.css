@@ -2,6 +2,51 @@ body{
     background-color: rgb(63, 149, 169, 0.1);
 }
 
+
+hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 2px;
+}
+
+.select-sortby{
+    background: white;
+    border: 2px solid #68C8D8;    
+    width: 15%;    
+    
+}
+
+.select-sortby{
+    outline: 0px transparent !important;
+}
+
+@media screen and (max-width: 1204px) and (min-width: 600px) {
+    .select-sortby{        
+        width: 35%;    
+        
+    }
+}
+
+@media screen and (max-width: 736px) {
+    
+    .select-sortby{        
+        width: 70%;    
+        
+    }
+}
+
+.img-pelamar{
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+}
+
+.btn-detail{
+    color: #68C8D8;    
+}
+
+
+
+/* detail-pelamar */
 .box-shadow{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background-color: white;
@@ -87,22 +132,13 @@ body{
     }
 }
 
-.profile-header #pic {
-    display: none;
-}
-
-.newbtn {
-    cursor: pointer;
-}
 
 .username{
     font-weight: bolder;
     text-transform: capitalize;
 }
 
-.btn-export{    
-    width: 50%;
-    height: 45px;        
+.btn-contact{        
     background-color: white;
     border: 1px solid #68C8D8;
     color: #68C8D8;
@@ -110,35 +146,9 @@ body{
     font-size: 15px;        
 }
 
-.btn-export:hover{
+.btn-contact:hover{
     background-color: #68C8D8;
     color: white;
-}
-
-.btn-preview{
-
-    width: 50%;
-    height: 45px;
-    background-color: white;
-    border: 1px solid #68C8D8;
-    color: #68C8D8;
-    font-weight: bolder;
-    font-size: 15px;    
-    margin-right: 20px;
-}
-
-.btn-preview:hover{
-    background-color: #68C8D8;
-    color: white;
-}
-
-
-.upgrade-button{
-    background: none!important;
-    border: none;
-    padding: 0!important;            
-    color: #069;    
-    cursor: pointer;
 }
 
 
@@ -161,6 +171,22 @@ body{
 .user-info-detail hr{
     background-color: rgb(63, 149, 169, 0.1);
     height: 1px;
+}
+
+
+
+/* tolak terima section */
+
+.btn-tolak{
+    color: white;
+    background-color: #EB5757;
+    
+}
+
+.btn-terima{
+    color: white;
+    background-color: #68C8D8;
+    
 }
 /* Basic Info Section */
 
@@ -338,39 +364,7 @@ body{
     border-radius: 100px;
 }
 
-
-
-
-/* button edit delete */
-
-.btn-edit{    
-    height: 50px;    
-    background: rgb(104, 200, 206, 0.2);
-    border-radius: 100px;
-}
-
-.btn-edit:hover{        
-    box-shadow: 5px 5px rgb(104, 200, 206);
-    transition: .3s;
-}
-
-.btn-delete{
-    height: 50px;    
-    background: rgb(235, 87, 87, 0.2);
-    border-radius: 100px;
-}
-
-.btn-delete:hover{
-    box-shadow: 5px 5px rgb(235, 87, 87);
-    transition: .3s;
-}
-
-
-
-
-
-/* Modal Update*/
-
+/* modal terima tolak */
 .btn-cancel{
     background: #FAFAFA;
     border-radius: 100px;
@@ -378,8 +372,15 @@ body{
     width: 120px;
 }
 
-.btn-simpan{
+.modal .btn-terima{
     background: #68C8D8;
+    border-radius: 100px;
+    color: white;
+    width: 120px;
+}
+
+.modal .btn-tolak{
+    background: #EB5757;
     border-radius: 100px;
     color: white;
     width: 120px;
@@ -395,7 +396,6 @@ body{
     margin-right: 15px;
 }
 
-/* basic-info modal */
 .modal .image-default img{
 
     width: 120px;
@@ -421,253 +421,23 @@ body{
 
         width: 120px;
         height: 120px;                    
-        margin-left: 80%;
+        margin-left: 85%;
         
     }
 }
 
-.modal #pic {
-    display: none;
+.box-text{
+    border: 1px dashed #3F95A9;
+    background-color: rgb(63, 149, 169, 0.1);
+    color: #4F4F4F;
 }
 
-.img-warning{
-    height: 20px;    
+.box-text-tolak{
+    border: 1px dashed #EB5757;
+    background-color: rgb(235, 87, 87, 0.1);
+    color: #4F4F4F;
 }
 
-.verify-email{
-    color: #68C8D8;    
-}
-
-
-/* education modal */
-.tgl-title{
-    font-weight: bold;
-    color: #BDBDBD;
-}
-
-/* skill modal */
-
-.btn-add-more{
-    border: 2px solid #68C8D8;
-    color: #68C8D8;
-}    
-    
-/* cv modal */
-.btn-add-cv{
-    border: 2px solid #68C8D8;
-    color: #68C8D8;
-}
-
-.inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
-
-.inputfile +    label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: #68C8D8;
-    background-color: rgb(104, 200, 206, 0.2);
-    border: 1px dashed #68C8D8;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-}
-
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background-color: rgb(104, 200, 206, 0.5);
-}
-
-.inputfile + label {
-	cursor: pointer;
-}
-
-/* social media and portofolio */
-.btn-view-more{
-    border: 2px solid #68C8D8;
-    color: #68C8D8;
-}
-
-
-
-
-/* floating label */
-.has-float-label{
-	display:block;
-	position:relative
-}
-.has-float-label label, .has-float-label > span{
-	position:absolute;
-	cursor:text;
-	font-size:75%;
-	opacity:1;
-	-webkit-transition:all .2s;
-	transition:all .2s;
-	top:-.5em;
-	left:.75rem;
-	z-index:3;
-	line-height:1;
-    padding:0 1px    
-}
-.has-float-label label::after, .has-float-label > span::after{
-	content:" ";
-	display:block;
-	position:absolute;
-	background:#fff;
-	height:2px;
-	top:50%;
-	left:-.2em;
-	right:-.2em;
-	z-index:-1
-}
-.has-float-label .form-control::-webkit-input-placeholder{
-	opacity:1;
-	-webkit-transition:all .2s;
-    transition:all .2s;
-    box-shadow: none;
-    
-}
-.has-float-label .form-control::-moz-placeholder{
-	opacity:1;
-	transition:all .2s;
-}
-.has-float-label .form-control:-ms-input-placeholder{
-	opacity:1;
-	transition:all .2s;
-}
-.has-float-label .form-control::placeholder{
-	opacity:0;
-	-webkit-transition:all .2s;
-	transition:all .2s;
-}
-.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder{
-	opacity:0;
-}
-.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder{
-	opacity:0;
-}
-.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder{
-	opacity:0;
-}
-.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder{
-	opacity:0;
-}
-.has-float-label .form-control:placeholder-shown:not(:focus)+*{
-	font-size:100%;
-	color: #6c757d;
-	opacity: 1;
-	top:.3em;
-}
-
-.has-float-label .form-control:placeholder-shown:not(:focus)+*{
-	font-size:100%;
-	color: #6c757d;
-	opacity: 1;
-	top:.3em;
-}
-.has-float-label .form-control:placeholder-shown:not(:focus) + * {
-	margin-top: 6px;
-}
-  
-
-/*Modal Price*/
-
-.pricing-divider {
-    border-radius: 20px;
-    background: #C64545;
-    padding: 1em 0 4em;
-    position: relative;
-}
-
-.blue .pricing-divider {
-    background: #2D5772;
-}
-
-.green .pricing-divider {
-    background: #1AA85C;
-}
-
-.red b {
-    color: #C64545
-}
-
-.blue b {
-    color: #2D5772
-}
-
-.green b {
-    color: #1AA85C
-}
-
-.pricing-divider-img {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 80px;
-}
-
-.deco-layer {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-}
-
-.btn-custom {
-    background: #C64545;
-    color: #fff;
-    border-radius: 20px
-}
-
-.img-float {
-    width: 50px;
-    position: absolute;
-    top: -3.5rem;
-    right: 1rem
-}
-
-.princing-item {
-    transition: all 150ms ease-out;
-}
-
-.princing-item:hover {
-    transform: scale(1.05);
-}
-
-.princing-item:hover .deco-layer--1 {
-    -webkit-transform: translate3d(15px, 0, 0);
-    transform: translate3d(15px, 0, 0);
-}
-
-.princing-item:hover .deco-layer--2 {
-    -webkit-transform: translate3d(-15px, 0, 0);
-    transform: translate3d(-15px, 0, 0);
-}
-
-
-
-/* right side */
-/* lengkapi profile */
-
-.progress{
-    border-radius: 100px;
-}
-.progress-bar{
-    border-radius: 100px;
-}
-
-
-/* notification */
-.notif-img{
-    height: 50px;
-}
-
-/* dream career */
-
-.explain-text{
-    font-size: 13px;
+.img-info{
+    height: 20px;
 }

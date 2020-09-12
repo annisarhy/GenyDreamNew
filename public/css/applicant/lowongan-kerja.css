@@ -242,6 +242,7 @@ p.nama-perusahaan{
     background: rgb(63, 149, 169, 0.1);
     margin-right: 10px;
 }
+
 /* lamar section */
 .img-info{    
     height: 20px;
@@ -347,4 +348,28 @@ p.nama-perusahaan{
 
 .select-sortby{
     outline: 0px transparent !important;
+}
+
+
+/* sukses apply lamaran */
+.image-perusahaan img{
+
+    width: 140px;
+    height: 140px;    
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);     
+    margin: 0 auto;        
+}
+
+.company-name-lamaran{
+    color: #4F4F4F;
+    font-size: 20px;    
+}
+
+.btn-cek-lamaran{
+    background: #68C8D8;    
+    padding: 15px;
+    color: white; 
+    height: 60px;
 }

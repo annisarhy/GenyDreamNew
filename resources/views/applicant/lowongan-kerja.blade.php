@@ -119,50 +119,49 @@
         <h5>Tersedia <span>{{ $listLoker->count() }}</span> Lowongan Kerja</h5>
         <div class="row">
            @foreach ($listLoker as $loker)
-           <div class="col-lg-3 col-md-3 mt-3">
-            <div class="card lowongan-kerja pb-3">
-                <div class="row ml-1 justify-content-between">                    
-                    <p class="mt-3 mb-0 update-time"><i class="fa fa-clock-o p-1"></i>1 jam yang lalu</p>
+            <div class="col-lg-3 col-md-3 mt-3">
+                <div class="card lowongan-kerja pb-3">
+                    <div class="row ml-1 justify-content-between">                    
+                        <p class="mt-3 mb-0 update-time"><i class="fa fa-clock-o p-1"></i>1 jam yang lalu</p>
 
-                    <div class="right-button d-flex pr-4">
-                        <button class="btn btn-link"><img src="{{ asset('images/ant-design_share-alt-outlined.png') }}" alt=""></button>
-                        <button class="btn btn-link"><img src="{{ asset('images/bi_bookmark.png') }}" alt=""></button>
-                    </div>
-                </div>
-
-                <hr class="mr-2 ml-2">
-
-                <div class="card-image mx-auto">
-                    <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
-                </div>
-
-                <div class="card-body d-flex flex-column p-0">                    
-
-                    <div class="job-position ml-2">
-                        <h6 class="font-weight-bold">{{ $loker->judul }}</h6>
-                        <p>{{ $loker->perusahaan->nama }}</p>
+                        <div class="right-button d-flex pr-4">
+                            <button class="btn btn-link"><img src="{{ asset('images/ant-design_share-alt-outlined.png') }}" alt=""></button>
+                            <button class="btn btn-link"><img src="{{ asset('images/bi_bookmark.png') }}" alt=""></button>
+                        </div>
                     </div>
 
-                    <div class="company-location mt-3 mr-2 row ml-2">
-                        <i class="fa fa-map-marker pt-1 mr-1"></i>
-                        <p>{{ $loker->perusahaan->alamat }}</p>
+                    <hr class="mr-2 ml-2">
+
+                    <div class="card-image mx-auto">
+                        <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
                     </div>
 
-                    <div class="job-salary ml-2 mr-2">
-                        <p class="card-text"><img src="{{ asset('images/la_money-bill-solid-black.png') }}" class="img-fluid mr-2" alt="">{{ $loker->salary }}</p>
-                    </div>
+                    <div class="card-body d-flex flex-column p-0">                    
 
-                    <div class="row justify-content-end pr-3">                        
-                        <div class="col-md-7">
-                            <a href="{{ route('pelamar.loker.detail',$loker->id) }}" class="btn btn-lg btn-block btn-detail">DETAIL</i></a>
+                        <div class="job-position ml-2">
+                            <h6 class="font-weight-bold">{{ $loker->judul }}</h6>
+                            <p>{{ $loker->perusahaan->nama }}</p>
+                        </div>
+
+                        <div class="company-location mt-3 mr-2 row ml-2">
+                            <i class="fa fa-map-marker pt-1 mr-1"></i>
+                            <p>{{ $loker->perusahaan->alamat }}</p>
+                        </div>
+
+                        <div class="job-salary ml-2 mr-2">
+                            <p class="card-text"><img src="{{ asset('images/la_money-bill-solid-black.png') }}" class="img-fluid mr-2" alt="">{{ $loker->salary }}</p>
+                        </div>
+
+                        <div class="row justify-content-end pr-3">                        
+                            <div class="col-md-7">
+                                <a href="{{ route('pelamar.loker.detail',$loker->id) }}" class="btn btn-lg btn-block btn-detail">DETAIL</i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
            @endforeach
-        
-        
+        </div>        
     </div>
 
 </section>

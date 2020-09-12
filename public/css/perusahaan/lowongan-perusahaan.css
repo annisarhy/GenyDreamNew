@@ -1,0 +1,214 @@
+
+body{
+    background-color: rgb(63, 149, 169, 0.1);
+}
+
+
+hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 2px;
+}
+
+/* page daftar lowongan */
+.card-img-top{
+    height: 90px;
+}
+.lowongan-kerja .update-time i {
+    color: #BDBDBD;
+    font-size: 15px;
+}
+
+
+.lowongan-kerja{
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.4);
+}
+
+.lowongan-kerja .company-location p, .lowongan-kerja .company-location i {
+    color: #219653;
+}
+
+.lowongan-kerja .job-position h6 {
+    color: #3F95A9;
+}
+
+.lowongan-kerja .job-position p {
+    color: #BDBDBD;
+    height: 20px;
+}
+
+.jml-pelamar-tag{
+    color: #4F4F4F;
+}
+.lowongan-kerja .btn-detail {
+    background: #68C8D8;
+    border-radius: 100px;
+    color: white;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.select-sortby{
+    background: white;
+    border: 2px solid #68C8D8;    
+    width: 15%;    
+    
+}
+
+.select-sortby{
+    outline: 0px transparent !important;
+}
+
+@media screen and (max-width: 1204px) and (min-width: 600px) {
+    .select-sortby{        
+        width: 35%;    
+        
+    }
+}
+
+@media screen and (max-width: 736px) {
+    
+    .select-sortby{        
+        width: 70%;    
+        
+    }
+}
+
+/* detail lowongan */
+
+.box-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 2px;
+}
+
+
+/* info pekerjaan */
+.company-image{
+    width: 160px;
+    height: 160px;    
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nama-lowongan{
+    color: #000000;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 24px;
+}
+
+p.nama-perusahaan{
+    color: #4F4F4F;
+    text-transform: uppercase;
+}
+
+.info-title{
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.bookmark-share button{
+    border: 1px solid #BDBDBD;
+    color: #BDBDBD;
+}
+
+
+/* deskripsi pekerjaan */
+.deskripsi-title{
+    font-weight: bolder;    
+}
+
+.deskripsi{
+    white-space: pre-wrap;
+}
+
+/* jumlah pelamar */
+.jml-pelamar-title{
+    font-weight: bold;
+}
+
+.box-jml-pelamar{
+    border: 1px dashed #3F95A9;
+    background-color: rgb(63, 149, 169, 0.1);
+}
+
+.box-jml-pelamar p, h2{
+    color: #3F95A9;
+    font-weight: bold;        
+}
+
+.btn-lihat-pelamar-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.btn-lihat-pelamar-side a{
+    background: #68C8D8;    
+    padding: 15px;
+    color: white; 
+    box-shadow: 0 4px 10px 0 rgba(104,200,216,0.4);    
+}
+
+
+
+
+/* skill yg dibutuhkan */
+.skill-title{
+    font-weight: bolder;
+}
+
+.skill{
+    color: #3F95A9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;        
+    background: rgb(63, 149, 169, 0.1);
+    margin-right: 10px;
+}
+
+
+
+/* right side */
+/* opsi */
+.title-opsi{
+    font-weight: bolder;
+}
+
+.lowongan-lain-title{
+    font-weight: bolder;
+}
+
+.wrap-opsi .btn-edit-lowongan{
+    background-color: white;
+    color: #68C8D8;
+    border: 1px solid #68C8D8;
+    border-radius: 100px;
+}
+
+.wrap-opsi .btn-edit-lowongan:hover{
+    background-color: #68C8D8;
+    color: white;    
+}
+
+.wrap-opsi .btn-delete-lowongan{
+    background-color: white;
+    color: #EB5757;
+    border: 1px solid #EB5757;
+    border-radius: 100px;
+}
+
+.wrap-opsi .btn-delete-lowongan:hover{
+    background-color: #EB5757;
+    color: white;    
+}
+

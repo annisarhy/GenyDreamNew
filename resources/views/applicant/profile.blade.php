@@ -68,6 +68,8 @@
 
                                     <p class="info-title mt-5">E-mail</p>
                                     <p>annaminerva@gmail.com</p>
+                                    <!-- pake if udah verified atau belum kalau udh jadinya display none -->
+                                    <p class="mb-1"><img src="{{ asset('images/ant-design_info-circle-outlined-red.png') }}" class="img-warning mr-1">Your email address is not yet verified.</p>                        
                                 </div>    
 
                                 <div class="col-md-6">
@@ -613,6 +615,7 @@
                     <div class="email mb-4">
                         <p class="email-title mb-0">EMAIL</p>
                         <p class="email-user font-weight-bold">annaminerva@gmail.com</p>
+                        <!-- pake if udah verified atau belum kalau udh jadinya display none -->
                         <p class="mb-1"><img src="{{ asset('images/ant-design_info-circle-outlined-red.png') }}" class="img-warning mr-1">Your email address is not yet verified.</p>
                         <a href="#" class="verify-email ml-3">VERIFY NOW</a>                        
                     </div>
@@ -1472,9 +1475,5 @@
             })
     });
 </script>
-
-
-
-
 
 @endsection
