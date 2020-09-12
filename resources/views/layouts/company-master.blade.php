@@ -56,28 +56,25 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="list-kursus" href="#">KURSUS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " data-value="list-pelamar" href="#">PELAMAR</a>
                 </li>                
-            </ul>
+                <li class="nav-item dropdown">
+                    <button class="btn btn-default" type="button" id="menu1" data-toggle="dropdown">
+                        <img id="profilebutton" style=" width: 30px; height:30px;" src="{{ asset('images/mentor-img.png') }}">
 
-            <ul class="navbar-nav  pull-left flex-row mr-4 dropdown">
-                <button class="btn btn-default" type="button" id="menu1" data-toggle="dropdown">
-                    <img id="profilebutton" style=" width: 30px; height:30px;" src="{{ asset('images/mentor-img.png') }}">
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href="{{ route('perusahaan.profile') }}">Profile</a></li>
+                        <li role="presentation">
+                            <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
 
-                </button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href="{{ route('perusahaan.profile') }}">Profile</a></li>
-                    <li role="presentation">
-                        <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </li>
-
-                </ul>
-            </ul>
+                    </ul>
+                </li>
+            </ul>                    
+            
         </div>
     </nav>
     <!-- end of navbar -->

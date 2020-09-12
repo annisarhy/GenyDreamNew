@@ -53,14 +53,17 @@
                     <a class="nav-link " data-value="blog" href="#list-course">KURSUS</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link " data-value="team" href="#tipsberita">TIPS DAN BERITA</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link " data-value="team" href="#">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="contact" href="#">CHATTING</a>
+                    <a class="nav-link " data-value="contact" href="#"><img src="{{ asset('images/cil_chat-bubble.png') }}" alt=""></a>
                 </li>
             </ul>
 
-            <ul class="navbar-nav pull-right flex-row" id="pull-right">
+            <ul class="navbar-nav flex-row" id="pull-right">
                 <li class="nav-item">
                     <a href="{{ route('login') }}" class="nav-link pl-3 pr-3" id="navButton">SIGN IN</a>
                 </li>
@@ -395,7 +398,7 @@
         </div>
     </section>
 
-    <!-- section Lowongan terbaik -->
+    <!-- section kota Lowongan terbaik -->
     <section class="lowongan-terbaik">
         <div class="container py-5">
             <div class="row justify-content-center">
@@ -500,356 +503,224 @@
                 </div>
             </div>
 
-            <div class="row lowongan-terkini-container">
-                <!--Carousel Wrapper-->
-                <div id="lowongan-carousel" class="carousel slide carousel-multi-item" data-ride="carousel">
-                    <div class="carousel-control">
-                        <!-- Left and right controls -->
-                        <a class="carousel-control-prev prev-lowongan" href="#lowongan-carousel" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next next-lowongan" href="#lowongan-carousel" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
-                        <!--/.Controls-->
+            
+                
+            <div class="carousel-card lowongan-terkini-container">            
+                <div class="col-lg-12 col-md-12 mt-2">
+                    <div class="card lowongan-kerja pb-3">
+                        <div class="row ml-1 justify-content-between">                    
+                            <p class="mt-3 mb-0 update-time"><i class="fa fa-clock-o p-1"></i>1 jam yang lalu</p>
 
-                        <ol class="carousel-indicators" style="margin-top:100px">
-                            <li data-target="#lowongan-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#lowongan-carousel" data-slide-to="1"></li>
-                        </ol>
-                    </div>
-
-                    <!--Slides-->
-                    <div class="carousel-inner" role="listbox">
-
-                        <!--First slide-->
-                        <div class="carousel-item active">
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
-                                <div class="card lowongan-kerja pb-3">
-                                    <div class="row ml-1 update-time">
-                                        <i class="fa fa-clock-o p-1"></i>
-                                        <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>
-
-                                    <div class="card-image mx-auto">
-                                        <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
-                                    </div>
-
-                                    <div class="card-body d-flex flex-column p-0">
-                                        <div class="company-location mr-2 row justify-content-end">
-                                            <i class="fa fa-map-marker p-1"></i>
-                                            <p>Jakarta Pusat</p>
-                                        </div>
-
-                                        <div class="job-position ml-2">
-                                            <h6 class="font-weight-bold">Accounting Staff</h6>
-                                            <p>PT PERTAMINA (PERSERO)</p>
-                                        </div>
-
-                                        <div class="job-description mt-3 ml-2">
-                                            <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id n....</p>
-                                        </div>
-
-                                        <div class="row ml-2">
-                                            <div class="col-md-3 d-flex justify-content-start">
-                                                <a href="" class="mr-2"><i class="fa fa-heart"></i></a>
-                                                <a href=""><i class="fa fa-share-alt"></i></a>
-                                            </div>
-                                            <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="right-button d-flex pr-4 mt-2">
+                                <button class="btn btn-link"><img src="{{ asset('images/ant-design_share-alt-outlined.png') }}" alt=""></button>
+                                <button class="btn btn-link"><img src="{{ asset('images/bi_bookmark.png') }}" alt=""></button>
                             </div>
-
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
-                                <div class="card lowongan-kerja pb-3">
-                                    <div class="row ml-1 update-time">
-                                        <i class="fa fa-clock-o p-1"></i>
-                                        <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>
-
-                                    <div class="card-image mx-auto">
-                                        <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
-                                    </div>
-
-                                    <div class="card-body d-flex flex-column p-0">
-                                        <div class="company-location mr-2 row justify-content-end">
-                                            <i class="fa fa-map-marker p-1"></i>
-                                            <p>Jakarta Pusat</p>
-                                        </div>
-
-                                        <div class="job-position ml-2">
-                                            <h6 class="font-weight-bold">Accounting Staff</h6>
-                                            <p>PT PERTAMINA (PERSERO)</p>
-                                        </div>
-
-                                        <div class="job-description mt-3 ml-2">
-                                            <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id n....</p>
-                                        </div>
-
-                                        <div class="row ml-2">
-                                            <div class="col-md-3 d-flex justify-content-start">
-                                                <a href="" class="mr-2"><i class="fa fa-heart"></i></a>
-                                                <a href=""><i class="fa fa-share-alt"></i></a>
-                                            </div>
-                                            <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
-                                <div class="card lowongan-kerja pb-3">
-                                    <div class="row ml-1 update-time">
-                                        <i class="fa fa-clock-o p-1"></i>
-                                        <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>
-
-                                    <div class="card-image mx-auto">
-                                        <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
-                                    </div>
-
-                                    <div class="card-body d-flex flex-column p-0">
-                                        <div class="company-location mr-2 row justify-content-end">
-                                            <i class="fa fa-map-marker p-1"></i>
-                                            <p>Jakarta Pusat</p>
-                                        </div>
-
-                                        <div class="job-position ml-2">
-                                            <h6 class="font-weight-bold">Accounting Staff</h6>
-                                            <p>PT PERTAMINA (PERSERO)</p>
-                                        </div>
-
-                                        <div class="job-description mt-3 ml-2">
-                                            <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id n....</p>
-                                        </div>
-
-                                        <div class="row ml-2">
-                                            <div class="col-md-3 d-flex justify-content-start">
-                                                <a href="" class="mr-2"><i class="fa fa-heart"></i></a>
-                                                <a href=""><i class="fa fa-share-alt"></i></a>
-                                            </div>
-                                            <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
-                                <div class="card lowongan-kerja pb-3">
-                                    <div class="row ml-1 update-time">
-                                        <i class="fa fa-clock-o p-1"></i>
-                                        <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>
-
-                                    <div class="card-image mx-auto">
-                                        <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
-                                    </div>
-
-                                    <div class="card-body d-flex flex-column p-0">
-                                        <div class="company-location mr-2 row justify-content-end">
-                                            <i class="fa fa-map-marker p-1"></i>
-                                            <p>Jakarta Pusat</p>
-                                        </div>
-
-                                        <div class="job-position ml-2">
-                                            <h6 class="font-weight-bold">Accounting Staff</h6>
-                                            <p>PT PERTAMINA (PERSERO)</p>
-                                        </div>
-
-                                        <div class="job-description mt-3 ml-2">
-                                            <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id n....</p>
-                                        </div>
-
-                                        <div class="row ml-2">
-                                            <div class="col-md-3 d-flex justify-content-start">
-                                                <a href="" class="mr-2"><i class="fa fa-heart"></i></a>
-                                                <a href=""><i class="fa fa-share-alt"></i></a>
-                                            </div>
-                                            <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
                         </div>
-                        <!--/.First slide-->
 
-                        <!--Second slide-->
-                        <div class="carousel-item">
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
-                                <div class="card lowongan-kerja pb-3">
-                                    <div class="row ml-1 update-time">
-                                        <i class="fa fa-clock-o p-1"></i>
-                                        <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>
+                        <hr class="mr-2 ml-2">
 
-                                    <div class="card-image mx-auto">
-                                        <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
-                                    </div>
+                        <div class="card-image mx-auto">
+                            <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
+                        </div>
 
-                                    <div class="card-body d-flex flex-column p-0">
-                                        <div class="company-location mr-2 row justify-content-end">
-                                            <i class="fa fa-map-marker p-1"></i>
-                                            <p>Jakarta Pusat</p>
-                                        </div>
+                        <div class="card-body d-flex flex-column p-0">                    
 
-                                        <div class="job-position ml-2">
-                                            <h6 class="font-weight-bold">Accounting Staff</h6>
-                                            <p>PT PERTAMINA (PERSERO)</p>
-                                        </div>
-
-                                        <div class="job-description mt-3 ml-2">
-                                            <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id n....</p>
-                                        </div>
-
-                                        <div class="row ml-2">
-                                            <div class="col-md-3 d-flex justify-content-start">
-                                                <a href="" class="mr-2"><i class="fa fa-heart"></i></a>
-                                                <a href=""><i class="fa fa-share-alt"></i></a>
-                                            </div>
-                                            <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="job-position ml-2">
+                                <h6 class="font-weight-bold">Android Programmer</h6>
+                                <p>PT. GOJEK INDONESIA</p>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
-                                <div class="card lowongan-kerja pb-3">
-                                    <div class="row ml-1 update-time">
-                                        <i class="fa fa-clock-o p-1"></i>
-                                        <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>
-
-                                    <div class="card-image mx-auto">
-                                        <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
-                                    </div>
-
-                                    <div class="card-body d-flex flex-column p-0">
-                                        <div class="company-location mr-2 row justify-content-end">
-                                            <i class="fa fa-map-marker p-1"></i>
-                                            <p>Jakarta Pusat</p>
-                                        </div>
-
-                                        <div class="job-position ml-2">
-                                            <h6 class="font-weight-bold">Accounting Staff</h6>
-                                            <p>PT PERTAMINA (PERSERO)</p>
-                                        </div>
-
-                                        <div class="job-description mt-3 ml-2">
-                                            <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id n....</p>
-                                        </div>
-
-                                        <div class="row ml-2">
-                                            <div class="col-md-3 d-flex justify-content-start">
-                                                <a href="" class="mr-2"><i class="fa fa-heart"></i></a>
-                                                <a href=""><i class="fa fa-share-alt"></i></a>
-                                            </div>
-                                            <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="company-location mt-3 mr-2 ml-2">
+                                
+                                <p><i class="fa fa-map-marker pt-1 mr-1"></i>Jakarta</p>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
-                                <div class="card lowongan-kerja pb-3">
-                                    <div class="row ml-1 update-time">
-                                        <i class="fa fa-clock-o p-1"></i>
-                                        <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>
-
-                                    <div class="card-image mx-auto">
-                                        <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
-                                    </div>
-
-                                    <div class="card-body d-flex flex-column p-0">
-                                        <div class="company-location mr-2 row justify-content-end">
-                                            <i class="fa fa-map-marker p-1"></i>
-                                            <p>Jakarta Pusat</p>
-                                        </div>
-
-                                        <div class="job-position ml-2">
-                                            <h6 class="font-weight-bold">Accounting Staff</h6>
-                                            <p>PT PERTAMINA (PERSERO)</p>
-                                        </div>
-
-                                        <div class="job-description mt-3 ml-2">
-                                            <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id n....</p>
-                                        </div>
-
-                                        <div class="row ml-2">
-                                            <div class="col-md-3 d-flex justify-content-start">
-                                                <a href="" class="mr-2"><i class="fa fa-heart"></i></a>
-                                                <a href=""><i class="fa fa-share-alt"></i></a>
-                                            </div>
-                                            <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="row job-salary ml-2 mr-2">                                
+                                <img src="{{ asset('images/la_money-bill-solid-black.png') }}" class="img-fluid mr-2 mt-1" alt="">
+                                <p class="card-text">35000000</p>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 mt-2" style="float: left">
-                                <div class="card lowongan-kerja pb-3">
-                                    <div class="row ml-1 update-time">
-                                        <i class="fa fa-clock-o p-1"></i>
-                                        <p>Diperbaharui 1 jam yang lalu</p>
-                                    </div>
-
-                                    <div class="card-image mx-auto">
-                                        <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
-                                    </div>
-
-                                    <div class="card-body d-flex flex-column p-0">
-                                        <div class="company-location mr-2 row justify-content-end">
-                                            <i class="fa fa-map-marker p-1"></i>
-                                            <p>Jakarta Pusat</p>
-                                        </div>
-
-                                        <div class="job-position ml-2">
-                                            <h6 class="font-weight-bold">Accounting Staff</h6>
-                                            <p>PT PERTAMINA (PERSERO)</p>
-                                        </div>
-
-                                        <div class="job-description mt-3 ml-2">
-                                            <p class="card-texr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus amet id n....</p>
-                                        </div>
-
-                                        <div class="row ml-2">
-                                            <div class="col-md-3 d-flex justify-content-start">
-                                                <a href="" class="mr-2"><i class="fa fa-heart"></i></a>
-                                                <a href=""><i class="fa fa-share-alt"></i></a>
-                                            </div>
-                                            <div class="col-md-9 d-flex justify-content-center">
-                                                <a href="#" class="btn btn-lg btn-detail mr-3">DETAIL</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="row justify-content-end pr-3">                        
+                                <div class="col-md-7">
+                                    <a href="#" class="btn btn-lg btn-block btn-detail">DETAIL</i></a>
                                 </div>
                             </div>
                         </div>
-                        <!--/.Second slide-->
                     </div>
-                    <!--/.Slides-->
                 </div>
-                <!--/.Carousel Wrapper-->
-            </div>
+                
+                <div class="col-lg-12 col-md-12 mt-2">
+                    <div class="card lowongan-kerja pb-3">
+                        <div class="row ml-1 justify-content-between">                    
+                            <p class="mt-3 mb-0 update-time"><i class="fa fa-clock-o p-1"></i>1 jam yang lalu</p>
+
+                            <div class="right-button d-flex pr-4 mt-2">
+                                <button class="btn btn-link"><img src="{{ asset('images/ant-design_share-alt-outlined.png') }}" alt=""></button>
+                                <button class="btn btn-link"><img src="{{ asset('images/bi_bookmark.png') }}" alt=""></button>
+                            </div>
+                        </div>
+
+                        <hr class="mr-2 ml-2">
+
+                        <div class="card-image mx-auto">
+                            <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
+                        </div>
+
+                        <div class="card-body d-flex flex-column p-0">                    
+
+                            <div class="job-position ml-2">
+                                <h6 class="font-weight-bold">Android Programmer</h6>
+                                <p>PT. GOJEK INDONESIA</p>
+                            </div>
+
+                            <div class="company-location mt-3 mr-2 ml-2">
+                                
+                                <p><i class="fa fa-map-marker pt-1 mr-1"></i>Jakarta</p>
+                            </div>
+
+                            <div class="row job-salary ml-2 mr-2">                                
+                                <img src="{{ asset('images/la_money-bill-solid-black.png') }}" class="img-fluid mr-2 mt-1" alt="">
+                                <p class="card-text">35000000</p>
+                            </div>
+
+                            <div class="row justify-content-end pr-3">                        
+                                <div class="col-md-7">
+                                    <a href="#" class="btn btn-lg btn-block btn-detail">DETAIL</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 mt-2">
+                    <div class="card lowongan-kerja pb-3">
+                        <div class="row ml-1 justify-content-between">                    
+                            <p class="mt-3 mb-0 update-time"><i class="fa fa-clock-o p-1"></i>1 jam yang lalu</p>
+
+                            <div class="right-button d-flex pr-4 mt-2">
+                                <button class="btn btn-link"><img src="{{ asset('images/ant-design_share-alt-outlined.png') }}" alt=""></button>
+                                <button class="btn btn-link"><img src="{{ asset('images/bi_bookmark.png') }}" alt=""></button>
+                            </div>
+                        </div>
+
+                        <hr class="mr-2 ml-2">
+
+                        <div class="card-image mx-auto">
+                            <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
+                        </div>
+
+                        <div class="card-body d-flex flex-column p-0">                    
+
+                            <div class="job-position ml-2">
+                                <h6 class="font-weight-bold">Android Programmer</h6>
+                                <p>PT. GOJEK INDONESIA</p>
+                            </div>
+
+                            <div class="company-location mt-3 mr-2 ml-2">
+                                
+                                <p><i class="fa fa-map-marker pt-1 mr-1"></i>Jakarta</p>
+                            </div>
+
+                            <div class="row job-salary ml-2 mr-2">                                
+                                <img src="{{ asset('images/la_money-bill-solid-black.png') }}" class="img-fluid mr-2 mt-1" alt="">
+                                <p class="card-text">35000000</p>
+                            </div>
+
+                            <div class="row justify-content-end pr-3">                        
+                                <div class="col-md-7">
+                                    <a href="#" class="btn btn-lg btn-block btn-detail">DETAIL</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 mt-2">
+                    <div class="card lowongan-kerja pb-3">
+                        <div class="row ml-1 justify-content-between">                    
+                            <p class="mt-3 mb-0 update-time"><i class="fa fa-clock-o p-1"></i>1 jam yang lalu</p>
+
+                            <div class="right-button d-flex pr-4 mt-2">
+                                <button class="btn btn-link"><img src="{{ asset('images/ant-design_share-alt-outlined.png') }}" alt=""></button>
+                                <button class="btn btn-link"><img src="{{ asset('images/bi_bookmark.png') }}" alt=""></button>
+                            </div>
+                        </div>
+
+                        <hr class="mr-2 ml-2">
+
+                        <div class="card-image mx-auto">
+                            <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
+                        </div>
+
+                        <div class="card-body d-flex flex-column p-0">                    
+
+                            <div class="job-position ml-2">
+                                <h6 class="font-weight-bold">Android Programmer</h6>
+                                <p>PT. GOJEK INDONESIA</p>
+                            </div>
+
+                            <div class="company-location mt-3 mr-2 ml-2">
+                                
+                                <p><i class="fa fa-map-marker pt-1 mr-1"></i>Jakarta</p>
+                            </div>
+
+                            <div class="row job-salary ml-2 mr-2">                                
+                                <img src="{{ asset('images/la_money-bill-solid-black.png') }}" class="img-fluid mr-2 mt-1" alt="">
+                                <p class="card-text">35000000</p>
+                            </div>
+
+                            <div class="row justify-content-end pr-3">                        
+                                <div class="col-md-7">
+                                    <a href="#" class="btn btn-lg btn-block btn-detail">DETAIL</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 mt-2">
+                    <div class="card lowongan-kerja pb-3">
+                        <div class="row ml-1 justify-content-between">                    
+                            <p class="mt-3 mb-0 update-time"><i class="fa fa-clock-o p-1"></i>1 jam yang lalu</p>
+
+                            <div class="right-button d-flex pr-4 mt-2">
+                                <button class="btn btn-link"><img src="{{ asset('images/ant-design_share-alt-outlined.png') }}" alt=""></button>
+                                <button class="btn btn-link"><img src="{{ asset('images/bi_bookmark.png') }}" alt=""></button>
+                            </div>
+                        </div>
+
+                        <hr class="mr-2 ml-2">
+
+                        <div class="card-image mx-auto">
+                            <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
+                        </div>
+
+                        <div class="card-body d-flex flex-column p-0">                    
+
+                            <div class="job-position ml-2">
+                                <h6 class="font-weight-bold">Android Programmer</h6>
+                                <p>PT. GOJEK INDONESIA</p>
+                            </div>
+
+                            <div class="company-location mt-3 mr-2 ml-2">
+                                
+                                <p><i class="fa fa-map-marker pt-1 mr-1"></i>Jakarta</p>
+                            </div>
+
+                            <div class="row job-salary ml-2 mr-2">                                
+                                <img src="{{ asset('images/la_money-bill-solid-black.png') }}" class="img-fluid mr-2 mt-1" alt="">
+                                <p class="card-text">35000000</p>
+                            </div>
+
+                            <div class="row justify-content-end pr-3">                        
+                                <div class="col-md-7">
+                                    <a href="#" class="btn btn-lg btn-block btn-detail">DETAIL</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
         </div>
     </section>
     <!-- end of section lowongan terbaik -->
@@ -863,13 +734,13 @@
             <div class="row justify-content-center mt-1 mb-5">
                 <h1>GENY HIRE</h1>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-3 d-flex justify-content-end">
-                    <a href="{{ route('register') }}" class="btn btn-signup font-weight-bold"><img src="{{ asset('images/ant-design_file-search-outlined-white.png') }}" alt=""> CARI LOWONGAN</a>
-                </div>
-                <div class="col-md-3">
-                    <a href="route('perusahaan.register')" class="btn btn-signup font-weight-bold"><img src="{{ asset('images/signupLogo.png') }}" alt="" class="mr-2">PASANG LOWONGAN</a>
-                </div>
+            <div class="d-md-flex flex-row justify-content-center text-center">
+                
+                <a href="{{ route('register') }}" class="btn btn-signup mt-2 mr-2 font-weight-bold"><img src="{{ asset('images/ant-design_file-search-outlined-white.png') }}" alt=""> CARI LOWONGAN</a>
+                
+                
+                <a href="route('perusahaan.register')" class="btn btn-signup mt-2 mr-2 font-weight-bold"><img src="{{ asset('images/signupLogo.png') }}" alt="" class="mr-2">PASANG LOWONGAN</a>
+                
             </div>
         </div>
     </section>
@@ -907,7 +778,7 @@
     <!-- end of kursus terbaru -->
 
     <!-- section intern -->
-    <section class="tips-dan-berita">
+    <section class="tips-dan-berita" id="tipsberita"> 
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-md-6">
@@ -920,7 +791,7 @@
                 </div>
             </div>
             
-            <div class="carousel-berita berita-list">            
+            <div class="carousel-card berita-list">            
                 <div class="col-lg-12 col-md-12 mt-2">
                     <div class="card berita-card">                        
                         <div class="header">
@@ -1224,7 +1095,7 @@
 
     <script>
         $(document).ready(function(){
-            $('.carousel-berita').slick({
+            $('.carousel-card').slick({
                 speed: 500,
                 slidesToShow: 3,
                 slidesToScroll: 1,

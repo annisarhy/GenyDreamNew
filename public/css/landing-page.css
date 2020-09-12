@@ -27,7 +27,7 @@ body {
 }
 
 #navbar-nav {
-    margin: auto;
+    margin-left: auto;
 }
 
 .navbar-toggle {
@@ -523,16 +523,21 @@ header .carousel-inner .carousel-item {
 }
 
 
-.lowongan-kerja .update-time p,
-i {
+.lowongan-kerja .card-img-top{
+    height: 90px;
+}
+.lowongan-kerja .update-time i {
     color: #BDBDBD;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 
-.lowongan-kerja .company-location p,
-i {
-    color: #BDBDBD;
+.lowongan-kerja{
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.4);
+}
+
+.lowongan-kerja .company-location p, .lowongan-kerja .company-location i {
+    color: #4F4F4F;
 }
 
 .lowongan-kerja .job-position h6 {
@@ -541,46 +546,25 @@ i {
 
 .lowongan-kerja .job-position p {
     color: #BDBDBD;
+    height: 20px;
+}
+
+.lowongan-kerja .job-salary{            
+    height: 50px;        
+}
+
+.lowongan-kerja .job-salary img{            
+    height: 20px;
 }
 
 .lowongan-kerja .btn-detail {
-    background: #3F95A9;
+    background: #68C8D8;
     border-radius: 100px;
     color: white;
     font-size: 13px;
     font-weight: lighter;
 }
 
-.prev-lowongan {
-    top: 200px;
-    background: #3F95A9;
-    width: 50px;
-    height: 60px;
-    opacity: 50%;
-
-}
-
-.next-lowongan {
-    top: 200px;
-    background: #3F95A9;
-    width: 50px;
-    height: 60px;
-    opacity: 50%;
-}
-
-.carousel-control {
-    position: relative;
-}
-
-.carousel-control .carousel-indicators {
-    top: 300px;
-}
-
-@media screen and (max-width: 600px) {
-    .carousel-control .carousel-indicators {
-        top: 1520px;
-    }
-}
 
 /* daftar akun */
 .signup-title {

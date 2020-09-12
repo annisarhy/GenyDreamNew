@@ -26,8 +26,8 @@ body{
 
 .profile-header .image-default img{
 
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     position: absolute;
     border-radius: 100px;
     background-color: white;
@@ -38,31 +38,53 @@ body{
     z-index: 10;
 }
 
-@media screen and (max-width: 992px) and (min-width: 600px) {
+.profile-header .username-info{
+    float: right;
+    width: 55%;    
+}
+@media screen and (max-width: 1204px) and (min-width: 600px) {
     .profile-header .image-default img{
 
         width: 120px;
         height: 120px;
         position: absolute;
+        border-radius: 100px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         top: -80px;
-        left: 40px;    
+        left: 40px;            
         margin: 0 auto;    
         z-index: 10;
     }   
+
+    .profile-header .username-info{
+        float: none;
+        margin-top: 30px;
+        width: 100%;
+    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 736px) {
     
     .profile-header .image-default img{
 
         width: 120px;
         height: 120px;
         position: absolute;
+        border-radius: 100px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         top: -80px;
         left: 107px;    
         margin: 0 auto;    
-        z-index: 10;
+        z-index: 10;    
     }   
+    .profile-header .username-info{
+        float: none;
+        margin-top: 30px;
+        width: 100%;
+
+    }
 }
 
 .profile-header #pic {
@@ -78,33 +100,36 @@ body{
     text-transform: capitalize;
 }
 
-.btn-export{
-    border-radius: 100px;
+.btn-export{    
+    width: 50%;
+    height: 45px;        
+    background-color: white;
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+    font-weight: bolder;
+    font-size: 15px;        
+}
+
+.btn-export:hover{
     background-color: #68C8D8;
     color: white;
-    font-weight: bolder;
-    font-size: 15px;
-    width: 30%;
-    height: 45px;
 }
 
 .btn-preview{
-    border-radius: 100px;
-    background-color: rgb(104, 200, 216, 0.6);
-    color: white;
-    font-weight: bolder;
-    font-size: 15px;
-    width: 30%;
+
+    width: 50%;
     height: 45px;
+    background-color: white;
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+    font-weight: bolder;
+    font-size: 15px;    
+    margin-right: 20px;
 }
 
-.user-status{
-    border: 1px solid #BDBDBD;
-    width: 20%;
-    pointer-events: none;
-    color: #BDBDBD;
-    font-size: 17px;
-    font-weight: bolder;    
+.btn-preview:hover{
+    background-color: #68C8D8;
+    color: white;
 }
 
 

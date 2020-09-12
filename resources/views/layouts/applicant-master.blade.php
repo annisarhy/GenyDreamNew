@@ -55,32 +55,65 @@
                     <a class="nav-link " data-value="portfolio" href="{{ route('pelamar.loker') }}">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="blog" href="{{ route('pelamar.kursus') }}">KURSUS</a>
+                    <a class="nav-link " data-value="blog" href="#">TIPS DAN BERITA</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="team" href="#">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="contact" href="#">CHATTING</a>
+                    <a class="nav-link " data-value="contact" href="#"><img src="{{ asset('images/cil_chat-bubble.png') }}" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="contact" href="#"><img src="{{ asset('images/clarity_notification-line.png') }}" alt=""></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn btn-default" type="button" id="menu1" data-toggle="dropdown">
+                        <img id="profilebutton" style=" width: 30px; height:30px;" src="{{ asset('images/mentor-img.png') }}">
+
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        
+                        <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href=" {{ route('pelamar.profile') }}">Profile</a></li>
+                        <li>
+                            <a class="dropdown-item" role="menuitem" data-value="team" href="#">Notification</a>
+                        </li>
+                        <hr>
+
+                        <li>
+                            <a class="dropdown-item" role="menuitem" data-value="team" href="{{ route('pelamar.loker') }}"><img class="img-fluid mr-2" src="{{ asset('images/ant-design_file-search-outlined-black.png') }}" alt="">Geny Hire</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" role="menuitem" data-value="team" href="{{ route('pelamar.kursus') }}"><img class="img-fluid mr-2" src="{{ asset('images/la_user-graduate-solid-black.png') }}" alt="">Geny Education</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" role="menuitem" data-value="team" href="#"><img class="img-fluid mr-2" src="{{ asset('images/la_user-tie-solid-black.png') }}" alt="">Geny Intern</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" role="menuitem" data-value="team" href="#"><img class="img-fluid mr-2" src="{{ asset('images/ic_outline-assessment-black.png') }}" alt="">Geny Assessment</a>
+                        </li>
+
+                        <hr>
+
+                        <li>
+                            <a class="dropdown-item" role="menuitem" data-value="team" href="#"><img class="img-fluid mr-2" src="{{ asset('images/star-black.png') }}" alt="">Go Premium</a>
+                        </li>
+                        <li role="presentation">
+                            <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Keluar</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+
+                    </ul>
                 </li>
             </ul>
 
-            <ul class="navbar-nav  pull-left flex-row mr-4 dropdown">
-                <button class="btn btn-default" type="button" id="menu1" data-toggle="dropdown">
-                    <img id="profilebutton" style=" width: 30px; height:30px;" src="{{ asset('images/mentor-img.png') }}">
-
-                </button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href=" {{ route('pelamar.profile') }}">Profile</a></li>
-                    <li role="presentation">
-                        <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </li>
-
-                </ul>
-            </ul>
+            
+                
+            
         </div>
     </nav>
         <!-- end of navbar -->
