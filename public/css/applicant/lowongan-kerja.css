@@ -373,3 +373,36 @@ p.nama-perusahaan{
     color: white; 
     height: 60px;
 }
+
+.terkirim{    
+    background-color: rgb(242, 201, 76, 0.2);
+    color: #F2C94C;
+    border-radius: 100px;
+}
+
+.terkirim .img-terkirim{
+    background-color: #F2C94C;
+    border-radius: 100px;
+}
+
+.diterima{    
+    background-color: rgb(111, 207, 151, 0.2);
+    color: #6FCF97;
+    border-radius: 100px;
+}
+
+.diterima .img-diterima{
+    background-color: #6FCF97;
+    border-radius: 100px;
+}
+
+.ditolak{    
+    background-color: rgb(235, 87, 87, 0.2);
+    color: #EB5757;
+    border-radius: 100px;
+}
+
+.ditolak .img-ditolak{
+    background-color: #EB5757;
+    border-radius: 100px;
+}
