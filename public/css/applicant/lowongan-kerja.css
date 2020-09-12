@@ -4,6 +4,22 @@ body{
     background-color: rgb(63, 149, 169, 0.1);
 }
 
+/* header menu */
+.lowongan-menu-item a{    
+    color: #BDBDBD;    
+    text-decoration: none;
+}
+
+.lowongan-menu-item a:hover{    
+    color: black;    
+    text-decoration: none;
+}
+
+.lowongan-menu-item .active{    
+    color: black;    
+    text-decoration: none;
+}
+
 /* search */
 .has-search .form-control {
     padding-left: 2.375rem;
@@ -101,10 +117,14 @@ body{
     color: gray;
 }
 
-/* lowongan */
-.lowongan-section{
-    background-color: rgb(63, 149, 169, 0.1);
+.btn-gaji-filter{
+    color: white;
+    font-weight: bold;
+    background-color: #68C8D8;
+    border-radius: 100px;
+    
 }
+/* lowongan */
 .lowongan-terkini {
     background: rgb(63, 149, 169, 0.1);
 }
@@ -112,17 +132,15 @@ body{
 .card-img-top{
     height: 90px;
 }
-.lowongan-kerja .update-time p,
-i {
+.lowongan-kerja .update-time i {
     color: #BDBDBD;
-    font-size: 12px;
+    font-size: 15px;
 }
+
 
 .lowongan-kerja{
-
-    height: 380px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.4);
 }
-
 
 .lowongan-kerja .company-location p, .lowongan-kerja .company-location i {
     color: #219653;
@@ -134,26 +152,26 @@ i {
 
 .lowongan-kerja .job-position p {
     color: #BDBDBD;
+    height: 20px;
 }
 
-.lowongan-kerja .job-description{            
-    height: 100px;        
+.lowongan-kerja .job-salary{            
+    height: 50px;        
 }
 
-.lowongan-kerja .job-description p{
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+.lowongan-kerja .job-salary img{            
+    height: 20px;
 }
 
 .lowongan-kerja .btn-detail {
-    background: #3F95A9;
+    background: #68C8D8;
     border-radius: 100px;
     color: white;
     font-size: 13px;
     font-weight: lighter;
 }
+
+
 
 /* Detail Lowongan */
 
@@ -317,4 +335,18 @@ p.nama-perusahaan{
 
 .modal-footer{
     border: none;
+}
+
+
+/* bookmark */
+
+.select-sortby{
+    background: white;
+    border: 2px solid #68C8D8;    
+    width: 15%;    
+    
+}
+
+.select-sortby{
+    outline: 0px transparent !important;
 }

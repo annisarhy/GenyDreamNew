@@ -44,6 +44,7 @@ Route::group([
   Route::get('/kursus', 'KursusController@index')->name('pelamar.kursus');
   Route::get('/kursus/detail', 'KursusController@detail')->name('pelamar.kursus.detail');
   Route::get('/lamaran', 'LamaranController@index')->name('pelamar.lamaran');
+  Route::get('/bookmark', 'LowonganKerjaController@bookmark')->name('pelamar.bookmark');
 });
 
 // company routes

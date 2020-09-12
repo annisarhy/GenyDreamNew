@@ -1,6 +1,12 @@
 @extends('layouts.applicant-master')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('css/applicant/lowongan-kerja.css') }}">
+
+<section class="header-lowongan bg-white pl-5 pt-3 pb-2">    
+    <p class="font-weight-bold">LAMARAN SAYA</p>                
+</section>
+
 <div class="container">
     <h3 class="my-5"><b>DAFTAR LAMARAN YANG SUDAH DIKIRIM</b></h3>
     <div class="my-5 row ">
