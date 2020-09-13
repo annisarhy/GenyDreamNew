@@ -1,7 +1,7 @@
 @extends('layouts.applicant-master')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/kursus.css') }}">    
+<link rel="stylesheet" href="{{ asset('css/applicant/kursus.css') }}">    
 <div class="wrap-slider">
     <div class="container page-container">
         <div class="page-content col-md-6 mx-auto">
@@ -77,7 +77,7 @@
                 <div class="col-lg-4 col-md-6 mt-2">
                     <div class="card kursus-card">                        
                         <div class="header mx-auto mt-2">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="">
+                            <img src="{{ asset('/images/course-img1.png') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="card-body">

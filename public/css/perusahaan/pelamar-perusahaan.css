@@ -1,0 +1,443 @@
+body{
+    background-color: rgb(63, 149, 169, 0.1);
+}
+
+
+hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 2px;
+}
+
+.select-sortby{
+    background: white;
+    border: 2px solid #68C8D8;    
+    width: 15%;    
+    
+}
+
+.select-sortby{
+    outline: 0px transparent !important;
+}
+
+@media screen and (max-width: 1204px) and (min-width: 600px) {
+    .select-sortby{        
+        width: 35%;    
+        
+    }
+}
+
+@media screen and (max-width: 736px) {
+    
+    .select-sortby{        
+        width: 70%;    
+        
+    }
+}
+
+.img-pelamar{
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+}
+
+.btn-detail{
+    color: #68C8D8;    
+}
+
+
+
+/* detail-pelamar */
+.box-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+
+/* left side */
+/* profile header */
+
+.profile-header .jumbotron{
+    margin: 0;
+    width: 100%;    
+    background-repeat: no-repeat;    
+    top: 0px;
+    background-size: cover;
+    background-position: bottom center;    
+    height: 240px;    
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, .3);
+    padding: 0;
+    border-radius: 0%;
+}
+
+.profile-header .image-default img{
+
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    top: -80px;
+    left: 85px;    
+    margin: 0 auto;    
+    z-index: 10;
+}
+
+.profile-header .username-info{
+    float: right;
+    width: 55%;    
+}
+@media screen and (max-width: 1204px) and (min-width: 600px) {
+    .profile-header .image-default img{
+
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        border-radius: 100px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        top: -80px;
+        left: 40px;            
+        margin: 0 auto;    
+        z-index: 10;
+    }   
+
+    .profile-header .username-info{
+        float: none;
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    
+    .profile-header .image-default img{
+
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        border-radius: 100px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        top: -80px;
+        left: 107px;    
+        margin: 0 auto;    
+        z-index: 10;    
+    }   
+    .profile-header .username-info{
+        float: none;
+        margin-top: 30px;
+        width: 100%;
+
+    }
+}
+
+
+.username{
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.btn-contact{        
+    background-color: white;
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+    font-weight: bolder;
+    font-size: 15px;        
+}
+
+.btn-contact:hover{
+    background-color: #68C8D8;
+    color: white;
+}
+
+
+.user-info-detail .btn-show-modal{
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+}
+
+.user-info-detail .btn-show-modal:hover{
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+    background: rgb(104, 200, 206, 0.2);
+}
+
+
+.user-info-detail .header-title{
+    font-weight: bolder;
+}
+
+.user-info-detail hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 1px;
+}
+
+
+
+/* tolak terima section */
+
+.btn-tolak{
+    color: white;
+    background-color: #EB5757;
+    
+}
+
+.btn-terima{
+    color: white;
+    background-color: #68C8D8;
+    
+}
+/* Basic Info Section */
+
+.info-title{
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+/* education section */
+
+.education-img{
+    display: block;        
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    background: rgb(63, 149, 169, 0.1);
+    border-radius: 100px;
+}
+
+.education-level{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.education-detail{
+    border-left: 4px solid rgb(63, 149, 169, 0.1);
+    margin-left: 33px;
+}
+
+.education-detail .university-name{
+    text-transform: uppercase;
+    color: #3F95A9;
+    font-weight: bolder;
+}
+
+.duration-of-education{
+    color: #BDBDBD;
+    font-size: 17px;    
+}
+
+.duration-of-education img{    
+    height: 27px;
+}
+
+.final-score{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;    
+    border-radius: 100px;    
+    margin-right: 10px;    
+    background-color: rgb(104, 200, 216, 0.2);
+    max-width: 80%;
+    color: #68C8D8;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 992px){
+    .education-detail{
+        position: relative;
+    }
+
+    .btn-editdelete{
+        position: absolute;
+        top: -50px;
+        right: 30px;
+    }
+}
+
+
+/* work experience section */
+
+.work-experience-img{
+    display: block;        
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    background: rgb(63, 149, 169, 0.1);
+    border-radius: 100px;
+}
+
+.work-experience-detail{
+    border-left: 4px solid rgb(63, 149, 169, 0.1);
+    margin-left: 33px;
+}
+
+.work-experience-detail .company-name{
+    text-transform: uppercase;
+    color: #3F95A9;
+    font-weight: bolder;
+}
+
+.duration-of-work{
+    color: #BDBDBD;
+    font-size: 17px;    
+}
+
+.duration-of-work img{    
+    height: 27px;
+}
+
+
+@media screen and (min-width: 992px){
+    .work-experience-detail{
+        position: relative;
+    }
+
+    .btn-editdelete{
+        position: absolute;
+        top: -50px;
+        right: 30px;
+    }
+}
+
+
+/* skills section */
+.skill-content:hover{
+    background: rgb(104, 200, 206, 0.2);
+}
+
+.skill-name{
+    color: #4F4F4F;
+    font-size: 20px;
+}
+
+/* Competence section */
+
+.competence-img{
+    display: block;        
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    background: rgb(63, 149, 169, 0.1);
+    border-radius: 100px;
+}
+
+.competence-name{        
+    font-weight: bold;
+    color: #3F95A9;
+}
+
+.competence-detail{
+    border-left: 4px solid rgb(63, 149, 169, 0.1);
+    margin-left: 33px;
+}
+
+.seminar-place{
+    color: #219653;
+}
+.duration-of-seminar{
+    color: #BDBDBD;
+    font-size: 17px;    
+}
+
+.duration-of-seminar img{    
+    height: 27px;
+}
+
+/* cv dan file pendukung section */
+.cv-link{
+    border: 1px dashed rgb(104, 200, 206);
+    background: rgb(104, 200, 206, 0.2);
+}
+
+/* portofolio section */
+.portofolio-img{
+    display: block;        
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background: rgb(63, 149, 169, 0.1);
+    border-radius: 100px;
+}
+
+/* modal terima tolak */
+.btn-cancel{
+    background: #FAFAFA;
+    border-radius: 100px;
+    color: #BDBDBD;
+    width: 120px;
+}
+
+.modal .btn-terima{
+    background: #68C8D8;
+    border-radius: 100px;
+    color: white;
+    width: 120px;
+}
+
+.modal .btn-tolak{
+    background: #EB5757;
+    border-radius: 100px;
+    color: white;
+    width: 120px;
+}
+
+.modal-footer{
+    border: none;
+}
+
+.modal-header{
+    border-bottom: 2px solid rgb(63, 149, 169, 0.1);    
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.modal .image-default img{
+
+    width: 120px;
+    height: 120px;                    
+    margin-left: 145%;
+    
+}
+
+@media screen and (max-width: 1204px) and (min-width: 600px) {
+    .modal .image-default img{
+
+        width: 120px;
+        height: 120px;                    
+        margin-left: 145%;
+        
+    }   
+    
+}
+
+@media screen and (max-width: 736px) {
+    
+    .modal .image-default img{
+
+        width: 120px;
+        height: 120px;                    
+        margin-left: 85%;
+        
+    }
+}
+
+.box-text{
+    border: 1px dashed #3F95A9;
+    background-color: rgb(63, 149, 169, 0.1);
+    color: #4F4F4F;
+}
+
+.box-text-tolak{
+    border: 1px dashed #EB5757;
+    background-color: rgb(235, 87, 87, 0.1);
+    color: #4F4F4F;
+}
+
+.img-info{
+    height: 20px;
+}

@@ -1,56 +1,71 @@
-@extends('perusahaan.master-dashboard.dashboard-master')
+@extends('layouts.company-master')
 
-@section('content-dashboard')
-<link href="{{ asset('css/beranda-perusahaan.css') }}" rel="stylesheet">
+@section('content')
+<link href="{{ asset('css/perusahaan/lowongan-perusahaan.css') }}" rel="stylesheet">
 
-<!-- <div class="row">
-    <form action="" class="form-signin col-md-5">
-        <div class="form-group has-search">
-            <span class="fa fa-search form-control-feedback"></span>
-            <button class="btn btn-cari">CARI</button>
-            <input type="text" class="form-control" placeholder="Ketik lowongan yang ingin kamu cari">
+
+<div class="container-fluid">    
+
+    <div class="row py-5 p-5">
+        <div class="col-md-10">
+            <h3 class="font-weight-bold">Daftar Lowongan</h3>
+            <p>Berikut daftar lowongan yang telah anda buat, cek secara berkala untuk menemukan pelamar sesuai kriteria perusahaanmu </p>
+        </div>        
+    </div>
+
+    <div class="row pl-5 justify-content-between">
+        <div class="col-md-9">
+            <select class="select select-sortby p-2 mb-4" name="sort_by" id="sort-by">
+                <option>SORT BY</option>
+                <option value="asc">Terbaru</option>
+                <option value="desc">Terlama</option>
+            </select>
         </div>
-    </form>
-
-    <button class="btn btn-filter ml-3"><img src="{{ asset('images/heroicons-outline_filter.png') }}" alt=""> FILTER</button>
-</div> -->
-
-
-<div class="row">                        
-    @foreach ($listLowongan as $lowongan)    
-    <div class="col-lg-4">
-        <div class="lowongan-card p-2 mt-3">
-            <div class="row title-pekerjaan p-3">
-                <div class="col md-5 pr-0">
-                    <div class="square-image mt-2">
-                        <img src="{{ asset('images/gojek.png') }}" alt="img-perusahaan" class="img-fluid img-perusahaan">
-                    </div>
-                </div>
-
-                <div class="col-md-7">
-                    <a href="#" class="btn-share pull-right mt-1"><img src="{{ asset('images/ant-design_share-alt-outlined.png') }}" alt=""></a>
-                <p class="nama-lowongan mb-0">{{ $lowongan->judul }}</p>
-                    <p class="nama-perusahaan mb-0">{{ $lowongan->perusahaan->nama }}</p>
-                </div>
-            </div>
-
-            <div class="row pl-4">
-                <p class="hour-text text-right"><img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" class="img-fluid mr-2 mb-1" alt=""> {{ $lowongan->updated_at }}</p>
-            </div>
-
-            <hr class="mt-0">
-
-            <div class="row footer-card">
-                <div class="col-md-6 jml-pelamar">
-                <p class=" mt-2 jml-pelamar-tag"><img src="{{ asset('images/la_user-tie-solid-green.png') }}" alt="" class="img-fluid mr-2 mb-1">{{ $lowongan->lamaran_count }} pelamar</p>
-                </div>
-                <div class="col-md-6 detail">
-                    <a href="#" class="btn btn-lg btn-block">Detail</a>
-                </div>
-            </div>
+        <div class="col-md-3">
+            <a href="{{ route('perusahaan.add.lowongan') }}" class="btn btn-primary btn-add-lowongan" id=""><img src="{{ asset('images/icons8_advertising.png') }}" alt=""> Upload Buat Lowongan</a>
         </div>
     </div>
-    @endforeach
+
+    <div class="row pl-5 pr-5 pb-5 pt-1">                        
+        @foreach ($listLowongan as $lowongan)    
+            <div class="col-lg-3 col-md-4 mt-3">
+                <div class="card lowongan-kerja pb-3">
+                    <div class="row ml-1 justify-content-between">                    
+                        <p class="mt-3 mb-0 update-time"><i class="fa fa-clock-o p-1"></i>1 jam yang lalu</p>
+
+                        <div class="right-button pr-4">
+                            <button class="btn btn-link mt-2"><img src="{{ asset('images/ant-design_share-alt-outlined.png') }}" alt=""></button>                        
+                        </div>
+                    </div>
+
+                        <hr class="mr-2 ml-2">
+
+                        <div class="card-image mx-auto">
+                            <img src="{{ asset('/images/gambarPertamina.png') }}" alt="" class="card-img-top">
+                        </div>
+
+                        <div class="card-body d-flex flex-column p-0">                    
+
+                            <div class="job-position ml-2 mt-4">
+                                <h6 class="font-weight-bold">{{ $lowongan->judul }}</h6>
+                                <p>{{ $lowongan->perusahaan->nama }}</p>
+                            </div>
+                            
+
+                            <div class="job-pelamar ml-2 mr-2">
+                                <p class=" mt-2 jml-pelamar-tag"><img src="{{ asset('images/la_user-tie-solid-black.png') }}" alt="" class="img-fluid mr-2 mb-1">{{ $lowongan->lamaran_count }} pelamar</p>
+                            </div>
+
+                            <div class="row justify-content-end pr-3">                        
+                                <div class="col-md-7">
+                                    <a href="{{ route('perusahaan.detail.lowongan') }}" class="btn btn-lg btn-block btn-detail">DETAIL</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+        @endforeach
+    </div>
 </div>
 
 @endsection

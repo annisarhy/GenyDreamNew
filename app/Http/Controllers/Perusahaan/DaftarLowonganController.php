@@ -17,4 +17,10 @@ class DaftarLowonganController extends Controller
 
         return view('perusahaan/daftar-lowongan',compact('listLowongan','perusahaan'));
     }
+
+    public function detailLowongan(){
+             
+        return view('perusahaan/detail-lowongan-perusahaan');
+    
+    }
 }

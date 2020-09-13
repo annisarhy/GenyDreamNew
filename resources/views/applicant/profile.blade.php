@@ -1,7 +1,7 @@
 @extends('layouts.applicant-master')
 
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ url('/css/profile.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/applicant/profile.css') }}" />
 
 <div class="flat-row profile-page p-3">
     <div class="container py-5">
@@ -13,7 +13,7 @@
                     <div class="row profile-header box-shadow pb-5">                                                    
                         <img class="jumbotron img-fluid" src="https://image.freepik.com/free-photo/construction-site_53876-14088.jpg" alt="">
                                                 
-                        <div class="col-md-4">
+                        <div class="col-md-7">
                             <div class="image-default">
                                 <label class=newbtn>
                                     <img class="rounded-circle" id="pictures" src="https://i.ibb.co/MsW3Ry1/100k-ai-faces-5.jpg" alt="...">
@@ -21,16 +21,17 @@
                                 </label>
                             </div>
 
-                            <h3 class="username mt-5 ml-3 text-center">Anna Minerva</h3>
+                            <div class="username-info">
+                                <h3 class="company-name">Anna Minerva</h3>
+                                <p class="user-status">Free User</p>
+                            </div>
                         </div>
 
-                        <div class="col-md-8">
+                        <div class="col-md-5">
                             <div class="d-flex flex-row justify-content-around mt-4">
-                                <button class="btn btn-lg btn-export">EXPORT</button>
-
                                 <button class="btn btn-lg btn-preview">PREVIEW</button>
 
-                                <p class="user-status btn btn-lg">Free User</p>
+                                <button class="btn btn-lg btn-export"><i class="fa fa-file"></i>EXPORT TO PDF</button>                                                                
                             </div>
                             
                             <p class="pull-right font-weight-bold mt-3 mr-3 upgrade-text">If you want to upgrade your account                                 
@@ -67,6 +68,8 @@
 
                                     <p class="info-title mt-5">E-mail</p>
                                     <p>annaminerva@gmail.com</p>
+                                    <!-- pake if udah verified atau belum kalau udh jadinya display none -->
+                                    <p class="mb-1"><img src="{{ asset('images/ant-design_info-circle-outlined-red.png') }}" class="img-warning mr-1">Your email address is not yet verified.</p>                        
                                 </div>    
 
                                 <div class="col-md-6">
@@ -140,9 +143,9 @@
                                         </div>
 
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#educationModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
-                                            <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePendidikanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
                                     </div>
                                 </div>                                                                                                
@@ -173,9 +176,9 @@
                                         </div>
 
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#educationModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
-                                            <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePendidikanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
                                     </div>
                                 </div>
@@ -209,9 +212,9 @@
                                         </div>                                                                                                                                    
                                         
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#workModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
-                                            <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePekerjaanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
                                     </div>
                                 </div>                                                                                                
@@ -231,9 +234,9 @@
                                         </div>                                                                                                                                    
                                         
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#workModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
-                                            <button class="btn btn-delete"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePekerjaanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
                                     </div>
                                 </div>
@@ -328,9 +331,14 @@
                                                     <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
                                                     <p class="ml-1">Dari Mei 2019 - Juli 2019 </p>
                                                 </div>                                            
-                                            </div>
-                                            
-                                        </div>                                        
+                                            </div>                                            
+                                        </div>    
+                                        
+                                        <div class="d-flex btn-editdelete">
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#kompetensiModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+
+                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePelatihanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                        </div>
                                     </div>
                                 </div>                                                                                                
 
@@ -353,9 +361,14 @@
                                                     <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
                                                     <p class="ml-1">Dari September 2019 - Februari 2020 </p>
                                                 </div>                                            
-                                            </div>
-                                            
-                                        </div>                                        
+                                            </div>                                            
+                                        </div>    
+                                        
+                                        <div class="d-flex btn-editdelete">
+                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#kompetensiModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+
+                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePelatihanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -602,6 +615,7 @@
                     <div class="email mb-4">
                         <p class="email-title mb-0">EMAIL</p>
                         <p class="email-user font-weight-bold">annaminerva@gmail.com</p>
+                        <!-- pake if udah verified atau belum kalau udh jadinya display none -->
                         <p class="mb-1"><img src="{{ asset('images/ant-design_info-circle-outlined-red.png') }}" class="img-warning mr-1">Your email address is not yet verified.</p>
                         <a href="#" class="verify-email ml-3">VERIFY NOW</a>                        
                     </div>
@@ -1039,7 +1053,7 @@
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header pl-0 pr-0">
-                <h5 class="modal-title font-weight-bold" id="ModalSkill">UPLOAD FILE</h5>
+                <h5 class="modal-title font-weight-bold" id="ModalCV">UPLOAD FILE</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>                
@@ -1256,7 +1270,66 @@
     </div>
 </div>
 
+<!-- modal delete riwayat pendidikan-->
+<div class="modal fade" id="deletePendidikanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="exampleModalLabel">HAPUS RIWAYAT PENDIDIKAN</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">                
+                <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Riwayat Pendidikan ini?</p>                
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" class="btn btn-danger">YAKIN<i class="fa fa-trash"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- modal delete riwayat pekerjaan-->
+<div class="modal fade" id="deletePekerjaanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="exampleModalLabel">HAPUS RIWAYAT PEKERJAAN</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">                
+                <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Riwayat Pekerjaan ini?</p>                
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" class="btn btn-danger">YAKIN<i class="fa fa-trash"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- modal delete riwayat seminar/pelatihan-->
+<div class="modal fade" id="deletePelatihanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="exampleModalLabel">HAPUS RIWAYAT PELATIHAN</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">                
+                <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Riwayat Pelatihan ini?</p>                
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" class="btn btn-danger">YAKIN<i class="fa fa-trash"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('js')
@@ -1402,9 +1475,5 @@
             })
     });
 </script>
-
-
-
-
 
 @endsection

@@ -1,3 +1,12 @@
+body{
+	background-color: rgb(63, 149, 169, 0.1);
+}
+
+.add-lowongan{
+	box-shadow: 0 4px 8px 0 rgba(104,200,216,0.2);
+	background-color: white;
+}
+
 .add-lowongan hr{
     background-color: rgb(63, 149, 169, 0.1);
     height: 4px;

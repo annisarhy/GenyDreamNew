@@ -1,7 +1,7 @@
 @extends('layouts.company-master')
 
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ url('/css/profile-perusahaan.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/perusahaan/profile-perusahaan.css') }}" />
 
 <div class="flat-row profile-page p-3">
     <div class="container py-5">
@@ -119,6 +119,57 @@
                         </div>
                     </div>
                     <!-- end of user perusahaan -->
+
+                    <!-- social media perusahaan -->
+                    <div class="row socmed box-shadow mt-5 p-4">
+                        <div class="socmed-content w-100">
+                            <div class="d-flex justify-content-between socmed-header">                                                                
+                                <h3 class="header-title mr-1">SOCIAL MEDIA</h3>
+                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#socmedModal"><i class="fa fa-plus mr-2"></i>TAMBAH SOCIAL MEDIA</button>
+                            </div>
+
+                            <hr>
+
+                            <div class="socmed-body">
+                                <div class="socmed-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/bx_bxl-facebook.png') }}" alt="" class="socmed-img">
+
+                                        <div class="socmed-link">
+                                            <p class="social-media-title ml-3 mb-0 font-weight-bold">FACEBOOK</p>
+                                            <a href="#" class="social-media-link ml-3">www.facebook.com/GojekIndonesia</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="socmed-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/ant-design_instagram-outlined.png') }}" alt="" class="socmed-img">
+
+                                        <div class="socmed-link">
+                                            <p class="social-media-title ml-3 mb-0 font-weight-bold">Instagram</p>
+                                            <a href="#" class="social-media-link ml-3">www.instagram.com/GojekIndonesia</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="socmed-row mt-2">
+                                    <div class="d-flex">
+                                        <img src="{{ asset('images/ant-design_twitter-outlined.png') }}" alt="" class="socmed-img">
+
+                                        <div class="socmed-link">
+                                            <p class="social-media-title ml-3 mb-0 font-weight-bold">Twitter</p>
+                                            <a href="#" class="social-media-link ml-3">www.twitter.com/GojekIndonesia</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of social media perusahaan -->
                 </div>
             </div>
 
@@ -314,7 +365,71 @@
 </div>
 <!-- end of modal user perusahaan -->
 
+<!-- modal update social media perusahaan -->
+<div class="modal fade" id="socmedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header pl-0 pr-0">
+                <h5 class="modal-title font-weight-bold" id="ModalSocmedTitle">TAMBAH SOCIAL MEDIA</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>                
+            </div>            
+            
+            <!-- form -->
+            <form action="">
+                <div class="modal-body modal-competence mt-4">                                    
+                    <div class="form-group social-media more-social-media">
+                        <span class="has-float-label">
+                            <input type="text" name="website" value="" class="form-control" id="website" placeholder="WEBSITE">
+                            <label for="website">WEBSITE</label>
+                        </span>
+                    </div>
 
+                    <div class="form-group social-media more-social-media">
+                        <span class="has-float-label">
+                            <input type="text" name="facebook" value="" class="form-control" id="facebook" placeholder="FACEBOOK">
+                            <label for="facebook">FACEBOOK</label>
+                        </span>
+                    </div>
+
+                    <div class="form-group social-media more-social-media">
+                        <span class="has-float-label">
+                            <input type="text" name="instagram" value="" class="form-control" id="instagram" placeholder="INSTAGRAM">
+                            <label for="instagram">INSTAGRAM</label>
+                        </span>
+                    </div>
+
+                    <div class="form-group social-media more-social-media">
+                        <span class="has-float-label">
+                            <input type="text" name="twitter" value="" class="form-control" id="twitter" placeholder="TWITTER">
+                            <label for="twitter">TWITTER</label>
+                        </span>
+                    </div>
+                                        
+
+                    <div class="form-group more-social-media" style="display: none;">
+                        <span class="has-float-label">
+                            <input type="text" name="linkedin" value="" class="form-control" id="linkedin" placeholder="LINKEDIN">
+                            <label for="linkedin">LINKEDIN</label>
+                        </span>
+                    </div>                
+
+                    <button class="btn btn-block btn-view-more mt-5" type="button">LIHAT LAINNYA</button>
+
+                </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
+                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                </div>
+            </form>
+
+            <!-- end of form -->
+        </div>
+    </div>
+</div>
+<!-- end of modal update social media perusahaan -->
 
 <!-- modal price subscribe -->
 <div class="modal fade bd-example-modal-xl" id="myModal" role="dialog">
@@ -419,5 +534,26 @@
     </div>
 </div>
 
+@endsection
 
+@section('js')
+<script>
+    $(document).ready(function(){
+
+
+        // social media dan portofolio
+        $(".more-social-media").slice(0, 3).show();
+        if($(".social-media:hidden").lenght != 0){
+            $(".btn-view-more").show();
+        }
+
+        $(".btn-view-more").click(function(e){
+            e.preventDefault();
+            $(".more-social-media:hidden").slice(0, 5).slideDown();
+            if($("more-social-media:hidden").length == 0){
+                $(".btn-view-more").fadeOut('slow');
+            }
+        })
+    });
+</script>
 @endsection

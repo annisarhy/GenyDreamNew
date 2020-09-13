@@ -168,63 +168,6 @@ hr{
     font-size: 20px;
 }
 
-
-
-
-/* Daftar Pelamar */
-
-.pelamar-card{
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-
-.pelamar-image{
-    text-align: center;
-}
-.img-pelamar{
-    height: 50px;
-}
-
-.pelamar-name{
-    font-weight: bolder;   
-}
-
-.score-title{
-    color: #219653;
-}
-
-.score{
-    font-size: 20px;
-    font-weight: bolder;
-    color: #219653;
-}
-
-.lihat-pelamar{
-    font-weight: bolder;
-    color: #68C8D8;        
-}
-
-.lihat-pelamar:hover{
-    color: #0F91A7; 
-}
-
-.pelamar-card .footer-card .btn-block {
-    width: 100px;
-    height: 40px;
-    background: #68C8D8;
-    border-radius: 100px;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.pelamar-card .footer-card .btn-block:hover {
-    background: #0F91A7;    
-}
-
-
-
 /* Daftar kursus */
 
 .kursus-list .header{
@@ -295,7 +238,7 @@ hr{
 }
 
 .img-genyedu{
-    margin-top: 100px;    
+    margin-top: 50px;    
     display: block;
     margin-left: auto;
     margin-right: auto;

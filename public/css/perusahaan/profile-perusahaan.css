@@ -166,6 +166,16 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+/* social media perusahaan */
+.socmed-img{
+    display: block;        
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background: rgb(63, 149, 169, 0.1);
+    border-radius: 100px;
+}
+
 
 
 
@@ -205,6 +215,28 @@ body{
     
 }
 
+@media screen and (max-width: 1204px) and (min-width: 600px) {
+    .modal .image-default img{
+
+        width: 120px;
+        height: 120px;                    
+        margin-left: 145%;
+        
+    }   
+    
+}
+
+@media screen and (max-width: 736px) {
+    
+    .modal .image-default img{
+
+        width: 120px;
+        height: 120px;                    
+        margin-left: 80%;
+        
+    }
+}
+
 .modal #pic {
     display: none;
 }
@@ -217,7 +249,11 @@ body{
     color: #68C8D8;    
 }
 
-
+/* modal update social media */
+.btn-view-more{
+    border: 2px solid #68C8D8;
+    color: #68C8D8;
+}   
 
 
 

@@ -1,7 +1,7 @@
 @extends('layouts.applicant-master')
 
 @section('content')
-<link href="{{ asset('css/beranda-applicant.css') }}" rel="stylesheet">
+<link href="{{ asset('css/applicant/beranda-applicant.css') }}" rel="stylesheet">
 
 <section class="dashboard-header">
     <div class="pl-5 pr-5 py-5">
@@ -97,7 +97,7 @@
             <div class="col-lg-5 col-md-9 tips-berita-title">
                 <h1>TIPS DAN BERITA UNTUK KAMU</h1>
                 <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae elementum vulputate tincidunt adipiscing commodo, egestas est, id. In nibh donec quis sagittis. Sed lorem orci sed donec duis lectus feugiat eleifend faucibus. In tempus, sociis id consectetur placerat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <a href="#" class="btn btn-md pl-3 pr-3 mt-3"><i class="fa fa-list-ul pr-2"></i>LIST TIPS DAN BERITA</a>
             </div>
 

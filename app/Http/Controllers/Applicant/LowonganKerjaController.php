@@ -36,6 +36,10 @@ class LowonganKerjaController extends Controller
             'status' => 0,
         ]);
 
-        return view('applicant/sukses-apply-lamaran',compact('pelamar'));
+        return view('applicant/sukses-apply-lamaran',compact('pelamar', 'loker'));
+    }
+
+    public function bookmark(){
+        return view('applicant/bookmark-lowongan');
     }
 }

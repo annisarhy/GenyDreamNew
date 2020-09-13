@@ -21,6 +21,8 @@ Route::get('/home','HomeController@index')->name('home');
 //login biasa
 Auth::routes(['verify' => true]);
 
+Route::get('/register/pelamar', 'Applicant\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
+
 //login perushaan
 Route::get('/login/perusahaan', 'Perusahaan\AuthPerusahaanController@showLoginForm')->name('perusahaan.login');
 Route::get('/register/perusahaan', 'Perusahaan\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
@@ -42,6 +44,7 @@ Route::group([
   Route::get('/kursus', 'KursusController@index')->name('pelamar.kursus');
   Route::get('/kursus/detail', 'KursusController@detail')->name('pelamar.kursus.detail');
   Route::get('/lamaran', 'LamaranController@index')->name('pelamar.lamaran');
+  Route::get('/bookmark', 'LowonganKerjaController@bookmark')->name('pelamar.bookmark');
 });
 
 // company routes
@@ -54,7 +57,23 @@ Route::group([
   Route::get('/', 'BerandaController@index')->name('perusahaan.beranda');
   Route::get('/profile-perusahaan', 'ProfilePerusahaanController@index')->name('perusahaan.profile');  
   Route::get('/lowongan', 'DaftarLowonganController@index')->name('perusahaan.list.lowongan');
-  Route::get('/lowongan/tambah-lowongan', 'AddLowonganController@index')->name('perusahaan.add.lowongan');
-  Route::get('/pelamar', 'DaftarPelamarController@index')->name('perusahaan.list.pelamar');
-  Route::get('/bookmark', 'BookmarkController@index')->name('perusahaan.bookmark');    
+
+  Route::get('/detaillowonganperusahaan', 'DaftarLowonganController@detailLowongan')->name('perusahaan.detail.lowongan');
+
+  Route::get('/lowongan/tambah-lowongan', 'AddLowonganController@index')->name('perusahaan.add.lowongan');  
+
+  Route::get('/daftarpelamar', 'ListPelamarController@index')->name('perusahaan.list.pelamar');  
+
+  Route::get('/detailpelamar', 'ListPelamarController@detailPelamar')->name('perusahaan.detail.pelamar');
+});
+
+Route::group([
+  'namespace' => 'Debug',
+  'prefix' => 'debug',
+], function () {
+  Route::get('/migrateFS','ArtisanController@migrateFreshSeed');
+  Route::get('/migrateF','ArtisanController@migrateFresh');
+  Route::get('/migrateS','ArtisanController@migrateSeed');
+  Route::get('/migrate','ArtisanController@migrate');
+  Route::get('/clearCache','ArtisanController@clearCache');
 });

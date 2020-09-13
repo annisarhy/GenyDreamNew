@@ -23,13 +23,16 @@
                     <div class="container">
                         <div class="container-fluid">
                             <h5 class="card-title">Login </h5>
+                            @if (session('error'))
+                                <div class="alert alert-danger">{{ session('error') }}</div>
+                            @endif
                             <p>Welcome! Please fill email and password to sign in into your account.</p>
                             <form class="form-signin" method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <input name="role" type="hidden" value="pelamar"/>
                                 <div class="form-label-group">
                                     <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-                                    <label for="inputEmail">Email address</label>
+                                    <label for="inputEmail">Email address</label>                                    
                                 </div>
 
 
