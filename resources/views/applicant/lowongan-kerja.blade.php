@@ -161,7 +161,11 @@
                 </div>
             </div>
            @endforeach
-        </div>        
+        </div>      
+        
+        <div class="row justify-content-center mt-4">
+            {{ $listLoker->links() }} 
+        </div>
     </div>
 
 </section>

@@ -13,7 +13,7 @@ class LowonganKerjaController extends Controller
 {
     public function index()
     {
-        $listLoker = Lowongan::orderBy('judul')->take(20)->get();
+        $listLoker = Lowongan::orderBy('judul')->paginate(12);
 
         return view('applicant/lowongan-kerja',compact('listLoker'));
     }

@@ -62,12 +62,17 @@
                                     
                                     <p class="info-title mt-5">E-mail</p>
                                     <p>annaminerva@gmail.com</p>
+                                    <!-- pake if udah verified atau belum kalau udh jadinya display none -->
+                                    <p class="mb-1"><img src="{{ asset('images/ant-design_info-circle-outlined-red.png') }}" class="img-warning mr-1">Your email address is not yet verified.</p>                        
                                 </div>    
 
                                 <div class="col-md-6">                                    
 
-                                    <p class="info-title mt-5">Nama Penanggung Jawwab</p>
-                                    <p class="text-capitalize">Andre Soelistyo</p>                                
+                                    <p class="info-title mt-5">Nama Penanggung Jawab</p>
+                                    <p class="text-capitalize">Andre Soelistyo</p>       
+                                    
+                                    <p class="info-title mt-5">Kota</p>
+                                    <p class="text-capitalize">kota bandung</p>
 
                                     <p class="info-title mt-5">Alamat</p>
                                     <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
@@ -228,7 +233,7 @@
                     <div class="form-group">
                         <span class="has-float-label">
                             <input type="text" name="nama_penanggungjawab" value="" class="form-control" id="nama_penanggungjawab" placeholder="NAMA PENANGGUNG JAWAB" required="required">
-                            <label for="nama_penanggungjawab">NAMA PENGANGGUNG JAWAB</label>
+                            <label for="nama_penanggungjawab">NAMA PENANGGUNG JAWAB</label>
                         </span>
                     </div>
 
@@ -261,6 +266,28 @@
                             <label for="alamat">ALAMAT</label>
                         </span>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mt-4">
+                                <span class="has-float-label">
+                                    <input type="text" name="kota" value="" class="form-control" list="kotaList" id="kota" placeholder="contoh: Kota Bandung">
+                                    <datalist id="kotaList"></datalist>
+                                    <label for="kota">KOTA</label>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group mt-4">
+                                <span class="has-float-label">
+                                    <input type="text" name="provinsi" value="" class="form-control" list="provinsiList" id="provinsi" placeholder="contoh: Jawa Barat">
+                                    <datalist id="provinsiList"></datalist>
+                                    <label for="provinsi">PROVINSI</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>                                
 
                 </div>
                 <div class="modal-footer">
@@ -553,7 +580,32 @@
             if($("more-social-media:hidden").length == 0){
                 $(".btn-view-more").fadeOut('slow');
             }
-        })
+        });        
+
+
+    });
+
+    $(document).ready(function(){
+
+
+        const citiesName = ["Kota Bandung", "Kabupaten Bandung", "Kota Garut", "Kabupaten Garut", "Kota Jakarta Barat", "Kota Jakarta Timur", "Kota Jakarta Selatan", "Kota Jakarta Utara", "Kota Jakarta Pusat", "Kota Tangerang", "Kota Medan", "Kabupaten Nias", "Kabupaten Batu Bara", "Kota Padang", "Kota Pariaman", "Kota Bukit Tinggi", "Kabupaten Solok", "Kabupaten Kepulauan Mentawai","Kota Padangpanjang", "Kota Solok", "Kota Pekanbaru", "Kota Batam", "Kota Tanjungpinang", "Kabupaten Natuna", "Kabupaten Bintan", "Kota Jambi", "Kota Bengkulu", "Kabupaten Lahat", "Kota Palembang", "Kota Pangkalpinang", "Kabupaten Bangka", "Kabupaten Lampung", "Kota Bandar Lampung", "Kabupaten Serang", "Kota Cilegon", "Kota Serang", "Kota Tangerang Selatan", "Kabupaten Lebak", "Kabupaten Cirebon", "Kota Bekasi", "Kota Bogor", "Kota Depok", "Kabupaten Cilacap", "Kabupaten Klaten", "Kabupaten Magelang", "Kabupaten Semarang", "Kota Magelang", "Kota Semarang", "Kota Surakarta", "Kota Salatiga", "Kabupaten Banyuwangi", "Kabupaten Jember", "Kota Surabaya", "Kota Pasurusan", "Kota Malang", "Kota Kediri", "Yogyakarta", "Kota Denpasar", "Kabupaten Gianyar", "Kabupaten Buleleng", "Kabupaten Bima", "Kota Bima", "Kota Kupang", "Kabupaten Sumba", "Kota Pontianak", "Kota Singkawang", "Kabupaten Malawi", "Kota Banjarmasin", "Kota Palangka Raya", "Kota Balikpapan", "Kota Bontang", "Kota Samarinda", "Kota Tarakan", "Kota Gorontalo", "Kabupaten Polewali Mandar", "Kota Makassar", "Kota Palopo", "Kota Parepare", "Kota Bau-bau", "Kota Kendari", "Kota Palu", "Kota Bitung", "Kota Manado", "Kota Tomohon", "Kota Ambon", "Kota Tual", "Kabupaten Maluku Tengan", "Kabupaten Maluku Tenggara", "Kabupaten Maluku Barat Daya", "Kota Ternate", "Kota Tidore Kepulauan", "Kabupaten Halmahera", "Kota Jayapura", "Kota Sorong"]
+
+        var options = '';
+
+        for(var i = 0; i < citiesName.length; i++)
+        options += '<option value="'+citiesName[i]+'" />';
+
+        document.getElementById('kotaList').innerHTML = options;
+
+        const provincesName = ["Nanggroe Aceh Darussalam", "Sumatera Utara", "Sumatera Barat", "Sumatera Selatan", "Riau", "Kepulauan Riau", "Jambi", "Bengkulu", "Kepulauan Bangka Belitung", "Lampung", "Banten", "DKI Jakarta", "Jawa Barat", "Jawa Tengah", "Jawa Timur", "DI Yogyakarta", "Bali", "Nusa Tenggara Barat", "Nusa Tenggara Timur", "Kalimantan Barat", "Kalimantan Selatan", "Kalimantan Tengah", "Kalimantan Timur", "Kalimantan Utara", "Gorontalo", "Sulawesi Barat", "Sulawesi Selatan", "Sulawesi Tenggara", "Sulawesi Tengah", "Sulawesi Utara", "Maluku", "Maluku Utara", "Papua", "Papua Barat"]
+
+        var optionsProvince = '';
+
+        for(var i = 0; i < provincesName.length; i++)
+        optionsProvince += '<option value="'+provincesName[i]+'" />';
+
+        document.getElementById('provinsiList').innerHTML = optionsProvince;
+
     });
 </script>
 @endsection

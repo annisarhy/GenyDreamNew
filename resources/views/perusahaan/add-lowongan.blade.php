@@ -21,13 +21,13 @@
 
                     <div class="form-group mt-4">
                         <span class="has-float-label">
-                            <input type="text" name="kategori" value="" class="form-control" list="kategoriList" id="kategori" placeholder="KATEGORI">
+                            <input type="text" name="kategori" value="" class="form-control" list="kategoriList" id="kategori" placeholder="contoh: marketing">
                             <datalist id="kategoriList">
-                                <option value="teknologi informasi">Teknologi Informasi</option>
-                                <option value="akuntansi">Akuntansi</option>
-                                <option value="administrasi">Administrasi</option>
-                                <option value="hukum">Hukum</option>
-                                <option value="manufaktur">Manufaktur</option>
+                                <option value="teknologi informasi">
+                                <option value="akuntansi">
+                                <option value="administrasi">
+                                <option value="hukum">
+                                <option value="manufaktur">
                             </datalist>
                             <label for="kategori">KATEGORI</label>
                         </span>
