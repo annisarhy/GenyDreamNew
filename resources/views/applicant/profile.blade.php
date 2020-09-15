@@ -1343,7 +1343,7 @@
         options = "";                
 
         for(var Y=nowY; Y>=1980; Y--) {
-            options += "<option>"+ Y +"</option>";
+            options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
         $("#years-start").append( options );    
@@ -1380,7 +1380,7 @@
         options = "";                
 
         for(var Y=nowY; Y>=1980; Y--) {
-            options += "<option>"+ Y +"</option>";
+            options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
         $("#years-start-work").append( options );    
@@ -1416,7 +1416,7 @@
         options = "";                
 
         for(var Y=nowY; Y>=1980; Y--) {
-            options += "<option>"+ Y +"</option>";
+            options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
         $("#years-start-seminar").append( options );    
