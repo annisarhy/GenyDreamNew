@@ -637,7 +637,7 @@
 
                         <div class="col-md-6">
                             <label class="form-group has-float-label">
-                                <select class="form-control custom-select">
+                                <select class="form-control custom-select" name="jenkel">
                                     <option selected>-- Pilih Gender --</option>
                                     <option value="perempuan">Perempuan</option>
                                     <option value="laki-laki">Laki-laki</option>                                
@@ -740,7 +740,7 @@
                 <div class="modal-body modal-education mt-4">                    
 
                     <label class="form-group has-float-label">
-                        <select class="form-control custom-select">
+                        <select class="form-control custom-select" name="jenjang-pendidikan">
                             <option selected>-- Pilih Jenjang Pendidikan --</option>
                             <option value="perguruan tinggi">PERGURUAN Tinggi</option>
                             <option value="sekolah menengan kejuruan">Sekolah Menengan Kejuruan</option>
@@ -771,14 +771,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start"></select>
+                                    <select class="form-control custom-select" id="months-start" name="bulan-awal-pendidikan"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start"></select>
+                                    <select class="form-control custom-select" id="years-start" name="tahun-awal-pendidikan"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -790,14 +790,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end"></select>
+                                    <select class="form-control custom-select" id="months-end" name="bulan-akhir-pendidikan"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end"></select>
+                                    <select class="form-control custom-select" id="years-end" name="tahun-akhir-pendidikan"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -865,14 +865,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start-work"></select>
+                                    <select class="form-control custom-select" id="months-start-work" name="bulan-awal-kerja"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start-work"></select>
+                                    <select class="form-control custom-select" id="years-start-work" name="tahun-awal-kerja"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -884,14 +884,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end-work"></select>
+                                    <select class="form-control custom-select" id="months-end-work" name="bulan-akhir-kerja"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end-work"></select>
+                                    <select class="form-control custom-select" id="years-end-work" name="tahun-akhir-kerja"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -993,14 +993,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start-seminar"></select>
+                                    <select class="form-control custom-select" id="months-start-seminar" name="bulan-awal-seminar"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start-seminar"></select>
+                                    <select class="form-control custom-select" id="years-start-seminar" name="tahun-awal-seminar"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -1012,14 +1012,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end-seminar"></select>
+                                    <select class="form-control custom-select" id="months-end-seminar" name="bulan-akhir-seminar"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end-seminar"></select>
+                                    <select class="form-control custom-select" id="years-end-seminar" name="tahun-akhir-seminar"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
