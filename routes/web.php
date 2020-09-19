@@ -67,6 +67,28 @@ Route::group([
   Route::get('/detailpelamar', 'ListPelamarController@detailPelamar')->name('perusahaan.detail.pelamar');
 });
 
+
+
+// admin routes
+Route::group([
+  'namespace' => 'Admin',  
+  'prefix' => 'admin',
+], function () {
+  Route::get('/', 'DashboardAdminController@index')->name('admin.dashboard');
+  // perusahaan
+  Route::get('/daftar-perusahaan', 'KelolaPerusahaanController@index')->name('admin.list.perusahaan');
+  Route::get('/tambah-perusahaan', 'KelolaPerusahaanController@addPerusahaan')->name('admin.add.perusahaan');
+  Route::get('/detail-perusahaan', 'KelolaPerusahaanController@detailPerusahaan')->name('admin.detail.perusahaan');
+
+  // user
+  Route::get('/daftar-user', 'KelolaUserController@index')->name('admin.list.user');
+  Route::get('/tambah-user', 'KelolaUserController@addUser')->name('admin.add.user');
+  Route::get('/detail-user', 'KelolaUserController@detailUser')->name('admin.detail.user');
+  // berita
+  
+});
+
+
 Route::group([
   'namespace' => 'Debug',
   'prefix' => 'debug',
