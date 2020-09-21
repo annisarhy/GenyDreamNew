@@ -18,7 +18,6 @@ class CreateBeritaTable extends Migration
             $table->string('judul');
             $table->string('isi');
             $table->foreignid('id_kategori')->constrained('kategori_berita');
-            $table->int('view_count');
             $table->timestamps();
         });
     }
