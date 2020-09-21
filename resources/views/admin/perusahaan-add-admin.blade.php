@@ -39,14 +39,14 @@
 
                         <div class="form-group mt-4">
                             <span class="has-float-label">
-                                <input type="text" name="penanggung_jawab" value="{{ old('nama',@$perusahaan->penanggung_jawab) }}" class="form-control" id="nama_penanggung_jawab" placeholder="NAMA PENANGGUNG JAWAB" required>
+                                <input type="text" name="penanggung_jawab" value="{{ old('penanggung_jawab',@$perusahaan->penanggung_jawab) }}" class="form-control" id="nama_penanggung_jawab" placeholder="NAMA PENANGGUNG JAWAB" required>
                                 <label for="nama_penanggung_jawab">NAMA PENANGGUNG JAWAB</label>
                             </span>
                         </div>
                             
                         <div class="form-group mt-4">
                             <span class="has-float-label">
-                                <input type="text" name="no_telp" value="{{ old('nama',@$perusahaan->no_telp) }}" class="form-control" id="no_telp" placeholder="NO TELEPON" required>
+                                <input type="text" name="no_telp" value="{{ old('no_telp',@$perusahaan->no_telp) }}" class="form-control" id="no_telp" placeholder="NO TELEPON" required>
                                 <label for="no_telp">NO TELEPON</label>
                             </span>
                         </div>
@@ -56,13 +56,13 @@
 
                         <div class="form-group mt-5">
                             <span class="has-float-label">
-                                <input type="email" name="email" value="{{ old('nama',@$perusahaan->email) }}" class="form-control" id="email" placeholder="EMAIL" required>
+                                <input type="email" name="email" value="{{ old('email',@$perusahaan->email) }}" class="form-control" id="email" placeholder="EMAIL" required>
                                 <label for="email">EMAIL</label>
                             </span>
                         </div>
                         <div class="form-group mt-4">
                             <span class="has-float-label">
-                                <textarea type="text" name="alamat" class="form-control" id="alamat" placeholder="ALAMAT" rows="10">{{ old('nama',@$perusahaan->alamat) }}</textarea>
+                                <textarea type="text" name="alamat" class="form-control" id="alamat" placeholder="ALAMAT" rows="10">{{ old('alamat',@$perusahaan->alamat) }}</textarea>
                                 <label for="alamat">ALAMAT</label>
                             </span>
                         </div>                                       

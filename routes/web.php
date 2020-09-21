@@ -80,16 +80,22 @@ Route::group([
   // perusahaan
   Route::get('/perusahaan', 'KelolaPerusahaanController@index')->name('admin.perusahaan.index');
   Route::get('/perusahaan/new', 'KelolaPerusahaanController@create')->name('admin.perusahaan.add');
-  Route::get('/perusahaan/{id}/edit', 'KelolaPerusahaanController@edit')->name('admin.perusahaan.edit');
   Route::get('/perusahaan/{id}', 'KelolaPerusahaanController@detail')->name('admin.perusahaan.detail');
+  Route::get('/perusahaan/{id}/edit', 'KelolaPerusahaanController@edit')->name('admin.perusahaan.edit');
   Route::post('/perusahaan','KelolaPerusahaanController@store');
   Route::patch('/perusahaan/{id}','KelolaPerusahaanController@update');
   Route::delete('/perusahaan/{id}','KelolaPerusahaanController@destroy')->name('admin.perusahaan.delete');
 
   // user
-  Route::get('/daftar-user', 'KelolaUserController@index')->name('admin.list.user');
-  Route::get('/tambah-user', 'KelolaUserController@addUser')->name('admin.add.user');
-  Route::get('/detail-user', 'KelolaUserController@detailUser')->name('admin.detail.user');
+  Route::get('/user', 'KelolaUserController@index')->name('admin.user.index');
+  Route::get('/user/new', 'KelolaUserController@create')->name('admin.user.add');
+  Route::get('/user/{id}', 'KelolaUserController@detail')->name('admin.user.detail');
+  Route::get('/user/{id}/edit', 'KelolaUserController@edit')->name('admin.user.edit');
+  Route::post('/user','KelolaUserController@store');
+  Route::patch('/user/{id}','KelolaUserController@update');
+  Route::delete('/user/{id}','KelolaUserController@destroy')->name('admin.user.delete');
+
+
   // berita
   
 });

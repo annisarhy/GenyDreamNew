@@ -13,11 +13,11 @@
     
 
     <div class="row mt-5 pl-3 pr-3 justify-content-between">
-        <a href="{{ route('admin.add.user') }}" class="btn btn-lg pt-3 btn-tambah-user"><i class="fa fa-plus mr-3"></i>TAMBAH USER</a>
+        <a href="{{ route('admin.user.add') }}" class="btn btn-lg pt-3 btn-tambah-user"><i class="fa fa-plus mr-3"></i>TAMBAH USER</a>
 
         <div class="form mt-2">
             <div class="input-group mb-3">
-                <input type="text" class="form-control form-search" placeholder="Cari Nama Perusahaan" aria-label="Cari Nama User">
+                <input type="text" class="form-control form-search" placeholder="Cari Nama User" aria-label="Cari Nama User">
                 <div class="input-group-append">
                     <button class="btn btn-search" type="button"><i class="fa fa-search"></i></button>
                 </div>
@@ -65,36 +65,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>                        
-                        <td>Anna Minerva</td>
-                        <td>annaminerva@gmail.com</td>
-                        <td>12345678</td>                                               
-                        <td><a href="{{ route('admin.detail.user') }}" class="btn btn-detail">DETAIL <i class="fa fa-angle-right ml-3"></i></a></td>
-                    </tr>
-
-                    <tr>                        
-                        <td>Anna Minerva</td>
-                        <td>annaminerva@gmail.com</td>
-                        <td>12345678</td>                                               
-                        <td><a href="{{ route('admin.detail.user') }}" class="btn btn-detail">DETAIL <i class="fa fa-angle-right ml-3"></i></a></td>                    </tr>
-
-                    <tr>                        
-                        <td>Anna Minerva</td>
-                        <td>annaminerva@gmail.com</td>
-                        <td>12345678</td>                                               
-                        <td><a href="{{ route('admin.detail.user') }}" class="btn btn-detail">DETAIL <i class="fa fa-angle-right ml-3"></i></a></td>                    </tr>
-
-                    <tr>                        
-                        <td>Anna Minerva</td>
-                        <td>annaminerva@gmail.com</td>
-                        <td>12345678</td>                                               
-                        <td><a href="{{ route('admin.detail.user') }}" class="btn btn-detail">DETAIL <i class="fa fa-angle-right ml-3"></i></a></td>                    </tr>
-
-                    <tr>                        
-                        <td>Anna Minerva</td>
-                        <td>annaminerva@gmail.com</td>
-                        <td>12345678</td>                                               
-                        <td><a href="{{ route('admin.detail.user') }}" class="btn btn-detail">DETAIL <i class="fa fa-angle-right ml-3"></i></a></td>                    </tr>
+                    @foreach ($listUser as $user)
+                        <tr>                        
+                            <td>{{ $user->username }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->password }}</td>                                               
+                            <td><a href="{{ route('admin.user.detail',$user->id) }}" class="btn btn-detail">DETAIL <i class="fa fa-angle-right ml-3"></i></a></td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

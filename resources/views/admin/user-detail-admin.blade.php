@@ -26,16 +26,16 @@
                             <div class="col-md-5">
 
                                 <p class="info-title mt-5">USERNAME</p>
-                                <p class="text-uppercase">ANNA MINERVA</p>
+                                <p class="text-uppercase">{{ $user->username }}</p>
                                                                                                
                                 <p class="info-title mt-5">E-mail</p>
-                                <p>annaminerva@gmail.com</p>                                
+                                <p>{{ $user->email }}</p>                                
                             </div>    
 
                             <div class="col-md-6">                                    
 
                                 <p class="info-title mt-5">PASSWORD</p>
-                                <p class="text-capitalize">12345678</p>                                                                                   
+                                <p class="text-capitalize">{{ $user->password }}</p>                                                                                   
                             </div>
                         </div>
                     </div>                                                
@@ -45,12 +45,12 @@
                 <!-- button box -->
                 <div class="row button-row box-shadow mt-5 p-4">
                     <div class="col-md-4 text-center">
-                        <a href="{{ route('admin.list.user') }}" class="btn btn-back mt-2"><i class="fa fa-arrow-left mr-2"></i>KEMBALI KE LIST</a>
+                        <a href="{{ route('admin.user.index') }}" class="btn btn-back mt-2"><i class="fa fa-arrow-left mr-2"></i>KEMBALI KE LIST</a>
                     </div>
 
                     <div class="col-md-8">
                         <div class="row justify-content-center">
-                            <a href="{{ route('admin.add.user') }}" class="btn btn-edit mr-2 mt-2"><i class="fa fa-pencil mr-2"></i>EDIT</a>
+                            <a href="{{ route('admin.user.edit',$user->id) }}" class="btn btn-edit mr-2 mt-2"><i class="fa fa-pencil mr-2"></i>EDIT</a>
                             <button class="btn btn-delete mr-2 mt-2" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash mr-2"></i>DELETE</button>
                         </div>
                     </div>
@@ -87,7 +87,11 @@
             <div class="modal-footer">
                     
                 <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
-                <button class="btn btn-delete font-weight-bold">DELETE</button>
+                <form action="{{ route('admin.user.delete',$user->id) }}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn btn-delete font-weight-bold">DELETE</button>
+                </form>
             </div>                        
         </div>
     </div>
