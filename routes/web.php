@@ -37,8 +37,13 @@ Route::group([
 ], function () {
   Route::get('/', 'BerandaController@index')->name('pelamar.beranda');
   Route::get('/profile', 'ProfileController@index')->name('pelamar.profile');
-  Route::get('/profile/edit', 'ProfileController@edit')->name('pelamar.profile.edit');
-  Route::patch('/profile/edit/{id}', 'ProfileController@update')->name('pelamar.profile.update');
+  Route::patch('/profile/edit/{id}', 'ProfileController@updateProfile')->name('pelamar.profile.basic.update');
+  Route::patch('/profile/edit/{id}/deskripsi', 'ProfileController@updateProfile')->name('pelamar.profile.deskripsi.update');
+  Route::patch('/profile/edit/{id}/keahlian', 'ProfileController@updateProfile')->name('pelamar.profile.keahlian.update');
+  Route::patch('/profile/edit/{id}/rpekerjaan', 'ProfileController@updateProfile')->name('pelamar.profile.rpekerjaan.update');
+  Route::patch('/profile/edit/{id}/rpendidikan', 'ProfileController@updateProfile')->name('pelamar.profile.rpendidikan.update');
+  Route::patch('/profile/edit/{id}/kompetensi', 'ProfileController@updateProfile')->name('pelamar.profile.kompetensi.update');
+
   Route::get('/loker', 'LowonganKerjaController@index')->name('pelamar.loker');
   Route::get('/loker/{id}', 'LowonganKerjaController@detail')->name('pelamar.loker.detail');
   Route::get('/loker/{id}/apply', 'LowonganKerjaController@successApply')->name('pelamar.loker.apply');

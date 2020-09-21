@@ -11,34 +11,32 @@ class ProfileController extends Controller
 {
   public function index()
   {
-    return view('applicant/profile');
-  }
-
-  public function edit()
-  {
     $data['profile'] = Pelamar::where('id_user',Auth::id())->first();
-    return view('applicant/edit-profile',$data);
+    return view('applicant/profile',$data);
   }
 
-  public function update(Request $request, $id){
+  public function updateProfile(Request $request, $id){
     $rule = [
-      'nama_depan' => 'required|string',
-      'nama_belakang' => 'required|string',
-      'no_hp' => 'required|string',
-      'no_ktp' => 'required|string',
+      'nama_lengkap' => 'required|string',
+      'gelar_depan' => 'required|string',
+      'gelar_belakang' => 'required|string',
+      'tempat_lahir' => 'required|string',
+      'tgl_lahir' => 'required|string',
+      'jen_kel' => 'required|string',
+      'no_telp' => 'required',
+      'no_ktp' => 'required',
       'alamat' => 'required|string',
     ];
     $this->validate($request,$rule);
 
     $input = $request->all();
     $data = Pelamar::find($id);
-    $data->nama_lengkap = $request->input('nama_depan') . " " . $request->input('nama_belakang');
     $status = $data->update($input);
 
     if ($status) {
-      return redirect('/profile')->with('success','Data Berhasil Diubah');
+      return redirect()->route('pelamar.profile')->with('success','Data Berhasil Diubah');
     }else{
-      return redirect('/edit-profile')->with('error','Data Gagal Diubah');
+      return redirect()->route('pelamar.profile')->with('error','Data Gagal Diubah');
     }
   }
 }

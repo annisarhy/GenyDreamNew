@@ -35,12 +35,15 @@ class KelolaUserController extends Controller
     	];
     	$this->validate($request,$rule);
 
-    	$status = \App\User::create([
+    	$user = new \App\User([
             'username' => $request->input('username'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
             'role' => 'pelamar',
         ]);
+        $status = $user->create();
+        
+        $user->initRole();
 
     	if ($status) {
     		return redirect()->route('admin.user.index')->with('success','Data Berhasil Ditambahkan');

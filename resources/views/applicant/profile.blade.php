@@ -22,7 +22,7 @@
                             </div>
 
                             <div class="username-info">
-                                <h3 class="company-name">Anna Minerva</h3>
+                                <h3 class="company-name">{{ $profile->nama_lengkap }}</h3>
                                 <p class="user-status">Free User</p>
                             </div>
                         </div>
@@ -55,39 +55,39 @@
                                 <div class="col-md-5">
 
                                     <p class="info-title mt-5">Nama</p>
-                                    <p>Anna Minerva</p>
+                                    <p>{{ $profile->nama_lengkap }}</p>
 
                                     <p class="info-title mt-5">Gelar Depan</p>
-                                    <p>Belum ada gelar</p>
+                                    <p>{{ $profile->gelar_depan }}</p>
 
                                     <p class="info-title mt-5">Tempat, Tanggal Lahir</p>
-                                    <p>Bandung, 20 Maret 2000</p>                                    
+                                    <p>{{ $profile->ttl }}</p>                                    
 
                                     <p class="info-title mt-5">Gender</p>
-                                    <p>Perempuan</p>
+                                    <p>{{ $profile->gender }}</p>
 
-                                    <p class="info-title mt-5">E-mail</p>
-                                    <p>annaminerva@gmail.com</p>
+                                    {{-- <p class="info-title mt-5">E-mail</p>
+                                    <p>{{ $profile->user->email }}</p>
                                     <!-- pake if udah verified atau belum kalau udh jadinya display none -->
-                                    <p class="mb-1"><img src="{{ asset('images/ant-design_info-circle-outlined-red.png') }}" class="img-warning mr-1">Your email address is not yet verified.</p>                        
+                                    <p class="mb-1"><img src="{{ asset('images/ant-design_info-circle-outlined-red.png') }}" class="img-warning mr-1">Your email address is not yet verified.</p>                         --}}
                                 </div>    
 
                                 <div class="col-md-6">
 
                                     <p class="info-title mt-5">No KTP</p>
-                                    <p>3245987312560934</p>
+                                    <p>{{ $profile->no_ktp }}</p>
 
                                     <p class="info-title mt-5">Gelar Belakang</p>
-                                    <p>Belum ada</p>
+                                    <p>{{ $profile->gelar_belakang }}</p>
 
                                     <p class="info-title mt-5">Usia</p>
-                                    <p>20</p>
+                                    <p>{{ $profile->usia }}</p>
 
                                     <p class="info-title mt-5">Telepon</p>
-                                    <p>088822222222</p>                                
+                                    <p>{{ $profile->no_hp }}</p>                                
 
                                     <p class="info-title mt-5">Alamat</p>
-                                    <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+                                    <p>{{ $profile->alamat }}</p>
                                 </div>
                             </div>
                         </div>                                                
@@ -571,7 +571,9 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.basic.update',$profile->id) }}" method="POST">'
+                @csrf
+                @method("PATCH")
                 <div class="modal-body modal-basic-info">
                     <!-- input image -->
                     <div class="image-default">
@@ -583,22 +585,22 @@
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="username" value="" class="form-control" id="username" placeholder="NAMA LENGKAP" required="required">
-                            <label for="username">NAMA</label>
+                        <input type="text" name="nama_lengkap" value="{{ old('nama_lengkap',@$profile->nama_lengkap) }}" class="form-control" id="nama_lengkap" placeholder="NAMA LENGKAP" required="required">
+                            <label for="nama_lengkap">NAMA</label>
                         </span>
                     </div>
                     
                     <div class="row">
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="text" name="gelas_depan" value="" class="form-control" id="gelar_depan" placeholder="GELAR DEPAN">
+                                <input type="text" name="gelar_depan" value="{{ old('gelar_depan',@$profile->gelar_depan) }}" class="form-control" id="gelar_depan" placeholder="GELAR DEPAN">
                                 <label for="gelar_depan">GELAR DEPAN</label>
                             </span>
                         </div>
 
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="text" name="gelar_belakang" value="" class="form-control" id="gelar_belakang" placeholder="GELAR BELAKANG">
+                                <input type="text" name="gelar_belakang" value="{{ old('gelar_belakang',@$profile->gelar_belakang) }}" class="form-control" id="gelar_belakang" placeholder="GELAR BELAKANG">
                                 <label for="gelar_belakang">GELAR BELAKANG</label>
                             </span>
                         </div>
@@ -606,12 +608,12 @@
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="no_ktp" value="" class="form-control" id="no_ktp" placeholder="NO KTP" required="required">
+                            <input type="text" name="no_ktp" value="{{ old('no_ktp',@$profile->no_ktp) }}" class="form-control" id="no_ktp" placeholder="NO KTP" required="required">
                             <label for="no_ktp">NO KTP</label>
                         </span>
                     </div>
 
-                    <!-- pake if email nya sudah verified atau belum -->
+                    {{-- <!-- pake if email nya sudah verified atau belum -->
                     <div class="email mb-4">
                         <p class="email-title mb-0">EMAIL</p>
                         <p class="email-user font-weight-bold">annaminerva@gmail.com</p>
@@ -622,25 +624,25 @@
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="email" value="" class="form-control" id="email" placeholder="UPDATE NEW EMAIL">
+                            <input type="text" name="email" value="{{ old('email',@$profile->email) }}" class="form-control" id="email" placeholder="UPDATE NEW EMAIL">
                             <label for="email">UPDATE NEW EMAIL</label>
                         </span>
-                    </div>
+                    </div> --}}
 
                     <div class="row">
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="text" name="no_telp" value="" class="form-control" id="no_telp" placeholder="NO TELEPON">
+                                <input type="text" name="no_telp" value="{{ old('no_telp',@$profile->no_telp) }}" class="form-control" id="no_telp" placeholder="NO TELEPON">
                                 <label for="no_telp">NO TELEPON</label>
                             </span>
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-group has-float-label">
-                                <select class="form-control custom-select" name="jenkel">
+                                <select class="form-control custom-select" name="jen_kel">
                                     <option selected>-- Pilih Gender --</option>
-                                    <option value="perempuan">Perempuan</option>
-                                    <option value="laki-laki">Laki-laki</option>                                
+                                    <option value="p" {{ old('p',@$profile->jen_kel) == "p" ? 'selected' : '' }}>Perempuan</option>
+                                    <option value="l" {{ old('p',@$profile->jen_kel) == "l" ? 'selected' : '' }}>Laki-laki</option>                                
                                 </select>
                                 <span>GENDER</span>
                             </label>
@@ -650,14 +652,14 @@
                     <div class="row">                        
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="text" name="tempat_tinggal" value="" class="form-control" id="tempat_tinggal" placeholder="TEMPAT TINGGAL">
-                                <label for="tempat_tinggal">TEMPAT TINGGAL</label>
+                                <input type="text" name="tempat_lahir" value="{{ old('tempat_lahir',@$profile->tempat_lahir) }}" class="form-control" id="tempat_tinggal" placeholder="TEMPAT TINGGAL">
+                                <label for="tempat_lahir">TEMPAT LAHIR</label>
                             </span>
                         </div>
 
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="date" name="tgl_lahir" value="" class="form-control" id="tgl_lahir" placeholder="TANGGAL LAHIR">
+                                <input type="date" name="tgl_lahir" value="{{ old('tgl_lahir',@$profile->tgl_lahir) }}" class="form-control" id="tgl_lahir" placeholder="TANGGAL LAHIR">
                                 <label for="tgl_lahir">TANGGAL LAHIR</label>
                             </span>
                         </div>                        
@@ -665,7 +667,7 @@
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <textarea type="text" name="alamat" value="" class="form-control" id="alamat" placeholder="ALAMAT" rows="4"></textarea>
+                            <textarea type="text" name="alamat" class="form-control" id="alamat" placeholder="ALAMAT" rows="4">{{ old('alamat',@$profile->alamat) }}</textarea>
                             <label for="alamat">ALAMAT</label>
                         </span>
                     </div>
@@ -674,7 +676,7 @@
                 <div class="modal-footer">
                     
                     <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
-                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                    <button class="btn btn-simpan font-weight-bold" type="submit">SIMPAN</button>
                 </div>
             </form>
 

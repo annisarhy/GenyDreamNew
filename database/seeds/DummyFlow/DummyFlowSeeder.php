@@ -31,8 +31,8 @@ class DummyFlowSeeder extends Seeder
         //     });
         // });
 
-        // generate 20 perusahaan baru
-        factory(Perusahaan::class, 1)->create()->each(function ($perusahaan) {
+        // generate 5 perusahaan baru
+        factory(Perusahaan::class, 5)->create()->each(function ($perusahaan) {
             //generate 4 lowongan dari perusahaan
             factory(Lowongan::class, 4)->create([
                 'id_perusahaan' => $perusahaan->id,
