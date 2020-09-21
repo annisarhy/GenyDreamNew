@@ -14,17 +14,13 @@ class Perusahaan extends Model
         'nama',
         'email',
         'penanggung_jawab',
-        'no_hp',
+        'no_telp',
         'alamat',
     ];
 
-    public function penanggungjawab()
-    {
-        return $this->belongsTo('App\User','id_user');
-    }
-
+    
     public function listUserPerusahaan()
     {
-        return $this->belongsToMany('App\UserPerusahaan');
+        return $this->hasMany('App\UserPerusahaan');
     }
 }

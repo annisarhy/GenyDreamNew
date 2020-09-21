@@ -86,7 +86,7 @@
 
                 <div class="row">
                     <div class="col-md-6 mt-2">                        
-                        <div class="menu-list pl-1 pt-2 pb-2 pr-4"  onclick="window.location='{{ route('admin.list.perusahaan') }}'">
+                        <div class="menu-list pl-1 pt-2 pb-2 pr-4" onclick="window.location='{{ route('admin.list.perusahaan') }}'">
                             <div class="d-flex">                                
                                 <div class="col-md-3 menu-list-img">
                                     <img src="{{ asset('images/bi_building-blue.png') }}" class="img-fluid img-left-menu" alt="">

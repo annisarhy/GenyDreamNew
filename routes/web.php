@@ -24,8 +24,9 @@ Auth::routes(['verify' => true]);
 Route::get('/register/pelamar', 'Applicant\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
 
 //login perushaan
-Route::get('/login/perusahaan', 'Perusahaan\AuthPerusahaanController@showLoginForm')->name('perusahaan.login');
-Route::get('/register/perusahaan', 'Perusahaan\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
+//sorry dicomment dulu soalnya rada gak make sense sama halaman admin
+// Route::get('/login/perusahaan', 'Perusahaan\AuthPerusahaanController@showLoginForm')->name('perusahaan.login');
+// Route::get('/register/perusahaan', 'Perusahaan\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
 
 // applicant routes
 
@@ -73,12 +74,17 @@ Route::group([
 Route::group([
   'namespace' => 'Admin',  
   'prefix' => 'admin',
+  'middleware' => ['admin','auth'],
 ], function () {
-  Route::get('/', 'DashboardAdminController@index')->name('admin.dashboard');
+  Route::get('/', 'DashboardAdminController@index')->name('admin.beranda');
   // perusahaan
-  Route::get('/daftar-perusahaan', 'KelolaPerusahaanController@index')->name('admin.list.perusahaan');
-  Route::get('/tambah-perusahaan', 'KelolaPerusahaanController@addPerusahaan')->name('admin.add.perusahaan');
-  Route::get('/detail-perusahaan', 'KelolaPerusahaanController@detailPerusahaan')->name('admin.detail.perusahaan');
+  Route::get('/perusahaan', 'KelolaPerusahaanController@index')->name('admin.perusahaan.index');
+  Route::get('/perusahaan/new', 'KelolaPerusahaanController@create')->name('admin.perusahaan.add');
+  Route::get('/perusahaan/{id}/edit', 'KelolaPerusahaanController@edit')->name('admin.perusahaan.edit');
+  Route::get('/perusahaan/{id}', 'KelolaPerusahaanController@detail')->name('admin.perusahaan.detail');
+  Route::post('/perusahaan','KelolaPerusahaanController@store');
+  Route::patch('/perusahaan/{id}','KelolaPerusahaanController@update');
+  Route::delete('/perusahaan/{id}','KelolaPerusahaanController@destroy')->name('admin.perusahaan.delete');
 
   // user
   Route::get('/daftar-user', 'KelolaUserController@index')->name('admin.list.user');
@@ -92,6 +98,7 @@ Route::group([
 Route::group([
   'namespace' => 'Debug',
   'prefix' => 'debug',
+  'middleware' => ['admin','auth'],
 ], function () {
   Route::get('/migrateFS','ArtisanController@migrateFreshSeed');
   Route::get('/migrateF','ArtisanController@migrateFresh');

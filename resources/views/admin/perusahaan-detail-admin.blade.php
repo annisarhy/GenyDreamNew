@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="username-info">
-                            <h3 class="company-name">PT. GOJEK INDONESIA</h3>
+                            <h3 class="company-name">{{ $perusahaan->nama }}</h3>
                             <p class="user-status">Free User</p>
                         </div>                            
                     </div>                                            
@@ -35,12 +35,12 @@
                 <!-- button box -->
                 <div class="row button-row box-shadow mt-5 p-4">
                     <div class="col-md-4 text-center">
-                        <a href="{{ route('admin.list.perusahaan') }}" class="btn btn-back mt-2"><i class="fa fa-arrow-left mr-2"></i>KEMBALI KE LIST</a>
+                        <a href="{{ route('admin.perusahaan.index') }}" class="btn btn-back mt-2"><i class="fa fa-arrow-left mr-2"></i>KEMBALI KE LIST</a>
                     </div>
 
                     <div class="col-md-8">
                         <div class="row justify-content-center">
-                            <a href="{{ route('admin.add.perusahaan') }}" class="btn btn-edit mr-2 mt-2"><i class="fa fa-pencil mr-2"></i>EDIT</a>
+                            <a href="{{ route('admin.perusahaan.edit',$perusahaan->id) }}" class="btn btn-edit mr-2 mt-2"><i class="fa fa-pencil mr-2"></i>EDIT</a>
                             <button class="btn btn-delete mr-2 mt-2" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash mr-2"></i>DELETE</button>
                         </div>
                     </div>
@@ -60,25 +60,25 @@
                             <div class="col-md-5">
 
                                 <p class="info-title mt-5">Nama Perusahaan</p>
-                                <p class="text-uppercase">PT. GOJEK INDONESIA</p>
+                                <p class="text-uppercase">{{ $perusahaan->nama }}</p>
 
                                 <p class="info-title mt-5">Telepon</p>
-                                <p>088822222222</p>                                
+                                <p>{{ $perusahaan->no_telp }}</p>                                
                                             
                                 <p class="info-title mt-5">E-mail</p>
-                                <p>gojekindonesia@gmail.com</p>                                
+                                <p>{{ $perusahaan->email }}</p>                                
                             </div>    
 
                             <div class="col-md-6">                                    
 
                                 <p class="info-title mt-5">Nama Penanggung Jawab</p>
-                                <p class="text-capitalize">Andre Soelistyo</p>       
+                                <p class="text-capitalize">{{ $perusahaan->penanggung_jawab }}</p>       
                                             
                                 <p class="info-title mt-5">Kota</p>
                                 <p class="text-capitalize">kota bandung</p>
 
                                 <p class="info-title mt-5">Alamat</p>
-                                <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+                                <p>{{ $perusahaan->alamat }}</p>
                             </div>
                         </div>
                     </div>                                                
@@ -115,7 +115,11 @@
             <div class="modal-footer">
                     
                 <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
-                <button class="btn btn-delete font-weight-bold">DELETE</button>
+                <form action="{{ route('admin.perusahaan.delete',$perusahaan->id) }}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn btn-delete font-weight-bold">DELETE</button>
+                </form>
             </div>                        
         </div>
     </div>

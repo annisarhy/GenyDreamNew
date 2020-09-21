@@ -1,4 +1,5 @@
 <?php
+
 namespace DummyFlow;
 
 use Illuminate\Database\Seeder;
@@ -15,19 +16,27 @@ class DummyFlowSeeder extends Seeder
      */
     public function run()
     {
-        // generate 5 user baru
-        factory(User::class,5)->create([
-            'role' => "perusahaan",
-        ])->each(function ($user) {
-            //generate perusahaan dari user
-            factory(Perusahaan::class,1)->create([
-                'id_user' => $user->id,
-            ])->each(function ($perusahaan) {
-                //generate 4 lowongan dari perusahaan
-                factory(Lowongan::class,4)->create([
-                    'id_perusahaan' => $perusahaan->id,
-                ]);
-            });
+        // // generate 5 user baru
+        // factory(User::class,5)->create([
+        //     'role' => "perusahaan",
+        // ])->each(function ($user) {
+        //     //generate perusahaan dari user
+        //     factory(Perusahaan::class,1)->create([
+        //         'id_user' => $user->id,
+        //     ])->each(function ($perusahaan) {
+        //         //generate 4 lowongan dari perusahaan
+        //         factory(Lowongan::class,4)->create([
+        //             'id_perusahaan' => $perusahaan->id,
+        //         ]);
+        //     });
+        // });
+
+        // generate 20 perusahaan baru
+        factory(Perusahaan::class, 1)->create()->each(function ($perusahaan) {
+            //generate 4 lowongan dari perusahaan
+            factory(Lowongan::class, 4)->create([
+                'id_perusahaan' => $perusahaan->id,
+            ]);
         });
     }
 }
