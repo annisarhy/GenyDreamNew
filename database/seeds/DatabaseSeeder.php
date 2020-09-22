@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UserSeeder::class);
         $this->call(KategoriLowonganSeeder::class);
+        $this->call(JenjangPendidikanSeeder::class);
         // $this->call(PerusahaanSeeder::class);
 
         $this->call(DummyFlow\DummyFlowSeeder::class);

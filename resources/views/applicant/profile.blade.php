@@ -84,7 +84,7 @@
                                     <p>{{ $profile->usia }}</p>
 
                                     <p class="info-title mt-5">Telepon</p>
-                                    <p>{{ $profile->no_hp }}</p>                                
+                                    <p>{{ $profile->no_telp }}</p>                                
 
                                     <p class="info-title mt-5">Alamat</p>
                                     <p>{{ $profile->alamat }}</p>
@@ -103,7 +103,9 @@
 
                             <hr>
 
-                            <p class="description mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, labore vero quos sunt qui laudantium non omnis, consequuntur reiciendis consectetur illum reprehenderit excepturi ipsum, harum error maxime. Unde, tempore? Deserunt.</p>
+                            <p class="description mt-5">
+                                {{ $profile->deskripsi }}
+                            </p>
                         </div>
                     </div>
 
@@ -118,71 +120,39 @@
                             <hr>
 
                             <div class="education-body">
-                                <div class="education-row mt-2">
-                                    <div class="d-flex">
-                                        <img src="{{ asset('images/la_user-graduate-solid.png') }}" alt="" class="education-img">
+                                @foreach ($profile->rpendidikan as $pendidikan)
+                                    <div class="education-row mt-2">
+                                        <div class="d-flex">
+                                            <img src="{{ asset('images/la_user-graduate-solid.png') }}" alt="" class="education-img">
 
-                                        <p class="education-level mt-4 ml-4">PERGURUAN TINGGI</p>
-                                    </div>
-
-                                    <div class="education-detail pl-4 mt-3">
-                                        <h3 class="university-name mb-1">INSTITUT TEKNOLOGI BANDUNG</h3>
-                                        <p class="major text-capitalize">jurusan teknik informatika</p>        
-                                        
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <div class="d-flex duration-of-education mt-2">
-                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                                    <p class="ml-1">Dari Juni 2018 - Juni 2022 (expected)</p>
-                                                </div>                                            
-                                            </div>
-
-                                            <div class="col-md-4">
-                                                <p class="final-score">Nilai Akhir : 3,78</p>
-                                            </div>
+                                        <p class="education-level mt-4 ml-4">{{ $pendidikan->jenjang->nama_jenjang }}</p>
                                         </div>
 
-                                        <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#educationModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                        <div class="education-detail pl-4 mt-3">
+                                            <h3 class="university-name mb-1">{{ $pendidikan->nama_instansi }}</h3>
+                                            <p class="major text-capitalize">{{ $pendidikan->jurusan }}</p>        
+                                            
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="d-flex duration-of-education mt-2">
+                                                        <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
+                                                        <p class="ml-1">Dari {{ $pendidikan->formatted_tgl_mulai }} - {{ $pendidikan->formatted_tgl_akhir }} (perkiraan)</p>
+                                                    </div>                                            
+                                                </div>
 
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePendidikanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>                                                                                                
-
-                                <!-- contoh 2 -->
-                                <div class="education-row mt-2">
-                                    <div class="d-flex">
-                                        <img src="{{ asset('images/la_user-graduate-solid.png') }}" alt="" class="education-img">
-
-                                        <p class="education-level mt-4 ml-4">Sekolah menengah kejuruan</p>
-                                    </div>
-
-                                    <div class="education-detail pl-4 mt-3">
-                                        <h3 class="university-name mb-1">SMK Negeri 4 bandung</h3>
-                                        <p class="major text-capitalize">jurusan rekayasa perangkat lunak</p>        
-                                        
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <div class="d-flex duration-of-education mt-2">
-                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                                    <p class="ml-1">Dari Juni 2015 - Juni 2018</p>
-                                                </div>                                            
+                                                <div class="col-md-4">
+                                                    <p class="final-score">Nilai Akhir : {{ $pendidikan->nilai_akhir }}</p>
+                                                </div>
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <p class="final-score">Nilai Akhir : 3,78</p>
+                                            <div class="d-flex btn-editdelete">
+                                                <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#educationModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+
+                                                <button class="btn btn-delete" data-toggle="modal" data-target="#deletePendidikanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                             </div>
                                         </div>
-
-                                        <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#educationModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
-
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePendidikanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                    </div>   
+                                @endforeach                                                                                        
                             </div>
                         </div>
                     </div>
@@ -699,14 +669,16 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.deskripsi.update',$profile->id) }}" method="POST">
+                @csrf
+                @method("PATCH")
                 <div class="modal-body modal-desctiption">                    
 
                     <p class="mt-4">Masukan deskripsi singkat tentang dirimu mulai dari keahlianmu hingga motto hidupmu!</p>
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <textarea type="text" name="deskripsi" value="" class="form-control" id="deskripsi" placeholder="DESKRIPSI" rows="10"></textarea>
+                        <textarea type="text" name="deskripsi" value="" class="form-control" id="deskripsi" placeholder="DESKRIPSI" rows="10">{{ old('deskripsi',@$profile->deskripsi) }}</textarea>
                             <label for="deskripsi">DESKRIPSI</label>
                         </span>
                     </div>
@@ -715,7 +687,7 @@
                 <div class="modal-footer">
                     
                     <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
-                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                    <button class="btn btn-simpan font-weight-bold" type="submit">SIMPAN</button>
                 </div>
             </form>
 
@@ -738,31 +710,31 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.rpendidikan.add', $profile->id) }}" method="POST">
+                @csrf
+                @method("PATCH")
                 <div class="modal-body modal-education mt-4">                    
 
                     <label class="form-group has-float-label">
-                        <select class="form-control custom-select" name="jenjang-pendidikan">
+                        <select class="form-control custom-select" name="id_jenjang">
                             <option selected>-- Pilih Jenjang Pendidikan --</option>
-                            <option value="perguruan tinggi">PERGURUAN Tinggi</option>
-                            <option value="sekolah menengan kejuruan">Sekolah Menengan Kejuruan</option>
-                            <option value="sekolah menengan atas">Sekolah Menengan Atas</option>
-                            <option value="sekolah menengan pertama">Sekolah Menengan Pertama</option>
-                            <option value="sekolah dasar">Sekolah Dasar</option>
+                            @foreach($listJenjangPendidikan as $jenjang)
+                                <option value="{{ $jenjang->id }}">{{ $jenjang->nama_jenjang }}</option>
+                            @endforeach
                         </select>
                         <span>PENDIDIKAN</span>
                     </label>
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="institution_name" value="" class="form-control" id="institution_name" placeholder="NAMA INSTANSI PENDIDIKAN" required="required">
+                            <input type="text" name="nama_instansi" value="" class="form-control" id="institution_name" placeholder="NAMA INSTANSI PENDIDIKAN" required="required">
                             <label for="institution_name">NAMA INSTANSI PENDIDIKAN</label>
                         </span>
                     </div>
                     
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="major" value="" class="form-control" id="major" placeholder="JURUSAN" required="required">
+                            <input type="text" name="jurusan" value="" class="form-control" id="major" placeholder="JURUSAN" required="required">
                             <label for="major">JURUSAN</label>
                         </span>
                     </div>
@@ -773,14 +745,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start" name="bulan-awal-pendidikan"></select>
+                                    <select class="form-control custom-select" id="months-start-edu" name="bulan_mulai"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start" name="tahun-awal-pendidikan"></select>
+                                    <select class="form-control custom-select" id="years-start-edu" name="tahun_mulai"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -792,14 +764,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end" name="bulan-akhir-pendidikan"></select>
+                                    <select class="form-control custom-select" id="months-end-edu" name="bulan_akhir"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end" name="tahun-akhir-pendidikan"></select>
+                                    <select class="form-control custom-select" id="years-end-edu" name="tahun_akhir"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -807,7 +779,7 @@
                     </div> 
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="masih_bersekolah" id="masih_bersekolah" value="masih_bersekolah">
+                        <input class="form-check-input" type="checkbox" name="masih_bersekolah" id="masih_bersekolah" value="true">
                         <label class="form-check-label" for="masih_bersekolah">SAYA MASIH BERSEKOLAH DI INSTITUSI TERSEBUT</label>
                     </div>                   
 
@@ -822,7 +794,7 @@
                 <div class="modal-footer">
                     
                     <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
-                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                    <button class="btn btn-simpan font-weight-bold" type="submit">SIMPAN</button>
                 </div>
             </form>
 
@@ -1348,9 +1320,9 @@
             options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
-        $("#years-start").append( options );    
+        $("#years-start-edu").append( options );    
 
-        $("#years-end").append( options );
+        $("#years-end-edu").append( options );
        
         for (var m = 0; m < 12; m++){
             let monthNum = new Date(2020, m).getMonth()
@@ -1359,7 +1331,7 @@
             monthElem.value = monthNum; 
             monthElem.textContent = month;            
             
-            $("#months-start").append(monthElem);            
+            $("#months-start-edu").append(monthElem);            
         }
 
         for (var m = 0; m < 12; m++){
@@ -1369,7 +1341,7 @@
             monthElem.value = monthNum; 
             monthElem.textContent = month;            
             
-            $("#months-end").append(monthElem);            
+            $("#months-end-edu").append(monthElem);            
         }
         
     });

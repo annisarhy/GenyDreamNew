@@ -25,7 +25,7 @@ class CreatePelamarTable extends Migration
             $table->string('no_telp')->nullable()->default("‎‎‏‏‎ ‎");
             $table->string('no_ktp')->nullable()->default("‎‎‏‏‎ ‎");
             $table->string('alamat')->nullable()->default("‎‎‏‏‎ ‎");
-            $table->text('deskripsi_diri')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }

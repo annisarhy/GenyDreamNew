@@ -20,16 +20,21 @@ class Pelamar extends Model
     'no_telp',
     'no_ktp',
     'alamat',
-    'deskripsi_diri',
+    'deskripsi',
   ];
 
   public function user(){
     return $this->belongsTo('\App\User','id_user');
   }
 
+  public function rpendidikan()
+  {
+    return $this->hasMany('\App\RPendidikan','id_pelamar');
+  }
+
   public function getTtlAttribute()
   {
-    return $this->tempat_lahir . ',' . $this->tgl_lahir;
+    return $this->tempat_lahir . ', ' . $this->tgl_lahir;
   }
 
   public function getGenderAttribute()
@@ -42,7 +47,6 @@ class Pelamar extends Model
       return "-";
     }
   }
-
 
   public function getUsiaAttribute()
   {

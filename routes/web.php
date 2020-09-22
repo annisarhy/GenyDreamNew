@@ -38,11 +38,12 @@ Route::group([
   Route::get('/', 'BerandaController@index')->name('pelamar.beranda');
   Route::get('/profile', 'ProfileController@index')->name('pelamar.profile');
   Route::patch('/profile/edit/{id}', 'ProfileController@updateProfile')->name('pelamar.profile.basic.update');
-  Route::patch('/profile/edit/{id}/deskripsi', 'ProfileController@updateProfile')->name('pelamar.profile.deskripsi.update');
-  Route::patch('/profile/edit/{id}/keahlian', 'ProfileController@updateProfile')->name('pelamar.profile.keahlian.update');
-  Route::patch('/profile/edit/{id}/rpekerjaan', 'ProfileController@updateProfile')->name('pelamar.profile.rpekerjaan.update');
-  Route::patch('/profile/edit/{id}/rpendidikan', 'ProfileController@updateProfile')->name('pelamar.profile.rpendidikan.update');
-  Route::patch('/profile/edit/{id}/kompetensi', 'ProfileController@updateProfile')->name('pelamar.profile.kompetensi.update');
+  Route::patch('/profile/edit/{id}/deskripsi', 'ProfileController@updateDeskripsi')->name('pelamar.profile.deskripsi.update');
+  Route::patch('/profile/edit/{id}/rpendidikan', 'ProfileController@storeRPendidikan')->name('pelamar.profile.rpendidikan.add');
+  Route::patch('/profile/edit/{id}/rpendidikan/{rpendidikan}', 'ProfileController@updateRPendidikan')->name('pelamar.profile.rpendidikan.update');
+  Route::patch('/profile/edit/{id}/keahlian', 'ProfileController@updateKeahlian')->name('pelamar.profile.keahlian.update');
+  Route::patch('/profile/edit/{id}/rpekerjaan', 'ProfileController@updateRPekerjaan')->name('pelamar.profile.rpekerjaan.update');
+  Route::patch('/profile/edit/{id}/kompetensi', 'ProfileController@updateKompetensi')->name('pelamar.profile.kompetensi.update');
 
   Route::get('/loker', 'LowonganKerjaController@index')->name('pelamar.loker');
   Route::get('/loker/{id}', 'LowonganKerjaController@detail')->name('pelamar.loker.detail');

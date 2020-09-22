@@ -16,10 +16,12 @@ class CreateRpendidikanTable extends Migration
         Schema::create('rpendidikan', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_pelamar')->constrained('pelamar');
-            $table->year('tahun');
-            $table->string('nama_sekolah');
+            $table->date('tgl_mulai');
+            $table->date('tgl_akhir')->nullable();
+            $table->string('nama_instansi');
+            $table->string('jurusan')->nullable();
             $table->foreignId('id_jenjang')->constrained('jenjang_pendidikan');
-            $table->tinyInteger('nilai_akhir');
+            $table->tinyInteger('nilai_akhir')->nullable();
             $table->timestamps();
         });
     }
