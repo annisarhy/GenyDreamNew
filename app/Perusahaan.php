@@ -16,6 +16,7 @@ class Perusahaan extends Model
         'penanggung_jawab',
         'no_telp',
         'alamat',
+        'logo',
     ];
 
     

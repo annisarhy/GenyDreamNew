@@ -15,6 +15,7 @@ class CreateBeritaTable extends Migration
     {
         Schema::create('berita', function (Blueprint $table) {
             $table->id();
+            $table->string('gambar')->nullable();
             $table->string('judul');
             $table->string('isi');
             $table->foreignid('id_kategori')->constrained('kategori_berita');

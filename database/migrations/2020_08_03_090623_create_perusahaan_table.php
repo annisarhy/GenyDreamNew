@@ -20,6 +20,7 @@ class CreatePerusahaanTable extends Migration
             $table->string('penanggung_jawab')->nullable();
             $table->string('no_telp')->nullable();
             $table->string('alamat')->nullable();
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }
