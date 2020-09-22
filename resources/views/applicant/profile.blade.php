@@ -168,17 +168,18 @@
                             <hr>
 
                             <div class="work-experience-body">
+                                @foreach ($profile->rpekerjaan as $pekerjaan)
                                 <div class="work-experience-row mt-2">
                                     
                                     <img src="{{ asset('images/la_user-tie-solid-blue.png') }}" alt="" class="work-experience-img">                                        
                                     
                                     <div class="work-experience-detail pl-4 mt-3">
-                                        <h3 class="company-name mb-1">CV. Triwikrama</h3>
-                                        <p class="job-title text-capitalize">Front end developer</p>        
+                                        <h3 class="company-name mb-1">{{ $pekerjaan->nama_perusahaan }}</h3>
+                                        <p class="job-title text-capitalize">{{ $pekerjaan->jabatan_terakhir }}</p>        
                                                                                 
                                         <div class="d-flex duration-of-work mt-4">
                                             <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                            <p class="ml-1">From Oktober 2017 - Desember 2017</p>
+                                            <p class="ml-1">Dari {{ $pekerjaan->formatted_tgl_mulai }} - {{ $pekerjaan->formatted_tgl_akhir }}</p>
                                         </div>                                                                                                                                    
                                         
                                         <div class="d-flex btn-editdelete">
@@ -187,29 +188,8 @@
                                             <button class="btn btn-delete" data-toggle="modal" data-target="#deletePekerjaanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
                                     </div>
-                                </div>                                                                                                
-
-                                <!-- contoh 2 -->                                
-                                <div class="work-experience-row mt-2">
-                                    
-                                    <img src="{{ asset('images/la_user-tie-solid-blue.png') }}" alt="" class="work-experience-img">                                        
-                                    
-                                    <div class="work-experience-detail pl-4 mt-3">
-                                        <h3 class="company-name mb-1">CV. Triwikrama</h3>
-                                        <p class="job-title text-capitalize">Front end developer</p>        
-                                                                                
-                                        <div class="d-flex duration-of-work mt-4">
-                                            <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                            <p class="ml-1">From Oktober 2017 - Desember 2017</p>
-                                        </div>                                                                                                                                    
-                                        
-                                        <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#workModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
-
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePekerjaanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div> 
+                                @endforeach                                                                                          
                             </div>
                         </div>
                     </div>
@@ -283,64 +263,40 @@
                             <hr>
 
                             <div class="competence-body">
-                                <div class="competence-row mt-2">
-                                    <div class="d-flex">
-                                        <img src="{{ asset('images/carbon_certificate.png') }}" alt="" class="competence-img">
+                                @foreach ($profile->rkompetensi as $kompetensi)
+                                    <div class="competence-row mt-2">
+                                        <div class="d-flex">
+                                            <img src="{{ asset('images/carbon_certificate.png') }}" alt="" class="competence-img">
 
-                                        <h3 class="competence-name mt-4 ml-4">MASTER UI/UX COURSE</h3>
-                                    </div>
-
-                                    <div class="education-detail pl-5 mt-3">                                        
-                                        <p class="seminar-place text-capitalize ml-3"><i class="fa fa-map-marker mr-2"></i>Bandung, Jawa Barat, Indonesia</p>
-
-                                        <p class="seminar-description ml-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem labore dolor, ratione iste saepe aspernatur consectetur quod, aliquid impedit doloribus accusamus blanditiis, est ipsa facere odio distinctio soluta. Aut!</p>
-                                        
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <div class="d-flex duration-of-seminar mt-2 ml-3">
-                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                                    <p class="ml-1">Dari Mei 2019 - Juli 2019 </p>
-                                                </div>                                            
-                                            </div>                                            
-                                        </div>    
-                                        
-                                        <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#kompetensiModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
-
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePelatihanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            <h3 class="competence-name mt-4 ml-4">{{ $kompetensi->nama_kompetensi }}</h3>
                                         </div>
-                                    </div>
-                                </div>                                                                                                
 
-                                <!-- contoh 2 -->                                
-                                <div class="competence-row mt-2">
-                                    <div class="d-flex">
-                                        <img src="{{ asset('images/carbon_certificate.png') }}" alt="" class="competence-img">
+                                        <div class="education-detail pl-5 mt-3">                                        
+                                            <p class="seminar-place text-capitalize ml-3"><i class="fa fa-map-marker mr-2"></i>{{ $kompetensi->lokasi }}</p>
 
-                                        <h3 class="competence-name mt-4 ml-4">BRANDING FOR INTERPRENEUR</h3>
-                                    </div>
-
-                                    <div class="education-detail pl-5 mt-3">                                        
-                                        <p class="seminar-place text-capitalize ml-3"><i class="fa fa-map-marker mr-2"></i>Bandung, Jawa Barat, Indonesia</p>
-
-                                        <p class="seminar-description ml-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem labore dolor, ratione iste saepe aspernatur consectetur quod, aliquid impedit doloribus accusamus blanditiis, est ipsa facere odio distinctio soluta. Aut!</p>
-                                        
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <div class="d-flex duration-of-seminar mt-2 ml-3">
-                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                                    <p class="ml-1">Dari September 2019 - Februari 2020 </p>
+                                            @if ($kompetensi->keterangan === true)
+                                                <p class="seminar-description ml-3">
+                                                    {{ $kompetensi->keterangan }}
+                                                </p>
+                                            @endif
+                                    
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="d-flex duration-of-seminar mt-2 ml-3">
+                                                        <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
+                                                        <p class="ml-1">Dari {{ $kompetensi->formatted_tgl_mulai }} - {{ $kompetensi->formatted_tgl_akhir }} </p>
+                                                    </div>                                            
                                                 </div>                                            
-                                            </div>                                            
-                                        </div>    
-                                        
-                                        <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#kompetensiModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            </div>    
+                                            
+                                            <div class="d-flex btn-editdelete">
+                                                <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#kompetensiModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePelatihanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                                <button class="btn btn-delete" data-toggle="modal" data-target="#deletePelatihanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> 
+                                @endforeach                                                                                        
                             </div>
                         </div>
                     </div>
@@ -817,18 +773,20 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.rpekerjaan.add',$profile->id) }}" method="POST">
+                @csrf
+                @method('PATCH')
                 <div class="modal-body modal-work-experience mt-4">                                    
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="company_name" value="" class="form-control" id="company_name" placeholder="NAMA PERUSAHAAN" required="required">
+                            <input type="text" name="nama_perusahaan" value="" class="form-control" id="company_name" placeholder="NAMA PERUSAHAAN" required="required">
                             <label for="company_name">NAMA PERUSAHAAN</label>
                         </span>
                     </div>
                     
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="job_title" value="" class="form-control" id="job_title" placeholder="JABATAN TERAKHIR" required="required">
+                            <input type="text" name="jabatan_terakhir" value="" class="form-control" id="job_title" placeholder="JABATAN TERAKHIR" required="required">
                             <label for="job_title">JABATAN TERAKHIR</label>
                         </span>
                     </div>
@@ -839,14 +797,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start-work" name="bulan-awal-kerja"></select>
+                                    <select class="form-control custom-select" id="months-start-work" name="bulan_mulai"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start-work" name="tahun-awal-kerja"></select>
+                                    <select class="form-control custom-select" id="years-start-work" name="tahun_mulai"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -858,14 +816,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end-work" name="bulan-akhir-kerja"></select>
+                                    <select class="form-control custom-select" id="months-end-work" name="bulan_akhir"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end-work" name="tahun-akhir-kerja"></select>
+                                    <select class="form-control custom-select" id="years-end-work" name="tahun_akhir"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -876,7 +834,7 @@
                 <div class="modal-footer">
                     
                     <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
-                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                    <button class="btn btn-simpan font-weight-bold" type="submit">SIMPAN</button>
                 </div>
             </form>
 
@@ -945,18 +903,20 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.rkompetensi.add',$profile->id) }}" method="POST">
+                @csrf
+                @method('PATCH')
                 <div class="modal-body modal-competence mt-4">                                    
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="compatence_name" value="" class="form-control" id="compatence_name" placeholder="NAMA KOMPETENSI" required="required">
+                            <input type="text" name="nama_kompetensi" value="" class="form-control" id="compatence_name" placeholder="NAMA KOMPETENSI" required="required">
                             <label for="compatence_name">NAMA KOMPETENSI</label>
                         </span>
                     </div>
                     
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="location" value="" class="form-control" id="location" placeholder="LOKASI" required="required">
+                            <input type="text" name="lokasi" value="" class="form-control" id="location" placeholder="LOKASI" required="required">
                             <label for="location">LOKASI</label>
                         </span>
                     </div>
@@ -967,14 +927,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start-seminar" name="bulan-awal-seminar"></select>
+                                    <select class="form-control custom-select" id="months-start-seminar" name="bulan_mulai"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start-seminar" name="tahun-awal-seminar"></select>
+                                    <select class="form-control custom-select" id="years-start-seminar" name="tahun_mulai"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -986,14 +946,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end-seminar" name="bulan-akhir-seminar"></select>
+                                    <select class="form-control custom-select" id="months-end-seminar" name="bulan_selesai"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end-seminar" name="tahun-akhir-seminar"></select>
+                                    <select class="form-control custom-select" id="years-end-seminar" name="tahun_selesai"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -1011,7 +971,7 @@
                 <div class="modal-footer">
                     
                     <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
-                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                    <button class="btn btn-simpan font-weight-bold" type="submit">SIMPAN</button>
                 </div>
             </form>
 
