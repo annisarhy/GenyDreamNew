@@ -67,7 +67,7 @@ table .btn-detail{
     background-color: white;
     border: 1px solid #68C8D8;
     color: #68C8D8;
-    border-radius: 100px;    
+    border-radius: 4px;    
 }
 
 .btn-edit:hover{
@@ -80,7 +80,7 @@ table .btn-detail{
     background-color: white;
     border: 1px solid #EB5757;
     color: #EB5757;
-    border-radius: 100px;
+    border-radius: 4px;
 }
 
 .btn-delete:hover{

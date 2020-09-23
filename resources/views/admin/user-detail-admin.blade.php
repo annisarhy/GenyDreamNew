@@ -10,20 +10,18 @@
 <div class="flat-row detail-page p-3">
     <div class="container py-5">
         <div class="col-md-9 col-sm-8 wrap-responsive mx-auto py-2">
-            <div class="user-info-detail">
-                                
-
+            <div class="user-info-detail">                                
                 <!-- basic info -->
-                <div class="row basic-info box-shadow p-4">                        
-                    <div class="basic-info-content w-100">
+                <div class="card row account-info box-shadow p-4">                        
+                    <div class="basic-info-content">
                         <div class="d-flex justify-content-between basic-info-header">                                                                
-                            <h3 class="header-title">BASIC INFO</h3>                            
+                            <h3 class="header-title">ACCOUNT INFO</h3>                            
                         </div>
 
                         <hr>
 
-                        <div class="row basic-info-body">
-                            <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
 
                                 <p class="info-title mt-5">USERNAME</p>
                                 <p class="text-uppercase">{{ $user->username }}</p>
@@ -33,9 +31,8 @@
                             </div>    
 
                             <div class="col-md-6">                                    
-
                                 <p class="info-title mt-5">PASSWORD</p>
-                                <p class="text-capitalize">{{ $user->password }}</p>                                                                                   
+                                <p class="">{{ $user->password }}</p>                                                                                                                   
                             </div>
                         </div>
                     </div>                                                

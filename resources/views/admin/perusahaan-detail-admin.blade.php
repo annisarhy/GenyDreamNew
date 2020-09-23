@@ -48,7 +48,7 @@
                 <!-- end of button box -->
 
                 <!-- basic info -->
-                <div class="row basic-info box-shadow mt-5 p-4">                        
+                <div class="card  row basic-info box-shadow mt-5 p-4">                        
                     <div class="basic-info-content w-100">
                         <div class="d-flex justify-content-between basic-info-header">                                                                
                             <h3 class="header-title">BASIC INFO</h3>                            

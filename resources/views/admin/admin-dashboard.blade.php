@@ -103,7 +103,7 @@
                     </div>                
 
                     <div class="col-md-6 mt-2">
-                        <div class="menu-list pl-1 pt-2 pb-2 pr-4">
+                        <div class="menu-list pl-1 pt-2 pb-2 pr-4" >
                             <div class="d-flex">                                
                                 <div class="col-md-3 menu-list-img" href="#">
                                     <img src="{{ asset('images/la_money-bill-solid-blue.png') }}" class="img-fluid img-left-menu" alt="">
@@ -120,9 +120,9 @@
                     </div>                
 
                     <div class="col-md-6 mt-2">
-                        <div class="menu-list pl-1 pt-2 pb-2 pr-4">
+                        <div class="menu-list pl-1 pt-2 pb-2 pr-4" onclick="window.location='{{ route('admin.user.index') }}'">
                             <div class="d-flex">                                
-                                <div class="col-md-3 menu-list-img" onclick="window.location='{{ route('admin.user.index') }}'">
+                                <div class="col-md-3 menu-list-img">
                                     <img src="{{ asset('images/ant-design_user-outlined-blue.png') }}" class="img-fluid img-left-menu" alt="">
                                 </div>
                             
@@ -137,7 +137,7 @@
                     </div>                
 
                     <div class="col-md-6 mt-2">
-                        <div class="menu-list pl-1 pt-2 pb-2 pr-4">
+                        <div class="menu-list pl-1 pt-2 pb-2 pr-4" onclick="window.location='{{ route('admin.berita.index') }}'">
                             <div class="d-flex">                                
                                 <div class="col-md-3 menu-list-img" href="#">
                                     <img src="{{ asset('images/bx_bx-news-blue.png') }}" class="img-fluid img-left-menu" alt="">

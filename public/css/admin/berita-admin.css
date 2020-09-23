@@ -7,8 +7,8 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-/* list perusahaan */
-.btn-tambah-perusahaan{
+/* list konten */
+.btn-tambah-berita{
     background-color: #68C8D8;
     color: white;
 
@@ -37,7 +37,7 @@ hr{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.img-perusahaan-list{
+.img-berita-list{
     max-width: 70px;    
     height: 65px;
     border-radius: 10px;
@@ -74,122 +74,15 @@ hr{
     border-radius: 10px;
 }
 
-
-
-/* detail perusahaan */
-.detail-header .jumbotron{
-    margin: 0;
-    width: 100%;    
-    background-repeat: no-repeat;    
-    top: 0px;
-    background-size: cover;
-    background-position: bottom center;    
-    height: 240px;    
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, .3);
-    padding: 0;
-    border-radius: 0%;
+.berita-title{
+    color: black;    
 }
 
-.detail-header .image-default img{
-
-    width: 140px;
-    height: 140px;
-    position: absolute;
-    border-radius: 100px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    top: -80px;
-    left: 85px;    
-    margin: 0 auto;    
-    z-index: 10;
+.berita-title:hover{
+    color: #68C8D8;
 }
 
-.detail-header .username-info{
-    float: right;
-}
-@media screen and (max-width: 1204px) and (min-width: 600px) {
-    .detail-header .image-default img{
-
-        width: 120px;
-        height: 120px;
-        position: absolute;
-        border-radius: 100px;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        top: -80px;
-        left: 40px;            
-        margin: 0 auto;    
-        z-index: 10;
-    }   
-
-    .detail-header .username-info{
-        float: none;
-        margin-top: 30px;
-    }
-}
-
-@media screen and (max-width: 736px) {
-    
-    .detail-header .image-default img{
-
-        width: 120px;
-        height: 120px;
-        position: absolute;
-        border-radius: 100px;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        top: -80px;
-        left: 107px;    
-        margin: 0 auto;    
-        z-index: 10;
-    }   
-    .detail-header .username-info{
-        float: none;
-        margin-top: 30px;
-        margin-left: 20px;
-    }
-}
-
-.detail-header #pic {
-    display: none;
-}
-
-.newbtn {
-    cursor: pointer;
-}
-
-.company-name{
-    font-weight: bolder;
-    text-transform: capitalize;
-}
-
-.user-status{        
-    pointer-events: none;
-    color: #BDBDBD;
-    font-size: 17px;
-    font-weight: bolder;    
-}
-
-
-
-
-.user-info-detail .header-title{
-    font-weight: bolder;
-}
-
-.user-info-detail hr{
-    background-color: rgb(63, 149, 169, 0.1);
-    height: 1px;
-}
-/* Basic Info Section */
-
-.info-title{
-    color: #4F4F4F;
-    font-weight: bolder;
-    font-size: 18px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
+/* detail kontent */
 
 .btn-back{
     background-color: #68C8D8;
@@ -226,8 +119,8 @@ hr{
 
 
 
-/* add perusahaan */
-.add-lowongan{
+/* add berita */
+.add-berita{
 	box-shadow: 0 4px 8px 0 rgba(104,200,216,0.2);
 	background-color: white;
 }
@@ -246,7 +139,35 @@ hr{
     border-radius: 100px;
 }
 
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
 
+.inputfile +    label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #68C8D8;
+    background-color: rgb(104, 200, 206, 0.2);
+    border: 1px dashed #68C8D8;
+    display: inline-block;
+    width: 50%;
+    height: 100px;    
+    text-align: center;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: rgb(104, 200, 206, 0.5);
+}
+
+.inputfile + label {
+	cursor: pointer;
+}
 
 /* modal delete */
 

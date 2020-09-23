@@ -30,6 +30,15 @@ Route::get('/register/pelamar', 'Applicant\AuthPerusahaanController@showRegister
 
 // applicant routes
 
+// berita
+
+Route::get('/tipsdanberita', 'BeritaController@index')->name('list.berita');
+Route::get('/detailberita', 'BeritaController@detailBerita')->name('detail.berita');
+// route berdasarkan kategori
+
+
+
+
 Route::group([
   'namespace' => 'Applicant',
   'prefix' => 'pelamar',
@@ -102,6 +111,9 @@ Route::group([
 
 
   // berita
+  Route::get('/berita', 'KelolaBeritaController@index')->name('admin.berita.index');
+  Route::get('berita/new', 'KelolaBeritaController@create')->name('admin.berita.add');
+  Route::get('berita/detail', 'KelolaBeritaController@detail')->name('admin.berita.detail');
   
 });
 

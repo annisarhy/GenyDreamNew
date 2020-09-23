@@ -17,13 +17,15 @@
                 class="fa fa-plus mr-3"></i>TAMBAH PERUSAHAAN</a>
 
         <div class="form mt-2">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control form-search" placeholder="Cari Nama Perusahaan"
-                    aria-label="Cari Nama Perusahaan">
-                <div class="input-group-append">
-                    <button class="btn btn-search" type="button"><i class="fa fa-search"></i></button>
+            <form action="">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-search" placeholder="Cari Nama Perusahaan"
+                        aria-label="Cari Nama Perusahaan">
+                    <div class="input-group-append">
+                        <button class="btn btn-search" type="button"><i class="fa fa-search"></i></button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 

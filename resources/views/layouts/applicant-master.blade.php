@@ -55,7 +55,7 @@
                     <a class="nav-link " data-value="portfolio" href="{{ route('pelamar.loker') }}">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="blog" href="#">TIPS DAN BERITA</a>
+                    <a class="nav-link " data-value="blog" href="{{ route('list.berita') }}">TIPS DAN BERITA</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="team" href="#">FAQ</a>

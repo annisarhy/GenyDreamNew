@@ -98,7 +98,7 @@
                 <h1>TIPS DAN BERITA UNTUK KAMU</h1>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="#" class="btn btn-md pl-3 pr-3 mt-3"><i class="fa fa-list-ul pr-2"></i>LIST TIPS DAN BERITA</a>
+                <a href="{{ route('list.berita') }}" class="btn btn-md pl-3 pr-3 mt-3"><i class="fa fa-list-ul pr-2"></i>LIST TIPS DAN BERITA</a>
             </div>
 
             <div class="col-lg-7 image-tips-berita-right d-none d-md-block">
@@ -108,6 +108,7 @@
     </div>
 </section>
 
+<!-- revisi -->
 <section class="tips-berita-carousel">
     <div class="container">
         <div class="row justify-content-center">
