@@ -40,11 +40,12 @@
     <hr>
 
     <div class="row mt-4 pl-3 pr-3">        
+        @foreach($listBerita as $berita)
             <div class="col-md-3 mt-2">
                 <div class="card box-shadow-card p-2">
                     <div class="card-body">
                         <div class="row justify-content-between">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="image-berita" class="img-berita-list img-fluid">
+                            <img src="{{ URL::to('/') }}/images_input/{{ $berita->gambar }}" alt="image-berita" class="img-berita-list img-fluid">
 
                             <div class="dropdown">
                                 <button class="btn btn-drop" type="button" id="dropdownMenuButton"
@@ -52,22 +53,27 @@
                                     <i class="fa fa-ellipsis-v"></i>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#"><img src="{{ asset('images/mdi_pencil.png') }}" alt="">EDIT</a>
-                                    <button class="dropdown-item mt-2" data-toggle="modal" data-target="#deleteModal"><img src="{{ asset('images/mdi_delete.png') }}" alt="">DELETE</button>
+                                    <a class="dropdown-item" href="{{ route('admin.berita.edit',$berita->id) }}"><img src="{{ asset('images/mdi_pencil.png') }}" alt="">EDIT</a>
+                                    <button class="dropdown-item mt-2 deleteBerita"  data-userid="{{$berita->id}}"><img src="{{ asset('images/mdi_delete.png') }}" alt="">DELETE</button>
                                 </div>
                             </div>
                         </div>
 
                         <div class="info-berita row mt-2">
-                            <p class="kategori-berita"><span class="font-weight-bold">Lifestyle</span> - Updated on <span>22 agustus 2020</span></p>                             
+                            <p class="kategori-berita"><span class="font-weight-bold">{{ $berita->kategori->nama }}</span> - Updated on <span>{{ $berita->updated_at }}</span></p>                             
                         </div>
 
                         <div class="row">
-                            <a href="#" class="berita-title p-0"><h5 class="font-weight-bold">Amet minim mollit non deserunt ullamco </h5></a>                       
+                            <a href="{{ route('admin.berita.detail', $berita->id) }}" class="berita-title p-0"><h5 class="font-weight-bold">{{ $berita->judul }}</h5></a>                       
                         </div>                        
                     </div>
                 </div>
-            </div>        
+            </div>    
+        @endforeach    
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        {{ $listBerita->links() }} 
     </div>
 </div>
 
@@ -82,29 +88,44 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <form action="{{ route('admin.berita.delete.modal') }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <div class="modal-body modal-basic-info">
 
-            <div class="modal-body modal-basic-info">
+                    <div class="img-delete-container col-md-3 mx-auto">
+                        <img src="{{ asset('images/jam_triangle-danger.png') }}"
+                            class="img-fluid img-delete" alt="">
+                    </div>
 
-                <div class="img-delete-container col-md-3 mx-auto">
-                    <img src="{{ asset('images/jam_triangle-danger.png') }}"
-                        class="img-fluid img-delete" alt="">
+                    <div class="box-text-delete pt-3 mt-5 d-flex">
+                        <img src="{{ asset('images/ant-design_info-circle-outlined-black.png') }}"
+                            alt="" class="img-fluid img-info mt-1 mr-2 ml-2">
+                        <p>Apakah kamu yakin untuk menghapus data tersebut?</p>
+                        <input type="hidden" name="id_berita" id="id_berita">
+                    </div>
+
                 </div>
+                <div class="modal-footer">
 
-                <div class="box-text-delete pt-3 mt-5 d-flex">
-                    <img src="{{ asset('images/ant-design_info-circle-outlined-black.png') }}"
-                        alt="" class="img-fluid img-info mt-1 mr-2 ml-2">
-                    <p>Apakah kamu yakin untuk menghapus data tersebut?</p>
+                    <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>                
+                    <button class="btn btn-delete font-weight-bold">DELETE</button>
+                    
                 </div>
-
-            </div>
-            <div class="modal-footer">
-
-                <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
-                <button class="btn btn-delete font-weight-bold">DELETE</button>
-            </div>
+            </form>                
         </div>
     </div>
 </div>
 <!-- end of modal delete -->
 
+@endsection
+
+@section('js')
+<script>
+$(document).on('click','.deleteBerita',function(){
+    var userID=$(this).attr('data-userid');    
+    $('#id_berita').val(userID); 
+    $('#deleteModal').modal('show'); 
+});
+</script>
 @endsection

@@ -33,7 +33,12 @@ Route::get('/register/pelamar', 'Applicant\AuthPerusahaanController@showRegister
 // berita
 
 Route::get('/tipsdanberita', 'BeritaController@index')->name('list.berita');
-Route::get('/detailberita', 'BeritaController@detailBerita')->name('detail.berita');
+Route::get('/tipsdanberita/lifestyle', 'BeritaController@lifestyleKategori')->name('list.berita.lifestyle');
+Route::get('/tipsdanberita/tipskarir', 'BeritaController@tipsKarirKategori')->name('list.berita.tipsKarir');
+Route::get('/tipsdanberita/keahlian', 'BeritaController@keahlianKategori')->name('list.berita.keahlian');
+Route::get('/tipsdanberita/tentangperusahaan', 'BeritaController@tentangPerusahaanKategori')->name('list.berita.tentang.perusahaan');
+Route::get('/tipsdanberita/beritaumum', 'BeritaController@BeritaUmumKategori')->name('list.berita.berita.umum');
+Route::get('/detailberita/{id}', 'BeritaController@detailBerita')->name('detail.berita');
 // route berdasarkan kategori
 
 
@@ -112,8 +117,13 @@ Route::group([
 
   // berita
   Route::get('/berita', 'KelolaBeritaController@index')->name('admin.berita.index');
-  Route::get('berita/new', 'KelolaBeritaController@create')->name('admin.berita.add');
-  Route::get('berita/detail', 'KelolaBeritaController@detail')->name('admin.berita.detail');
+  Route::get('/berita/new', 'KelolaBeritaController@create')->name('admin.berita.add');
+  Route::get('/berita/{id}', 'KelolaBeritaController@detail')->name('admin.berita.detail');
+  Route::get('/berita/{id}/edit', 'KelolaBeritaController@edit')->name('admin.berita.edit');
+  Route::post('/berita','KelolaBeritaController@store')->name('admin.berita.store');
+  Route::patch('/berita/{id}','KelolaBeritaController@update');
+  Route::delete('/berita/{id}','KelolaBeritaController@destroy')->name('admin.berita.delete');
+  Route::delete('/berita','KelolaBeritaController@destroyModal')->name('admin.berita.delete.modal');
   
 });
 

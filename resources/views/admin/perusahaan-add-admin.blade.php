@@ -23,7 +23,7 @@
                 {{ session('error') }}
             </div>
             @endif
-            <form action="{{ url('admin/perusahaan',@$perusahaan->id) }}" method="POST">
+            <form action="{{ url('admin/perusahaan', @$perusahaan->id) }}" method="POST">
             @csrf
             @if(!empty($perusahaan))
                 @method('PATCH')

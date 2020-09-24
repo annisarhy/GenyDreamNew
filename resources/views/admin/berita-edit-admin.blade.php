@@ -21,14 +21,17 @@
                 </ul>
                 </div>
                 @endif
-            <form action="{{ url('admin/berita') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('admin/berita', @$berita->id) }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}                
+            @method('PATCH')            
                 <div class="row">
                     <div class="col-md-6">                                         
                         <div class="form-group">                 
                             <input id="image" class="inputfile" name="image" type="file">                                   
                             <label for="image"><i class="fa fa-camera mr-2 mt-3"></i> <br> Upload Gambar</label>
-                                                                                
+                                                    
+                            <img src="{{ URL::to('/') }}/images_input/{{ $berita->gambar }}" class="img-thumbnail" width="100" />
+                            <input type="hidden" name="hidden_image" value="{{ $berita->gambar }}" />
                         </div>
                     </div>
 

@@ -17,7 +17,7 @@ class CreateBeritaTable extends Migration
             $table->id();
             $table->string('gambar')->nullable();
             $table->string('judul');
-            $table->string('isi');
+            $table->text('isi');
             $table->foreignid('id_kategori')->constrained('kategori_berita');
             $table->timestamps();
         });
