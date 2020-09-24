@@ -98,7 +98,7 @@
                         <hr>
 
                         <li>
-                            <a class="dropdown-item" role="menuitem" data-value="team" href="#"><img class="img-fluid mr-2" src="{{ asset('images/star-black.png') }}" alt="">Go Premium</a>
+                            <a class="dropdown-item premium-link" role="menuitem" data-value="team" href="{{ route('pelamar.buy.premium' )}}"><img class="img-fluid mr-2" src="{{ asset('images/star1.png') }}" alt="">Go Premium</a>
                         </li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Keluar</a>

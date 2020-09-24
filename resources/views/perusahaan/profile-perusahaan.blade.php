@@ -35,7 +35,7 @@
                             
                             <p class="pull-right font-weight-bold mt-3 mr-3 upgrade-text">If you want to upgrade your account                                 
                                 <br>
-                                <button class="upgrade-button" data-toggle="modal" data-target="#myModal">CLICK HERE</button>
+                                <a href="{{ route('perusahaan.choose.method') }}" class="upgrade-button">CLICK HERE</a>
                             </p>
                         </div>                        
                     </div>

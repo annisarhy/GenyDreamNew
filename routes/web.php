@@ -65,6 +65,17 @@ Route::group([
   Route::get('/kursus/detail', 'KursusController@detail')->name('pelamar.kursus.detail');
   Route::get('/lamaran', 'LamaranController@index')->name('pelamar.lamaran');
   Route::get('/bookmark', 'LowonganKerjaController@bookmark')->name('pelamar.bookmark');
+
+
+  //premium
+  Route::get('/buypremium', 'PremiumPaymentController@index')->name('pelamar.buy.premium');
+  Route::get('/pilihMetode', 'PremiumPaymentController@chooseMethod')->name('pelamar.choose.method');
+  Route::get('/bankMenu', 'PremiumPaymentController@paymentBankOption')->name('pelamar.bank.option');
+  Route::get('/bankManual', 'PremiumPaymentController@paymentBankManual')->name('pelamar.bank.manual');  
+  Route::get('/e-banking', 'PremiumPaymentController@paymentBankEbanking')->name('pelamar.bank.elektronik');  
+  Route::get('/paymentcreditcard', 'PremiumPaymentController@paymentCreditCard')->name('pelamar.credit.card');  
+  Route::get('/paymentPulsa', 'PremiumPaymentController@paymentPulsa')->name('pelamar.pulsa');  
+  Route::get('/paymentEmoney', 'PremiumPaymentController@paymentEmoney')->name('pelamar.emoney');  
 });
 
 // company routes
@@ -85,6 +96,15 @@ Route::group([
   Route::get('/daftarpelamar', 'ListPelamarController@index')->name('perusahaan.list.pelamar');  
 
   Route::get('/detailpelamar', 'ListPelamarController@detailPelamar')->name('perusahaan.detail.pelamar');
+
+  //premium  
+  Route::get('/pilihMetodeperusahaan', 'PremiumPaymentPerusahaanController@chooseMethod')->name('perusahaan.choose.method');
+  Route::get('/bankMenuperusahaan', 'PremiumPaymentPerusahaanController@paymentBankOption')->name('perusahaan.bank.option');
+  Route::get('/bankManualperusahaan', 'PremiumPaymentPerusahaanController@paymentBankManual')->name('perusahaan.bank.manual');  
+  Route::get('/e-bankingperusahaan', 'PremiumPaymentPerusahaanController@paymentBankEbanking')->name('perusahaan.bank.elektronik');  
+  Route::get('/paymentcreditcardperusahaan', 'PremiumPaymentPerusahaanController@paymentCreditCard')->name('perusahaan.credit.card');  
+  Route::get('/paymentPulsaperusahaan', 'PremiumPaymentPerusahaanController@paymentPulsa')->name('perusahaan.pulsa');  
+  Route::get('/paymentEmoneyperusahaan', 'PremiumPaymentPerusahaanController@paymentEmoney')->name('perusahaan.emoney');  
 });
 
 

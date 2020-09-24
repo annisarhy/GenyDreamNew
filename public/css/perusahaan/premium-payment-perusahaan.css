@@ -1,0 +1,261 @@
+body{
+    background-color: rgb(63, 149, 169, 0.05);
+}
+
+.payment-info-title{
+    text-shadow: 2px 3px #68C8D8;
+}
+
+.img-box{
+    border: 2px dashed #68C8D8;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+
+}
+
+.img-money{
+    width: 50px;
+    margin-top: 20px;
+    -webkit-transform:rotate(1300deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(130deg);
+
+}
+
+.payment-info-content .btn-upgrade-link {    
+    width: 30%;
+    color: white;
+    font-size: 15px;
+    background-color: #68C8D8;
+}
+
+#line-row {
+    position: relative;
+    height: 5px;
+}
+
+.line {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent 50%, #68C8D8 50%);
+    background-size: 50px 100%;
+}
+
+/* benefits section */
+
+.img-box-circle{
+    border: 2px dashed #68C8D8;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;    
+    background-color: rgb(63, 149, 169, 0.1);
+}
+
+.img-benefits{
+    width: 50px;
+    margin-left: auto;
+    margin-top: 23px;    
+
+}
+
+/* payment footer section */
+.footer-payment-content .text-left{
+    letter-spacing: 8px;
+}
+
+.box-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 2px;
+}
+
+.header-jumbotron{
+    width: 100%;
+    height: 200px;
+    background-color: #3F95A9;
+    color: white;
+}
+
+.header-jumbotron span{
+    color: #F2C94C;
+}
+/* payment option */
+.box-text{
+    border: 1px dashed #68C8D8;    
+    border-radius: 10px;
+    background-color: rgb(63, 149, 169, 0.05);
+}
+
+.img-info{
+    height: 20px;
+}
+
+.menu-list{
+    height: 90px;
+}
+.menu-list:hover{
+    background-color: rgb(63, 149, 169, 0.1);
+    cursor: pointer;
+    border: 2px dashed #68C8D8;
+    border-right: 0;
+    border-radius: 10px;
+}
+
+.img-left-menu{    
+    margin-left: auto;
+    width: 50px;
+    margin-top: 5px;    
+}
+
+.menu-list .fa-angle-right{    
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+.row-option{
+    width: 100%;
+    height: 89px;
+    background-color: #68C8D8;
+    border-radius: 10px;
+}
+
+.img-pembayaran img{
+    height: 20px;
+}
+
+.img-gambar-option{
+    height: 40px;
+}
+
+.img-gambar-emoney{
+    height: 13px;
+}
+
+.img-gambar-bank{
+    height: 20px;
+}
+
+/* bank payment */
+.btn-lg{
+    color: white;
+    background-color: #68C8D8;
+}
+
+.btn-atm{
+    display: none;
+}
+
+/* credit card */
+.exp{
+    color: #BDBDBD;
+}
+
+/* emoney */
+.gopay-box{
+    display: none;
+}
+
+.btn-gopay{
+    display: none;
+}
+
+
+
+
+
+
+/* floating label */
+.has-float-label{
+	display:block;
+	position:relative
+}
+.has-float-label label, .has-float-label > span{
+	position:absolute;
+	cursor:text;
+	font-size:75%;
+	opacity:1;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+	top:-.5em;
+	left:.75rem;
+	z-index:3;
+	line-height:1;
+    padding:0 1px;  
+    color : black;
+    font-weight: bold;  
+}
+.has-float-label label::after, .has-float-label > span::after{
+	content:" ";
+	display:block;
+	position:absolute;
+	background:#fff;
+	height:2px;
+	top:50%;
+	left:-.2em;
+	right:-.2em;
+    z-index:-1;    
+    color : black;
+    font-weight: bold;
+}
+.has-float-label .form-control::-webkit-input-placeholder{
+	opacity:1;
+	-webkit-transition:all .2s;
+    transition:all .2s;
+    box-shadow: none;
+    
+}
+.has-float-label .form-control::-moz-placeholder{
+	opacity:1;
+	transition:all .2s;
+}
+.has-float-label .form-control:-ms-input-placeholder{
+	opacity:1;
+	transition:all .2s;
+}
+.has-float-label .form-control::placeholder{
+	opacity:1;
+	-webkit-transition:all .2s;
+    transition:all .2s;
+    
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)+*{
+	font-size:100%;
+	color: #6c757d;
+	opacity: 1;
+    top:.3em;    
+        
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)+*{
+	font-size:100%;
+	color: #6c757d;
+	opacity: 1;
+    top:.3em;    ;
+    
+}
+.has-float-label .form-control:placeholder-shown:not(:focus) + * {
+    margin-top: 6px;    
+}

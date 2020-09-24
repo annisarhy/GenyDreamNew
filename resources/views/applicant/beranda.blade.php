@@ -91,12 +91,29 @@
    </div>
 </section>
 
+<section class="payment">
+    <div class="container py-5">
+        <div class="row">            
+            <div class="col-md-7 image-payment-left d-none d-md-block">
+                <img src="{{ asset('images/premiumBeranda.png') }}" alt="">
+            </div>
+
+            <div class="col-md-5 payment-title">                
+                <p class="pb-5">Apakah kamu bingung dengan karirmu ? kamu ingin cari tau tentang passionmu ? Jangan khawartir dengan Geny Dream Premium Kamu bisa mengikuti serangkaian tes yang dapat membantu perkembangan karirmu dan juga ada banyak privilege lainnya. <span class="font-weight-bold">Tunggu apa lagi ayo berlangganan sekarang!</span></p>
+                <a href="{{ route('pelamar.buy.premium' )}}" class="btn btn-block pl-3 pr-3 mt-5">GENY DREAM PREMIUM <i class="fa fa-arrow-right ml-4"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="tips-berita">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-5 col-md-9 tips-berita-title">
                 <h1>TIPS DAN BERITA UNTUK KAMU</h1>
-                <hr>
+                <div class="col-md-12 mt-3 mb-4" id="line-row">
+                    <div class="line2"></div>
+                </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <a href="{{ route('list.berita') }}" class="btn btn-md pl-3 pr-3 mt-3"><i class="fa fa-list-ul pr-2"></i>LIST TIPS DAN BERITA</a>
             </div>
@@ -108,153 +125,36 @@
     </div>
 </section>
 
-<!-- revisi -->
 <section class="tips-berita-carousel">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h4 class="font-weight-bold text-center">BERITA DAN TIPS YANG TAK BOLEH KAMU LEWATKAN</h4>
+                <h4 class="font-weight-bold text-center">BERITA TERUPDATE</h4>
                 <div class="row justify-content-center">
-                    <div class="col-md-9 mt-3 mb-4" id="line-row">
+                    <div class="col-md-7 mt-3 mb-4" id="line-row">
                         <div class="line"></div>
                     </div>
                 </div>                
             </div>
         </div>
         
-        <div class="carousel berita-list">            
-            <div class="col-lg-12 col-md-12 mt-2">
-                <div class="card berita-card">                        
-                    <div class="header">
-                        <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                    </div>
+        <div class="row mb-5">
+            @foreach($listBerita as $berita)
+                <div class="col-md-4">
+                    <div class="content-body mr-4" onclick="window.location='{{ route('detail.berita', $berita->id) }}'">
+                        <img src="{{ URL::to('/')}}/images_input/{{ $berita->gambar }}" class="img-fluid img-list-berita" alt="">
 
-                    <div class="card-body">
-                        <div class="row">
-                            <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                        </div>                        
-                                    
-                        <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                    
-                        <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                    
-                        <div class="row mt-5 footer-card justify-content-end">                                                        
-                            <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
+                        <div class="info-berita d-flex mt-2 p-1">
+                            <p class="font-weight-bold kategori-berita">{{ $berita->kategori->nama }}</p>
+                            <p class="ml-1 mr-1">-</p>
+                            <p class="waktu"> Updated on <span>{{ $berita->updated_at }}</span></p>
                         </div>
+
+                        <h3 class="berita-title font-weight-bold ml-1">{{ $berita->judul }}</h3>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-12 col-md-12 mt-2">
-                <div class="card berita-card">                        
-                    <div class="header">
-                        <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                    </div>
-
-                    <div class="card-body">
-                        <div class="row">
-                            <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                        </div>
-                                    
-                        <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                    
-                        <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                    
-                        <div class="row mt-5 footer-card justify-content-end">                                                        
-                            <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12 col-md-12 mt-2">
-                <div class="card berita-card">                        
-                    <div class="header">
-                        <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                    </div>
-
-                    <div class="card-body">
-                        <div class="row">
-                            <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                        </div>
-                                    
-                        <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                    
-                        <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                    
-                        <div class="row mt-5 footer-card justify-content-end">                                                        
-                            <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12 col-md-12 mt-2">
-                <div class="card berita-card">                        
-                    <div class="header">
-                        <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                    </div>
-
-                    <div class="card-body">
-                        <div class="row">
-                            <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                        </div>
-                                    
-                        <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                    
-                        <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                    
-                        <div class="row mt-5 footer-card justify-content-end">                                                        
-                            <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12 col-md-12 mt-2">
-                <div class="card berita-card">                        
-                    <div class="header">
-                        <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                    </div>
-
-                    <div class="card-body">
-                        <div class="row">
-                            <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                        </div>
-                                    
-                        <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                    
-                        <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                    
-                        <div class="row mt-5 footer-card justify-content-end">                                                        
-                            <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12 col-md-12 mt-2">
-                <div class="card berita-card">                        
-                    <div class="header">
-                        <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                    </div>
-
-                    <div class="card-body">
-                        <div class="row">
-                            <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                        </div>
-                                    
-                        <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                    
-                        <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                    
-                        <div class="row mt-5 footer-card justify-content-end">                                                        
-                            <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>        
+            @endforeach
+        </div>      
     </div>    
     
 </section>
