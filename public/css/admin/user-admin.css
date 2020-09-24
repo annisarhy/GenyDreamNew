@@ -1,0 +1,231 @@
+body{
+    background-color: rgb(63, 149, 169, 0.1);
+}
+
+.box-shadow{
+    background-color: white;    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* list user */
+.btn-tambah-user{
+    background-color: #68C8D8;
+    color: white;
+
+}
+
+.form-search{
+    background-color: white;
+    border: none;    
+}
+
+.btn-search{
+    background-color: #68C8D8;
+    color: white;
+    border-right: 10px;
+}
+
+hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 2px;
+}
+
+table .btn-detail{
+    color: #68C8D8;    
+}
+
+
+
+
+
+/* detail user */
+.user-info-detail .header-title{
+    font-weight: bolder;
+}
+
+.user-info-detail hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 1px;
+}
+/* Basic Info Section */
+.info-title{
+    color: #4F4F4F;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.btn-back{
+    background-color: #68C8D8;
+    color: white;
+    margin: auto;
+}
+
+.btn-edit{
+    width: 150px;
+    background-color: white;
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+    border-radius: 4px;    
+}
+
+.btn-edit:hover{
+    background-color: #68C8D8;
+    color: white;
+}
+
+.btn-delete{
+    width: 150px;
+    background-color: white;
+    border: 1px solid #EB5757;
+    color: #EB5757;
+    border-radius: 4px;
+}
+
+.btn-delete:hover{
+    background-color: #EB5757;
+    color: white;
+}
+
+
+
+
+/* add user */
+.add-lowongan{
+	box-shadow: 0 4px 8px 0 rgba(104,200,216,0.2);
+	background-color: white;
+}
+
+.btn-batalkan{
+    width: 150px;
+    background-color: #FAFAFA;
+    color: #BDBDBD;
+    border-radius: 100px;
+}
+
+.btn-simpan{
+    width: 150px;
+    background-color: #68C8D8;
+    color: white;
+    border-radius: 100px;
+}
+
+
+
+/* modal delete */
+
+.img-delete-container{    
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    background-color: rgb(242, 201, 76, 0.1);
+}
+
+.img-delete{
+    margin-top: 20%;
+    margin-left: auto;
+    width: 100%;
+}
+.box-text-delete{
+    border: 1px dashed #EB5757;
+    background-color: rgb(235, 87, 87, 0.1);
+    color: #4F4F4F;
+}
+
+.img-info{
+    height: 20px;
+}
+
+.btn-cancel{
+    width: 150px;
+    background-color: #FAFAFA;
+    color: #BDBDBD;
+    border-radius: 100px;
+}
+
+
+/* floating label */
+.has-float-label{
+	display:block;
+	position:relative
+}
+.has-float-label label, .has-float-label > span{
+	position:absolute;
+	cursor:text;
+	font-size:75%;
+	opacity:1;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+	top:-.5em;
+	left:.75rem;
+	z-index:3;
+	line-height:1;
+    padding:0 1px;  
+    color : black;
+    font-weight: bold;  
+}
+.has-float-label label::after, .has-float-label > span::after{
+	content:" ";
+	display:block;
+	position:absolute;
+	background:#fff;
+	height:2px;
+	top:50%;
+	left:-.2em;
+	right:-.2em;
+    z-index:-1;    
+    color : black;
+    font-weight: bold;
+}
+.has-float-label .form-control::-webkit-input-placeholder{
+	opacity:1;
+	-webkit-transition:all .2s;
+    transition:all .2s;
+    box-shadow: none;
+    
+}
+.has-float-label .form-control::-moz-placeholder{
+	opacity:1;
+	transition:all .2s;
+}
+.has-float-label .form-control:-ms-input-placeholder{
+	opacity:1;
+	transition:all .2s;
+}
+.has-float-label .form-control::placeholder{
+	opacity:1;
+	-webkit-transition:all .2s;
+    transition:all .2s;
+    
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)+*{
+	font-size:100%;
+	color: #6c757d;
+	opacity: 1;
+    top:.3em;    
+        
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)+*{
+	font-size:100%;
+	color: #6c757d;
+	opacity: 1;
+    top:.3em;    ;
+    
+}
+.has-float-label .form-control:placeholder-shown:not(:focus) + * {
+    margin-top: 6px;    
+}

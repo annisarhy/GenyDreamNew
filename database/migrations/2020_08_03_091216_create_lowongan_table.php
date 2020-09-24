@@ -15,7 +15,7 @@ class CreateLowonganTable extends Migration
     {
         Schema::create('lowongan', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_perusahaan')->constrained('perusahaan');
+            $table->foreignId('id_perusahaan')->constrained('perusahaan')->onDelete('cascade')->onUpdate('cascade');
             $table->string('judul');
             $table->foreignId('id_kategori_lowongan')->constrained('kategori_lowongan');
             $table->dateTime('waktu_posting');

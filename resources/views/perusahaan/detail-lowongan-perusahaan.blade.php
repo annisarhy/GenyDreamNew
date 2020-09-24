@@ -32,13 +32,13 @@
                             <div class="col-md-6">
 
                                 <p class="info-title mt-5">Kategori Lowongan</p>
-                                <p>Teknologi Informasi</p>
+                                <p class="text-capitalize">Teknologi Informasi</p>
 
                                 <p class="info-title mt-5">Gaji</p>
-                                <p>3000000</p>
+                                <p class="text-capitalize">3000000</p>
 
-                                <p class="info-title mt-5">Alamat</p>
-                                <p>Jl. Gunung Sahari Raya No.2M, Gn. Sahari Utara, Sawah Besar, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10720, Indonesia.</p>
+                                <p class="info-title mt-5">Kota</p>
+                                <p class="text-capitalize">kota bandung</p>
 
                             </div>    
 
@@ -48,8 +48,10 @@
                                 <p>6 jam lalu</p>
 
                                 <p class="info-title mt-5">Tenggat Waktu</p>
-                                <p>30 September 2020</p>
+                                <p class="text-capitalize">30 September 2020</p>
 
+                                <p class="info-title mt-5">Alamat</p>
+                                <p>Jl. Gunung Sahari Raya No.2M, Gn. Sahari Utara, Sawah Besar, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10720, Indonesia.</p>
                             </div>
                         </div>                        
                     </div>                    

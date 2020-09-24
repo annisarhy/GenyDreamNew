@@ -777,7 +777,27 @@
     </section>
     <!-- end of kursus terbaru -->
 
-    <!-- section intern -->
+
+    <!-- section tips berita -->
+    <section class="tips-berita">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 col-md-9 tips-berita-title">
+                    <h1>TIPS DAN BERITA UNTUK KAMU</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="{{ route('list.berita') }}" class="btn btn-md pl-3 pr-3 mt-3"><i class="fa fa-list-ul pr-2"></i>LIST TIPS DAN BERITA</a>
+                </div>
+
+                <div class="col-lg-7 image-tips-berita-right d-none d-md-block">
+                    <img src="{{ asset('images/tips-berita-img.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end of section tips berita -->
+    <!-- section berita list -->
     <section class="tips-dan-berita" id="tipsberita"> 
         <div class="container py-5">
             <div class="row justify-content-center">
@@ -926,7 +946,7 @@
             </div>        
         </div>
     </section>
-    <!-- end of section intern -->
+    <!-- end of section berita list -->
 
     <!-- footer -->
     <footer id="dk-footer" class="dk-footer">

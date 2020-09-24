@@ -10,7 +10,7 @@ $factory->define(Perusahaan::class, function (Faker $faker) {
         'nama' => $faker->company,
         'email' => $faker->unique()->safeEmail,
         'penanggung_jawab' => $faker->name,
-        'no_hp' => $faker->phoneNumber,
+        'no_telp' => $faker->phoneNumber,
         'alamat' => $faker ->address,
     ];
 });

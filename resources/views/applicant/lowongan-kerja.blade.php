@@ -35,7 +35,8 @@
 
                     <div class="row p-3 select-filter">                        
                         <div class="col-md-4">
-                            <select class="mt-2 p-2" title="Job Type">
+                            <select class="mt-2 p-2" title="Job Type" name="job-type">
+                                <option>Job Type</option>
                                 <option value="freelance">Freelance</option>
                                 <option value="remote">Remote</option>
                                 <option value="full time">Full time</option>
@@ -44,15 +45,23 @@
                         </div>
                         
                         <div class="col-md-4 pt-2">
-                            <select class="my-select p-2" title="Career">
-                                <option value="developer">Developer</option>
-                                <option value="design dan multimedia">Design dan Multimedia</option>
-                                <option value="teknologi">Teknologi</option>
-                                <option value="konstruksi dan fasilitas">Konstruksi dan Fasilitas</option>
+                            <select class="my-select p-2" title="Career" name="job-category">
+                                <option>Job Category</option>
+                                <option value="administrasi">Administrasi</option>
                                 <option value="akuntansi dan keuangan">Akuntansi dan Keuangan</option>
-                                <option value="pemerintahan">Pemerintahan</option>
-                                <option value="telekomunikasi">Telekomunikasi</option>
-                                <option value="sumber daya manusia">Sumber Daya Manusia</option>
+                                <option value="konstruksi">Konstruksi</option>
+                                <option value="hukum">Hukum</option>
+                                <option value="ilmu pengetahuan">Ilmu Pengetahuan</option>
+                                <option value="jasa">Jasa/Pelayanan</option>
+                                <option value="keahlian teknik">Keahlian Teknik</option>
+                                <option value="manufaktur">Manufaktur</option>
+                                <option value="pelayanan kesehatan">Pelayanan Kesehatan</option>
+                                <option value="pemasaran">Pemasaran</option>
+                                <option value="pendidikan dan pelatihan">Pendidikan/Pelatihan & Pengembangan</option>
+                                <option value="penjualan">Penjualan</option>
+                                <option value="sumber daya manusia">Personalia/SDM/HR</option>
+                                <option value="komunikasi">Komunikasi</option>
+                                <option value="teknologi informasi">Teknologi Informasi</option>
                             </select>
                         </div>                        
 
@@ -60,15 +69,16 @@
                             <button class="btn text-left btn-block dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Salary
                             </button>
                             <div class="dropdown-menu p-2 pr-3" aria-labelledby="dropdownMenu2"  style="width:100%;">
-                                <input type="text" class="form-control" placeholder="minimum salary">
-                                <input type="text" class="form-control mt-3" placeholder="maximum salary">
+                                <input type="text" class="form-control" placeholder="minimum salary" name="minimum-salary">
+                                <input type="text" class="form-control mt-3" placeholder="maximum salary" name="maximum-salary">
 
                                 <button class="btn btn-gaji-filter mt-5 pull-right">LANJUT</button>
                             </div>
                         </div>
 
                         <div class="col-md-4 pt-2" >
-                            <select class="my-select p-2" title="Skill">
+                            <select class="my-select p-2" title="Skill" name="skill">
+                                <option>Skill</option>
                                 <option value="android programming">Android Programming</option>
                                 <option value="graphic design">Graphic Design</option>
                                 <option value="script writing">Script Writing</option>
@@ -81,7 +91,8 @@
                         </div>                    
 
                         <div class="col-md-4 pt-2">
-                            <select class="my-select p-2" title="Location">
+                            <select class="my-select p-2" title="Location" name="location">
+                                <option>Location</option>
                                 <option value="kota bandung">Kota Bandung</option>
                                 <option value="jakarta">Jakarta</option>
                                 <option value="kota bogor">Kota Bogor</option>
@@ -95,7 +106,8 @@
                         </div>                
 
                         <div class="col-md-4">
-                            <select class="p-2 mt-2" title="Experience">
+                            <select class="p-2 mt-2" title="Experience" name="experience">
+                                <option>Experience</option>
                                 <option value="fresh graduate">Fresh Graduate</option>
                                 <option value="less than 1 year">Less than 1 year</option>
                                 <option value="1-3 years">1-3 years</option>
@@ -161,7 +173,11 @@
                 </div>
             </div>
            @endforeach
-        </div>        
+        </div>      
+        
+        <div class="row justify-content-center mt-4">
+            {{ $listLoker->links() }} 
+        </div>
     </div>
 
 </section>

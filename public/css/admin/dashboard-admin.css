@@ -1,0 +1,88 @@
+.box-shadow{
+    background-color: white;    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.img-left{
+    margin-top: 50%;
+    margin-left: auto;
+    width: 100%;
+}
+
+/* perusahaan terdaftar */
+.img-left-company{    
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: rgb(242, 201, 76, 0.1);
+}
+
+.info-company-total{
+    color: #F2C94C;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* jumlah pelamar */
+.img-left-applicant{    
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: rgb(187, 107, 218, 0.1);
+}
+
+.info-applicant-total{
+    color: #BB6BD9;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* jumlah diterima */
+.img-left-accepted{    
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: rgb(111, 207, 151, 0.1);
+}
+
+.info-accepted-total{
+    color: #6FCF97;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* jumlah ditolak */
+.img-left-rejected{    
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: rgb(235, 87, 87, 0.1);
+}
+
+.info-rejected-total{
+    color: #EB5757;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* daftar menu */
+
+
+.menu-list:hover{
+    background-color: rgb(63, 149, 169, 0.1);
+    cursor: pointer;
+}
+
+
+.img-left-menu{    
+    margin-left: auto;
+    width: 80%;
+    margin-top: 5px;
+}
+
+.menu-list .fa-angle-right{
+    color: #68C8D8;
+    font-weight: bold;
+    font-size: 30px;
+}

@@ -64,6 +64,13 @@ body {
     margin-right: 5px;
 }
 
+.premium-link{
+    color: #F2C94C;
+}
+
+.premium-link:hover{
+    color: #F2C94C;
+}
 /*Footer*/
 .footer-widget p {
     margin-bottom: 27px;

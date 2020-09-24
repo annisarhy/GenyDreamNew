@@ -17,13 +17,15 @@ class CreatePelamarTable extends Migration
             $table->id();
             $table->foreignId('id_user')->constrained('users');
             $table->string('nama_lengkap')->nullable();
-            $table->string('gelar_depan')->nullable();
-            $table->string('gelar_belakang')->nullable();
-            $table->date('tgl_lahir')->nullable();
-            $table->enum('jen_kel',['l','p'])->nullable();
-            $table->string('no_hp')->nullable();
-            $table->string('no_ktp')->nullable();
-            $table->string('alamat')->nullable();
+            $table->string('gelar_depan')->nullable()->default("-");
+            $table->string('gelar_belakang')->nullable()->default("-");
+            $table->string('tempat_lahir')->nullable()->default("‎‎‏‏‎ ‎");
+            $table->date('tgl_lahir')->nullable()->default(\Carbon\Carbon::now());
+            $table->enum('jen_kel',['l','p','-'])->nullable()->default("-");
+            $table->string('no_telp')->nullable()->default("‎‎‏‏‎ ‎");
+            $table->string('no_ktp')->nullable()->default("‎‎‏‏‎ ‎");
+            $table->string('alamat')->nullable()->default("‎‎‏‏‎ ‎");
+            $table->text('deskripsi_diri')->nullable();
             $table->timestamps();
         });
     }

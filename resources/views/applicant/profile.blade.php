@@ -22,7 +22,7 @@
                             </div>
 
                             <div class="username-info">
-                                <h3 class="company-name">Anna Minerva</h3>
+                                <h3 class="company-name">{{ $profile->nama_lengkap }}</h3>
                                 <p class="user-status">Free User</p>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                             
                             <p class="pull-right font-weight-bold mt-3 mr-3 upgrade-text">If you want to upgrade your account                                 
                                 <br>
-                                <button class="upgrade-button" data-toggle="modal" data-target="#myModal">CLICK HERE</button>
+                                <a href="{{ route('pelamar.buy.premium') }}" class="upgrade-button">CLICK HERE</a>
                             </p>
                         </div>                        
                     </div>
@@ -55,39 +55,39 @@
                                 <div class="col-md-5">
 
                                     <p class="info-title mt-5">Nama</p>
-                                    <p>Anna Minerva</p>
+                                    <p>{{ $profile->nama_lengkap }}</p>
 
                                     <p class="info-title mt-5">Gelar Depan</p>
-                                    <p>Belum ada gelar</p>
+                                    <p>{{ $profile->gelar_depan }}</p>
 
                                     <p class="info-title mt-5">Tempat, Tanggal Lahir</p>
-                                    <p>Bandung, 20 Maret 2000</p>                                    
+                                    <p>{{ $profile->ttl }}</p>                                    
 
                                     <p class="info-title mt-5">Gender</p>
-                                    <p>Perempuan</p>
+                                    <p>{{ $profile->gender }}</p>
 
-                                    <p class="info-title mt-5">E-mail</p>
-                                    <p>annaminerva@gmail.com</p>
+                                    {{-- <p class="info-title mt-5">E-mail</p>
+                                    <p>{{ $profile->user->email }}</p>
                                     <!-- pake if udah verified atau belum kalau udh jadinya display none -->
-                                    <p class="mb-1"><img src="{{ asset('images/ant-design_info-circle-outlined-red.png') }}" class="img-warning mr-1">Your email address is not yet verified.</p>                        
+                                    <p class="mb-1"><img src="{{ asset('images/ant-design_info-circle-outlined-red.png') }}" class="img-warning mr-1">Your email address is not yet verified.</p>                         --}}
                                 </div>    
 
                                 <div class="col-md-6">
 
                                     <p class="info-title mt-5">No KTP</p>
-                                    <p>3245987312560934</p>
+                                    <p>{{ $profile->no_ktp }}</p>
 
                                     <p class="info-title mt-5">Gelar Belakang</p>
-                                    <p>Belum ada</p>
+                                    <p>{{ $profile->gelar_belakang }}</p>
 
                                     <p class="info-title mt-5">Usia</p>
-                                    <p>20</p>
+                                    <p>{{ $profile->usia }}</p>
 
                                     <p class="info-title mt-5">Telepon</p>
-                                    <p>088822222222</p>                                
+                                    <p>{{ $profile->no_hp }}</p>                                
 
                                     <p class="info-title mt-5">Alamat</p>
-                                    <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+                                    <p>{{ $profile->alamat }}</p>
                                 </div>
                             </div>
                         </div>                                                
@@ -571,7 +571,9 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.basic.update',$profile->id) }}" method="POST">'
+                @csrf
+                @method("PATCH")
                 <div class="modal-body modal-basic-info">
                     <!-- input image -->
                     <div class="image-default">
@@ -583,22 +585,22 @@
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="username" value="" class="form-control" id="username" placeholder="NAMA LENGKAP" required="required">
-                            <label for="username">NAMA</label>
+                        <input type="text" name="nama_lengkap" value="{{ old('nama_lengkap',@$profile->nama_lengkap) }}" class="form-control" id="nama_lengkap" placeholder="NAMA LENGKAP" required="required">
+                            <label for="nama_lengkap">NAMA</label>
                         </span>
                     </div>
                     
                     <div class="row">
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="text" name="gelas_depan" value="" class="form-control" id="gelar_depan" placeholder="GELAR DEPAN">
+                                <input type="text" name="gelar_depan" value="{{ old('gelar_depan',@$profile->gelar_depan) }}" class="form-control" id="gelar_depan" placeholder="GELAR DEPAN">
                                 <label for="gelar_depan">GELAR DEPAN</label>
                             </span>
                         </div>
 
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="text" name="gelar_belakang" value="" class="form-control" id="gelar_belakang" placeholder="GELAR BELAKANG">
+                                <input type="text" name="gelar_belakang" value="{{ old('gelar_belakang',@$profile->gelar_belakang) }}" class="form-control" id="gelar_belakang" placeholder="GELAR BELAKANG">
                                 <label for="gelar_belakang">GELAR BELAKANG</label>
                             </span>
                         </div>
@@ -606,12 +608,12 @@
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="no_ktp" value="" class="form-control" id="no_ktp" placeholder="NO KTP" required="required">
+                            <input type="text" name="no_ktp" value="{{ old('no_ktp',@$profile->no_ktp) }}" class="form-control" id="no_ktp" placeholder="NO KTP" required="required">
                             <label for="no_ktp">NO KTP</label>
                         </span>
                     </div>
 
-                    <!-- pake if email nya sudah verified atau belum -->
+                    {{-- <!-- pake if email nya sudah verified atau belum -->
                     <div class="email mb-4">
                         <p class="email-title mb-0">EMAIL</p>
                         <p class="email-user font-weight-bold">annaminerva@gmail.com</p>
@@ -622,25 +624,25 @@
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="email" value="" class="form-control" id="email" placeholder="UPDATE NEW EMAIL">
+                            <input type="text" name="email" value="{{ old('email',@$profile->email) }}" class="form-control" id="email" placeholder="UPDATE NEW EMAIL">
                             <label for="email">UPDATE NEW EMAIL</label>
                         </span>
-                    </div>
+                    </div> --}}
 
                     <div class="row">
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="text" name="no_telp" value="" class="form-control" id="no_telp" placeholder="NO TELEPON">
+                                <input type="text" name="no_telp" value="{{ old('no_telp',@$profile->no_telp) }}" class="form-control" id="no_telp" placeholder="NO TELEPON">
                                 <label for="no_telp">NO TELEPON</label>
                             </span>
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-group has-float-label">
-                                <select class="form-control custom-select">
+                                <select class="form-control custom-select" name="jen_kel">
                                     <option selected>-- Pilih Gender --</option>
-                                    <option value="perempuan">Perempuan</option>
-                                    <option value="laki-laki">Laki-laki</option>                                
+                                    <option value="p" {{ old('p',@$profile->jen_kel) == "p" ? 'selected' : '' }}>Perempuan</option>
+                                    <option value="l" {{ old('p',@$profile->jen_kel) == "l" ? 'selected' : '' }}>Laki-laki</option>                                
                                 </select>
                                 <span>GENDER</span>
                             </label>
@@ -650,14 +652,14 @@
                     <div class="row">                        
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="text" name="tempat_tinggal" value="" class="form-control" id="tempat_tinggal" placeholder="TEMPAT TINGGAL">
-                                <label for="tempat_tinggal">TEMPAT TINGGAL</label>
+                                <input type="text" name="tempat_lahir" value="{{ old('tempat_lahir',@$profile->tempat_lahir) }}" class="form-control" id="tempat_tinggal" placeholder="TEMPAT TINGGAL">
+                                <label for="tempat_lahir">TEMPAT LAHIR</label>
                             </span>
                         </div>
 
                         <div class="form-group col-md-6">
                             <span class="has-float-label">
-                                <input type="date" name="tgl_lahir" value="" class="form-control" id="tgl_lahir" placeholder="TANGGAL LAHIR">
+                                <input type="date" name="tgl_lahir" value="{{ old('tgl_lahir',@$profile->tgl_lahir) }}" class="form-control" id="tgl_lahir" placeholder="TANGGAL LAHIR">
                                 <label for="tgl_lahir">TANGGAL LAHIR</label>
                             </span>
                         </div>                        
@@ -665,7 +667,7 @@
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <textarea type="text" name="alamat" value="" class="form-control" id="alamat" placeholder="ALAMAT" rows="4"></textarea>
+                            <textarea type="text" name="alamat" class="form-control" id="alamat" placeholder="ALAMAT" rows="4">{{ old('alamat',@$profile->alamat) }}</textarea>
                             <label for="alamat">ALAMAT</label>
                         </span>
                     </div>
@@ -674,7 +676,7 @@
                 <div class="modal-footer">
                     
                     <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
-                    <button class="btn btn-simpan font-weight-bold">SIMPAN</button>
+                    <button class="btn btn-simpan font-weight-bold" type="submit">SIMPAN</button>
                 </div>
             </form>
 
@@ -740,7 +742,7 @@
                 <div class="modal-body modal-education mt-4">                    
 
                     <label class="form-group has-float-label">
-                        <select class="form-control custom-select">
+                        <select class="form-control custom-select" name="jenjang-pendidikan">
                             <option selected>-- Pilih Jenjang Pendidikan --</option>
                             <option value="perguruan tinggi">PERGURUAN Tinggi</option>
                             <option value="sekolah menengan kejuruan">Sekolah Menengan Kejuruan</option>
@@ -771,14 +773,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start"></select>
+                                    <select class="form-control custom-select" id="months-start" name="bulan-awal-pendidikan"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start"></select>
+                                    <select class="form-control custom-select" id="years-start" name="tahun-awal-pendidikan"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -790,14 +792,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end"></select>
+                                    <select class="form-control custom-select" id="months-end" name="bulan-akhir-pendidikan"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end"></select>
+                                    <select class="form-control custom-select" id="years-end" name="tahun-akhir-pendidikan"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -865,14 +867,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start-work"></select>
+                                    <select class="form-control custom-select" id="months-start-work" name="bulan-awal-kerja"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start-work"></select>
+                                    <select class="form-control custom-select" id="years-start-work" name="tahun-awal-kerja"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -884,14 +886,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end-work"></select>
+                                    <select class="form-control custom-select" id="months-end-work" name="bulan-akhir-kerja"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end-work"></select>
+                                    <select class="form-control custom-select" id="years-end-work" name="tahun-akhir-kerja"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -993,14 +995,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start-seminar"></select>
+                                    <select class="form-control custom-select" id="months-start-seminar" name="bulan-awal-seminar"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start-seminar"></select>
+                                    <select class="form-control custom-select" id="years-start-seminar" name="tahun-awal-seminar"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -1012,14 +1014,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end-seminar"></select>
+                                    <select class="form-control custom-select" id="months-end-seminar" name="bulan-akhir-seminar"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end-seminar"></select>
+                                    <select class="form-control custom-select" id="years-end-seminar" name="tahun-akhir-seminar"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -1167,108 +1169,6 @@
 </div>
 <!-- end of modal portofolio -->
 
-<!-- modal price subscribe -->
-<div class="modal fade bd-example-modal-xl" id="myModal" role="dialog">
-    <div class="modal-dialog modal-xl">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-
-            <div class="modal-body">
-                <div class="container-fluid bg-gradient p-5">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <div class="row m-auto text-center w-75">
-
-                        <div class="col-4 princing-item red">
-                            <div class="pricing-divider ">
-                                <h3 class="text-light">GRATIS</h3>
-                                <h4 class="my-0 display-2 text-light font-weight-normal mb-3"><span class="h3">$</span> 120 <span class="h5">/mo</span></h4>
-                                <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
-                                    <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
-	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
-                                    <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
-	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
-                                    <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
-	H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
-                                    <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
-	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
-                                </svg>
-                            </div>
-                            <div class="card-body bg-white mt-0 shadow">
-                                <ul class="list-unstyled mb-5 position-relative">
-                                    <li><b>10</b> users included</li>
-                                    <li><b>2 GB</b> of storage</li>
-                                    <li><b>Free </b>Email support</li>
-                                    <li><b>Help center access</b></li>
-                                </ul>
-                                <button type="button" class="btn btn-lg btn-block  btn-custom ">Sign up for free</button>
-                            </div>
-                        </div>
-
-                        <div class="col-4 princing-item blue">
-                            <div class="pricing-divider ">
-                                <h3 class="text-light">BISNIS</h3>
-                                <h4 class="my-0 display-2 text-light font-weight-normal mb-3"><span class="h3">$</span> 250 <span class="h5">/mo</span></h4>
-                                <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
-                                    <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
-	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
-                                    <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
-	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
-                                    <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
-	H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
-                                    <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
-	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
-                                </svg>
-                            </div>
-
-                            <div class="card-body bg-white mt-0 shadow">
-                                <ul class="list-unstyled mb-5 position-relative">
-                                    <li><b>100 </b>users included</li>
-                                    <li><b>10 GB</b> of storage</li>
-                                    <li><b>Free</b>Email support</li>
-                                    <li><b>Help center access</b></li>
-                                </ul>
-                                <button type="button" class="btn btn-lg btn-block  btn-custom ">Sign up for free</button>
-                            </div>
-                        </div>
-
-                        <div class="col-4 princing-item green">
-                            <div class="pricing-divider ">
-                                <h3 class="text-light">PROFESIONAL</h3>
-                                <h4 class="my-0 display-2 text-light font-weight-normal mb-3"><span class="h3">$</span> 450 <span class="h5">/mo</span></h4>
-                                <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
-                                    <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
-	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
-                                    <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
-	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
-                                    <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
-	H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
-                                    <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
-	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
-                                </svg>
-                            </div>
-
-                            <div class="card-body bg-white mt-0 shadow">
-                                <ul class="list-unstyled mb-5 position-relative">
-                                    <li><b>300</b> users included</li>
-                                    <li><b>20 GB</b> of storage</li>
-                                    <li><b>Free</b> Email support</li>
-                                    <li><b>Help center access</b></li>
-                                </ul>
-                                <button type="button" class="btn btn-lg btn-block  btn-custom ">Sign up for free</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</div>
 
 <!-- modal delete riwayat pendidikan-->
 <div class="modal fade" id="deletePendidikanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1343,7 +1243,7 @@
         options = "";                
 
         for(var Y=nowY; Y>=1980; Y--) {
-            options += "<option>"+ Y +"</option>";
+            options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
         $("#years-start").append( options );    
@@ -1380,7 +1280,7 @@
         options = "";                
 
         for(var Y=nowY; Y>=1980; Y--) {
-            options += "<option>"+ Y +"</option>";
+            options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
         $("#years-start-work").append( options );    
@@ -1416,7 +1316,7 @@
         options = "";                
 
         for(var Y=nowY; Y>=1980; Y--) {
-            options += "<option>"+ Y +"</option>";
+            options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
         $("#years-start-seminar").append( options );    

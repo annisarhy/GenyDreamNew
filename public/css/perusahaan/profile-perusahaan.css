@@ -153,7 +153,9 @@ body{
 
 .info-title{
     font-weight: bolder;
+    font-size: 18px;
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 /* user perusahaan section */
@@ -305,7 +307,7 @@ body{
 	transition:all .2s;
 }
 .has-float-label .form-control::placeholder{
-	opacity:0;
+	opacity:1;
 	-webkit-transition:all .2s;
 	transition:all .2s;
 }

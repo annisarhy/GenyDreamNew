@@ -461,7 +461,7 @@
                 <!-- nama pelamar -->
                 <h3 class="font-weight-bold text-center">Anna Minerva</h3>
 
-                <div class="box-text pt-3  d-flex">                    
+                <div class="box-text pt-3 mt-5 d-flex">                    
                     <img src="{{ asset('images/ant-design_info-circle-outlined-black.png') }}" alt="" class="img-fluid img-info mt-1 mr-2 ml-2"> 
                     <p>Apakah kamu yakin  menerima lamaran <span>Nama Pelamar</span> untuk bekerja diperusahaanmu ? </p>
                 </div>
@@ -499,7 +499,7 @@
                 <!-- nama pelamar -->
                 <h3 class="font-weight-bold text-center">Anna Minerva</h3>
 
-                <div class="box-text-tolak pt-3 d-flex">                    
+                <div class="box-text-tolak pt-3 mt-5 d-flex">                    
                     <img src="{{ asset('images/ant-design_info-circle-outlined-black.png') }}" alt="" class="img-fluid img-info mt-1 mr-2 ml-2"> 
                     <p>Apakah kamu yakin  menolak lamaran <span>Nama Pelamar</span> untuk bekerja diperusahaanmu ? </p>
                 </div>

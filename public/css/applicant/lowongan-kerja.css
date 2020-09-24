@@ -210,12 +210,19 @@ p.nama-perusahaan{
 
 .info-title{
     font-weight: bolder;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 5px;    
 }
 
 .bookmark-share button{
-    border: 1px solid #BDBDBD;
-    color: #BDBDBD;
+    border: 1px solid #68C8D8;
+    color: #68C8D8;
+    background-color: white;
+}
+
+.bookmark-share button:hover{
+    background-color: #68C8D8;
+    color: white;
 }
 
 
@@ -295,31 +302,44 @@ p.nama-perusahaan{
     border:none;
 }
 
-.square-image-modal{
-    border: 1px solid #BDBDBD;
-    height: 100px;    
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img-perusahaan-modal{
+    
+    width: 140px;
+    height: 140px;    
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);     
+    margin: 0 auto;        
 }
 
 .nama-lowongan-modal{
-    color: #3F95A9;
+    color: black;
     font-weight: bolder;
-    text-transform: capitalize;  
-    font-size: 20px;  
+    text-transform: capitalize;        
 }
 
 .nama-perusahaan-modal{
+    color: #4F4F4F;
+    font-size: 20px;
+}
+
+.box-text{
+    border: 1px dashed #3F95A9;
+    background-color: rgb(63, 149, 169, 0.1);
+    color: #4F4F4F;
+}
+
+.btn-cancel{
+    background: #FAFAFA;
+    border-radius: 100px;
     color: #BDBDBD;
-    font-size: 13px;
+    width: 120px;
 }
 
 .btn-lamar-modal{
     background: #68C8D8;
     border-radius: 100px;
-    padding: 10px;
+    
     color: white;
 }
 
@@ -406,4 +426,84 @@ p.nama-perusahaan{
 .ditolak .img-ditolak{
     background-color: #EB5757;
     border-radius: 100px;
+}
+
+
+/* has float label */
+
+.has-float-label{
+	display:block;
+	position:relative
+}
+.has-float-label label, .has-float-label > span{
+	position:absolute;
+	cursor:text;
+	font-size:75%;
+	opacity:1;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+	top:-.5em;
+	left:.75rem;
+	z-index:3;
+	line-height:1;
+    padding:0 1px    
+}
+.has-float-label label::after, .has-float-label > span::after{
+	content:" ";
+	display:block;
+	position:absolute;
+	background:#fff;
+	height:2px;
+	top:50%;
+	left:-.2em;
+	right:-.2em;
+	z-index:-1
+}
+.has-float-label .form-control::-webkit-input-placeholder{
+	opacity:1;
+	-webkit-transition:all .2s;
+    transition:all .2s;
+    box-shadow: none;
+    
+}
+.has-float-label .form-control::-moz-placeholder{
+	opacity:1;
+	transition:all .2s;
+}
+.has-float-label .form-control:-ms-input-placeholder{
+	opacity:1;
+	transition:all .2s;
+}
+.has-float-label .form-control::placeholder{
+	opacity:0;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder{
+	opacity:0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)+*{
+	font-size:100%;
+	color: #6c757d;
+	opacity: 1;
+	top:.3em;
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)+*{
+	font-size:100%;
+	color: #6c757d;
+	opacity: 1;
+	top:.3em;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus) + * {
+	margin-top: 6px;
 }

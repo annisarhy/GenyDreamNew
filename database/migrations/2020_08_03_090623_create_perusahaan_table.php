@@ -15,12 +15,12 @@ class CreatePerusahaanTable extends Migration
     {
         Schema::create('perusahaan', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_user')->constrained('users');
-            $table->string('nama')->nullable();;
-            $table->string('email')->nullable();;
-            $table->string('penanggung_jawab')->nullable();;
-            $table->string('no_hp')->nullable();;
-            $table->string('alamat')->nullable();;
+            $table->string('nama')->nullable();
+            $table->string('email')->nullable();
+            $table->string('penanggung_jawab')->nullable();
+            $table->string('no_telp')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }

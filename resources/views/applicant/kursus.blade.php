@@ -102,7 +102,7 @@
                 <div class="col-lg-4 col-md-6 mt-2">
                     <div class="card kursus-card">                        
                         <div class="header mx-auto mt-2">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="">
+                            <img src="{{ asset('/images/course-img1.png') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="card-body">
@@ -127,7 +127,7 @@
                 <div class="col-lg-4 col-md-6 mt-2">
                     <div class="card kursus-card">                        
                         <div class="header mx-auto mt-2">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="">
+                            <img src="{{ asset('/images/course-img1.png') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="card-body">
@@ -152,7 +152,7 @@
                 <div class="col-lg-4 col-md-6 mt-2">
                     <div class="card kursus-card">                        
                         <div class="header mx-auto mt-2">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="">
+                            <img src="{{ asset('/images/course-img1.png') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="card-body">
@@ -177,7 +177,7 @@
                 <div class="col-lg-4 col-md-6 mt-2">
                     <div class="card kursus-card">                        
                         <div class="header mx-auto mt-2">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="">
+                            <img src="{{ asset('/images/course-img1.png') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="card-body">
@@ -202,7 +202,7 @@
                 <div class="col-lg-4 col-md-6 mt-2">
                     <div class="card kursus-card">                        
                         <div class="header mx-auto mt-2">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="">
+                            <img src="{{ asset('/images/course-img1.png') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="card-body">
@@ -227,7 +227,7 @@
                 <div class="col-lg-4 col-md-6 mt-2">
                     <div class="card kursus-card">                        
                         <div class="header mx-auto mt-2">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="">
+                            <img src="{{ asset('/images/course-img1.png') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="card-body">
@@ -252,7 +252,7 @@
                 <div class="col-lg-4 col-md-6 mt-2">
                     <div class="card kursus-card">                        
                         <div class="header mx-auto mt-2">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="">
+                            <img src="{{ asset('/images/course-img1.png') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="card-body">
@@ -277,7 +277,7 @@
                 <div class="col-lg-4 col-md-6 mt-2">
                     <div class="card kursus-card">                        
                         <div class="header mx-auto mt-2">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="">
+                            <img src="{{ asset('/images/course-img1.png') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="card-body">

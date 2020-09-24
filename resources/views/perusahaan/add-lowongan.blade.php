@@ -21,15 +21,25 @@
 
                     <div class="form-group mt-4">
                         <span class="has-float-label">
-                            <input type="text" name="kategori" value="" class="form-control" list="kategoriList" id="kategori" placeholder="KATEGORI">
-                            <datalist id="kategoriList">
-                                <option value="teknologi informasi">Teknologi Informasi</option>
-                                <option value="akuntansi">Akuntansi</option>
+                            <select class="form-control" id="kategori" name="kategori" title="Career">
+                                <option>Job Category</option>
                                 <option value="administrasi">Administrasi</option>
+                                <option value="akuntansi dan keuangan">Akuntansi dan Keuangan</option>
+                                <option value="konstruksi">Konstruksi</option>
                                 <option value="hukum">Hukum</option>
+                                <option value="ilmu pengetahuan">Ilmu Pengetahuan</option>
+                                <option value="jasa">Jasa/Pelayanan</option>
+                                <option value="keahlian teknik">Keahlian Teknik</option>
                                 <option value="manufaktur">Manufaktur</option>
-                            </datalist>
-                            <label for="kategori">KATEGORI</label>
+                                <option value="pelayanan kesehatan">Pelayanan Kesehatan</option>
+                                <option value="pemasaran">Pemasaran</option>
+                                <option value="pendidikan dan pelatihan">Pendidikan/Pelatihan & Pengembangan</option>
+                                <option value="penjualan">Penjualan</option>
+                                <option value="sumber daya manusia">Personalia/SDM/HR</option>
+                                <option value="komunikasi">Komunikasi</option>
+                                <option value="teknologi informasi">Teknologi Informasi</option>
+                            </select>
+                            <label for="kategori">Job Category</label>
                         </span>
                     </div>
 

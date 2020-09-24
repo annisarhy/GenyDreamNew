@@ -96,7 +96,7 @@ body{
 	transition:all .2s;
 }
 .has-float-label .form-control::placeholder{
-	opacity:0;
+	opacity:1;
 	-webkit-transition:all .2s;
     transition:all .2s;
     

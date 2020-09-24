@@ -1,0 +1,57 @@
+.form-search{
+    background-color: white;
+    border: none;    
+}
+
+.btn-search{
+    background-color: #68C8D8;
+    color: white;
+    border-right: 10px;
+}
+
+.berita-menu a{
+    color: #aca4a4;
+}
+
+.berita-menu .active{
+    color: #68C8D8;
+}
+
+.berita-menu a:hover{
+    color: #68C8D8;
+}
+
+.list-berita-line {
+    background-color: #3F95A9;
+    width: 10%;
+    height: 5px;
+    text-align: left;
+    margin-left: 0px;
+    border-radius: 20px;    
+    align-content: flex-start;
+}
+
+/* list berita */
+
+.content-body:hover{    
+    color: #68C8D8;
+    cursor: pointer;
+}
+.img-list-berita{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.info-berita{
+    color: #BDBDBD;
+}
+
+/* detail berita */
+.img-berita-detail{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.berita-content{
+    white-space: pre-wrap;
+}

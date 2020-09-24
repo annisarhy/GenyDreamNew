@@ -17,8 +17,8 @@
                                 </div>
                             </div>
                             <div class="col-md-8">
-                            <h3 class="nama-lowongan">{{ $loker->judul }}</h3>
-                            <p class="nama-perusahaan">{{ $loker->perusahaan->nama }}</p>
+                                <h3 class="nama-lowongan">{{ $loker->judul }}</h3>
+                                <p class="nama-perusahaan">{{ $loker->perusahaan->nama }}</p>
                             </div>
                         </div>
 
@@ -33,13 +33,13 @@
                             <div class="col-md-6">
 
                                 <p class="info-title mt-5">Kategori Lowongan</p>
-                                <p>Teknologi Informasi</p>
+                                <p class="text-capitalize">Teknologi Informasi</p>
 
                                 <p class="info-title mt-5">Gaji</p>
-                                <p>3000000</p>
-
-                                <p class="info-title mt-5">Alamat</p>
-                                <p>Jl. Gunung Sahari Raya No.2M, Gn. Sahari Utara, Sawah Besar, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10720, Indonesia.</p>
+                                <p>{{ $loker->salary }}</p>
+                                
+                                <p class="info-title mt-5">KOTA</p>
+                                <p class="text-capitalize">kota bandung</p>
 
                             </div>    
 
@@ -49,12 +49,31 @@
                                 <p>6 jam lalu</p>
 
                                 <p class="info-title mt-5">Tenggat Waktu</p>
-                                <p>30 September 2020</p>
+                                <p class="text-capitalize">30 September 2020</p>
 
+                                <p class="info-title mt-5">Alamat</p>
+                                <p>Jl. Gunung Sahari Raya No.2M, Gn. Sahari Utara, Sawah Besar, Daerah Khusus Ibukota Jakarta 10720, Indonesia.</p>
                             </div>
                         </div>
                         
-                    </div>                    
+                    </div>      
+                    
+                    <div class="melamar-kerja">                                                
+                        <div class="row mt-5">
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <img src="{{ asset('images/ant-design_info-circle-outlined.png') }}" alt="" class="img-fluid img-info mr-2 mt-1">
+                                    <p>Jika dalam lowongan ini terdapat kejanggalan didalamnya termasuk bersifat penipuan.<br> <a href="#" class="klik-disini">KLIK DISINI</a></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 btn-lamar-side">
+                                <button type="button" class="btn btn-block" data-toggle="modal" data-target="#lamarModal">
+                                    Lamar Sekarang <i class="fa fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="deskripsi-perkejaan box-shadow p-5 mt-5">
                         <h4 class="deskripsi-title">DESKRIPSI PEKERJAAN</h4>
@@ -79,8 +98,7 @@
 
                     </div>
 
-                    <div class="melamar-kerja">                        
-                        
+                    <div class="melamar-kerja">                                                
                         <div class="row mt-5">
                             <div class="col-md-6">
                                 <div class="d-flex">
@@ -311,23 +329,30 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="row title-pekerjaan">
-                    <div class="col md-3">
-                        <div class="square-image-modal">
-                            <img src="{{ asset('images/gojek.png') }}" alt="img-perusahaan" class="img-fluid img-perusahaan-modal">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h5 class="nama-lowongan-modal">{{ $loker->judul }}</h5>
-                        <p class="nama-perusahaan-modal">{{ $loker->perusahaan->nama }}</p>
-                    </div>
+                <div class="row title-pekerjaan justify-content-center">
+                    
+                    <img src="{{ asset('images/gojek.png') }}" alt="img-perusahaan" class="img-fluid img-perusahaan-modal">                                                                                                        
                 </div>
-
-                <p class="mt-3 text-dark">Apa alasanmu ingin melamar pada lowongan ini ?</p>
-                <input type="text" class="form-control w-75 bg-light" name="alasan_lamar" id="alasan-lamar">
+                
+                <div class="job-company-name-modal text-center mt-4">
+                    <h3 class="nama-lowongan-modal mb-0">{{ $loker->judul }}</h3>
+                    <p class="nama-perusahaan-modal">{{ $loker->perusahaan->nama }}</p>
+                </div>                
+                
+                <div class="form-group mt-5">
+                    <span class="has-float-label">
+                        <textarea type="text" name="alasan_melamar"class="form-control" id="alasan_melamar" placeholder="MENGAPA KAMU INGIN MELAMAR PEKERJAAN INI ?" rows="4"></textarea>
+                        <label for="alasan_melamar">MENGAPA KAMU INGIN MELAMAR PEKERJAAN INI ?</label>
+                    </span>
+                </div>
+                
+                <div class="box-text mt-5 pl-2 pt-3 d-flex">                                        
+                    <p>Apakah kamu yakin ingin melamar pekerjaan ini ?</p>
+                </div>
             </div>
             <div class="modal-footer">
-                <a href="{{ route('pelamar.loker.apply',$loker->id) }}" type="button" class="btn btn-lamar-modal">LAMAR SEKARANG <i class="fa fa-arrow-right"></i></a>
+                <button type="button" class="btn btn-cancel font-weight-bold mr-4" data-dismiss="modal">BATALKAN</button>
+                <a href="{{ route('pelamar.loker.apply',$loker->id) }}" type="button" class="btn btn-lamar-modal">LAMAR SEKARANG</a>
             </div>
         </div>
     </div>

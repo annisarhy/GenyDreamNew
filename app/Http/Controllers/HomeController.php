@@ -26,6 +26,8 @@ class HomeController extends Controller
       return redirect()->route('pelamar.beranda');
     }else if($role == "perusahaan"){
       return redirect()->route('perusahaan.beranda');
+    }else if($role == "admin"){
+      return redirect()->route('admin.beranda');
     }
   }
 }
