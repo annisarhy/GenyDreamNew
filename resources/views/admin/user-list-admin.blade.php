@@ -41,7 +41,7 @@
     <hr>
 
     <div class="row mt-4 pl-3 pr-3">
-        <div class="table-responsive col-xs-12 bg-white mb-5 mt-5" style="min-width: 0;">          
+        <div class="table-responsive bg-white mb-5 mt-5" style="overflow-x:auto;">          
             <table class="table table-hover table-borderless text-center">
                 <thead>
                     <tr>                        

@@ -25,8 +25,10 @@
         <div id="page-content-wrapper">
             <!-- content -->
             <div class="container-fluid">
-                <button class="btn btn-primary mb-3" id="menu-toggle">Sidebar</button>                
-                @yield('content-dashboard')                
+                <button class="btn btn-primary mb-3" id="menu-toggle">Sidebar</button>
+                <div class="row">
+                    @yield('content-dashboard')
+                </div>
                 
             </div>
         </div>
