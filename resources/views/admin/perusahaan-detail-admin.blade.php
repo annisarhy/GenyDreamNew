@@ -19,7 +19,7 @@
                     <div class="col-md-7">
                         <div class="image-default">
                             <label class=newbtn>
-                                <img class="rounded-circle" id="pictures" src="{{ asset('images/gojek.png') }}" alt="...">
+                                <img class="rounded-circle" id="pictures" src="{{ asset('images/default-image.png') }}" alt="...">
                                             
                             </label>
                         </div>

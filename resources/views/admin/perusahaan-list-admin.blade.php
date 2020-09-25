@@ -47,7 +47,7 @@
                 <div class="card box-shadow-card p-2">
                     <div class="card-body">
                         <div class="row justify-content-between">
-                            <img src="{{ asset('images/gojek.png') }}" alt="image-perusahaan"
+                            <img src="{{ asset('images/default-image.png') }}" alt="image-perusahaan"
                                 class="img-perusahaan-list img-fluid">
 
                             <div class="dropdown">
