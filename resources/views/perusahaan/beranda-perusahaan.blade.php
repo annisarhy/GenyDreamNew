@@ -10,7 +10,7 @@
             <div class="col-md-3 mb-2">
                 <div class="user-info-container d-flex justify-content-start p-3">
                     <img src="{{ asset('images/profile-image.png') }}" alt="">
-                    
+
                     <div class="user-info-content">
                         <p class="username mb-0 font-weight-bold">Anna Minerva</p>
                         <p class="user-position">Human Resources Department</p>
@@ -20,21 +20,21 @@
 
                 <div class="info-lengkapi-profile mt-5 p-3">
                     <p class="info-lengkapi-title font-weight-bold">Ayo Lengkapi Profil Perusahaanmu</p>
-                    
+
                     <div class="progress-container d-flex">
                         <div class="progress flex-fill mt-1 mr-2">
                             <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>                    
+                        </div>
                         <p class="flex-shrink percentage">50%</p>
-                    </div>                                            
-                    
-                    <a href="{{ route('perusahaan.profile') }}" class="profile-picture d-block">Profile Picture <i class="fa fa-angle-right pull-right"></i></a>                                            
-                                        
-                    <a href="{{ route('perusahaan.profile') }}" class="basic-information d-block mt-3">Basic Information <i class="fa fa-angle-right pull-right"></i></a>                                            
+                    </div>
+
+                    <a href="{{ route('perusahaan.profile') }}" class="profile-picture d-block">Profile Picture <i class="fa fa-angle-right pull-right"></i></a>
+
+                    <a href="{{ route('perusahaan.profile') }}" class="basic-information d-block mt-3">Basic Information <i class="fa fa-angle-right pull-right"></i></a>
                 </div>
             </div>
-            
-            <div class="col-md-9">            
+
+            <div class="col-md-9">
                 <div class="wrap-image-header">
                     <div class="container page-container">
                         <div class="page-content col-md-6">
@@ -46,7 +46,7 @@
                     </div>
                 </div> <!-- end wrap slider -->
 
-                <div class="announcement mt-3">                    
+                <div class="announcement mt-3">
                     <div class="announcement-content row justify-content-center">
                         <div class="col-lg-4 col-sm-12">
                             <div class="d-flex flex-row m-2 pb-3 lowongan-content ">
@@ -108,7 +108,7 @@
                                 <div class="col md-5 pr-0">
                                     <div class="square-image mt-2">
                                         <img src="{{ asset('images/gojek.png') }}" alt="img-perusahaan" class="img-fluid img-perusahaan">
-                                    </div>                        
+                                    </div>
                                 </div>
 
                                 <div class="col-md-7">
@@ -125,23 +125,23 @@
                             <hr>
 
                             <div class="row footer-card">
-                                <div class="col-md-6 jml-pelamar">                                    
+                                <div class="col-md-6 jml-pelamar">
                                     <p class=" mt-2 jml-pelamar-tag"><img src="{{ asset('images/la_user-tie-solid-green.png') }}" alt="" class="img-fluid mr-2 mb-1">8 Pelamar</p>
                                 </div>
                                 <div class="col-md-6 detail">
                                     <a href="#" class="btn btn-lg btn-block">Detail</a>
                                 </div>
-                            </div>            
-                        </div>                        
-                    </div>    
-                    
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-lg-6">
                         <div class="lowongan-card p-2 mt-4">
                             <div class="row title-pekerjaan p-3">
                                 <div class="col md-5 pr-0">
                                     <div class="square-image mt-2">
                                         <img src="{{ asset('images/gojek.png') }}" alt="img-perusahaan" class="img-fluid img-perusahaan">
-                                    </div>                        
+                                    </div>
                                 </div>
 
                                 <div class="col-md-7">
@@ -158,16 +158,16 @@
                             <hr>
 
                             <div class="row footer-card">
-                                <div class="col-md-6 jml-pelamar">                                    
+                                <div class="col-md-6 jml-pelamar">
                                     <p class=" mt-2 jml-pelamar-tag"><img src="{{ asset('images/la_user-tie-solid-green.png') }}" alt="" class="img-fluid mr-2 mb-1">8 Pelamar</p>
                                 </div>
                                 <div class="col-md-6 detail">
                                     <a href="#" class="btn btn-lg btn-block">Detail</a>
                                 </div>
-                            </div>            
-                        </div>      
+                            </div>
+                        </div>
                     </div>
-                </div>                
+                </div>
             </div>
 
             <div class="col-lg-5 d-none d-md-block">
@@ -190,32 +190,32 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-6 d-none d-md-block">                
-                <img src="{{ asset('images/genyedu.png') }}" alt="" class="img-fluid img-genyedu">  
+            <div class="col-lg-6 d-none d-md-block">
+                <img src="{{ asset('images/genyedu.png') }}" alt="" class="img-fluid img-genyedu">
             </div>
 
             <div class="col-lg-6 kursus-list">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 mt-2">
-                        <div class="card kursus-card">                        
+                        <div class="card kursus-card">
                             <div class="header">
                                 <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">
 
                                 <div class="img-text">
                                     <p class="course-update ml-2"><i class="fa fa-clock-o p-1"></i>12 jam yang lalu</p>
                                     <p class="member-count mr-2">7/90</p>
-                                </div>                                
+                                </div>
                             </div>
 
                             <div class="card-body">
                                 <h6 class="course-category font-weight-bold">Seni dan kemanusiaan</h6>
-                                
+
                                 <h4 class="card-title course-name">PAINTING AND SKETCH COURSE</h4>
-                                
+
                                 <p class="mentor">By Dianne Russell</p>
-                                
+
                                 <div class="row mt-5 footer-card">
-                                    <div class="col-md-6 price-col">                                    
+                                    <div class="col-md-6 price-col">
                                         <p class="price-tag mt-2"><img src="{{ asset('images/la_money-bill-solid.png') }}" alt="" class="mb-1"> Rp 100.000</p>
                                     </div>
                                     <div class="col-md-6 detail">
@@ -224,28 +224,28 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
 
                     <div class="col-lg-6 col-md-6 mt-2">
-                        <div class="card kursus-card">                        
+                        <div class="card kursus-card">
                             <div class="header">
                                 <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">
 
                                 <div class="img-text">
                                     <p class="course-update ml-2"><i class="fa fa-clock-o p-1"></i>12 jam yang lalu</p>
                                     <p class="member-count mr-2">7/90</p>
-                                </div>                                
+                                </div>
                             </div>
 
                             <div class="card-body">
                                 <h6 class="course-category font-weight-bold">Seni dan kemanusiaan</h6>
-                                
+
                                 <h4 class="card-title course-name">PAINTING AND SKETCH COURSE</h4>
-                                
+
                                 <p class="mentor">By Dianne Russell</p>
-                                
+
                                 <div class="row mt-5 footer-card">
-                                    <div class="col-md-6 price-col">                                    
+                                    <div class="col-md-6 price-col">
                                         <p class="price-tag mt-2"><img src="{{ asset('images/la_money-bill-solid.png') }}" alt="" class="mb-1"> Rp 100.000</p>
                                     </div>
                                     <div class="col-md-6 detail">
@@ -254,13 +254,66 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
-                </div>                
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<!--MODAL-->
+<div class="modal fade text-center py-5 subscribeModal-lg" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+            </div>
+            <div class="modal-body">
 
+                <div class="col-lg-12 col-xl-12 mx-auto">
+                    <div class="card card-signin flex-row my-0 mb-2">
+                        <div class="card-body">
+                            <h1 class="header-title text-left">ACTIVATE YOUR COMPANY</h1>
+                            <div class="text-description mt-5">
+                                <div class="row">
+                                    <div class="col-sm-1 col-md-1 col-xs-1">
+                                        <img src="https://i.ibb.co/0Vb5Dw6/ant-design-info-circle-outlined.png" alt="">
+                                    </div>
+                                    <div class="col-sm-11 col-md-11 col-xs-11">
+                                        <p class="text-left">Untuk mulai menggunakan Akun Perusahaan Geny Dream anda perlu melakukan aktivasi terlebih dahulu. Silahkan klik tombol berikut untuk melanjutkan</p>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <button class="btn btn-block btn-aktivasi font-weight-bold mt-5" type="submit">AKTIVASI SEKARANG</button>
+
+                        </div>
+                        <div class="card-img-right d-none d-md-flex ml-5">
+                            <!-- Background image for card set in CSS! -->
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
+@section('js')
 
+<script>
+    $(window).on('load', function() {
 
+        setTimeout(function() {
+            $('.subscribeModal-lg').modal('show');
+        }, 1000);
+    });
+    $('#Reloadpage').click(function() {
+        location.reload();
+    });
+</script>
+@endsection
