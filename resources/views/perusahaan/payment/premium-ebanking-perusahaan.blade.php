@@ -1,7 +1,7 @@
-@extends('layouts.applicant-master')
+@extends('layouts.company-master')
 
 @section('content')
-<link href="{{ asset('css/applicant/premium-payment.css') }}" rel="stylesheet">
+<link href="{{ asset('css/perusahaan/premium-payment-perusahaan.css') }}" rel="stylesheet">
 
 
 <div class="header-jumbotron mt-5 text-center pt-5">

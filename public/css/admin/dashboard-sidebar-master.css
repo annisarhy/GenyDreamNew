@@ -3,7 +3,7 @@ body{
 }
 /* sidebar */
 #wrapper {
-    
+    display: flex;
     
  }
 
@@ -22,6 +22,10 @@ body{
   
   #sidebar-wrapper .list-group {
     width: 15rem;    
+  }
+
+  .active{
+    color: #68C8D8;
   }
 
   .list-group-item-action{

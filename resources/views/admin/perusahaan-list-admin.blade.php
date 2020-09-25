@@ -17,12 +17,11 @@
                 class="fa fa-plus mr-3"></i>TAMBAH PERUSAHAAN</a>
 
         <div class="form mt-2">
-            <form action="">
+            <form action="{{ route('admin.perusahaan.search') }}">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control form-search" placeholder="Cari Nama Perusahaan"
-                        aria-label="Cari Nama Perusahaan">
+                    <input type="text" name="search" class="form-control form-search" placeholder="Cari Nama Perusahaan" aria-label="Cari Nama Perusahaan">
                     <div class="input-group-append">
-                        <button class="btn btn-search" type="button"><i class="fa fa-search"></i></button>
+                        <button class="btn btn-search" type="submit"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
             </form>
@@ -30,28 +29,13 @@
     </div>
 
     <!-- sort by -->
-    <div class="row mt-4 pl-3 pr-3 justify-content-center">
-        <!-- (ini bisa diubah sesuai kebutuhan, class di btnnya aja yg samaain) form untuk sortby menggunakan button -->
+    <div class="row mt-4 pl-3 pr-3 menu justify-content-center">        
 
-        <a href="#" class="btn btn-link">ALL</a>
-        <a href="#" class="btn btn-link">A-Z</a>
-        <a href="#" class="btn btn-link">Z-A</a>
-        <a href="#" class="btn btn-link">UPDATED</a>
-        <a href="#" class="btn btn-link">OLDER</a>
-
-        <!-- kalo mau pake form bisa kayak gini ro atau bisa pake cara lain -->
-        <!-- <form action="">
-            <input type="submit" name="all" value="ALL" class="btn btn-link">
-
-            <input type="button" name="asc" value="A-Z" class="btn btn-link">
-
-            <input type="button" name="desc" value="Z-A" class="btn btn-link">
-
-            <input type="button" name="updated" value="UPDATED" class="btn btn-link">
-
-            <input type="button" name="older" value="OLDER" class="btn btn-link">
-
-        </form> -->
+        <a href="{{ route('admin.perusahaan.index') }}" class="btn btn-link {{ request()->route()->named('admin.perusahaan.index') ? 'active' : '' }}">ALL</a>
+        <a href="{{ route('admin.perusahaan.name.asc') }}" class="btn btn-link {{ request()->route()->named('admin.perusahaan.name.asc') ? 'active' : '' }}">A-Z</a>
+        <a href="{{ route('admin.perusahaan.name.desc') }}" class="btn btn-link {{ request()->route()->named('admin.perusahaan.name.desc') ? 'active' : '' }}">Z-A</a>
+        <a href="{{ route('admin.perusahaan.updated') }}" class="btn btn-link {{ request()->route()->named('admin.perusahaan.updated') ? 'active' : '' }}">UPDATED</a>
+        <a href="{{ route('admin.perusahaan.older') }}" class="btn btn-link {{ request()->route()->named('admin.perusahaan.older') ? 'active' : '' }}">OLDER</a>
 
     </div>
 
@@ -100,6 +84,10 @@
                 </div>
             </div>
         @endforeach
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        {{ $listPerusahaan->links() }} 
     </div>
 </div>
 

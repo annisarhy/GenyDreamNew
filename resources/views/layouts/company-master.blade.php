@@ -49,10 +49,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" data-value="beranda" href="{{ route('perusahaan.beranda') }}">BERANDA</a>
+                    <a class="nav-link {{ request()->route()->named('perusahaan.beranda') ? 'active' : '' }}" data-value="beranda" href="{{ route('perusahaan.beranda') }}">BERANDA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="list-lowongan" href="{{ route('perusahaan.list.lowongan') }}">LOWONGAN KERJA</a>
+                    <a class="nav-link {{ request()->route()->named('perusahaan.list.lowongan') ? 'active' : '' }}" data-value="list-lowongan" href="{{ route('perusahaan.list.lowongan') }}">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="list-kursus" href="#">KURSUS</a>

@@ -53,7 +53,7 @@
                     <a class="nav-link " data-value="blog" href="#list-course">KURSUS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="team" href="#tipsberita">TIPS DAN BERITA</a>
+                    <a class="nav-link " data-value="team" href="#tips-berita">TIPS DAN BERITA</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="team" href="#">FAQ</a>
@@ -68,7 +68,7 @@
                     <a href="{{ route('login') }}" class="nav-link pl-3 pr-3" id="navButton">SIGN IN</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('register') }}" class="nav-link pl-3 pr-3" id="navButton">SIGN UP</a>
+                    <button class="nav-link pl-3 pr-3" data-toggle="modal" data-target="#signupModal" id="navButton">SIGN UP</button>
                 </li>
             </ul>
         </div>
@@ -779,7 +779,7 @@
 
 
     <!-- section tips berita -->
-    <section class="tips-berita">
+    <section class="tips-berita" id="tips-berita">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-5 col-md-9 tips-berita-title">
@@ -796,157 +796,7 @@
         </div>
     </section>
 
-    <!-- end of section tips berita -->
-    <!-- section berita list -->
-    <section class="tips-dan-berita" id="tipsberita"> 
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <h4 class="font-weight-bold text-center">BERITA DAN TIPS YANG TAK BOLEH KAMU LEWATKAN</h4>
-                    <div class="row justify-content-center">
-                        <div class="col-md-9 mt-3 mb-4" id="line-row">
-                            <div class="line"></div>
-                        </div>
-                    </div>                
-                </div>
-            </div>
-            
-            <div class="carousel-card berita-list">            
-                <div class="col-lg-12 col-md-12 mt-2">
-                    <div class="card berita-card">                        
-                        <div class="header">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                        </div>
-
-                        <div class="card-body">
-                            <div class="row">
-                                <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                            </div>                        
-                                        
-                            <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                        
-                            <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                        
-                            <div class="row mt-5 footer-card justify-content-end">                                                        
-                                <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-12 mt-2">
-                    <div class="card berita-card">                        
-                        <div class="header">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                        </div>
-
-                        <div class="card-body">
-                            <div class="row">
-                                <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                            </div>
-                                        
-                            <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                        
-                            <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                        
-                            <div class="row mt-5 footer-card justify-content-end">                                                        
-                                <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-12 mt-2">
-                    <div class="card berita-card">                        
-                        <div class="header">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                        </div>
-
-                        <div class="card-body">
-                            <div class="row">
-                                <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                            </div>
-                                        
-                            <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                        
-                            <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                        
-                            <div class="row mt-5 footer-card justify-content-end">                                                        
-                                <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-12 mt-2">
-                    <div class="card berita-card">                        
-                        <div class="header">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                        </div>
-
-                        <div class="card-body">
-                            <div class="row">
-                                <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                            </div>
-                                        
-                            <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                        
-                            <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                        
-                            <div class="row mt-5 footer-card justify-content-end">                                                        
-                                <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-12 mt-2">
-                    <div class="card berita-card">                        
-                        <div class="header">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                        </div>
-
-                        <div class="card-body">
-                            <div class="row">
-                                <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                            </div>
-                                        
-                            <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                        
-                            <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                        
-                            <div class="row mt-5 footer-card justify-content-end">                                                        
-                                <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-12 mt-2">
-                    <div class="card berita-card">                        
-                        <div class="header">
-                            <img src="{{ asset('/images/course-img1.png') }}" alt="" class="card-img-top">                                                     
-                        </div>
-
-                        <div class="card-body">
-                            <div class="row">
-                                <h6 class="berita-kategori font-weight-bold">Seni dan kemanusiaan</h6>
-                            </div>
-                                        
-                            <h4 class="card-title judul-berita">PAINTING AND SKETCH COURSE</h4>
-                                        
-                            <p class="berita-content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..........</p>
-                                        
-                            <div class="row mt-5 footer-card justify-content-end">                                                        
-                                <a href="#" class="btn-detail mr-3">LIHAT SELENGKAPNYA <i class="fa fa-angle-right ml-2"></i></a>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>        
-        </div>
-    </section>
-    <!-- end of section berita list -->
+    <!-- end of section tips berita -->    
 
     <!-- footer -->
     <footer id="dk-footer" class="dk-footer">
@@ -1105,6 +955,66 @@
 
     </footer>
 
+    <!-- modal signup -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header pl-3 pr-3">
+                    <h5 class="modal-title font-weight-bold" id="ModalDelete">PILIH OPSI BERIKUT</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>                
+                <div class="modal-body modal-basic-info">
+
+                    <div class="box-text pt-3 mt-5 d-flex">                    
+                        <img src="{{ asset('images/ant-design_info-circle-outlined-black.png') }}" alt="" class="img-fluid img-info mt-1 mr-2 ml-2"> 
+                        <p>Kamu mau daftar sebagai apa? Pilih satu diantara opsi berikut ini!</p>                
+                    </div>
+
+                    <div class="menu-list mt-4" onclick="window.location='{{ route('register') }}'">
+                        <div class="d-flex">                                
+                            <div class="col-md-2 menu-list-img mt-2">
+                                <img src="{{ asset('images/ant-design_user-outlined-blue.png') }}" class="img-fluid img-left-menu" alt="">
+                            </div>
+                                    
+                            <div class="col-md-9 mt-3">
+                                <p class="menu-header font-weight-bold mb-2">DAFTAR SEBAGAI PELAMAR</p>
+                                
+                                <p class="mb-0">Daftar sebagai pelamar dan mulai cari pekerjaan sesuai dengan kategori, minat, bakat yang kamu miliki.</p>                                                                    
+                                
+                            </div>
+
+                            <div class="row-option text-center">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>                    
+                        </div>
+                    </div>
+
+                    <div class="menu-list mt-3" onclick="window.location='{{ route('perusahaan.register') }}'">
+                        <div class="d-flex">                                
+                            <div class="col-md-2 menu-list-img mt-2">
+                                <img src="{{ asset('images/bi_building-blue.png') }}" class="img-fluid img-left-menu" alt="">
+                            </div>
+                                    
+                            <div class="col-md-9 mt-3">
+                                <p class="menu-header font-weight-bold mb-2">DAFTAR SEBAGAI PERUSAHAAN</p>
+                                
+                                <p class="mb-0">Daftar sebagai perusahaan dan mulai temukan kandidat terbaik untuk bekerja di perusahaanmu.</p>                                                                    
+                                
+                            </div>
+
+                            <div class="row-option text-center">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>                    
+                        </div>
+                    </div>
+
+                </div>                    
+            </div>
+        </div>
+    </div>
+    <!-- end of modal signup -->
 
 
     <!-- script -->

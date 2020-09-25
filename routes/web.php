@@ -21,18 +21,19 @@ Route::get('/home','HomeController@index')->name('home');
 //login biasa
 Auth::routes(['verify' => true]);
 
-Route::get('/register/pelamar', 'Applicant\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
+// Route::get('/register/pelamar', 'Applicant\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
 
 //login perushaan
 //sorry dicomment dulu soalnya rada gak make sense sama halaman admin
 // Route::get('/login/perusahaan', 'Perusahaan\AuthPerusahaanController@showLoginForm')->name('perusahaan.login');
-// Route::get('/register/perusahaan', 'Perusahaan\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
+Route::get('/register/perusahaan', 'Perusahaan\AuthPerusahaanController@showRegisterForm')->name('perusahaan.register');
 
 // applicant routes
 
 // berita
 
 Route::get('/tipsdanberita', 'BeritaController@index')->name('list.berita');
+Route::get('/tipsdanberita/cari', 'BeritaController@search')->name('list.berita.search');
 Route::get('/tipsdanberita/lifestyle', 'BeritaController@lifestyleKategori')->name('list.berita.lifestyle');
 Route::get('/tipsdanberita/tipskarir', 'BeritaController@tipsKarirKategori')->name('list.berita.tipsKarir');
 Route::get('/tipsdanberita/keahlian', 'BeritaController@keahlianKategori')->name('list.berita.keahlian');
@@ -118,25 +119,38 @@ Route::group([
   Route::get('/', 'DashboardAdminController@index')->name('admin.beranda');
   // perusahaan
   Route::get('/perusahaan', 'KelolaPerusahaanController@index')->name('admin.perusahaan.index');
+  Route::get('/perusahaan/cari', 'KelolaPerusahaanController@search')->name('admin.perusahaan.search');
   Route::get('/perusahaan/new', 'KelolaPerusahaanController@create')->name('admin.perusahaan.add');
   Route::get('/perusahaan/{id}', 'KelolaPerusahaanController@detail')->name('admin.perusahaan.detail');
   Route::get('/perusahaan/{id}/edit', 'KelolaPerusahaanController@edit')->name('admin.perusahaan.edit');
   Route::post('/perusahaan','KelolaPerusahaanController@store');
   Route::patch('/perusahaan/{id}','KelolaPerusahaanController@update');
   Route::delete('/perusahaan/{id}','KelolaPerusahaanController@destroy')->name('admin.perusahaan.delete');
+  // menu perusahaan
+  Route::get('/a-to-z', 'KelolaPerusahaanController@aToZ')->name('admin.perusahaan.name.asc');
+  Route::get('/z-to-a', 'KelolaPerusahaanController@zToA')->name('admin.perusahaan.name.desc');
+  Route::get('/updated', 'KelolaPerusahaanController@updatedat')->name('admin.perusahaan.updated');
+  Route::get('/older', 'KelolaPerusahaanController@older')->name('admin.perusahaan.older');
+
 
   // user
   Route::get('/user', 'KelolaUserController@index')->name('admin.user.index');
+  Route::get('/user/cari', 'KelolaUserController@search')->name('admin.user.search');
   Route::get('/user/new', 'KelolaUserController@create')->name('admin.user.add');
   Route::get('/user/{id}', 'KelolaUserController@detail')->name('admin.user.detail');
   Route::get('/user/{id}/edit', 'KelolaUserController@edit')->name('admin.user.edit');
   Route::post('/user','KelolaUserController@store');
   Route::patch('/user/{id}','KelolaUserController@update');
   Route::delete('/user/{id}','KelolaUserController@destroy')->name('admin.user.delete');
-
+  // menu user
+  Route::get('/a-to-z-user', 'KelolaUserController@aToZ')->name('admin.user.name.asc');
+  Route::get('/z-to-a-user', 'KelolaUserController@zToA')->name('admin.user.name.desc');
+  Route::get('/updated-user', 'KelolaUserController@updatedat')->name('admin.user.updated');
+  Route::get('/older-user', 'KelolaUserController@older')->name('admin.user.older');
 
   // berita
   Route::get('/berita', 'KelolaBeritaController@index')->name('admin.berita.index');
+  Route::get('/berita/cari', 'KelolaBeritaController@search')->name('admin.berita.search');
   Route::get('/berita/new', 'KelolaBeritaController@create')->name('admin.berita.add');
   Route::get('/berita/{id}', 'KelolaBeritaController@detail')->name('admin.berita.detail');
   Route::get('/berita/{id}/edit', 'KelolaBeritaController@edit')->name('admin.berita.edit');
@@ -144,6 +158,12 @@ Route::group([
   Route::patch('/berita/{id}','KelolaBeritaController@update');
   Route::delete('/berita/{id}','KelolaBeritaController@destroy')->name('admin.berita.delete');
   Route::delete('/berita','KelolaBeritaController@destroyModal')->name('admin.berita.delete.modal');
+  // menu berita
+  Route::get('/lifestyle', 'KelolaBeritaController@lifestyleKategori')->name('admin.berita.lifestyle');
+  Route::get('/tipskarir', 'KelolaBeritaController@tipsKarirKategori')->name('admin.berita.tipsKarir');
+  Route::get('/keahlian', 'KelolaBeritaController@keahlianKategori')->name('admin.berita.keahlian');
+  Route::get('/tentangperusahaan', 'KelolaBeritaController@tentangPerusahaanKategori')->name('admin.berita.tentang.perusahaan');
+  Route::get('/beritaumum', 'KelolaBeritaController@BeritaUmumKategori')->name('admin.berita.berita.umum');
   
 });
 

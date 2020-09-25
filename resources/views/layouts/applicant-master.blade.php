@@ -49,13 +49,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" data-value="about" href="{{ route('pelamar.beranda') }}">BERANDA</a>
+                    <a class="nav-link {{ request()->route()->named('pelamar.beranda') ? 'active' : '' }}" data-value="about" href="{{ route('pelamar.beranda') }}">BERANDA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="portfolio" href="{{ route('pelamar.loker') }}">LOWONGAN KERJA</a>
+                    <a class="nav-link {{ request()->route()->named('pelamar.loker') ? 'active' : '' }}" data-value="portfolio" href="{{ route('pelamar.loker') }}">LOWONGAN KERJA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " data-value="blog" href="{{ route('list.berita') }}">TIPS DAN BERITA</a>
+                    <a class="nav-link {{ request()->route()->named('list.berita') ? 'active' : '' }}" data-value="blog" href="{{ route('list.berita') }}">TIPS DAN BERITA</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-value="team" href="#">FAQ</a>

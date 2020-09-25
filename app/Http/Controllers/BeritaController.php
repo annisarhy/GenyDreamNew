@@ -13,6 +13,15 @@ class BeritaController extends Controller
  
     }
 
+    public function search(Request $request){		
+		$search = $request->search;
+     		
+		$listBerita = Berita::where('judul','like',"%".$search."%")->paginate(12);
+     		
+		return view('list-berita', compact('listBerita'));
+ 
+	}
+
     public function lifestyleKategori(){                
         $listBerita = Berita::orderBy('id', 'DESC')->where('id_kategori', '1')->paginate(12);
         return view('list-berita', compact('listBerita'));

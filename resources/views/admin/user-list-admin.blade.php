@@ -13,48 +13,35 @@
     
 
     <div class="row mt-5 pl-3 pr-3 justify-content-between">
-        <a href="{{ route('admin.user.add') }}" class="btn btn-lg pt-3 btn-tambah-user"><i class="fa fa-plus mr-3"></i>TAMBAH USER</a>
+        <a href="{{ route('admin.user.add') }}"  class="btn btn-lg pt-3 btn-tambah-user"><i class="fa fa-plus mr-3"></i>TAMBAH USER</a>
 
         <div class="form mt-2">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control form-search" placeholder="Cari Nama User" aria-label="Cari Nama User">
-                <div class="input-group-append">
-                    <button class="btn btn-search" type="button"><i class="fa fa-search"></i></button>
+            <form action="{{ route('admin.user.search') }}">
+                <div class="input-group mb-3">
+                    <input type="text" name="search" class="form-control form-search" placeholder="Cari Nama User" aria-label="Cari Nama User">
+                    <div class="input-group-append">
+                        <button class="btn btn-search" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
     <!-- sort by -->
-    <div class="row mt-4 pl-3 pr-3 justify-content-center">
-        <!-- (ini bisa diubah sesuai kebutuhan, class di btnnya aja yg samaain) form untuk sortby menggunakan button -->
+    <div class="row mt-4 pl-3 pr-3 menu justify-content-center">        
 
-        <a href="#" class="btn btn-link">ALL</a>
-        <a href="#" class="btn btn-link">A-Z</a>
-        <a href="#" class="btn btn-link">Z-A</a>
-        <a href="#" class="btn btn-link">UPDATED</a>
-        <a href="#" class="btn btn-link">OLDER</a>
-
-        <!-- kalo mau pake form bisa kayak gini ro atau bisa pake cara lain -->
-        <!-- <form action="">
-            <input type="submit" name="all" value="ALL" class="btn btn-link">
-
-            <input type="button" name="asc" value="A-Z" class="btn btn-link">
-
-            <input type="button" name="desc" value="Z-A" class="btn btn-link">
-
-            <input type="button" name="updated" value="UPDATED" class="btn btn-link">
-
-            <input type="button" name="older" value="OLDER" class="btn btn-link">
-
-        </form> -->
+        <a href="{{ route('admin.user.index') }}" class="btn btn-link {{ request()->route()->named('admin.user.index') ? 'active' : '' }}">ALL</a>
+        <a href="{{ route('admin.user.name.asc') }}" class="btn btn-link {{ request()->route()->named('admin.user.name.asc') ? 'active' : '' }}">A-Z</a>
+        <a href="{{ route('admin.user.name.desc') }}" class="btn btn-link {{ request()->route()->named('admin.user.name.desc') ? 'active' : '' }}">Z-A</a>
+        <a href="{{ route('admin.user.updated') }}" class="btn btn-link {{ request()->route()->named('admin.user.updated') ? 'active' : '' }}">UPDATED</a>
+        <a href="{{ route('admin.user.older') }}" class="btn btn-link {{ request()->route()->named('admin.user.older') ? 'active' : '' }}">OLDER</a>        
         
     </div>
 
     <hr>
 
     <div class="row mt-4 pl-3 pr-3">
-        <div class="table-responsive bg-white mx-auto mb-5 mt-5">          
+        <div class="table-responsive col-xs-12 bg-white mb-5 mt-5" style="min-width: 0;">          
             <table class="table table-hover table-borderless text-center">
                 <thead>
                     <tr>                        
@@ -79,8 +66,8 @@
     </div>
 
     <div class="row justify-content-center mt-4">
-            <!-- pagination -->
-        </div>
+        {{ $listUser->links() }} 
+    </div>
 
 </div>
     

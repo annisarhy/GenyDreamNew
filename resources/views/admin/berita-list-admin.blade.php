@@ -13,12 +13,11 @@
         <a href="{{ route('admin.berita.add') }}" class="btn btn-lg pt-3 btn-tambah-berita"><i class="fa fa-plus mr-3"></i>TAMBAH KONTEN</a>
 
         <div class="form mt-2">
-            <form action="">
+            <form action="{{ route('admin.berita.search') }}" method="GET">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control form-search" placeholder="Cari Nama Konten"
-                        aria-label="Cari Nama Konten">
+                    <input type="text" class="form-control form-search" name="search" placeholder="Cari Nama Konten" aria-label="Cari Nama Konten">
                     <div class="input-group-append">
-                        <button class="btn btn-search" type="button"><i class="fa fa-search"></i></button>
+                        <button class="btn btn-search" type="submit"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
             </form>
@@ -26,14 +25,13 @@
     </div>
 
     <!-- sort by -->
-    <div class="row mt-4 pl-3 pr-3 justify-content-center">       
-
-        <a href="#" class="btn btn-link text-capitalize">ALL</a>
-        <a href="#" class="btn btn-link text-capitalize">Lifestyle</a>
-        <a href="#" class="btn btn-link text-capitalize">Tips Karir</a>
-        <a href="#" class="btn btn-link text-capitalize">Keahlian</a>
-        <a href="#" class="btn btn-link text-capitalize">Tentang Perusahaan</a>       
-        <a href="#" class="btn btn-link text-capitalize">Berita Umum</a>       
+    <div class="row mt-4 pl-3 pr-3 berita-menu justify-content-center">       
+        <a href="{{ route('admin.berita.index') }}" class="btn btn-link text-capitalize {{ request()->route()->named('admin.berita.index') ? 'active' : '' }}">ALL</a>
+        <a href="{{ route('admin.berita.lifestyle') }}" class="btn btn-link text-capitalize {{ request()->route()->named('admin.berita.lifestyle') ? 'active' : '' }}">Lifestyle</a>
+        <a href="{{ route('admin.berita.tipsKarir') }}" class="btn btn-link text-capitalize {{ request()->route()->named('admin.berita.tipsKarir') ? 'active' : '' }}">Tips Karir</a>
+        <a href="{{ route('admin.berita.keahlian') }}" class="btn btn-link text-capitalize {{ request()->route()->named('admin.berita.keahlian') ? 'active' : '' }}">Keahlian</a>
+        <a href="{{ route('admin.berita.tentang.perusahaan') }}" class="btn btn-link text-capitalize {{ request()->route()->named('admin.berita.tentang.perusahaan') ? 'active' : '' }}">Tentang Perusahaan</a>       
+        <a href="{{ route('admin.berita.berita.umum') }}" class="btn btn-link text-capitalize {{ request()->route()->named('admin.berita.berita.umum') ? 'active' : '' }}">Berita Umum</a>       
 
     </div>
 
@@ -75,6 +73,8 @@
     <div class="row justify-content-center mt-4">
         {{ $listBerita->links() }} 
     </div>
+
+    
 </div>
 
 <!-- modal delete -->
@@ -120,7 +120,7 @@
 
 @endsection
 
-@section('js')
+@section('js-dashboard')
 <script>
 $(document).on('click','.deleteBerita',function(){
     var userID=$(this).attr('data-userid');    

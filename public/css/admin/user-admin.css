@@ -13,6 +13,13 @@ body{
     color: white;
 
 }
+.menu a{
+    color: #aca4a4;
+}
+
+.menu .active{
+    color: #68C8D8;
+}
 
 .form-search{
     background-color: white;
@@ -30,9 +37,10 @@ hr{
     height: 2px;
 }
 
-table .btn-detail{
-    color: #68C8D8;    
-}
+/* td{
+    word-break:break-all;
+} */
+
 
 
 

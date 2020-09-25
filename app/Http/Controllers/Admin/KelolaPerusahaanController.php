@@ -4,12 +4,45 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Perusahaan;
 class KelolaPerusahaanController extends Controller
 {
     public function index(){
-        $data['listPerusahaan'] = \App\Perusahaan::all();
+        $data['listPerusahaan'] = \App\Perusahaan::paginate(12);
         return view('admin.perusahaan-list-admin',$data);
+    }
+
+    public function search(Request $request){		
+		$search = $request->search;
+     		
+		$listPerusahaan = Perusahaan::where('nama','like',"%".$search."%")->paginate(12);
+     		
+		return view('admin.perusahaan-list-admin', compact('listPerusahaan'));
+ 
+	}
+
+    public function aToZ(){                
+        $listPerusahaan = Perusahaan::orderBy('nama', 'ASC')->paginate(12);
+        return view('admin.perusahaan-list-admin', compact('listPerusahaan'));
+ 
+    }
+
+    public function zToA(){                
+        $listPerusahaan = Perusahaan::orderBy('nama', 'DESC')->paginate(12);
+        return view('admin.perusahaan-list-admin', compact('listPerusahaan'));
+ 
+    }
+
+    public function updatedat(){                
+        $listPerusahaan = Perusahaan::orderBy('updated_at', 'DESC')->paginate(12);
+        return view('admin.perusahaan-list-admin', compact('listPerusahaan'));
+ 
+    }
+
+    public function older(){                
+        $listPerusahaan = Perusahaan::orderBy('created_at', 'ASC')->paginate(12);
+        return view('admin.perusahaan-list-admin', compact('listPerusahaan'));
+ 
     }
 
     public function create(){
