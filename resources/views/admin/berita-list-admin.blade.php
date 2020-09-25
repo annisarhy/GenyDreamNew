@@ -52,7 +52,7 @@
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="{{ route('admin.berita.edit',$berita->id) }}"><img src="{{ asset('images/mdi_pencil.png') }}" alt="">EDIT</a>
-                                    <button class="dropdown-item mt-2 deleteBerita"  data-userid="{{$berita->id}}"><img src="{{ asset('images/mdi_delete.png') }}" alt="">DELETE</button>
+                                    <button class="dropdown-item mt-2 deleteBerita"  data-userid="{{ $berita->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt="">DELETE</button>
                                 </div>
                             </div>
                         </div>

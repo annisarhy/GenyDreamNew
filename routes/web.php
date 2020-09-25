@@ -126,6 +126,7 @@ Route::group([
   Route::post('/perusahaan','KelolaPerusahaanController@store');
   Route::patch('/perusahaan/{id}','KelolaPerusahaanController@update');
   Route::delete('/perusahaan/{id}','KelolaPerusahaanController@destroy')->name('admin.perusahaan.delete');
+  Route::delete('/perusahaan','KelolaPerusahaanController@destroyModal')->name('admin.perusahaan.delete.modal');
   // menu perusahaan
   Route::get('/a-to-z', 'KelolaPerusahaanController@aToZ')->name('admin.perusahaan.name.asc');
   Route::get('/z-to-a', 'KelolaPerusahaanController@zToA')->name('admin.perusahaan.name.desc');

@@ -60,10 +60,7 @@
                                         href="{{ route('admin.perusahaan.edit',$perusahaan->id) }}"><img
                                             src="{{ asset('images/mdi_pencil.png') }}" alt="">
                                         EDIT</a>
-                                    <button class="dropdown-item mt-2" data-toggle="modal"
-                                        data-target="#deleteModal"><img
-                                            src="{{ asset('images/mdi_delete.png') }}" alt="">
-                                        DELETE</button>
+                                    <button class="dropdown-item mt-2 deletePerusahaan" data-userid="{{ $perusahaan->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt="">DELETE</button>
 
                                 </div>
                             </div>
@@ -103,7 +100,10 @@
                 </button>
             </div>
 
-            <div class="modal-body modal-basic-info">
+            <form action="{{ route('admin.perusahaan.delete.modal') }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <div class="modal-body modal-basic-info">
 
                 <div class="img-delete-container col-md-3 mx-auto">
                     <img src="{{ asset('images/jam_triangle-danger.png') }}"
@@ -114,6 +114,7 @@
                     <img src="{{ asset('images/ant-design_info-circle-outlined-black.png') }}"
                         alt="" class="img-fluid img-info mt-1 mr-2 ml-2">
                     <p>Apakah kamu yakin untuk menghapus data tersebut?</p>
+                    <input type="hidden" name="id_perusahaan" id="id_perusahaan">
                 </div>
 
             </div>
@@ -122,9 +123,20 @@
                 <button type="button" class="btn btn-cancel font-weight-bold" data-dismiss="modal">BATAL</button>
                 <button class="btn btn-delete font-weight-bold">DELETE</button>
             </div>
+            </form>            
         </div>
     </div>
 </div>
 <!-- end of modal delete -->
 
+@endsection
+
+@section('js-dashboard')
+<script>
+$(document).on('click','.deletePerusahaan',function(){
+    var userID=$(this).attr('data-userid');    
+    $('#id_perusahaan').val(userID); 
+    $('#deleteModal').modal('show'); 
+});
+</script>
 @endsection

@@ -110,4 +110,11 @@ class KelolaPerusahaanController extends Controller
     		return redirect()->route('admin.perusahaan.index')->with('error','Data Gagal Ditambahkan');
     	}
     }
+
+    public function destroyModal(Request $request){
+        $id_perusahaan=$request->input('id_perusahaan');        
+        Perusahaan::destroy($id_perusahaan);
+
+        return redirect()->route('admin.perusahaan.index')->with('success','Data Berhasil Dihapus');
+    }
 }

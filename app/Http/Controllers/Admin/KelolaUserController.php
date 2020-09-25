@@ -117,4 +117,5 @@ class KelolaUserController extends Controller
     		return redirect()->route('admin.user.index')->with('error','Data Gagal Ditambahkan');
     	}
     }
+    
 }

@@ -36,9 +36,11 @@
     </div>    
 @endsection
 
+@section('js')
+
 @yield('js-dashboard')
 
-@section('js')
+
 <script>
     function openNav() {
     document.getElementById("sidebar-wrapper").style.width = "250px";
