@@ -166,6 +166,10 @@ Route::group([
   Route::get('/tentangperusahaan', 'KelolaBeritaController@tentangPerusahaanKategori')->name('admin.berita.tentang.perusahaan');
   Route::get('/beritaumum', 'KelolaBeritaController@BeritaUmumKategori')->name('admin.berita.berita.umum');
   
+
+  // verifikasi pembayaran
+  Route::get('/verifikasi-pembayaran', 'VerifikasiPembayaranController@index')->name('admin.verifikasi.index');
+  Route::get('/verifikasi-pembayaran/detail', 'VerifikasiPembayaranController@detail')->name('admin.verifikasi.detail');
 });
 
 

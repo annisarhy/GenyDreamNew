@@ -1,0 +1,117 @@
+body{
+    background-color: rgb(63, 149, 169, 0.1);
+}
+
+.box-shadow{
+    background-color: white;    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* list user */
+.btn-switch{
+    background-color: white;
+    border: 1px solid #68C8D8;
+}
+
+.btn-switch:hover{
+    background-color: rgb(63, 149, 169, 0.1);
+    color: white;
+}
+.menu a{
+    color: #aca4a4;
+}
+
+.menu .active{
+    color: #68C8D8;
+}
+
+.form-search{
+    background-color: white;
+    border: none;    
+}
+
+.btn-search{
+    background-color: #68C8D8;
+    color: white;
+    border-right: 10px;
+}
+
+hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 2px;
+}
+
+.table-user{
+    display: none;
+}
+
+
+/* detail verifikasi */
+
+.box-text{
+    border: 1px dashed #68C8D8;    
+    border-radius: 10px;
+    background-color: rgb(63, 149, 169, 0.05);
+}
+
+.img-info{
+    height: 20px;
+}
+
+hr{
+    background-color: rgb(63, 149, 169, 0.1);
+    height: 2px;
+}
+
+.metode-pembayaran-title{
+    color: #BDBDBD;
+}
+
+.info-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.info-data-lainnya .info-content{
+    color: #4F4F4F;
+}
+
+.btn-delete{
+    background-color: #EB5757;
+    color: white;
+}
+
+.btn-verifikasi{
+    width: 80%;
+    background-color: #68C8D8;
+    color: white;
+}
+
+/* modal delete */
+
+.img-delete-container{    
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    background-color: rgb(242, 201, 76, 0.1);
+}
+
+.img-delete{
+    margin-top: 20%;
+    margin-left: auto;
+    width: 100%;
+}
+.box-text-delete{
+    border: 1px dashed #EB5757;
+    background-color: rgb(235, 87, 87, 0.1);
+    color: #4F4F4F;
+}
+
+.img-info{
+    height: 20px;
+}
+
+.btn-cancel{    
+    background-color: #FAFAFA;
+    color: #BDBDBD;    
+}

@@ -15,7 +15,7 @@
                 <a href="{{ route('admin.beranda') }}" class="list-group-item list-group-item-action {{ request()->route()->named('admin.beranda') ? 'active' : '' }}"><img src="{{ asset('images/gg_menu-grid-gray.png') }}" alt="" class="img-fluid mr-2">DASHBOARD</a>
                 <a href="{{ route('admin.perusahaan.index') }}" class="list-group-item list-group-item-action {{ request()->route()->named('admin.perusahaan.index') ? 'active' : '' }}"><img src="{{ asset('images/bi_building-gray.png') }}" alt="" class="img-fluid mr-2">KELOLA PERUSAHAAN</a>
                 <a href="{{ route('admin.user.index') }}" class="list-group-item list-group-item-action {{ request()->route()->named('admin.user.index') ? 'active' : '' }}"><img src="{{ asset('images/ant-design_user-outlined-gray.png') }}" alt="" class="img-fluid mr-2">KELOLA USER</a>
-                <a href="#" class="list-group-item list-group-item-action"><img src="{{ asset('images/la_money-bill-solid-gray.png') }}" alt="" class="img-fluid mr-2">VERIFIKASI PEMBAYARAN</a>
+                <a href="{{ route('admin.verifikasi.index')}}" class="list-group-item list-group-item-action {{ request()->route()->named('admin.verifikasi.index') ? 'active' : '' }}"><img src="{{ asset('images/la_money-bill-solid-gray.png') }}" alt="" class="img-fluid mr-2">VERIFIKASI PEMBAYARAN</a>
                 <a href="{{ route('admin.berita.index') }}" class="list-group-item list-group-item-action {{ request()->route()->named('admin.berita.index') ? 'active' : '' }}"><img src="{{ asset('images/bx_bx-news-gray.png') }}" alt="" class="img-fluid mr-2">KELOLA KONTEN</a>
 
                 <a href="#" class="list-group-item list-group-item-action list-item-out mt-5"><i class="fa fa-arrow-left mr-3"></i>KELUAR</a>
