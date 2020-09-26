@@ -11,6 +11,9 @@
                     <div class="container">
                         <div class="container-fluid">
                             <h5 class="card-title">DAFTAR SEBAGAI PERUSAHAAN</h5>
+                            @if (session('error'))
+                                <div class="alert alert-danger">{{ session('error') }}</div>
+                            @endif
                             <div class="box-text pt-3 mt-5 d-flex">                    
                                 <img src="{{ asset('images/ant-design_info-circle-outlined-black.png') }}" alt="" class="img-fluid img-info mt-1 mr-2 ml-2"> 
                                 <p>Selamat datang! Silahkan isi kolom yang tersedia untuk melanjutkan.</p>                
