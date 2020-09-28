@@ -52,8 +52,9 @@ Route::group([
 ], function () {
   Route::get('/', 'BerandaController@index')->name('pelamar.beranda');
   Route::get('/profile', 'ProfileController@index')->name('pelamar.profile');
+  Route::post('/profile/create/rpendidikan', 'ProfileController@createRPendidikan')->name('pelamar.profile.create.rpendidikan');
   Route::patch('/profile/edit/{id}', 'ProfileController@updateProfile')->name('pelamar.profile.basic.update');
-  Route::patch('/profile/edit/{id}/deskripsi', 'ProfileController@updateProfile')->name('pelamar.profile.deskripsi.update');
+  Route::patch('/profile/edit/{id}/deskripsi', 'ProfileController@updateDesc')->name('pelamar.profile.deskripsi.update');
   Route::patch('/profile/edit/{id}/keahlian', 'ProfileController@updateProfile')->name('pelamar.profile.keahlian.update');
   Route::patch('/profile/edit/{id}/rpekerjaan', 'ProfileController@updateProfile')->name('pelamar.profile.rpekerjaan.update');
   Route::patch('/profile/edit/{id}/rpendidikan', 'ProfileController@updateProfile')->name('pelamar.profile.rpendidikan.update');
@@ -84,7 +85,7 @@ Route::group([
 Route::group([
   'namespace' => 'Perusahaan',
   'prefix' => 'perusahaan',
-  'middleware' => ['perusahaan','auth','verified'],
+  'middleware' => ['perusahaan','auth','verified'], 
 ], function () {
   Route::get('/', 'BerandaController@index')->name('perusahaan.beranda');
   Route::get('/profile-perusahaan', 'ProfilePerusahaanController@index')->name('perusahaan.profile');  

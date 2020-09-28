@@ -27,10 +27,15 @@ class Pelamar extends Model
     return $this->belongsTo('\App\User','id_user');
   }
 
+  public function pendidikan(){
+    return $this->hasMany('App\RPendidikan','id_pelamar', 'id');
+  }
+
   public function getTtlAttribute()
   {
     return $this->tempat_lahir . ',' . $this->tgl_lahir;
   }
+
 
   public function getGenderAttribute()
   {

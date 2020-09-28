@@ -103,7 +103,7 @@
 
                             <hr>
 
-                            <p class="description mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, labore vero quos sunt qui laudantium non omnis, consequuntur reiciendis consectetur illum reprehenderit excepturi ipsum, harum error maxime. Unde, tempore? Deserunt.</p>
+                            <p class="description mt-5">{{ $profile->deskripsi_diri }}</p>
                         </div>
                     </div>
 
@@ -118,27 +118,29 @@
                             <hr>
 
                             <div class="education-body">
+                                @foreach ($profile->pendidikan as $edu)
+                                    
                                 <div class="education-row mt-2">
                                     <div class="d-flex">
                                         <img src="{{ asset('images/la_user-graduate-solid.png') }}" alt="" class="education-img">
 
-                                        <p class="education-level mt-4 ml-4">PERGURUAN TINGGI</p>
+                                        <p class="education-level mt-4 ml-4">{{ $edu->jenjang->nama_jenjang }}</p>
                                     </div>
 
                                     <div class="education-detail pl-4 mt-3">
-                                        <h3 class="university-name mb-1">INSTITUT TEKNOLOGI BANDUNG</h3>
-                                        <p class="major text-capitalize">jurusan teknik informatika</p>        
+                                        <h3 class="university-name mb-1">{{ $edu->nama_sekolah }}</h3>
+                                        <p class="major text-capitalize">{{ $edu->jurusan }}</p>        
                                         
                                         <div class="row">
                                             <div class="col-md-8">
                                                 <div class="d-flex duration-of-education mt-2">
                                                     <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                                    <p class="ml-1">Dari Juni 2018 - Juni 2022 (expected)</p>
+                                                    <p class="ml-1">Dari {{ Carbon\Carbon::parse($edu->tgl_mulai)->format('M Y') }}  sampai {{ Carbon\Carbon::parse($edu->tgl_akhir)->format('M Y') }} </p>
                                                 </div>                                            
                                             </div>
 
                                             <div class="col-md-4">
-                                                <p class="final-score">Nilai Akhir : 3,78</p>
+                                                <p class="final-score">Nilai Akhir : {{ $edu->nilai_akhir }}</p>
                                             </div>
                                         </div>
 
@@ -149,40 +151,7 @@
                                         </div>
                                     </div>
                                 </div>                                                                                                
-
-                                <!-- contoh 2 -->
-                                <div class="education-row mt-2">
-                                    <div class="d-flex">
-                                        <img src="{{ asset('images/la_user-graduate-solid.png') }}" alt="" class="education-img">
-
-                                        <p class="education-level mt-4 ml-4">Sekolah menengah kejuruan</p>
-                                    </div>
-
-                                    <div class="education-detail pl-4 mt-3">
-                                        <h3 class="university-name mb-1">SMK Negeri 4 bandung</h3>
-                                        <p class="major text-capitalize">jurusan rekayasa perangkat lunak</p>        
-                                        
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <div class="d-flex duration-of-education mt-2">
-                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                                    <p class="ml-1">Dari Juni 2015 - Juni 2018</p>
-                                                </div>                                            
-                                            </div>
-
-                                            <div class="col-md-4">
-                                                <p class="final-score">Nilai Akhir : 3,78</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#educationModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
-
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePendidikanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -640,7 +609,7 @@
                         <div class="col-md-6">
                             <label class="form-group has-float-label">
                                 <select class="form-control custom-select" name="jen_kel">
-                                    <option selected>-- Pilih Gender --</option>
+                                    <option value="0" selected>-- Pilih Gender --</option>
                                     <option value="p" {{ old('p',@$profile->jen_kel) == "p" ? 'selected' : '' }}>Perempuan</option>
                                     <option value="l" {{ old('p',@$profile->jen_kel) == "l" ? 'selected' : '' }}>Laki-laki</option>                                
                                 </select>
@@ -699,15 +668,17 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.deskripsi.update',$profile->id) }}" method="POST"> 
+                @csrf
+                @method("PATCH")
                 <div class="modal-body modal-desctiption">                    
 
                     <p class="mt-4">Masukan deskripsi singkat tentang dirimu mulai dari keahlianmu hingga motto hidupmu!</p>
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <textarea type="text" name="deskripsi" value="" class="form-control" id="deskripsi" placeholder="DESKRIPSI" rows="10"></textarea>
-                            <label for="deskripsi">DESKRIPSI</label>
+                            <textarea type="text" name="deskripsi_diri"  class="form-control" id="deskripsi_diri" placeholder="DESKRIPSI" rows="10" required>{{ $profile->deskripsi_diri }}</textarea>
+                            <label for="deskripsi_diri">DESKRIPSI</label>
                         </span>
                     </div>
 
@@ -738,32 +709,32 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.create.rpendidikan') }}" method="POST"> 
+                @csrf
+                @method("post")
                 <div class="modal-body modal-education mt-4">                    
-
+                <input type="text" value="{{$profile->id}}" style="display: none" name="id_pelamar" id="id_pelamar">
                     <label class="form-group has-float-label">
-                        <select class="form-control custom-select" name="jenjang-pendidikan">
+                        <select class="form-control custom-select" name="id_jenjang" id="id_jenjang">
                             <option selected>-- Pilih Jenjang Pendidikan --</option>
-                            <option value="perguruan tinggi">PERGURUAN Tinggi</option>
-                            <option value="sekolah menengan kejuruan">Sekolah Menengan Kejuruan</option>
-                            <option value="sekolah menengan atas">Sekolah Menengan Atas</option>
-                            <option value="sekolah menengan pertama">Sekolah Menengan Pertama</option>
-                            <option value="sekolah dasar">Sekolah Dasar</option>
+                            @foreach ($jenjang as $pendidikan)
+                            <option value="{{ $pendidikan->id }}">{{ $pendidikan->nama_jenjang }}</option>
+                            @endforeach             
                         </select>
                         <span>PENDIDIKAN</span>
                     </label>
 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="institution_name" value="" class="form-control" id="institution_name" placeholder="NAMA INSTANSI PENDIDIKAN" required="required">
-                            <label for="institution_name">NAMA INSTANSI PENDIDIKAN</label>
+                            <input type="text" name="nama_sekolah" value="" class="form-control" id="nama_sekolah" placeholder="NAMA INSTANSI PENDIDIKAN" required="required">
+                            <label for="nama_sekolah">NAMA INSTANSI PENDIDIKAN</label>
                         </span>
                     </div>
                     
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="major" value="" class="form-control" id="major" placeholder="JURUSAN" required="required">
-                            <label for="major">JURUSAN</label>
+                            <input type="text" name="jurusan" value="" class="form-control" id="jurusan" placeholder="JURUSAN" required="required">
+                            <label for="jurusan">JURUSAN</label>
                         </span>
                     </div>
                                         
@@ -773,14 +744,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start" name="bulan-awal-pendidikan"></select>
+                                    <select class="form-control custom-select" id="months-start" name="months_start"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start" name="tahun-awal-pendidikan"></select>
+                                    <select class="form-control custom-select" id="years-start" name="years_start"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -792,14 +763,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end" name="bulan-akhir-pendidikan"></select>
+                                    <select class="form-control custom-select" id="months-end" name="months_end"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end" name="tahun-akhir-pendidikan"></select>
+                                    <select class="form-control custom-select" id="years-end" name="years_end"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -1254,7 +1225,7 @@
             let monthNum = new Date(2020, m).getMonth()
             let month = monthNames[monthNum];
             var monthElem = document.createElement("option");
-            monthElem.value = monthNum; 
+            monthElem.value = monthNum+1; 
             monthElem.textContent = month;            
             
             $("#months-start").append(monthElem);            
@@ -1264,7 +1235,7 @@
             let monthNum = new Date(2020, m).getMonth()
             let month = monthNames[monthNum];
             var monthElem = document.createElement("option");
-            monthElem.value = monthNum; 
+            monthElem.value = monthNum+1; 
             monthElem.textContent = month;            
             
             $("#months-end").append(monthElem);            
