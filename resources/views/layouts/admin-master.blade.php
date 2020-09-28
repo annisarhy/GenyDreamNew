@@ -64,7 +64,7 @@
                         <li role="presentation"><a class="dropdown-item" role="menuitem" id="profilebutton" href="#">Profile</a></li>
                                                 
                         <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Keluar</a>
+                        <a class="dropdown-item" role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Keluar</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

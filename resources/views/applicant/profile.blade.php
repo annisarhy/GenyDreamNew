@@ -358,19 +358,19 @@
                                 <div class="file-row col-md-12">
                                     <p class="file-name mt-5 font-weight-bold mb-1 ml-1">FILE CV</p>
                                     <!-- link mengarah ke file pdfnya -->
-                                    <a href="#" class="cv-link row ml-1 p-2">CV Anna Minerva.pdf</a>
+                                    <a href="#" class="cv-link row ml-1 p-2"><i class="fa fa-file mt-1 mr-2"></i>CV Anna Minerva.pdf</a>
                                 </div> 
                                 
                                 <div class="file-row col-md-12">
                                     <p class="file-name mt-5 font-weight-bold mb-1 ml-1">FILE PENDUKUNG</p>
                                     <!-- link mengarah ke file pdfnya -->
-                                    <a href="#" class="cv-link row ml-1 p-2">File pendukung satu.pdf</a>
+                                    <a href="#" class="cv-link row ml-1 p-2"><i class="fa fa-file mt-1 mr-2"></i>File pendukung satu.pdf</a>
                                 </div>
 
                                 <div class="file-row col-md-12">
                                     <p class="file-name mt-5 font-weight-bold mb-1 ml-1">FILE PENDUKUNG</p>
                                     <!-- link mengarah ke file pdfnya -->
-                                    <a href="#" class="cv-link row ml-1 p-2">File pendukung dua.pdf</a>
+                                    <a href="#" class="cv-link row ml-1 p-2"><i class="fa fa-file mt-1 mr-2"></i>File pendukung dua.pdf</a>
                                 </div>
                             </div>
                             
@@ -899,7 +899,7 @@
             
             <!-- form -->
             <form action="">
-                <div class="modal-body modal-desctiption">                            
+                <div class="modal-body modal-skill">                            
 
                     <div class="skill-content-modal">
                         <div class="form-group mt-4">
@@ -910,8 +910,8 @@
                         </div>
 
                         <div class="form-group">                        
-                            <input type="range" class="form-control-range range-skill" id="range_skill" name="range_skill" min="0" max="100" step="10">
-                        </div>
+                            <input type="range" class="form-control-range range-skill" id="range_skill" name="range_skill" min="0" max="100" step="10">                                                        
+                        </div>                                                                        
                     </div>                    
                     
 
@@ -1052,6 +1052,19 @@
                     
 
                     <button class="btn btn-block btn-add-cv mt-5" type="button"><i class="fa fa-plus"></i>TAMBAH SKILL</button>
+
+
+                    <!-- list file yg ada di db -->
+                    <div class="delete-file">
+                        <div class="file-row col-md-12 pr-3 pl-0">
+                             <p class="file-name mt-5 font-weight-bold mb-1 ml-1">FILE CV</p><!-- Nama File -->
+                            <!-- link mengarah ke file pdfnya -->
+                            <div class="cv-link-modal file-container">
+                                <a href="#" class="ml-1 p-2 d-block"><i class="fa fa-file mt-1 mr-2"></i> CV Anna Minerva.pdf</a>                            
+                                <button class="btn btn-link btn-delete-file mt-3 p-2" type="button"><img src="{{ asset('images/mdi_delete.png') }}" alt="">Hapus</button>
+                            </div>                            
+                        </div> 
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -1320,16 +1333,36 @@
     $(document).ready(function(){
 
         // skill modal
-        $('.btn-add-more').click(function(){
-            var html = $('.skill-content-modal').html();
-            $('.skill-content-modal').after(html);
+        $('.btn-add-more').click(function(e) {
+            e.preventDefault();
+
+            $(".skill-content-modal").append(
+                '<div>'
+                    +'<div class="form-group mt-6">'
+                        +'<span class="has-float-label mt-5">'
+                            +'<input type="text" name="nama_skill" value="" class="form-control" id="nama_skill" placeholder="NAMA SKILL"></input>'
+                            +'<label for="nama_skill">NAMA SKILL</label>'
+                        +'</span>'
+                    +'</div>'
+
+                    +'<div class="form-group mb-0">'
+                        +'<input type="range" class="form-control-range range-skill" id="range_skill" name="range_skill" min="0" max="100" step="10">'
+                    +'</div>'
+                    +'<button class="btn btn-link pull-right btn-delete-clone-skill" type="button"><img src="{{ asset('images/mdi_delete.png') }}" alt="">Hapus</button>'
+                +'</div>');
+        });
+        
+        $('.skill-content-modal').on('click', '.btn-delete-clone-skill', function(e) {
+            e.preventDefault();
+
+            $(this).parent().remove();
         });
 
         // cv modal
         $('.btn-add-cv').click(function(){
             var html = $('.cv-content-modal').html();
             $('.cv-content-modal').after(html);
-        });
+        });      
 
         // social media dan portofolio
         $(".more-social-media").slice(0, 3).show();
@@ -1344,7 +1377,7 @@
                     $(".btn-view-more").fadeOut('slow');
                 }
             })
-    });
+    });    
 </script>
 
 @endsection
