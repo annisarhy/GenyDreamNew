@@ -327,7 +327,7 @@ body{
 /* cv dan file pendukung section */
 .cv-link{
     border: 1px dashed rgb(104, 200, 206);
-    background: rgb(104, 200, 206, 0.2);
+    background: rgba(187, 215, 218, 0.2);
 }
 
 /* portofolio section */
@@ -460,6 +460,10 @@ body{
     color: #68C8D8;
 }
 
+.btn-delete-clone-skill{
+ color: #EB5757;
+}
+
 .inputfile {
 	width: 0.1px;
 	height: 0.1px;
@@ -489,6 +493,16 @@ body{
 	cursor: pointer;
 }
 
+.cv-link-modal{
+    border: 1px dashed rgb(104, 200, 206);
+    background: rgb(104, 200, 206, 0.2);
+    position: relative;    
+}
+
+.btn-delete-file{
+    color: #EB5757;    
+    
+}
 /* social media and portofolio */
 .btn-view-more{
     border: 2px solid #68C8D8;
