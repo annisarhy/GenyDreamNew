@@ -62,6 +62,7 @@ Route::group([
   Route::patch('/profile/edit/{id}/rpekerjaan', 'ProfileController@updateProfile')->name('pelamar.profile.rpekerjaan.update');
   Route::patch('/profile/edit/{id}/rpendidikan', 'ProfileController@updateProfile')->name('pelamar.profile.rpendidikan.update');
   Route::patch('/profile/edit/{id}/kompetensi', 'ProfileController@updateProfile')->name('pelamar.profile.kompetensi.update');
+  Route::delete('/profile','ProfileController@destroyPendidikanModal')->name('pelamar.profile.delete.pendidikan');
 
   Route::get('/loker', 'LowonganKerjaController@index')->name('pelamar.loker');
   Route::get('/loker/{id}', 'LowonganKerjaController@detail')->name('pelamar.loker.detail');

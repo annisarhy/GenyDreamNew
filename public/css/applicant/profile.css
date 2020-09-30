@@ -511,7 +511,9 @@ body{
 
 
 
-
+input:focus, textarea {
+    outline: none !important;
+}
 /* floating label */
 .has-float-label{
 	display:block;
