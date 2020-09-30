@@ -53,6 +53,9 @@ Route::group([
   Route::get('/', 'BerandaController@index')->name('pelamar.beranda');
   Route::get('/profile', 'ProfileController@index')->name('pelamar.profile');
   Route::post('/profile/create/rpendidikan', 'ProfileController@createRPendidikan')->name('pelamar.profile.create.rpendidikan');
+  Route::post('/profile/create/rpekerjaan', 'ProfileController@createRPekerjaan')->name('pelamar.profile.create.rpekerjaan');
+  Route::post('/profile/create/rkeahlian', 'ProfileController@createRKeahlian')->name('pelamar.profile.create.rkeahlian');
+  Route::post('/profile/create/rkompetensi', 'ProfileController@createRKompetensi')->name('pelamar.profile.create.rkompetensi');
   Route::patch('/profile/edit/{id}', 'ProfileController@updateProfile')->name('pelamar.profile.basic.update');
   Route::patch('/profile/edit/{id}/deskripsi', 'ProfileController@updateDesc')->name('pelamar.profile.deskripsi.update');
   Route::patch('/profile/edit/{id}/keahlian', 'ProfileController@updateProfile')->name('pelamar.profile.keahlian.update');

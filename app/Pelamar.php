@@ -31,6 +31,16 @@ class Pelamar extends Model
     return $this->hasMany('App\RPendidikan','id_pelamar', 'id');
   }
 
+  public function pekerjaan(){
+    return $this->hasMany('App\RPekerjaan','id_pelamar', 'id');
+  }
+  public function keahlian(){
+    return $this->hasMany('App\RKeahlian','id_pelamar', 'id');
+  }
+  public function kompetensi(){
+    return $this->hasMany('App\RKompetensi','id_pelamar', 'id');
+  }
+
   public function getTtlAttribute()
   {
     return $this->tempat_lahir . ',' . $this->tgl_lahir;

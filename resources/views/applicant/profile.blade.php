@@ -145,9 +145,9 @@
                                         </div>
 
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#educationModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit btn-edit-pendidikan mr-3" data-pendidikanId="{{ $edu->id }}" data-jenjang="{{ $edu->id_jenjang }}" data-sekolah="{{ $edu->nama_sekolah }}" data-jurusan="{{ $edu->jurusan }}" data-mulai-pendidikan="{{ $edu->tgl_mulai }}" data-akhir-pendidikan="{{ $edu->tgl_akhir }}" data-nilai-akhir="{{ $edu->nilai_akhir }}"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePendidikanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            <button class="btn btn-delete btn-delete-pendidikan" data-idPendidikan="{{ $edu->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
                                     </div>
                                 </div>                                                                                                
@@ -168,16 +168,18 @@
 
                             <div class="work-experience-body">
                                 <div class="work-experience-row mt-2">
+                                @foreach ($profile->pekerjaan as $job)
                                     
+                                  
                                     <img src="{{ asset('images/la_user-tie-solid-blue.png') }}" alt="" class="work-experience-img">                                        
                                     
                                     <div class="work-experience-detail pl-4 mt-3">
-                                        <h3 class="company-name mb-1">CV. Triwikrama</h3>
-                                        <p class="job-title text-capitalize">Front end developer</p>        
+                                    <h3 class="company-name mb-1">{{ $job->nama_perusahaan }}</h3>
+                                        <p class="job-title text-capitalize">{{ $job->jabatan_terakhir }}</p>        
                                                                                 
                                         <div class="d-flex duration-of-work mt-4">
                                             <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                            <p class="ml-1">From Oktober 2017 - Desember 2017</p>
+                                            <p class="ml-1">From {{ Carbon\Carbon::parse($job->tgl_mulai)->format('M Y') }} sampai {{ Carbon\Carbon::parse($job->tgl_akhir)->format('M Y') }}</p>
                                         </div>                                                                                                                                    
                                         
                                         <div class="d-flex btn-editdelete">
@@ -187,30 +189,11 @@
                                         </div>
                                     </div>
                                 </div>                                                                                                
-
-                                <!-- contoh 2 -->                                
-                                <div class="work-experience-row mt-2">
-                                    
-                                    <img src="{{ asset('images/la_user-tie-solid-blue.png') }}" alt="" class="work-experience-img">                                        
-                                    
-                                    <div class="work-experience-detail pl-4 mt-3">
-                                        <h3 class="company-name mb-1">CV. Triwikrama</h3>
-                                        <p class="job-title text-capitalize">Front end developer</p>        
-                                                                                
-                                        <div class="d-flex duration-of-work mt-4">
-                                            <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                            <p class="ml-1">From Oktober 2017 - Desember 2017</p>
-                                        </div>                                                                                                                                    
-                                        
-                                        <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#workModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
-
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePekerjaanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach 
+                                
                             </div>
                         </div>
+                    </div>
                     </div>
 
                     <!-- Skills -->
@@ -224,49 +207,20 @@
                             <hr>
 
                             <div class="skills-body">
+
+                                @foreach ($profile->keahlian as $skill)
                                 <div class="container skill-content pr-5 pl-5 pt-3 pb-3">
-                                    <p class="skill-name font-weight-bold">Designer</p>
+                                    <p class="skill-name font-weight-bold">{{$skill->nama_keahlian}}</p>
 
                                     <div class="progress-container d-flex">
                                         <div class="progress flex-fill mt-1 mr-2">
-                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: {{ $skill->persentase }}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
-                                        <p class="flex-shrink percentage">50%</p>
+                                        <p class="flex-shrink percentage">{{ $skill->persentase }}%</p>
                                     </div> 
                                 </div>
-
-                                <div class="container skill-content pr-5 pl-5 pt-3 pb-3">
-                                    <p class="skill-name font-weight-bold">Communication</p>
-
-                                    <div class="progress-container d-flex">
-                                        <div class="progress flex-fill mt-1 mr-2">
-                                            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <p class="flex-shrink percentage">80%</p>
-                                    </div> 
-                                </div>
-
-                                <div class="container skill-content pr-5 pl-5 pt-3 pb-3">
-                                    <p class="skill-name font-weight-bold">Bootstrap</p>
-
-                                    <div class="progress-container d-flex">
-                                        <div class="progress flex-fill mt-1 mr-2">
-                                            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <p class="flex-shrink percentage">90%</p>
-                                    </div> 
-                                </div>
-
-                                <div class="container skill-content pr-5 pl-5 pt-3 pb-3">
-                                    <p class="skill-name font-weight-bold">Javascript</p>
-
-                                    <div class="progress-container d-flex">
-                                        <div class="progress flex-fill mt-1 mr-2">
-                                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <p class="flex-shrink percentage">80%</p>
-                                    </div> 
-                                </div>
+                                @endforeach
+            
                             </div>
                         </div>
                     </div>
@@ -281,24 +235,25 @@
 
                             <hr>
 
+                            @foreach ($profile->kompetensi as $seminar)
                             <div class="competence-body">
                                 <div class="competence-row mt-2">
                                     <div class="d-flex">
                                         <img src="{{ asset('images/carbon_certificate.png') }}" alt="" class="competence-img">
 
-                                        <h3 class="competence-name mt-4 ml-4">MASTER UI/UX COURSE</h3>
+                                    <h3 class="competence-name mt-4 ml-4">{{ $seminar->nama_kompetensi }}</h3>
                                     </div>
 
                                     <div class="education-detail pl-5 mt-3">                                        
-                                        <p class="seminar-place text-capitalize ml-3"><i class="fa fa-map-marker mr-2"></i>Bandung, Jawa Barat, Indonesia</p>
+                                        <p class="seminar-place text-capitalize ml-3"><i class="fa fa-map-marker mr-2"></i>{{ $seminar->lokasi }}</p>
 
-                                        <p class="seminar-description ml-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem labore dolor, ratione iste saepe aspernatur consectetur quod, aliquid impedit doloribus accusamus blanditiis, est ipsa facere odio distinctio soluta. Aut!</p>
+                                        <p class="seminar-description ml-3">{{ $seminar->keterangan }}</p>
                                         
                                         <div class="row">
                                             <div class="col-md-8">
                                                 <div class="d-flex duration-of-seminar mt-2 ml-3">
                                                     <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                                    <p class="ml-1">Dari Mei 2019 - Juli 2019 </p>
+                                                    <p class="ml-1">Dari {{ Carbon\Carbon::parse($seminar->tgl_mulai)->format('M Y') }} sampai {{ Carbon\Carbon::parse($seminar->tgl_akhir)->format('M Y') }} </p>
                                                 </div>                                            
                                             </div>                                            
                                         </div>    
@@ -310,37 +265,9 @@
                                         </div>
                                     </div>
                                 </div>                                                                                                
-
-                                <!-- contoh 2 -->                                
-                                <div class="competence-row mt-2">
-                                    <div class="d-flex">
-                                        <img src="{{ asset('images/carbon_certificate.png') }}" alt="" class="competence-img">
-
-                                        <h3 class="competence-name mt-4 ml-4">BRANDING FOR INTERPRENEUR</h3>
-                                    </div>
-
-                                    <div class="education-detail pl-5 mt-3">                                        
-                                        <p class="seminar-place text-capitalize ml-3"><i class="fa fa-map-marker mr-2"></i>Bandung, Jawa Barat, Indonesia</p>
-
-                                        <p class="seminar-description ml-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem labore dolor, ratione iste saepe aspernatur consectetur quod, aliquid impedit doloribus accusamus blanditiis, est ipsa facere odio distinctio soluta. Aut!</p>
-                                        
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <div class="d-flex duration-of-seminar mt-2 ml-3">
-                                                    <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                                    <p class="ml-1">Dari September 2019 - Februari 2020 </p>
-                                                </div>                                            
-                                            </div>                                            
-                                        </div>    
-                                        
-                                        <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#kompetensiModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
-
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePelatihanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+                            @endforeach
+
                         </div>
                     </div>
 
@@ -713,6 +640,7 @@
                 @csrf
                 @method("post")
                 <div class="modal-body modal-education mt-4">                    
+                <input type="hidden" name="id_pendidikan" id="id_pendidikan">
                 <input type="text" value="{{$profile->id}}" style="display: none" name="id_pelamar" id="id_pelamar">
                     <label class="form-group has-float-label">
                         <select class="form-control custom-select" name="id_jenjang" id="id_jenjang">
@@ -816,19 +744,22 @@
             </div>            
             
             <!-- form -->
-            <form action="">
-                <div class="modal-body modal-work-experience mt-4">                                    
+            <form action="{{ route('pelamar.profile.create.rpekerjaan') }}" method="POST"> 
+                @csrf
+                @method("post")
+                <div class="modal-body modal-work-experience mt-4">       
+                <input type="text" value="{{$profile->id}}" name="id_pelamar" id="id_pelamar" style="display: none">                             
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="company_name" value="" class="form-control" id="company_name" placeholder="NAMA PERUSAHAAN" required="required">
-                            <label for="company_name">NAMA PERUSAHAAN</label>
+                            <input type="text" name="nama_perusahaan" value="" class="form-control" id="nama_perusahaan" placeholder="NAMA PERUSAHAAN" required="required">
+                            <label for="nama_perusahaan">NAMA PERUSAHAAN</label>
                         </span>
                     </div>
                     
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="job_title" value="" class="form-control" id="job_title" placeholder="JABATAN TERAKHIR" required="required">
-                            <label for="job_title">JABATAN TERAKHIR</label>
+                            <input type="text" name="jabatan_terkahir" value="" class="form-control" id="jabatan_terkahir" placeholder="JABATAN TERAKHIR" required="required">
+                            <label for="jabatan_terkahir">JABATAN TERAKHIR</label>
                         </span>
                     </div>
                                         
@@ -838,14 +769,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start-work" name="bulan-awal-kerja"></select>
+                                    <select class="form-control custom-select" id="months_start_work" name="months_start_work"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start-work" name="tahun-awal-kerja"></select>
+                                    <select class="form-control custom-select" id="years_start_work" name="years_start_work"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -857,14 +788,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end-work" name="bulan-akhir-kerja"></select>
+                                    <select class="form-control custom-select" id="months_end_work" name="months_end_work"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end-work" name="tahun-akhir-kerja"></select>
+                                    <select class="form-control custom-select" id="years_end_work" name="years_end_work"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -898,24 +829,31 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.create.rkeahlian') }}" method="POST"> 
+                @csrf
+                @method("post")
                 <div class="modal-body modal-skill">                            
 
                     <div class="skill-content-modal">
+                    <input type="text" id="id_pelamar" name="id_pelamar" value="{{ $profile->id }}" style="display: none">
                         <div class="form-group mt-4">
                             <span class="has-float-label">
-                                <input type="text" name="nama_skill" value="" class="form-control" id="nama_skill" placeholder="NAMA SKILL"></input>
-                                <label for="nama_skill">NAMA SKILL</label>
+                                <input type="text" name="nama_keahlian" value="" class="form-control" id="nama_keahlian" placeholder="NAMA SKILL"></input>
+                                <label for="nama_keahlian">NAMA SKILL</label>
                             </span>                        
                         </div>
 
                         <div class="form-group">                        
-                            <input type="range" class="form-control-range range-skill" id="range_skill" name="range_skill" min="0" max="100" step="10">                                                        
-                        </div>                                                                        
+                            <input type="range" class="form-control-range range-skill" id="persentase" name="persentase" min="0" max="100" step="10" onchange="updateTextInput(this.value);">                                                        
+                        </div>          
+                        
+                        <div class="form-group">                        
+                            <input type="text" class="form-control-range range-skill" id="skill_range" value="50%" style="text-align: center; border:none; text-size:2vw; background-color:#fff" disabled>                                                        
+                        </div>
                     </div>                    
                     
-
-                    <button class="btn btn-block btn-add-more mt-5" type="button"><i class="fa fa-plus"></i>TAMBAH SKILL</button>
+                    {{-- penggunaan multiple input skill dihilangkan karena tidak menemukan cara menyimpan keseluruhan datanya sekaligus --}}
+                    {{-- <button class="btn btn-block btn-add-more mt-5" type="button"><i class="fa fa-plus"></i>TAMBAH SKILL</button> --}}
 
                 </div>
                 <div class="modal-footer">
@@ -944,19 +882,22 @@
             </div>            
             
             <!-- form -->
-            <form action="">
-                <div class="modal-body modal-competence mt-4">                                    
+            <form action="{{ route('pelamar.profile.create.rkompetensi') }}" method="POST"> 
+                @csrf
+                @method("post")
+                <div class="modal-body modal-competence mt-4">   
+                    <input type="text" id="id_pelamar" name="id_pelamar" value="{{ $profile->id }}" style="display: none">                                 
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="compatence_name" value="" class="form-control" id="compatence_name" placeholder="NAMA KOMPETENSI" required="required">
-                            <label for="compatence_name">NAMA KOMPETENSI</label>
+                            <input type="text" name="nama_kompetensi" value="" class="form-control" id="nama_kompetensi" placeholder="NAMA KOMPETENSI" required="required">
+                            <label for="nama_kompetensi">NAMA KOMPETENSI</label>
                         </span>
                     </div>
                     
                     <div class="form-group">
                         <span class="has-float-label">
-                            <input type="text" name="location" value="" class="form-control" id="location" placeholder="LOKASI" required="required">
-                            <label for="location">LOKASI</label>
+                            <input type="text" name="lokasi" value="" class="form-control" id="lokasi" placeholder="LOKASI" required="required">
+                            <label for="lokasi">LOKASI</label>
                         </span>
                     </div>
                                         
@@ -966,14 +907,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-start-seminar" name="bulan-awal-seminar"></select>
+                                    <select class="form-control custom-select" id="months_start_seminar" name="months_start_seminar"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-start-seminar" name="tahun-awal-seminar"></select>
+                                    <select class="form-control custom-select" id="years_start_seminar" name="years_start_seminar"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -985,14 +926,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months-end-seminar" name="bulan-akhir-seminar"></select>
+                                    <select class="form-control custom-select" id="months_end_seminar" name="months_end_seminar"></select>
                                     <span>BULAN</span>
                                 </label>
                             </div>  
 
                             <div class="col-md-6">
                                 <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years-end-seminar" name="tahun-akhir-seminar"></select>
+                                    <select class="form-control custom-select" id="years_end_seminar" name="years_end_seminar"></select>
                                     <span>TAHUN</span>
                                 </label>
                             </div>                        
@@ -1164,12 +1105,17 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">                
-                <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Riwayat Pendidikan ini?</p>                
-            </div>
-            <div class="modal-footer">
-                <a href="#" type="button" class="btn btn-danger">YAKIN<i class="fa fa-trash"></i></a>
-            </div>
+            <form action="{{ route('pelamar.profile.delete.pendidikan') }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <div class="modal-body">                            
+                    <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Riwayat Pendidikan ini?</p>                
+                    <input type="hidden" name="id_pendidikan" id="pendidikan_id">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger">YAKIN<i class="fa fa-trash ml-4"></i></button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -1230,9 +1176,9 @@
             options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
-        $("#years-start").append( options );    
+        $("#years-start").append(options);    
 
-        $("#years-end").append( options );
+        $("#years-end").append(options);
        
         for (var m = 0; m < 12; m++){
             let monthNum = new Date(2020, m).getMonth()
@@ -1255,9 +1201,36 @@
         }
         
     });
+
+    $(document).ready(function(){
+        $(document).on('click', '.btn-edit-pendidikan', function(){
+            var pendidikanId    = $(this).attr('data-pendidikanId'),
+                jenjang         = $(this).attr('data-jenjang'),                
+                namaSekolah     = $(this).attr('data-sekolah'),
+                jurusan         = $(this).attr('data-jurusan'),
+                // bulanMulai      = $(this).attr(''),
+                // tahunMulai      = $(this).attr(''),
+                // bulanAkhir      = $(this).attr(''),
+                // tahunAkhir      = $(this).attr(''),
+                nilaiAkhir      = $(this).attr('data-nilai-akhir');
+
+            $('#id_pendidikan').val(pendidikanId);
+            $('#id_jenjang').val(jenjang);            
+            $('#nama_sekolah').val(namaSekolah);
+            $('#jurusan').val(jurusan);
+            $('#nilai_akhir').val(nilaiAkhir);
+
+            $('#educationModal').modal('show')
+        });
+
+        $(document).on('click','.btn-delete-pendidikan',function(){
+            var pendidikanID = $(this).attr('data-idPendidikan');    
+            $('#pendidikan_id').val(pendidikanID); 
+            $('#deletePendidikanModal').modal('show'); 
+        });
+    });
     
     // work experience
-
     $(document).ready(function(){
         var nowY = new Date().getFullYear();
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];        
@@ -1267,28 +1240,28 @@
             options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
-        $("#years-start-work").append( options );    
+        $("#years_start_work").append( options );    
 
-        $("#years-end-work").append( options );
+        $("#years_end_work").append( options );
        
         for (var m = 0; m < 12; m++){
             let monthNum = new Date(2020, m).getMonth()
             let month = monthNames[monthNum];
             var monthElem = document.createElement("option");
-            monthElem.value = monthNum; 
+            monthElem.value = monthNum+1; 
             monthElem.textContent = month;            
             
-            $("#months-start-work").append(monthElem);            
+            $("#months_start_work").append(monthElem);            
         }
 
         for (var m = 0; m < 12; m++){
             let monthNum = new Date(2020, m).getMonth()
             let month = monthNames[monthNum];
             var monthElem = document.createElement("option");
-            monthElem.value = monthNum; 
+            monthElem.value = monthNum+1; 
             monthElem.textContent = month;            
             
-            $("#months-end-work").append(monthElem);            
+            $("#months_end_work").append(monthElem);            
         }
         
     });
@@ -1303,28 +1276,28 @@
             options += '<option value="'+ Y +'">'+ Y +'</option>';
         }
 
-        $("#years-start-seminar").append( options );    
+        $("#years_start_seminar").append( options );    
 
-        $("#years-end-seminar").append( options );
+        $("#years_end_seminar").append( options );
        
         for (var m = 0; m < 12; m++){
             let monthNum = new Date(2020, m).getMonth()
             let month = monthNames[monthNum];
             var monthElem = document.createElement("option");
-            monthElem.value = monthNum; 
+            monthElem.value = monthNum+1; 
             monthElem.textContent = month;            
             
-            $("#months-start-seminar").append(monthElem);            
+            $("#months_start_seminar").append(monthElem);            
         }
 
         for (var m = 0; m < 12; m++){
             let monthNum = new Date(2020, m).getMonth()
             let month = monthNames[monthNum];
             var monthElem = document.createElement("option");
-            monthElem.value = monthNum; 
+            monthElem.value = monthNum+1; 
             monthElem.textContent = month;            
             
-            $("#months-end-seminar").append(monthElem);            
+            $("#months_end_seminar").append(monthElem);            
         }
         
     });
@@ -1333,24 +1306,26 @@
     $(document).ready(function(){
 
         // skill modal
-        $('.btn-add-more').click(function(e) {
-            e.preventDefault();
+        // $('.btn-add-more').click(function(e) {
+        //     e.preventDefault();
 
-            $(".skill-content-modal").append(
-                '<div>'
-                    +'<div class="form-group mt-6">'
-                        +'<span class="has-float-label mt-5">'
-                            +'<input type="text" name="nama_skill" value="" class="form-control" id="nama_skill" placeholder="NAMA SKILL"></input>'
-                            +'<label for="nama_skill">NAMA SKILL</label>'
-                        +'</span>'
-                    +'</div>'
+        //     penggunaan append dihilangkan karena tidak menemukan cara untuk menyimpan kesemua datanya
+        //     $(".skill-content-modal").append(
+        //         '<div>'
+        //             +'<div class="form-group mt-6">'
+        //             +'<input type="text" id="id_pelamar" name="id_pelamar" value="{{ $profile->id }}" style="display: none">'
+        //                 +'<span class="has-float-label mt-5">'
+        //                     +'<input type="text" name="nama_keahlian" value="" class="form-control" id="nama_keahlian" placeholder="NAMA SKILL"></input>'
+        //                     +'<label for="nama_keahlian">NAMA SKILL</label>'
+        //                 +'</span>'
+        //             +'</div>'
 
-                    +'<div class="form-group mb-0">'
-                        +'<input type="range" class="form-control-range range-skill" id="range_skill" name="range_skill" min="0" max="100" step="10">'
-                    +'</div>'
-                    +'<button class="btn btn-link pull-right btn-delete-clone-skill" type="button"><img src="{{ asset('images/mdi_delete.png') }}" alt="">Hapus</button>'
-                +'</div>');
-        });
+        //             +'<div class="form-group mb-0">'
+        //                 +'<input type="range" class="form-control-range range-skill" id="persentase" name="persentase" min="0" max="100" step="10">'
+        //             +'</div>'
+        //             +'<button class="btn btn-link pull-right btn-delete-clone-skill" type="button"><img src="{{ asset('images/mdi_delete.png') }}" alt="">Hapus</button>'
+        //         +'</div>');
+        // });
         
         $('.skill-content-modal').on('click', '.btn-delete-clone-skill', function(e) {
             e.preventDefault();
@@ -1379,10 +1354,10 @@
             })
     });    
 
-    // show data modal edit pendidikan
-    $(document).ready(function({
-        
-    }))
+    // fungsi update value of input range type
+    function updateTextInput(val) {
+          document.getElementById('skill_range').value=val+'%'; 
+    }
 </script>
 
 @endsection
