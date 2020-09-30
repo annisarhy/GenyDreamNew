@@ -46,6 +46,18 @@ body{
 }
 
 
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+label:focus
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
 
 /* floating label */
 .has-float-label{
