@@ -99,4 +99,8 @@ class ProfileController extends Controller
     return redirect()->route('pelamar.profile')->with('success','Data Berhasil Ditambah');
 
   }
+
+  public function editPendidikanShow($id){
+    
+  }
 }

@@ -1378,6 +1378,11 @@
                 }
             })
     });    
+
+    // show data modal edit pendidikan
+    $(document).ready(function({
+        
+    }))
 </script>
 
 @endsection
