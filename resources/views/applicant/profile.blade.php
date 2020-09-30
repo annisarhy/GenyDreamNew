@@ -145,7 +145,7 @@
                                         </div>
 
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit btn-edit-pendidikan mr-3" data-pendidikanId="{{ $edu->id }}" data-jenjang="{{ $edu->id_jenjang }}" data-sekolah="{{ $edu->nama_sekolah }}" data-jurusan="{{ $edu->jurusan }}" data-mulai-pendidikan="{{ $edu->tgl_mulai }}" data-akhir-pendidikan="{{ $edu->tgl_akhir }}" data-nilai-akhir="{{ $edu->nilai_akhir }}"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit btn-edit-pendidikan mr-3" data-pendidikanId="{{ $edu->id }}" data-jenjang="{{ $edu->id_jenjang }}" data-sekolah="{{ $edu->nama_sekolah }}" data-jurusan="{{ $edu->jurusan }}" data-bulan-mulai="{{ Carbon\Carbon::parse($edu->tgl_mulai)->format('m') }}" data-bulan-akhir="{{ Carbon\Carbon::parse($edu->tgl_akhir)->format('m') }}" data-tahun-mulai="{{ Carbon\Carbon::parse($edu->tgl_mulai)->format('Y') }}" data-tahun-akhir="{{ Carbon\Carbon::parse($edu->tgl_akhir)->format('Y') }}" data-nilai-akhir="{{ $edu->nilai_akhir }}"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
                                             <button class="btn btn-delete btn-delete-pendidikan" data-idPendidikan="{{ $edu->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
@@ -624,7 +624,7 @@
 <!-- end of modal description -->
 
 
-<!-- modal education -->
+<!-- modal education create-->
 <div class="modal fade" id="educationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
@@ -639,12 +639,15 @@
             <form action="{{ route('pelamar.profile.create.rpendidikan') }}" method="POST"> 
                 @csrf
                 @method("post")
-                <div class="modal-body modal-education mt-4">                    
-                <input type="hidden" name="id_pendidikan" id="id_pendidikan">
-                <input type="text" value="{{$profile->id}}" style="display: none" name="id_pelamar" id="id_pelamar">
+                <div class="modal-body modal-education mt-4">      
+                <input type="text" value="{{$profile->id}}" style="display: none" name="id_pelamar" id="id_pelamar">     
+                
+                <div id="educationModalWrapper">
+                    <input type="hidden" name="id_pendidikan" id="id_pendidikan">
+                
                     <label class="form-group has-float-label">
                         <select class="form-control custom-select" name="id_jenjang" id="id_jenjang">
-                            <option selected>-- Pilih Jenjang Pendidikan --</option>
+                            <option selected disabled>-- Pilih Jenjang Pendidikan --</option>
                             @foreach ($jenjang as $pendidikan)
                             <option value="{{ $pendidikan->id }}">{{ $pendidikan->nama_jenjang }}</option>
                             @endforeach             
@@ -717,6 +720,7 @@
                         </span>
                     </div>
 
+                </div>
                 </div>
                 <div class="modal-footer">
                     
@@ -1167,6 +1171,19 @@
 <script>
 
     // education
+    $('#educationModal').on('hidden.bs.modal', function (e) {
+        $('#educationModalWrapper')
+            .find("input,textarea")
+            .val('')
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end()
+            .find("select")
+            .prop("selectedIndex",0)
+            .end();
+    })
+
     $(document).ready(function(){
         var nowY = new Date().getFullYear();
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];        
@@ -1202,27 +1219,34 @@
         
     });
 
+    // fungsi binding data to edit
     $(document).ready(function(){
         $(document).on('click', '.btn-edit-pendidikan', function(){
             var pendidikanId    = $(this).attr('data-pendidikanId'),
                 jenjang         = $(this).attr('data-jenjang'),                
                 namaSekolah     = $(this).attr('data-sekolah'),
                 jurusan         = $(this).attr('data-jurusan'),
-                // bulanMulai      = $(this).attr(''),
-                // tahunMulai      = $(this).attr(''),
-                // bulanAkhir      = $(this).attr(''),
-                // tahunAkhir      = $(this).attr(''),
+                bulanMulai      = $(this).attr('data-bulan-mulai'),
+                tahunMulai      = $(this).attr('data-tahun-mulai'),
+                bulanAkhir      = $(this).attr('data-bulan-akhir'),
+                tahunAkhir      = $(this).attr('data-tahun-akhir'),
                 nilaiAkhir      = $(this).attr('data-nilai-akhir');
+                bulanMulai = bulanMulai.replace(/^0+/, '');
+                bulanAkhir = bulanAkhir.replace(/^0+/, '');
 
             $('#id_pendidikan').val(pendidikanId);
             $('#id_jenjang').val(jenjang);            
             $('#nama_sekolah').val(namaSekolah);
             $('#jurusan').val(jurusan);
             $('#nilai_akhir').val(nilaiAkhir);
-
-            $('#educationModal').modal('show')
+            $('#months-start').val(bulanMulai);
+            $('#years-start').val(tahunMulai);
+            $('#months-end').val(bulanAkhir);
+            $('#years-end').val(tahunAkhir);
+            $('#educationModal').modal('show');
+            
         });
-
+        // fungsi delete pendidikan
         $(document).on('click','.btn-delete-pendidikan',function(){
             var pendidikanID = $(this).attr('data-idPendidikan');    
             $('#pendidikan_id').val(pendidikanID); 

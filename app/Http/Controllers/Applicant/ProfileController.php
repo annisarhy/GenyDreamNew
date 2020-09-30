@@ -80,12 +80,31 @@ class ProfileController extends Controller
       'years_end' => 'required',
       'nilai_akhir'  => 'required'
     ];
+    
 
     
     $tgl_awal = $request->years_start ."-". $request->months_start."-01" ;
     $tgl_akhir = $request->years_end ."-". $request->months_end."-01" ;
     $jurusan = $request->jurusan;
+    $id_pendidikan = $request->id_pendidikan;
 
+  // jika daat dikirim id_pendidikan terisi maka otomatis mengupdate data dari id_pendidikan tersebut
+   if ($id_pendidikan > 0){
+
+    $input = $request->all();
+    $data = RPendidikan::find($id_pendidikan);
+    $status = $data->update($input);
+
+    if ($status) {
+      return redirect()->route('pelamar.profile')->with('success','Data Berhasil Diubah');
+    }else{
+      return redirect()->route('pelamar.profile')->with('error','Data Gagal Diubah');
+    }
+
+   }
+
+  //  jika id_pendidikan tidak diisi maka otomatis menambahkan data baru
+   else if($id_pendidikan == null){
     $data_store = RPendidikan::create([
       'id_pelamar'    => $request->id_pelamar,
       'id_jenjang'    => $request->id_jenjang,
@@ -99,13 +118,11 @@ class ProfileController extends Controller
     
     $data_store->save();
     return redirect()->route('pelamar.profile')->with('success','Data Berhasil Ditambah');
+   }
 
   }
 
-  // 
-  public function updatePendidikan(){
 
-  }
 
   public function destroyPendidikanModal(Request $request){
     $id_pendidikan= $request->input('id_pendidikan');        
