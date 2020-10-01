@@ -18,10 +18,14 @@
             </div>
             @endif
 
-            @if(session('error'))
-            <div class="alert alert-error mt-3">
-                {{ session('error') }}
-            </div>
+            @if($errors->any())
+                <div class="alert alert-danger">
+                <ul>
+                @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+                </ul>
+                </div>
             @endif
             <form action="{{ url('admin/user',@$user->id) }}" method="POST">
                 @csrf
@@ -53,6 +57,16 @@
                                 <label for="password">PASSWORD</label>
                             </span>
                         </div>
+
+                        <label class="form-group has-float-label mt-5">
+                            <select class="form-control" name="role" id="role">
+                                <option>-- ROLE --</option>                                                                
+                                <option value="pelamar"{{ (old("role", @$user->role) == "pelamar" ? "selected":"") }}>PELAMAR</option>
+                                <option value="perusahaan"{{ (old("role", @$user->role) == "perusahaan" ? "selected":"") }}>PERUSAHAAN</option>
+                                <option value="admin"{{ (old("role", @$user->role) == "admin" ? "selected":"") }}>ADMIN</option>
+                            </select>
+                            <span>ROLE</span>
+                        </label>
                         
                         <div class="row justify-content-end mt-5 py-5">
                             <a href="{{ route('admin.user.index') }}" class="btn btn-batalkan mt-3 mr-2">BATALKAN</a>

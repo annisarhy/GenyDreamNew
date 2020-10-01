@@ -32,7 +32,10 @@
 
                             <div class="col-md-6">                                    
                                 <p class="info-title mt-5">PASSWORD</p>
-                                <p class="">{{ $user->password }}</p>                                                                                                                   
+                                <p class="">{{ $user->password }}</p>
+
+                                <p class="info-title mt-5">ROLE</p>
+                                <p class="">{{ $user->role }}</p>
                             </div>
                         </div>
                     </div>                                                
