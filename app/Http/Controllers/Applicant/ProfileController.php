@@ -67,7 +67,7 @@ class ProfileController extends Controller
   }
 
 
-  // fungsi create pendidikan
+  // fungsi create dan update pendidikan
   public function createRPendidikan(Request $request){
     $rule = [
       'id_pelamar' => 'required',
@@ -90,8 +90,18 @@ class ProfileController extends Controller
 
   // jika daat dikirim id_pendidikan terisi maka otomatis mengupdate data dari id_pendidikan tersebut
    if ($id_pendidikan > 0){
+    
+    $input = [
+      'id_pelamar'    => $request->id_pelamar,
+      'id_jenjang'    => $request->id_jenjang,
+      'nama_sekolah'  => $request->nama_sekolah,
+      'jurusan'       => $jurusan,
+      'tgl_mulai'     => $tgl_awal,
+      'tgl_akhir'     => $tgl_akhir,
+      'nilai_akhir'   => $request->nilai_akhir
+    ];
 
-    $input = $request->all();
+
     $data = RPendidikan::find($id_pendidikan);
     $status = $data->update($input);
 
@@ -132,21 +142,46 @@ class ProfileController extends Controller
 }
     
 
-  // fungsi create pengalaman kerja
+  // fungsi create dan edit pengalaman kerja
   public function createRPekerjaan(Request $request){
     $tgl_awal = $request->years_start_work ."-". $request->months_start_work."-01" ;
     $tgl_akhir = $request->years_end_work ."-". $request->months_end_work."-01" ;
+    $id_pekerjaan = $request->id_pekerjaan;
 
+    // jika id_pendidikan lebih dari 0 maka otomatis menjadi edit data
+    if ($id_pekerjaan > 0){
+
+      $input = [
+        'id_pelamar'        => $request->id_pelamar,
+        'nama_perusahaan'   => $request->nama_perusahaan,
+        'jabatan_terakhir'  => $request->jabatan_terakhir,
+        'tgl_mulai'         => $tgl_awal,
+        'tgl_akhir'         => $tgl_akhir
+      ];
+
+      $data = RPekerjaan::find($id_pekerjaan);
+      $status = $data->update($input);
+
+      if ($status) {
+        return redirect()->route('pelamar.profile')->with('success','Data Berhasil Diubah');
+      }else{
+        return redirect()->route('pelamar.profile')->with('error','Data Gagal Diubah');
+      }
+    }
+
+    // jika id_pekerjaan = null maka data otomatis ditambahkan
+    else if($id_pekerjaan == null){
     $data_store = RPekerjaan::create([
       'id_pelamar'        => $request->id_pelamar,
       'nama_perusahaan'   => $request->nama_perusahaan,
-      'jabatan_terakhir'  => $request->jabatan_terkahir,
+      'jabatan_terakhir'  => $request->jabatan_terakhir,
       'tgl_mulai'         => $tgl_awal,
       'tgl_akhir'         => $tgl_akhir
     ]);
 
     $data_store->save();
     return redirect()->route('pelamar.profile')->with('success','Data Berhasil Ditambah');
+    }
   }
 
 
@@ -171,7 +206,7 @@ class ProfileController extends Controller
   }
 
 
-  // fungsi create kompetensi
+  // fungsi create dan edit kompetensi
   public function createRKompetensi(Request $request){
     $rule = [
       'id_pelamar'                => 'required',
@@ -186,22 +221,49 @@ class ProfileController extends Controller
 
     $tgl_awal = $request->years_start_seminar ."-". $request->months_start_seminar."-01" ;
     $tgl_akhir = $request->years_end_seminar ."-". $request->months_end_seminar."-01" ;
+    $id_seminar =$request->id_kompetensi;
 
-    $data_store = RKompetensi::create([
-      'id_pelamar'                => $request->id_pelamar,
-      'nama_kompetensi'           => $request->nama_kompetensi,
-      'lokasi'                    => $request->lokasi,
-      'tgl_mulai'                 => $tgl_awal,
-      'tgl_akhir'                 => $tgl_akhir,
-      'keterangan'                => $request->keterangan
-    ]);
+    if ($id_seminar > 0){
 
-    $status = $data_store->save();
+      $input = [
+        'id_pelamar'                => $request->id_pelamar,
+        'nama_kompetensi'           => $request->nama_kompetensi,
+        'lokasi'                    => $request->lokasi,
+        'tgl_mulai'                 => $tgl_awal,
+        'tgl_akhir'                 => $tgl_akhir,
+        'keterangan'                => $request->keterangan
+      ];
 
-    if ($status) {
-      return redirect()->route('pelamar.profile')->with('success','Data Berhasil ditambah');
-    }else{
-      return redirect()->route('pelamar.profile')->with('error','Data Gagal ditambah');
+      $data = RKompetensi::find($id_seminar);
+      $status = $data->update($input);
+
+      if ($status) {
+        return redirect()->route('pelamar.profile')->with('success','Data Berhasil Diubah');
+      }else{
+        return redirect()->route('pelamar.profile')->with('error','Data Gagal Diubah');
+      }
+
+    }
+
+    else if($id_seminar == 0){
+
+      $data_store = RKompetensi::create([
+        'id_pelamar'                => $request->id_pelamar,
+        'nama_kompetensi'           => $request->nama_kompetensi,
+        'lokasi'                    => $request->lokasi,
+        'tgl_mulai'                 => $tgl_awal,
+        'tgl_akhir'                 => $tgl_akhir,
+        'keterangan'                => $request->keterangan
+      ]);
+
+      $status = $data_store->save();
+
+      if ($status) {
+        return redirect()->route('pelamar.profile')->with('success','Data Berhasil ditambah');
+      }else{
+        return redirect()->route('pelamar.profile')->with('error','Data Gagal ditambah');
+      }
+
     }
 
   }

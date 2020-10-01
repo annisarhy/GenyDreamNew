@@ -145,7 +145,17 @@
                                         </div>
 
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit btn-edit-pendidikan mr-3" data-pendidikanId="{{ $edu->id }}" data-jenjang="{{ $edu->id_jenjang }}" data-sekolah="{{ $edu->nama_sekolah }}" data-jurusan="{{ $edu->jurusan }}" data-bulan-mulai="{{ Carbon\Carbon::parse($edu->tgl_mulai)->format('m') }}" data-bulan-akhir="{{ Carbon\Carbon::parse($edu->tgl_akhir)->format('m') }}" data-tahun-mulai="{{ Carbon\Carbon::parse($edu->tgl_mulai)->format('Y') }}" data-tahun-akhir="{{ Carbon\Carbon::parse($edu->tgl_akhir)->format('Y') }}" data-nilai-akhir="{{ $edu->nilai_akhir }}"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit btn-edit-pendidikan mr-3" 
+                                            data-pendidikanId       ="{{ $edu->id }}" 
+                                            data-jenjang            ="{{ $edu->id_jenjang }}" 
+                                            data-sekolah            ="{{ $edu->nama_sekolah }}" 
+                                            data-jurusan            ="{{ $edu->jurusan }}" 
+                                            data-bulan-mulai        ="{{ Carbon\Carbon::parse($edu->tgl_mulai)->format('m') }}" 
+                                            data-bulan-akhir        ="{{ Carbon\Carbon::parse($edu->tgl_akhir)->format('m') }}" 
+                                            data-tahun-mulai        ="{{ Carbon\Carbon::parse($edu->tgl_mulai)->format('Y') }}" 
+                                            data-tahun-akhir        ="{{ Carbon\Carbon::parse($edu->tgl_akhir)->format('Y') }}" 
+                                            data-nilai-akhir        ="{{ $edu->nilai_akhir }}"><img src="{{ asset('images/mdi_pencil.png') }}" 
+                                            alt=""></button>
 
                                             <button class="btn btn-delete btn-delete-pendidikan" data-idPendidikan="{{ $edu->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
@@ -183,7 +193,14 @@
                                         </div>                                                                                                                                    
                                         
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#workModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                        <button class="btn btn-edit btn-edit-pekerjaan mr-3" 
+                                        data-id-pekerjaan       ="{{ $job->id }}" 
+                                        data-nama-perusahaan    ="{{ $job->nama_perusahaan }}"
+                                        data-jabatan            ="{{ $job->jabatan_terakhir }}"
+                                        data-bulan-mulai        ="{{ Carbon\Carbon::parse($job->tgl_mulai)->format('m') }}" 
+                                        data-bulan-akhir        ="{{ Carbon\Carbon::parse($job->tgl_akhir)->format('m') }}" 
+                                        data-tahun-mulai        ="{{ Carbon\Carbon::parse($job->tgl_mulai)->format('Y') }}" 
+                                        data-tahun-akhir        ="{{ Carbon\Carbon::parse($job->tgl_akhir)->format('Y') }}" ><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
                                             <button class="btn btn-delete" data-toggle="modal" data-target="#deletePekerjaanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
@@ -194,14 +211,13 @@
                             </div>
                         </div>
                     </div>
-                    </div>
 
                     <!-- Skills -->
                     <div class="row skills box-shadow mt-5 p-4">
                         <div class="skills-content w-100">
                             <div class="d-flex justify-content-between skills-header">                                                                
                                 <h3 class="header-title mr-1">TAMBAH SKILL</h3>
-                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#skillsModal"><i class="fa fa-plus mr-2"></i>EDIT DESCRIPTION</button>
+                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#skillsModal"><i class="fa fa-plus mr-2"></i>ADD SKILL</button>
                             </div>
 
                             <hr>
@@ -259,7 +275,15 @@
                                         </div>    
                                         
                                         <div class="d-flex btn-editdelete">
-                                            <button class="btn btn-edit mr-3" data-toggle="modal" data-target="#kompetensiModal"><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+                                            <button class="btn btn-edit btn-edit-kompetensi mr-3" 
+                                            data-id-kompetensi      ="{{ $seminar->id }}"
+                                            data-nama-kompetensi   ="{{ $seminar->nama_kompetensi }}"
+                                            data-lokasi             ="{{ $seminar->lokasi }}"
+                                            data-keterangan         ="{{ $seminar->keterangan }}"
+                                            data-bulan-mulai        ="{{ Carbon\Carbon::parse($seminar->tgl_mulai)->format('m') }}" 
+                                            data-bulan-akhir        ="{{ Carbon\Carbon::parse($seminar->tgl_akhir)->format('m') }}" 
+                                            data-tahun-mulai        ="{{ Carbon\Carbon::parse($seminar->tgl_mulai)->format('Y') }}" 
+                                            data-tahun-akhir        ="{{ Carbon\Carbon::parse($seminar->tgl_akhir)->format('Y') }}" ><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
                                             <button class="btn btn-delete" data-toggle="modal" data-target="#deletePelatihanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
@@ -641,7 +665,7 @@
                 @method("post")
                 <div class="modal-body modal-education mt-4">      
                 <input type="text" value="{{$profile->id}}" style="display: none" name="id_pelamar" id="id_pelamar">     
-                
+                {{-- wrapper to remove input value when the modal is closed --}}
                 <div id="educationModalWrapper">
                     <input type="hidden" name="id_pendidikan" id="id_pendidikan">
                 
@@ -753,58 +777,62 @@
                 @method("post")
                 <div class="modal-body modal-work-experience mt-4">       
                 <input type="text" value="{{$profile->id}}" name="id_pelamar" id="id_pelamar" style="display: none">                             
-                    <div class="form-group">
-                        <span class="has-float-label">
-                            <input type="text" name="nama_perusahaan" value="" class="form-control" id="nama_perusahaan" placeholder="NAMA PERUSAHAAN" required="required">
-                            <label for="nama_perusahaan">NAMA PERUSAHAAN</label>
-                        </span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <span class="has-float-label">
-                            <input type="text" name="jabatan_terkahir" value="" class="form-control" id="jabatan_terkahir" placeholder="JABATAN TERAKHIR" required="required">
-                            <label for="jabatan_terkahir">JABATAN TERAKHIR</label>
-                        </span>
-                    </div>
-                                        
-                    
-                    <div class="tanggal-mulai mt-4">
-                        <p class="tgl-title mb-4">TANGGAL MULAI</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months_start_work" name="months_start_work"></select>
-                                    <span>BULAN</span>
-                                </label>
-                            </div>  
-
-                            <div class="col-md-6">
-                                <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years_start_work" name="years_start_work"></select>
-                                    <span>TAHUN</span>
-                                </label>
-                            </div>                        
+                {{-- wrapper to remove input value when the modal is closed --}}
+                    <div id="workModalWrapper">
+                        <input type="hidden" id="id_pekerjaan" name="id_pekerjaan">
+                        <div class="form-group">
+                            <span class="has-float-label">
+                                <input type="text" name="nama_perusahaan" value="" class="form-control" id="nama_perusahaan" placeholder="NAMA PERUSAHAAN" required="required">
+                                <label for="nama_perusahaan">NAMA PERUSAHAAN</label>
+                            </span>
                         </div>
-                    </div>                    
-
-                    <div class="tanggal-akhir mt-2">
-                        <p class="tgl-title mb-4">TANGGAL AKHIR</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months_end_work" name="months_end_work"></select>
-                                    <span>BULAN</span>
-                                </label>
-                            </div>  
-
-                            <div class="col-md-6">
-                                <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years_end_work" name="years_end_work"></select>
-                                    <span>TAHUN</span>
-                                </label>
-                            </div>                        
+                        
+                        <div class="form-group">
+                            <span class="has-float-label">
+                                <input type="text" name="jabatan_terakhir" value="" class="form-control" id="jabatan_terakhir" placeholder="JABATAN TERAKHIR" required="required">
+                                <label for="jabatan_terakhir">JABATAN TERAKHIR</label>
+                            </span>
                         </div>
-                    </div>                    
+                                            
+                        
+                        <div class="tanggal-mulai mt-4">
+                            <p class="tgl-title mb-4">TANGGAL MULAI</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="form-group has-float-label">
+                                        <select class="form-control custom-select" id="months_start_work" name="months_start_work"></select>
+                                        <span>BULAN</span>
+                                    </label>
+                                </div>  
+
+                                <div class="col-md-6">
+                                    <label class="form-group has-float-label">
+                                        <select class="form-control custom-select" id="years_start_work" name="years_start_work"></select>
+                                        <span>TAHUN</span>
+                                    </label>
+                                </div>                        
+                            </div>
+                        </div>                    
+
+                        <div class="tanggal-akhir mt-2">
+                            <p class="tgl-title mb-4">TANGGAL AKHIR</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="form-group has-float-label">
+                                        <select class="form-control custom-select" id="months_end_work" name="months_end_work"></select>
+                                        <span>BULAN</span>
+                                    </label>
+                                </div>  
+
+                                <div class="col-md-6">
+                                    <label class="form-group has-float-label">
+                                        <select class="form-control custom-select" id="years_end_work" name="years_end_work"></select>
+                                        <span>TAHUN</span>
+                                    </label>
+                                </div>                        
+                            </div>
+                        </div>   
+                    </div>                 
 
                 </div>
                 <div class="modal-footer">
@@ -891,64 +919,68 @@
                 @method("post")
                 <div class="modal-body modal-competence mt-4">   
                     <input type="text" id="id_pelamar" name="id_pelamar" value="{{ $profile->id }}" style="display: none">                                 
-                    <div class="form-group">
-                        <span class="has-float-label">
-                            <input type="text" name="nama_kompetensi" value="" class="form-control" id="nama_kompetensi" placeholder="NAMA KOMPETENSI" required="required">
-                            <label for="nama_kompetensi">NAMA KOMPETENSI</label>
-                        </span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <span class="has-float-label">
-                            <input type="text" name="lokasi" value="" class="form-control" id="lokasi" placeholder="LOKASI" required="required">
-                            <label for="lokasi">LOKASI</label>
-                        </span>
-                    </div>
-                                        
-                    
-                    <div class="tanggal-mulai mt-4">
-                        <p class="tgl-title mb-4">TANGGAL MULAI</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months_start_seminar" name="months_start_seminar"></select>
-                                    <span>BULAN</span>
-                                </label>
-                            </div>  
-
-                            <div class="col-md-6">
-                                <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years_start_seminar" name="years_start_seminar"></select>
-                                    <span>TAHUN</span>
-                                </label>
-                            </div>                        
+                    {{-- wrapper for removing the input value after the modal is closed --}}
+                    <div id="kompetensiModalWrapper">
+                        <input type="hidden" id="id_kompetensi" name="id_kompetensi">
+                        <div class="form-group">
+                            <span class="has-float-label">
+                                <input type="text" name="nama_kompetensi" value="" class="form-control" id="nama_kompetensi" placeholder="NAMA KOMPETENSI" required="required">
+                                <label for="nama_kompetensi">NAMA KOMPETENSI</label>
+                            </span>
                         </div>
-                    </div>                    
-
-                    <div class="tanggal-akhir mt-2">
-                        <p class="tgl-title mb-4">TANGGAL AKHIR</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="months_end_seminar" name="months_end_seminar"></select>
-                                    <span>BULAN</span>
-                                </label>
-                            </div>  
-
-                            <div class="col-md-6">
-                                <label class="form-group has-float-label">
-                                    <select class="form-control custom-select" id="years_end_seminar" name="years_end_seminar"></select>
-                                    <span>TAHUN</span>
-                                </label>
-                            </div>                        
+                        
+                        <div class="form-group">
+                            <span class="has-float-label">
+                                <input type="text" name="lokasi" value="" class="form-control" id="lokasi" placeholder="LOKASI" required="required">
+                                <label for="lokasi">LOKASI</label>
+                            </span>
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <span class="has-float-label">
-                            <textarea type="text" name="keterangan" value="" class="form-control" id="keterangan" placeholder="KETERANGAN" rows="5"></textarea>
-                            <label for="keterangan">KETERANGAN</label>
-                        </span>
+                                            
+                        
+                        <div class="tanggal-mulai mt-4">
+                            <p class="tgl-title mb-4">TANGGAL MULAI</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="form-group has-float-label">
+                                        <select class="form-control custom-select" id="months_start_seminar" name="months_start_seminar"></select>
+                                        <span>BULAN</span>
+                                    </label>
+                                </div>  
+
+                                <div class="col-md-6">
+                                    <label class="form-group has-float-label">
+                                        <select class="form-control custom-select" id="years_start_seminar" name="years_start_seminar"></select>
+                                        <span>TAHUN</span>
+                                    </label>
+                                </div>                        
+                            </div>
+                        </div>                    
+
+                        <div class="tanggal-akhir mt-2">
+                            <p class="tgl-title mb-4">TANGGAL AKHIR</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="form-group has-float-label">
+                                        <select class="form-control custom-select" id="months_end_seminar" name="months_end_seminar"></select>
+                                        <span>BULAN</span>
+                                    </label>
+                                </div>  
+
+                                <div class="col-md-6">
+                                    <label class="form-group has-float-label">
+                                        <select class="form-control custom-select" id="years_end_seminar" name="years_end_seminar"></select>
+                                        <span>TAHUN</span>
+                                    </label>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <span class="has-float-label">
+                                <textarea type="text" name="keterangan" value="" class="form-control" id="keterangan" placeholder="KETERANGAN" rows="5"></textarea>
+                                <label for="keterangan">KETERANGAN</label>
+                            </span>
+                        </div>
                     </div>
 
                 </div>
@@ -1170,20 +1202,6 @@
 
 <script>
 
-    // education
-    $('#educationModal').on('hidden.bs.modal', function (e) {
-        $('#educationModalWrapper')
-            .find("input,textarea")
-            .val('')
-            .end()
-            .find("input[type=checkbox], input[type=radio]")
-            .prop("checked", "")
-            .end()
-            .find("select")
-            .prop("selectedIndex",0)
-            .end();
-    })
-
     $(document).ready(function(){
         var nowY = new Date().getFullYear();
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];        
@@ -1219,40 +1237,7 @@
         
     });
 
-    // fungsi binding data to edit
-    $(document).ready(function(){
-        $(document).on('click', '.btn-edit-pendidikan', function(){
-            var pendidikanId    = $(this).attr('data-pendidikanId'),
-                jenjang         = $(this).attr('data-jenjang'),                
-                namaSekolah     = $(this).attr('data-sekolah'),
-                jurusan         = $(this).attr('data-jurusan'),
-                bulanMulai      = $(this).attr('data-bulan-mulai'),
-                tahunMulai      = $(this).attr('data-tahun-mulai'),
-                bulanAkhir      = $(this).attr('data-bulan-akhir'),
-                tahunAkhir      = $(this).attr('data-tahun-akhir'),
-                nilaiAkhir      = $(this).attr('data-nilai-akhir');
-                bulanMulai = bulanMulai.replace(/^0+/, '');
-                bulanAkhir = bulanAkhir.replace(/^0+/, '');
-
-            $('#id_pendidikan').val(pendidikanId);
-            $('#id_jenjang').val(jenjang);            
-            $('#nama_sekolah').val(namaSekolah);
-            $('#jurusan').val(jurusan);
-            $('#nilai_akhir').val(nilaiAkhir);
-            $('#months-start').val(bulanMulai);
-            $('#years-start').val(tahunMulai);
-            $('#months-end').val(bulanAkhir);
-            $('#years-end').val(tahunAkhir);
-            $('#educationModal').modal('show');
-            
-        });
-        // fungsi delete pendidikan
-        $(document).on('click','.btn-delete-pendidikan',function(){
-            var pendidikanID = $(this).attr('data-idPendidikan');    
-            $('#pendidikan_id').val(pendidikanID); 
-            $('#deletePendidikanModal').modal('show'); 
-        });
-    });
+        
     
     // work experience
     $(document).ready(function(){
@@ -1289,6 +1274,7 @@
         }
         
     });
+
 
     // Competence
     $(document).ready(function(){
@@ -1377,6 +1363,148 @@
                 }
             })
     });    
+
+
+
+    // edit modal section
+
+    // pendidikan
+
+        $(document).ready(function(){
+            $(document).on('click', '.btn-edit-pendidikan', function(){
+                var pendidikanId    = $(this).attr('data-pendidikanId'),
+                    jenjang         = $(this).attr('data-jenjang'),                
+                    namaSekolah     = $(this).attr('data-sekolah'),
+                    jurusan         = $(this).attr('data-jurusan'),
+                    bulanMulai      = $(this).attr('data-bulan-mulai'),
+                    tahunMulai      = $(this).attr('data-tahun-mulai'),
+                    bulanAkhir      = $(this).attr('data-bulan-akhir'),
+                    tahunAkhir      = $(this).attr('data-tahun-akhir'),
+                    nilaiAkhir      = $(this).attr('data-nilai-akhir');
+                    bulanMulai = bulanMulai.replace(/^0+/, '');
+                    bulanAkhir = bulanAkhir.replace(/^0+/, '');
+
+                $('#id_pendidikan').val(pendidikanId);
+                $('#id_jenjang').val(jenjang);            
+                $('#nama_sekolah').val(namaSekolah);
+                $('#jurusan').val(jurusan);
+                $('#nilai_akhir').val(nilaiAkhir);
+                $('#months-start').val(bulanMulai);
+                $('#years-start').val(tahunMulai);
+                $('#months-end').val(bulanAkhir);
+                $('#years-end').val(tahunAkhir);
+                $('#educationModal').modal('show');
+            });
+        
+            // fungsi delete pendidikan
+            $(document).on('click','.btn-delete-pendidikan',function(){
+                var pendidikanID = $(this).attr('data-idPendidikan');    
+                $('#pendidikan_id').val(pendidikanID); 
+                $('#deletePendidikanModal').modal('show'); 
+            });
+        })
+    
+
+    // pekerjaan
+
+        $(document).ready(function(){
+            $(document).on('click', '.btn-edit-pekerjaan', function(){
+                var pekerjaanId     = $(this).attr('data-id-pekerjaan'),
+                    namaPerusahaan  = $(this).attr('data-nama-perusahaan'),                
+                    jabatan         = $(this).attr('data-jabatan'),
+                    bulanMulai      = $(this).attr('data-bulan-mulai'),
+                    tahunMulai      = $(this).attr('data-tahun-mulai'),
+                    bulanAkhir      = $(this).attr('data-bulan-akhir'),
+                    tahunAkhir      = $(this).attr('data-tahun-akhir'),
+                    bulanMulai      = bulanMulai.replace(/^0+/, '');
+                    bulanAkhir      = bulanAkhir.replace(/^0+/, '');
+
+                $('#id_pekerjaan').val(pekerjaanId);         
+                $('#nama_perusahaan').val(namaPerusahaan);
+                $('#jabatan_terakhir').val(jabatan);
+                $('#months_start_work').val(bulanMulai);
+                $('#years_start_work').val(tahunMulai);
+                $('#months_end_work').val(bulanAkhir);
+                $('#years_end_work').val(tahunAkhir);
+                $('#workModal').modal('show');
+                
+            });
+        });
+
+    // kompetensi
+
+    $(document).ready(function(){
+            $(document).on('click', '.btn-edit-kompetensi', function(){
+                var kompetensiId        = $(this).attr('data-id-kompetensi'),
+                    namaKomepetensi     = $(this).attr('data-nama-kompetensi'),                
+                    lokasi              = $(this).attr('data-lokasi'),
+                    keterangan          = $(this).attr('data-keterangan'),
+                    bulanMulai          = $(this).attr('data-bulan-mulai'),
+                    tahunMulai          = $(this).attr('data-tahun-mulai'),
+                    bulanAkhir          = $(this).attr('data-bulan-akhir'),
+                    tahunAkhir          = $(this).attr('data-tahun-akhir'),
+                    bulanMulai          = bulanMulai.replace(/^0+/, '');
+                    bulanAkhir          = bulanAkhir.replace(/^0+/, '');
+
+                $('#id_kompetensi').val(kompetensiId);         
+                $('#nama_kompetensi').val(namaKomepetensi);
+                $('#lokasi').val(lokasi);
+                $('#keterangan').val(keterangan);
+                $('#months_start_seminar').val(bulanMulai);
+                $('#years_start_seminar').val(tahunMulai);
+                $('#months_end_seminar').val(bulanAkhir);
+                $('#years_end_seminar').val(tahunAkhir);
+                $('#kompetensiModal').modal('show');
+                
+            });
+        });
+
+    
+    
+    // fungsi remove input value when modal is closed
+
+    // education
+    $('#educationModal').on('hidden.bs.modal', function (e) {
+        $('#educationModalWrapper')
+            .find("input,textarea")
+            .val('')
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end()
+            .find("select")
+            .prop("selectedIndex",0)
+            .end();
+    })
+
+    //  rpekerjaan
+    $('#workModal').on('hidden.bs.modal', function (e) {
+        $('#workModalWrapper')
+            .find("input,textarea")
+            .val('')
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end()
+            .find("select")
+            .prop("selectedIndex",0)
+            .end();
+    })
+
+    //  rkompetensi
+    $('#kompetensiModal').on('hidden.bs.modal', function (e) {
+        $('#kompetensiModalWrapper')
+            .find("input,textarea")
+            .val('')
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end()
+            .find("select")
+            .prop("selectedIndex",0)
+            .end();
+    })
+
 
     // fungsi update value of input range type
     function updateTextInput(val) {
