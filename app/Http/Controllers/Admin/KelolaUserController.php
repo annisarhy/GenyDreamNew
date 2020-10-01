@@ -89,8 +89,7 @@ class KelolaUserController extends Controller
     public function update(Request $request, $id){
     	$rule = [
             'username' => 'required|string',
-            'email' => 'required|string',
-            'password' => 'required|string',
+            'email' => 'required|string',            
             'role' => 'required|string',
     	];
     	$this->validate($request,$rule);
