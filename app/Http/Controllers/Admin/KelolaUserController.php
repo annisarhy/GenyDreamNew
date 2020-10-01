@@ -64,7 +64,8 @@ class KelolaUserController extends Controller
     	$rule = [
             'username' => 'required|string',
             'email' => 'required|string',
-    		'password' => 'required|string',
+            'password' => 'required|string',
+            'role' => 'required|string',
     	];
     	$this->validate($request,$rule);
 
@@ -72,7 +73,7 @@ class KelolaUserController extends Controller
             'username' => $request->input('username'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
-            'role' => 'pelamar',
+            'role' => $request->input('role'),
         ]);
         $status = $user->create();
         
@@ -88,8 +89,8 @@ class KelolaUserController extends Controller
     public function update(Request $request, $id){
     	$rule = [
             'username' => 'required|string',
-            'email' => 'required|string',
-    		'password' => 'required|string',
+            'email' => 'required|string',            
+            'role' => 'required|string',
     	];
     	$this->validate($request,$rule);
 
@@ -98,6 +99,7 @@ class KelolaUserController extends Controller
             'username' => $request->input('username'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
+            'role' => $request->input('role'),
         ]);
 
     	if ($status) {
