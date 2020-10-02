@@ -157,7 +157,8 @@
                                             data-nilai-akhir        ="{{ $edu->nilai_akhir }}"><img src="{{ asset('images/mdi_pencil.png') }}" 
                                             alt=""></button>
 
-                                            <button class="btn btn-delete btn-delete-pendidikan" data-idPendidikan="{{ $edu->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            <button class="btn btn-delete btn-delete-pendidikan" 
+                                            data-idPendidikan="{{ $edu->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
                                     </div>
                                 </div>                                                                                                
@@ -202,7 +203,8 @@
                                         data-tahun-mulai        ="{{ Carbon\Carbon::parse($job->tgl_mulai)->format('Y') }}" 
                                         data-tahun-akhir        ="{{ Carbon\Carbon::parse($job->tgl_akhir)->format('Y') }}" ><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePekerjaanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            <button class="btn btn-delete btn-delete-pekerjaan" 
+                                            data-id-pekerjaan="{{ $job->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
                                     </div>
                                 </div>                                                                                                
@@ -277,7 +279,7 @@
                                         <div class="d-flex btn-editdelete">
                                             <button class="btn btn-edit btn-edit-kompetensi mr-3" 
                                             data-id-kompetensi      ="{{ $seminar->id }}"
-                                            data-nama-kompetensi   ="{{ $seminar->nama_kompetensi }}"
+                                            data-nama-kompetensi    ="{{ $seminar->nama_kompetensi }}"
                                             data-lokasi             ="{{ $seminar->lokasi }}"
                                             data-keterangan         ="{{ $seminar->keterangan }}"
                                             data-bulan-mulai        ="{{ Carbon\Carbon::parse($seminar->tgl_mulai)->format('m') }}" 
@@ -285,7 +287,8 @@
                                             data-tahun-mulai        ="{{ Carbon\Carbon::parse($seminar->tgl_mulai)->format('Y') }}" 
                                             data-tahun-akhir        ="{{ Carbon\Carbon::parse($seminar->tgl_akhir)->format('Y') }}" ><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
-                                            <button class="btn btn-delete" data-toggle="modal" data-target="#deletePelatihanModal"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            <button class="btn btn-delete btn-delete-kompetensi" 
+                                            data-idKompetensi="{{ $seminar->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
                                         </div>
                                     </div>
                                 </div>                                                                                                
@@ -300,7 +303,9 @@
                         <div class="support-file-content w-100">
                             <div class="d-flex justify-content-between support-file-header">                                                                
                                 <h3 class="header-title mr-1">CV DAN FILE PENDUKUNG LAINNYA</h3>
-                                <button class="btn btn-show-modal"data-toggle="modal" data-target="#cvModal"><i class="fa fa-file mr-2"></i>UPDLOAD FILE</button>
+                                <button class="btn btn-show-modal"
+                                data-toggle="modal" 
+                                data-target="#cvModal"> <i class="fa fa-file mr-2"></i>UPDLOAD FILE </button>
                             </div>
 
                             <hr>
@@ -1166,12 +1171,17 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">                
-                <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Riwayat Pekerjaan ini?</p>                
-            </div>
-            <div class="modal-footer">
-                <a href="#" type="button" class="btn btn-danger">YAKIN<i class="fa fa-trash"></i></a>
-            </div>
+            <form action="{{ route('pelamar.profile.delete.pekerjaan') }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <div class="modal-body">                            
+                    <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Riwayat Pekerjaan ini?</p>                
+                    <input type="hidden" name="pekerjaanID" id="pekerjaanID">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger">YAKIN<i class="fa fa-trash ml-4"></i></button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -1187,12 +1197,17 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">                
-                <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Riwayat Pelatihan ini?</p>                
-            </div>
-            <div class="modal-footer">
-                <a href="#" type="button" class="btn btn-danger">YAKIN<i class="fa fa-trash"></i></a>
-            </div>
+            <form action="{{ route('pelamar.profile.delete.kompetensi') }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <div class="modal-body">                            
+                    <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Data Kompetensi ini?</p>                
+                    <input type="hidden" name="kompetensiID" id="kompetensiID">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger">YAKIN<i class="fa fa-trash ml-4"></i></button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -1429,6 +1444,13 @@
                 $('#workModal').modal('show');
                 
             });
+
+            // fungsi delete pekerjaan
+            $(document).on('click','.btn-delete-pekerjaan',function(){
+                var pekerjaanId = $(this).attr('data-id-pekerjaan');    
+                $('#pekerjaanID').val(pekerjaanId); 
+                $('#deletePekerjaanModal').modal('show'); 
+            });
         });
 
     // kompetensi
@@ -1456,6 +1478,14 @@
                 $('#years_end_seminar').val(tahunAkhir);
                 $('#kompetensiModal').modal('show');
                 
+            });
+
+            // fungsi delete pelatihan
+            $(document).on('click','.btn-delete-kompetensi',function(){
+                var idKompetensi = $(this).attr('data-idKompetensi');   
+
+                $('#kompetensiID').val(idKompetensi); 
+                $('#deletePelatihanModal').modal('show'); 
             });
         });
 

@@ -133,13 +133,29 @@ class ProfileController extends Controller
   }
 
 
-
+  // fungsi destroy pendidikan
   public function destroyPendidikanModal(Request $request){
     $id_pendidikan= $request->input('id_pendidikan');        
     RPendidikan::destroy($id_pendidikan);    
 
     return redirect()->route('pelamar.profile')->with('success','Data Berhasil Dihapus');
-}
+  }
+
+  // fungsi destroy pekerjaan
+  public function destroyPekerjaanModal(Request $request){
+    $id_pekerjaan = $request->pekerjaanID;
+    RPekerjaan::destroy($id_pekerjaan);    
+
+    return redirect()->route('pelamar.profile')->with('success','Data Berhasil Dihapus');
+  }
+
+  // fungsi destroy kompetensi
+  public function destroyKompetensiModal(Request $request){
+    $id_kompetensi= $request->kompetensiID;        
+    RKompetensi::destroy($id_kompetensi);    
+
+    return redirect()->route('pelamar.profile')->with('success','Data Berhasil Dihapus');
+  }
     
 
   // fungsi create dan edit pengalaman kerja
