@@ -201,7 +201,7 @@ class ProfileController extends Controller
   }
 
 
-  // fungsi create keahlian
+  // fungsi create dan edit keahlian
   public function createRKeahlian(Request $request){
     $rule = [
       'id_pelamar' => 'required',
@@ -209,15 +209,36 @@ class ProfileController extends Controller
       'persentase'  => 'required'
     ];
     $this->validate($request, $rule);
+    $id_skill = $request->id_skill;
 
-    $input = $request->all();
-    $data = RKeahlian::create($input);
-    $status = $data->save();
+    // if the id_skill having value more than 0 it will automatically update the data iwht those id
+    if ($id_skill > 0){
 
-    if ($status) {
-      return redirect()->route('pelamar.profile')->with('success','Data Berhasil ditambah');
-    }else{
-      return redirect()->route('pelamar.profile')->with('error','Data Gagal ditambah');
+      $input = $request->all();
+      $data = RKeahlian::find($id_skill);
+      $status = $data->update($input);
+
+      if ($status) {
+        return redirect()->route('pelamar.profile')->with('success','Data Berhasil Diubah');
+      }else{
+        return redirect()->route('pelamar.profile')->with('error','Data Gagal Diubah');
+      }
+
+    }
+    
+
+    // if the id_skill is null it will automatically add new data entry to the rkeahlian table
+    else if ($id_skill == 0)
+    {  
+      $input = $request->all();
+      $data = RKeahlian::create($input);
+      $status = $data->save();
+
+      if ($status) {
+        return redirect()->route('pelamar.profile')->with('success','Data Berhasil ditambah');
+      }else{
+        return redirect()->route('pelamar.profile')->with('error','Data Gagal ditambah');
+      }
     }
   }
 

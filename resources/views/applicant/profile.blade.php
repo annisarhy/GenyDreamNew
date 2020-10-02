@@ -227,7 +227,11 @@
                             <div class="skills-body">
 
                                 @foreach ($profile->keahlian as $skill)
-                                <div class="container skill-content pr-5 pl-5 pt-3 pb-3">
+                                <div class="container skill-content pr-5 pl-5 pt-3 pb-3 skill-edit" 
+                                    data-skillID="{{ $skill->id }}"
+                                    data-nama-skill="{{ $skill->nama_keahlian }}"
+                                    data-persentase="{{ $skill->persentase }}"
+                                    style="cursor: pointer">
                                     <p class="skill-name font-weight-bold">{{$skill->nama_keahlian}}</p>
 
                                     <div class="progress-container d-flex">
@@ -872,21 +876,26 @@
                 <div class="modal-body modal-skill">                            
 
                     <div class="skill-content-modal">
-                    <input type="text" id="id_pelamar" name="id_pelamar" value="{{ $profile->id }}" style="display: none">
-                        <div class="form-group mt-4">
-                            <span class="has-float-label">
-                                <input type="text" name="nama_keahlian" value="" class="form-control" id="nama_keahlian" placeholder="NAMA SKILL"></input>
-                                <label for="nama_keahlian">NAMA SKILL</label>
-                            </span>                        
-                        </div>
+                        <input type="text" id="id_pelamar" name="id_pelamar" value="{{ $profile->id }}" style="display: none">
+                        {{-- wrapper for removing value from its input field after the modal is closed --}}
+                        <div id="skillModalWrapper">
+                            <input type="hidden" name="id_skill" id="id_skill">    
+                            <div class="form-group mt-4">
+                                <span class="has-float-label">
+                                    <input type="text" name="nama_keahlian" value="" class="form-control" id="nama_keahlian" placeholder="NAMA SKILL"></input>
+                                    <label for="nama_keahlian">NAMA SKILL</label>
+                                </span>                        
+                            </div>
 
-                        <div class="form-group">                        
-                            <input type="range" class="form-control-range range-skill" id="persentase" name="persentase" min="0" max="100" step="10" onchange="updateTextInput(this.value);">                                                        
-                        </div>          
-                        
-                        <div class="form-group">                        
-                            <input type="text" class="form-control-range range-skill" id="skill_range" value="50%" style="text-align: center; border:none; text-size:2vw; background-color:#fff" disabled>                                                        
+                            <div class="form-group">                        
+                                <input type="range" class="form-control-range range-skill" id="persentase" name="persentase" min="0" max="100" step="10" onchange="updateTextInput(this.value);">                                                        
+                            </div>          
+                            
+                            <div class="form-group">                        
+                                <input type="text" class="form-control-range range-skill" id="skill_range" value="50%" style="text-align: center; border:none; text-size:2vw; background-color:#fff" disabled>                                                        
+                            </div>
                         </div>
+                    
                     </div>                    
                     
                     {{-- penggunaan multiple input skill dihilangkan karena tidak menemukan cara menyimpan keseluruhan datanya sekaligus --}}
@@ -982,7 +991,7 @@
                         
                         <div class="form-group">
                             <span class="has-float-label">
-                                <textarea type="text" name="keterangan" value="" class="form-control" id="keterangan" placeholder="KETERANGAN" rows="5"></textarea>
+                                <textarea type="text" name="keterangan" value="" class="form-control" required id="keterangan" placeholder="KETERANGAN" rows="5"></textarea>
                                 <label for="keterangan">KETERANGAN</label>
                             </span>
                         </div>
@@ -1326,6 +1335,7 @@
         }
         
     });
+    
 
 
     $(document).ready(function(){
@@ -1489,6 +1499,33 @@
             });
         });
 
+
+        // skill
+
+    $(document).ready(function(){
+            $(document).on('click', '.skill-edit', function(){
+                var skillID             = $(this).attr('data-skillID'),
+                    namaSkill           = $(this).attr('data-nama-skill'),                
+                    persentase          = $(this).attr('data-persentase'),
+                    persentaseText      = persentase+"%";
+                
+
+                $('#id_skill').val(skillID);         
+                $('#nama_keahlian').val(namaSkill);
+                $('#persentase').val(persentase);
+                $('#skill_range').val(persentaseText);
+                $('#skillsModal').modal('show');
+                
+            });
+
+            // fungsi delete skill
+            $(document).on('click','.btn-delete-kompetensi',function(){
+                var idKompetensi = $(this).attr('data-idKompetensi');   
+
+                $('#kompetensiID').val(idKompetensi); 
+                $('#deletePelatihanModal').modal('show'); 
+            });
+        });
     
     
     // fungsi remove input value when modal is closed
@@ -1534,6 +1571,25 @@
             .prop("selectedIndex",0)
             .end();
     })
+
+    //  skills
+    $('#skillsModal').on('hidden.bs.modal', function (e) {
+        $('#skillModalWrapper')
+            .find("input,textarea")
+            .val('')
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end()
+            .find("select")
+            .prop("selectedIndex",0)
+            .end()
+            .find(".skill_range")
+            .val('50%')
+            .end();
+    })
+
+    
 
 
     // fungsi update value of input range type
