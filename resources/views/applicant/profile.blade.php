@@ -185,7 +185,7 @@
                                     <img src="{{ asset('images/la_user-tie-solid-blue.png') }}" alt="" class="work-experience-img">                                        
                                     
                                     <div class="work-experience-detail pl-4 mt-3">
-                                    <h3 class="company-name mb-1">{{ $job->nama_perusahaan }}</h3>
+                                        <h3 class="company-name mb-1">{{ $job->nama_perusahaan }}</h3>
                                         <p class="job-title text-capitalize">{{ $job->jabatan_terakhir }}</p>        
                                                                                 
                                         <div class="d-flex duration-of-work mt-4">
@@ -210,6 +210,7 @@
                                 </div>                                                                                                
                                 @endforeach 
                                 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -897,9 +898,8 @@
                         </div>
                     
                     </div>                    
-                    
-                    {{-- penggunaan multiple input skill dihilangkan karena tidak menemukan cara menyimpan keseluruhan datanya sekaligus --}}
-                    {{-- <button class="btn btn-block btn-add-more mt-5" type="button"><i class="fa fa-plus"></i>TAMBAH SKILL</button> --}}
+                                        
+                    <button class="btn btn-link btn-delete-file btn-delete-skill p-2" id="btn-delete-skill" id-skill-delete="" type="button"><img src="{{ asset('images/mdi_delete.png') }}" alt="">HAPUS</button>
 
                 </div>
                 <div class="modal-footer">
@@ -1195,7 +1195,6 @@
     </div>
 </div>
 
-
 <!-- modal delete riwayat seminar/pelatihan-->
 <div class="modal fade" id="deletePelatihanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md" role="document">
@@ -1212,6 +1211,31 @@
                 <div class="modal-body">                            
                     <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Data Kompetensi ini?</p>                
                     <input type="hidden" name="kompetensiID" id="kompetensiID">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger">YAKIN<i class="fa fa-trash ml-4"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- modal delete riwayat keahlian-->
+<div class="modal fade" id="deleteKeahlianModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="exampleModalLabel">HAPUS KEAHLIAN</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{ route('pelamar.profile.delete.keahlian') }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <div class="modal-body">                            
+                    <p class="mt-3 text-dark">Apa Anda Yakin Akan Menghapus Data Keahlian ini?</p>                
+                    <input type="hidden" name="keahlianID" id="keahlianID">
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-danger">YAKIN<i class="fa fa-trash ml-4"></i></button>
@@ -1507,23 +1531,25 @@
                 var skillID             = $(this).attr('data-skillID'),
                     namaSkill           = $(this).attr('data-nama-skill'),                
                     persentase          = $(this).attr('data-persentase'),
-                    persentaseText      = persentase+"%";
+                    persentaseText      = persentase+"%";                    
                 
 
+                document.getElementById('btn-delete-skill').style.display='block';                
                 $('#id_skill').val(skillID);         
                 $('#nama_keahlian').val(namaSkill);
                 $('#persentase').val(persentase);
                 $('#skill_range').val(persentaseText);
+                $('#btn-delete-skill').attr('id-skill-delete', skillID);
                 $('#skillsModal').modal('show');
                 
             });
 
             // fungsi delete skill
-            $(document).on('click','.btn-delete-kompetensi',function(){
-                var idKompetensi = $(this).attr('data-idKompetensi');   
+            $(document).on('click','.btn-delete-skill',function(){
+                var idSkill = $(this).attr('id-skill-delete');   
 
-                $('#kompetensiID').val(idKompetensi); 
-                $('#deletePelatihanModal').modal('show'); 
+                $('#keahlianID').val(idSkill); 
+                $('#deleteKeahlianModal').modal('show'); 
             });
         });
     

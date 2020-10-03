@@ -156,7 +156,14 @@ class ProfileController extends Controller
 
     return redirect()->route('pelamar.profile')->with('success','Data Berhasil Dihapus');
   }
-    
+  // fungsi destroy keahlian
+  public function destroyKeahlianModal(Request $request){
+    $id_keahlian= $request->keahlianID;        
+    RKeahlian::destroy($id_keahlian);    
+
+    return redirect()->route('pelamar.profile')->with('success','Data Berhasil Dihapus');
+  }
+  
 
   // fungsi create dan edit pengalaman kerja
   public function createRPekerjaan(Request $request){
