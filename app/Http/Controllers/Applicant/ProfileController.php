@@ -88,7 +88,7 @@ class ProfileController extends Controller
     $jurusan = $request->jurusan;
     $id_pendidikan = $request->id_pendidikan;
 
-  // jika daat dikirim id_pendidikan terisi maka otomatis mengupdate data dari id_pendidikan tersebut
+    // jika daat dikirim id_pendidikan terisi maka otomatis mengupdate data dari id_pendidikan tersebut
    if ($id_pendidikan > 0){
     
     $input = [
