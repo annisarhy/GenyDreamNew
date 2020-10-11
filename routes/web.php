@@ -52,6 +52,7 @@ Route::group([
 ], function () {
   Route::get('/', 'BerandaController@index')->name('pelamar.beranda');
   Route::get('/profile', 'ProfileController@index')->name('pelamar.profile');
+  Route::patch('/profile/edit/{id}/sosmed', 'ProfileController@updateSosmed')->name('pelamar.profile.update.sosmed');
   Route::post('/profile/create/rpendidikan', 'ProfileController@createRPendidikan')->name('pelamar.profile.create.rpendidikan');
   Route::post('/profile/create/rpekerjaan', 'ProfileController@createRPekerjaan')->name('pelamar.profile.create.rpekerjaan');
   Route::post('/profile/create/rkeahlian', 'ProfileController@createRKeahlian')->name('pelamar.profile.create.rkeahlian');

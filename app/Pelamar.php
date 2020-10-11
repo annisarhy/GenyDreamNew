@@ -21,6 +21,12 @@ class Pelamar extends Model
     'no_ktp',
     'alamat',
     'deskripsi_diri',
+    'instagram',
+    'website',
+    'twitter',
+    'facebook',
+    'github',
+    'linkedin'
   ];
 
   public function user(){

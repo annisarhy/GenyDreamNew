@@ -304,4 +304,19 @@ class ProfileController extends Controller
     }
 
   }
+  // fungsi Edit sosmed
+  public function updateSosmed(Request $request, $id){
+
+    $input = $request->all();
+    $data = Pelamar::find($id);
+    $status = $data->update($input);
+
+    if ($status) {
+      return redirect()->route('pelamar.profile')->with('success','Data Berhasil Diubah');
+    }else{
+      return redirect()->route('pelamar.profile')->with('error','Data Gagal Diubah');
+    }
+    
+  }
+
 }

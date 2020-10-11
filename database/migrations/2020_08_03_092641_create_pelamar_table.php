@@ -26,6 +26,12 @@ class CreatePelamarTable extends Migration
             $table->string('no_ktp')->nullable()->default("‎‎‏‏‎ ‎");
             $table->string('alamat')->nullable()->default("‎‎‏‏‎ ‎");
             $table->text('deskripsi_diri')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('github')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('website')->nullable();
             $table->timestamps();
         });
     }

@@ -179,37 +179,37 @@
 
                             <div class="work-experience-body">
                                 <div class="work-experience-row mt-2">
-                                @foreach ($profile->pekerjaan as $job)
-                                    
-                                  
-                                    <img src="{{ asset('images/la_user-tie-solid-blue.png') }}" alt="" class="work-experience-img">                                        
-                                    
-                                    <div class="work-experience-detail pl-4 mt-3">
-                                    <h3 class="company-name mb-1">{{ $job->nama_perusahaan }}</h3>
-                                        <p class="job-title text-capitalize">{{ $job->jabatan_terakhir }}</p>        
-                                                                                
-                                        <div class="d-flex duration-of-work mt-4">
-                                            <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
-                                            <p class="ml-1">From {{ Carbon\Carbon::parse($job->tgl_mulai)->format('M Y') }} sampai {{ Carbon\Carbon::parse($job->tgl_akhir)->format('M Y') }}</p>
-                                        </div>                                                                                                                                    
-                                        
-                                        <div class="d-flex btn-editdelete">
-                                        <button class="btn btn-edit btn-edit-pekerjaan mr-3" 
-                                        data-id-pekerjaan       ="{{ $job->id }}" 
-                                        data-nama-perusahaan    ="{{ $job->nama_perusahaan }}"
-                                        data-jabatan            ="{{ $job->jabatan_terakhir }}"
-                                        data-bulan-mulai        ="{{ Carbon\Carbon::parse($job->tgl_mulai)->format('m') }}" 
-                                        data-bulan-akhir        ="{{ Carbon\Carbon::parse($job->tgl_akhir)->format('m') }}" 
-                                        data-tahun-mulai        ="{{ Carbon\Carbon::parse($job->tgl_mulai)->format('Y') }}" 
-                                        data-tahun-akhir        ="{{ Carbon\Carbon::parse($job->tgl_akhir)->format('Y') }}" ><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
 
-                                            <button class="btn btn-delete btn-delete-pekerjaan" 
-                                            data-id-pekerjaan="{{ $job->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
-                                        </div>
-                                    </div>
-                                </div>                                                                                                
-                                @endforeach 
-                                
+                                    @foreach ($profile->pekerjaan as $job)
+                                  
+                                        <img src="{{ asset('images/la_user-tie-solid-blue.png') }}" alt="" class="work-experience-img">                                        
+                                        
+                                        <div class="work-experience-detail pl-4 mt-3">
+                                            <h3 class="company-name mb-1">{{ $job->nama_perusahaan }}</h3>
+                                            <p class="job-title text-capitalize">{{ $job->jabatan_terakhir }}</p>        
+                                                                                    
+                                            <div class="d-flex duration-of-work mt-4">
+                                                <img src="{{ asset('images/ant-design_clock-circle-outlined.png') }}" alt="">
+                                                <p class="ml-1">From {{ Carbon\Carbon::parse($job->tgl_mulai)->format('M Y') }} sampai {{ Carbon\Carbon::parse($job->tgl_akhir)->format('M Y') }}</p>
+                                            </div>                                                                                                                                    
+                                            
+                                            <div class="d-flex btn-editdelete">
+                                                <button class="btn btn-edit btn-edit-pekerjaan mr-3" 
+                                                data-id-pekerjaan       ="{{ $job->id }}" 
+                                                data-nama-perusahaan    ="{{ $job->nama_perusahaan }}"
+                                                data-jabatan            ="{{ $job->jabatan_terakhir }}"
+                                                data-bulan-mulai        ="{{ Carbon\Carbon::parse($job->tgl_mulai)->format('m') }}" 
+                                                data-bulan-akhir        ="{{ Carbon\Carbon::parse($job->tgl_akhir)->format('m') }}" 
+                                                data-tahun-mulai        ="{{ Carbon\Carbon::parse($job->tgl_mulai)->format('Y') }}" 
+                                                data-tahun-akhir        ="{{ Carbon\Carbon::parse($job->tgl_akhir)->format('Y') }}" ><img src="{{ asset('images/mdi_pencil.png') }}" alt=""></button>
+
+                                                <button class="btn btn-delete btn-delete-pekerjaan" 
+                                                data-id-pekerjaan="{{ $job->id }}"><img src="{{ asset('images/mdi_delete.png') }}" alt=""></button>
+                                            </div>
+                                        </div>                                                                                           
+                                    @endforeach
+
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -349,41 +349,114 @@
                             <hr>
 
                             <div class="portofolio-body">
+                                {{-- facebook --}}
+                                @if (empty($profile->facebook))
+                                @else
                                 <div class="portofolio-row mt-2">
                                     <div class="d-flex">
                                         <img src="{{ asset('images/bx_bxl-facebook.png') }}" alt="" class="portofolio-img">
 
                                         <div class="portofolio-link">
+                                            
                                             <p class="social-media-title ml-3 mb-0 font-weight-bold">FACEBOOK</p>
-                                            <a href="#" class="social-media-link ml-3">www.facebook.com/AnnaMinerva</a>
+                                            <a target="_blank" href="http://{{$profile->facebook}}" class="social-media-link ml-3">{{$profile->facebook}}</a>
+                                            
                                         </div>
                                         
                                     </div>
                                 </div>
-                                
+                                @endif
+                                {{-- end of facebook --}}
+
+                                {{-- instagram --}}
+                                @if (empty($profile->instagram))
+                                @else
                                 <div class="portofolio-row mt-2">
                                     <div class="d-flex">
                                         <img src="{{ asset('images/ant-design_instagram-outlined.png') }}" alt="" class="portofolio-img">
 
                                         <div class="portofolio-link">
                                             <p class="social-media-title ml-3 mb-0 font-weight-bold">Instagram</p>
-                                            <a href="#" class="social-media-link ml-3">www.instagram.com/AnnaMinerva</a>
+                                            <a target="_blank" href="http://{{$profile->instagram}}" class="social-media-link ml-3">{{$profile->instagram}}</a>
                                         </div>
                                         
                                     </div>
                                 </div>
+                                @endif
+                                {{-- end of instagram --}}
 
+                                {{-- twitter --}}
+                                @if (empty($profile->twitter))
+                                {{-- menampilkan kosong jika belum memasukan twitter --}}
+                                @else
                                 <div class="portofolio-row mt-2">
                                     <div class="d-flex">
                                         <img src="{{ asset('images/ant-design_twitter-outlined.png') }}" alt="" class="portofolio-img">
 
                                         <div class="portofolio-link">
                                             <p class="social-media-title ml-3 mb-0 font-weight-bold">Twitter</p>
-                                            <a href="#" class="social-media-link ml-3">www.twitter.com/AnnaMinerva</a>
+                                            <a target="_blank" href="http://{{$profile->twitter}}" class="social-media-link ml-3">{{$profile->twitter}}</a>
                                         </div>
                                         
                                     </div>
                                 </div>
+                                @endif
+                                {{-- end of twitter --}}
+
+                                 {{-- website --}}
+                                 @if (empty($profile->website))
+                                 {{-- menampilkan kosong jika belum memasukan website --}}
+                                 @else
+                                 <div class="portofolio-row mt-2">
+                                     <div class="d-flex">
+                                         <img src="{{ asset('images/ant-design_twitter-outlined.png') }}" alt="" class="portofolio-img">
+ 
+                                         <div class="portofolio-link">
+                                             <p class="social-media-title ml-3 mb-0 font-weight-bold">website</p>
+                                             <a target="_blank" href="http://{{$profile->website}}" class="social-media-link ml-3">{{$profile->website}}</a>
+                                         </div>
+                                         
+                                     </div>
+                                 </div>
+                                 @endif
+                                 {{-- end of website --}}
+
+                                 {{-- website --}}
+                                 @if (empty($profile->linkedin))
+                                 {{-- menampilkan kosong jika belum memasukan linkedin --}}
+                                 @else
+                                 <div class="portofolio-row mt-2">
+                                     <div class="d-flex">
+                                         <img src="{{ asset('images/ant-design_twitter-outlined.png') }}" alt="" class="portofolio-img">
+ 
+                                         <div class="portofolio-link">
+                                             <p class="social-media-title ml-3 mb-0 font-weight-bold">linkedin</p>
+                                             <a target="_blank" href="http://{{$profile->linkedin}}" class="social-media-link ml-3">{{$profile->linkedin}}</a>
+                                         </div>
+                                         
+                                     </div>
+                                 </div>
+                                 @endif
+                                 {{-- end of linkedin --}}
+
+                                 {{-- github --}}
+                                 @if (empty($profile->github))
+                                 {{-- menampilkan kosong jika belum memasukan github --}}
+                                 @else
+                                 <div class="portofolio-row mt-2">
+                                     <div class="d-flex">
+                                         <img src="{{ asset('images/ant-design_twitter-outlined.png') }}" alt="" class="portofolio-img">
+ 
+                                         <div class="portofolio-link">
+                                             <p class="social-media-title ml-3 mb-0 font-weight-bold">github</p>
+                                             <a target="_blank" href="http://{{$profile->github}}" class="social-media-link ml-3">{{$profile->github}}</a>
+                                         </div>
+                                         
+                                     </div>
+                                 </div>
+                                 @endif
+                                 {{-- end of github --}}
+
                             </div>
                         </div>
                     </div>
@@ -1072,7 +1145,7 @@
 <!-- end of modal CV -->
 
 
-<!-- modal portofolio -->
+<!-- modal sosmed -->
 <div class="modal fade" id="portofolioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
@@ -1084,46 +1157,48 @@
             </div>            
             
             <!-- form -->
-            <form action="">
+            <form action="{{ route('pelamar.profile.update.sosmed',$profile->id) }}" method="POST">'
+                @csrf
+                @method("PATCH")
                 <div class="modal-body modal-competence mt-4">                                    
                     <div class="form-group social-media more-social-media">
                         <span class="has-float-label">
-                            <input type="text" name="website" value="" class="form-control" id="website" placeholder="WEBSITE">
+                            <input type="text" name="website" value="{{ old('website',@$profile->website) }}" class="form-control" id="website" placeholder="WEBSITE">
                             <label for="website">WEBSITE</label>
                         </span>
                     </div>
 
                     <div class="form-group social-media more-social-media">
                         <span class="has-float-label">
-                            <input type="text" name="facebook" value="" class="form-control" id="facebook" placeholder="FACEBOOK">
+                            <input type="text" name="facebook" value="{{ old('facebook',@$profile->facebook) }}" class="form-control" id="facebook" placeholder="FACEBOOK">
                             <label for="facebook">FACEBOOK</label>
                         </span>
                     </div>
 
                     <div class="form-group social-media more-social-media">
                         <span class="has-float-label">
-                            <input type="text" name="instagram" value="" class="form-control" id="instagram" placeholder="INSTAGRAM">
+                            <input type="text" name="instagram" value="{{ old('instagram',@$profile->instagram) }}" class="form-control" id="instagram" placeholder="INSTAGRAM">
                             <label for="instagram">INSTAGRAM</label>
                         </span>
                     </div>
 
                     <div class="form-group social-media more-social-media">
                         <span class="has-float-label">
-                            <input type="text" name="twitter" value="" class="form-control" id="twitter" placeholder="TWITTER">
+                            <input type="text" name="twitter" value="{{ old('twitter',@$profile->twitter) }}" class="form-control" id="twitter" placeholder="TWITTER">
                             <label for="twitter">TWITTER</label>
                         </span>
                     </div>
                     
                     <div class="form-group more-social-media" style="display: none;">
                         <span class="has-float-label">
-                            <input type="text" name="github" value="" class="form-control" id="github" placeholder="GITHUB">
+                            <input type="text" name="github" value="{{ old('github',@$profile->github) }}" class="form-control" id="github" placeholder="GITHUB">
                             <label for="github">GITHUB</label>
                         </span>
                     </div>
 
                     <div class="form-group more-social-media" style="display: none;">
                         <span class="has-float-label">
-                            <input type="text" name="linkedin" value="" class="form-control" id="linkedin" placeholder="LINKEDIN">
+                            <input type="text" name="linkedin" value="{{ old('linkedin',@$profile->linkedin) }}" class="form-control" id="linkedin" placeholder="LINKEDIN">
                             <label for="linkedin">LINKEDIN</label>
                         </span>
                     </div>                
