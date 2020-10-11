@@ -66,6 +66,7 @@ Route::group([
   Route::delete('/profile/rpendidikan','ProfileController@destroyPendidikanModal')->name('pelamar.profile.delete.pendidikan');
   Route::delete('/profile/rpekerjaan','ProfileController@destroyPekerjaanModal')->name('pelamar.profile.delete.pekerjaan');
   Route::delete('/profile/rkompetensi','ProfileController@destroyKompetensiModal')->name('pelamar.profile.delete.kompetensi');
+  Route::delete('/profile/rkeahlian','ProfileController@destroyKeahlianModal')->name('pelamar.profile.delete.keahlian');
 
   Route::get('/loker', 'LowonganKerjaController@index')->name('pelamar.loker');
   Route::get('/loker/{id}', 'LowonganKerjaController@detail')->name('pelamar.loker.detail');

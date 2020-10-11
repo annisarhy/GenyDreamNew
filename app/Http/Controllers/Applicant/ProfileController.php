@@ -88,7 +88,7 @@ class ProfileController extends Controller
     $jurusan = $request->jurusan;
     $id_pendidikan = $request->id_pendidikan;
 
-  // jika daat dikirim id_pendidikan terisi maka otomatis mengupdate data dari id_pendidikan tersebut
+    // jika daat dikirim id_pendidikan terisi maka otomatis mengupdate data dari id_pendidikan tersebut
    if ($id_pendidikan > 0){
     
     $input = [
@@ -156,7 +156,14 @@ class ProfileController extends Controller
 
     return redirect()->route('pelamar.profile')->with('success','Data Berhasil Dihapus');
   }
-    
+  // fungsi destroy keahlian
+  public function destroyKeahlianModal(Request $request){
+    $id_keahlian= $request->keahlianID;        
+    RKeahlian::destroy($id_keahlian);    
+
+    return redirect()->route('pelamar.profile')->with('success','Data Berhasil Dihapus');
+  }
+  
 
   // fungsi create dan edit pengalaman kerja
   public function createRPekerjaan(Request $request){

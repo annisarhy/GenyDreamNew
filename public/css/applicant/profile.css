@@ -452,7 +452,11 @@ body{
 .btn-add-more{
     border: 2px solid #68C8D8;
     color: #68C8D8;
-}    
+}   
+
+.btn-delete-skill{
+    display: none;
+}
     
 /* cv modal */
 .btn-add-cv{
